@@ -2763,7 +2763,7 @@ body {
   @media screen and (min-width: 768px) {
     .escom-fifty-fifty__content {
       padding: 32px; } }
-  @media screen and (min-width: 1200pxc) {
+  @media screen and (min-width: 1200px) {
     .escom-fifty-fifty__content {
       margin: 0;
       padding: 32px 64px; } }
@@ -3218,7 +3218,7 @@ body {
         .escom-logo-grid {
           -ms-grid-columns: (1fr)[6];
               grid-template-columns: repeat(6, 1fr); } }
-      @media screen and (min-width: 1200pxc) {
+      @media screen and (min-width: 1200px) {
         .escom-logo-grid {
           -ms-grid-columns: (1fr)[6];
               grid-template-columns: repeat(6, 1fr); } } }
@@ -3237,7 +3237,7 @@ body {
       @supports (grid-column-gap: 0) {
         .logo-grid__image {
           width: auto; } } }
-  @media screen and (min-width: 1200pxc) {
+  @media screen and (min-width: 1200px) {
     .logo-grid__image {
       width: calc(16.666% - 8px); }
       @supports (grid-column-gap: 0) {
@@ -3389,7 +3389,7 @@ body {
   padding: 32px;
   background: #404040;
   width: 100%; }
-  @media screen and (min-width: 1200pxc) {
+  @media screen and (min-width: 1200px) {
     .whatwedo .productdesign-block {
       padding: 32px;
       width: 40%;
