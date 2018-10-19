@@ -814,19 +814,11 @@ body {
     .escom-timeline__time {
       font-size: 15px; } }
 
-.escom-timeline__content-left-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  @media screen and (min-width: 768px) {
-    .escom-timeline__content-left-right {
-      grid-gap: 32px;
-      -ms-grid-columns: 20% 80%;
-          grid-template-columns: 20% 80%; } }
-  @media screen and (min-width: 768px) {
-    .escom-timeline--years-only .escom-timeline__content-left-right {
-      -ms-grid-columns: 10% 90%;
-          grid-template-columns: 10% 90%; } }
+@media screen and (min-width: 768px) {
+  .escom-timeline__content-left-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 .escom-timeline__heading {
   font-family: Barlow, "Lato", sans-serif;
@@ -851,6 +843,11 @@ body {
           -ms-flex: 0 0 20%;
               flex: 0 0 20%;
       margin-right: 32px; } }
+  @media screen and (min-width: 768px) {
+    .escom-timeline--years-only .escom-timeline__heading {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 10%;
+              flex: 0 0 10%; } }
 
 .escom-timeline__content-right,
 .escom-timeline__content-bottom {
@@ -3296,10 +3293,13 @@ body {
   overflow: hidden; }
 
 .escom-bio-thumbnail__image-wrap {
+  border-radius: 8px;
   margin: 0 0 8px;
+  overflow: hidden;
   position: relative; }
   .escom-bio-thumbnail__image-wrap:before {
-    background: rgba(32, 189, 213, 0.5);
+    background: #bde0e4;
+    border-radius: 8px;
     bottom: 0;
     content: '';
     left: 0;
@@ -3311,10 +3311,9 @@ body {
     transition: opacity .5s;
     z-index: 1; }
   .escom-bio-thumbnail:hover .escom-bio-thumbnail__image-wrap:before {
-    opacity: .4; }
+    opacity: .5; }
 
 .escom-bio-thumbnail__image {
-  border-radius: 8px;
   display: block;
   max-width: 100%; }
 
