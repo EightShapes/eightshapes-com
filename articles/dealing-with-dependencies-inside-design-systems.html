@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+        
+        <title>EightShapes &gt; Articles &gt; Dealing with Dependencies Inside Design Systems</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/styles/escom.css">
+
+        
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+    
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url(/images/bios/bio-thumb-nathan-curtis.png)">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    Nathan Curtis
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Oct 3, 2018 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                        9min
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Dealing with Dependencies Inside Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Decomposing Features to Master Change Up the Chain</h2>
+            
+        </div>
+    
+        
+    </div>
+</div>
+
+
+
+    
+    
+
+<div class="esds-row esds-container--dark esds-row--no-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            <img src="/images/articles/dealing-with-dependencies-inside-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+        
+    </div>
+</div>
+
+    
+    
+
+    
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        
+
+    <p>Within a component library, what component has the most dependents (other components in the library that include it)?</p>
+<p>“Button!” is a knee-jerk response. Good guess! Buttons are reused heavily by many other components. &quot;How about paragraph?&quot; someone suggests. Not exactly. Paragraph is usually reused as a style, not a component. I pause, then reveal &quot;Would you believe... icon?&quot; Ahhh, of course, icon.</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/1.png" alt="Components that depend on the icon component">
+    <figcaption class="escom-article-figure__caption">Components that depend on the icon component</figcaption>
+</figure>
+
+
+
+<p>Many, many components depend on icon: <code>checkbox</code>, <code>button</code>, <code>select</code>, <code>alert</code>, <code>list group</code>, and so many others. Even a simple, atomic button can include <em>two</em> icons, one to the left and one to the right! Hopefully <code>icon</code> stabilizes early, and doesn’t change often. But when it does? All those dependent components must change too.</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/2.png" alt="Card depends on Button, both depend on Icon">
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+
+
+
+<p>Compositional depth isn’t limited to two levels, and components don’t exist only on one prescribed level, anyway. A <code>card</code> can depend on a <code>button</code>, and both of them can depend on <code>icon</code>. Effective system teams understand this and cope with change across this hierarchical chain of dependencies.</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/3.png" alt="(Some of?) Atlaskit’s component packages with the highest number of dependents.">
+    <figcaption class="escom-article-figure__caption">(Some of?) Atlaskit’s component packages with the highest number of dependents.</figcaption>
+</figure>
+
+
+
+<p>Atlassian’s AtlasKit exposes dependent relationships visibly in NPM. Their published components reveal icon&#39;s <a href="https://www.npmjs.com/package/@atlaskit/icon">dominance of 62 dependents</a> that exceeds <code>button</code>&#39;s <a href="https://www.npmjs.com/package/@atlaskit/button">42</a>, <code>avatar</code>&#39;s <a href="https://www.npmjs.com/package/@atlaskit/avatar">19</a>, and <code>modal</code>&#39;s <a href="https://www.npmjs.com/package/@atlaskit/modal-dialog">15</a>.</p>
+<p>Composability made concrete exposes the dependency chain that a team must maintain as a library changes over time. As systems mature, teams build, trace, and update components as change ripple up through the hierarchy to keep their library outputs in sync as much as possible.</p>
+<hr>
+
+<h2>Dependencies Inside a Library</h2>
+
+<p>So many of our components are built using other, more primitive components in the library. Take, for example, a menu.</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/4.png" alt="Menu depends on List Group and Popover, which references Tooltip">
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+
+
+
+<p>Compositionally, a menu is a popover with a list group inside. The popover is tooltip with a flexible content area, reusing tooltip&#39;s collision detection, directional notch, and layered appearance. Depending on how you architect your system, menu could depend on both list-group and popover, which might be a sibling of or dependent on tooltip.</p>
+<p><i>Takeaway</i>: Designers and developers level up system acumen by recognizing, unwinding, and delivering features with such compositional dependencies. Lessons learned decomposing this chain cost us sweat, tears, and scars, but are what earn our badges as “system thinkers.”</p>
+<hr>
+
+<h3>Recognize Shared Styles and Behaviors as Implied Dependencies</h3>
+
+<p>Component-by-component dependencies should be visible and easy to trace. I see an icon in the button. Other dependencies are implicit, especially styles and sometimes behaviors.</p>
+<p>For example, a tooltip exhibits many behaviors relevant to other layered components like popover, menu, modal, and dialog. These include states (opening and closing), animation (how it opens and closes), and collision detection (how it adjusts location based on proximity to a viewport&#39;s edge).</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/5.png" alt="Shared styles possibly limited to a subset of “layered” components">
+    <figcaption class="escom-article-figure__caption">Shared styles possibly limited to a subset of “layered” components</figcaption>
+</figure>
+
+
+
+<p>Similarly, a tooltip usually imbues a shadow (separating it from content below), notch (connecting it with a trigger), elevation (within a page&#39;s z-index stack) and usually rounded shaped (produced by a border-radius). Such styles can be shared using design tokens, mixins, and other style tooling. It&#39;s guaranteed that other layered components also depend upon these styles.</p>
+<p><i>Takeaway</i>: Style and behavior, not just component objects, can propagate throughout a library. Therefore, establish predictable locations for both that can ease tracing from a decision’s root through the dependency chain.</p>
+<hr>
+
+<h3>Build Small to Large, But Design Across Levels Too</h3>
+
+<p>If so commonly included, we should make icon first. For similarly reasons, buttons is among the first few components we will make. For the next layer of components, that order isn’t so clear. As we consider each, we decompose it into parts and gauge if some parts need to be delivered primitively first.</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/6.png" alt="Header then Module Container then Accordion">
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+
+
+
+<p>At Morningstar, the team delivers dependent components in sequence. For example, the team first delivered Header across many sized levels. Next, the team released a Module Container for layouts with many content types. Finally, the team extended those features with an Accordion.</p>
+<p>As Accordion took shape, the team had to reconsider how Header and Module Container were built. While they avoided breaking changes, deploying Accordion required deprecating the original Module Container in favor of an adjusted version.</p>
+<p><i>Takeaway</i>: Order what you build from small (like tooltip) to large (like menu). As you do so, create opportunities to compose examples of small things in larger things to stress-test how the chain works.</p>
+<hr>
+
+<h3>Tracing How Change Ripples Through Dependents</h3>
+
+<p>You release icon first, and then other components that depend on it later. Then, icon adds minor features or suffers a breaking change. If you update icon, you can’t stop there. You must ripple that change through all of icon’s dependent in the library too.</p>
+<p>“If we upgrade and break a component, we have to go through and fix all the dependent components.” 
+— Jony Cheung, Software Engineering Manager, Atlassian’s Atlaskit
+Developers and designers share this challenge. For code, some may start with a search through the src directory for instances. More sophisticated tooling enables teams to traces the repository in intelligent ways.</p>
+<p>“We run a script to highlight where dependencies exist. That said, our team has been around long enough to be so familiar with the library to not need to use it.” — Rowan Manning, Developer of FT’s Origami</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/7.png" alt="Symbol Instance Locator results locating instances of Primary Button">
+    <figcaption class="escom-article-figure__caption">Symbol Instance Locator results locating instances of Primary Button</figcaption>
+</figure>
+
+
+
+<p>For designers, tracing through a Sketch file of library assets can be a chore. Imagine changing button spacing, or revising your interactive blue token. So many painstaking adjustments! Fortunately, Sketch plug-ins like Symbol Instance Locator and Find-all-instances-of-symbol enable you to find symbols and instances across artboards and jump to their location.</p>
+<hr>
+
+<h3>Automate Versioning, Warnings, and Other Tooling</h3>
+
+<p>As package management capabilities improve, teams improve how they cope and document a chain of impacted features. Atlassian’s AtlasKit release tool displays impacted dependencies and prompts authors to designate version increment level (breaking, minor, fix) for each one.</p>
+<p>“Our release wizard provides a prompt identifying dependent components, indicating that they too will increment a version.” — Jony Cheung, Software Engineering Manager, Atlassian’s Atlaskit
+A team must decide version type for each impacted feature in the chain. Breaking icon means a major version increment. However, that doesn’t imply that button, list group, and alert also all incur a major increment. To some, it may simply be a patch increment to consume the new icon version.</p>
+<p>Teams must also weed out inconsistent version dependencies within a catalog. Financial Time’s Origami errors when conflict occurs, like a compilation resulting in multiple versions of the same module being included.</p>
+<pre><code>// origami.ft.com example
+Cannot complete build: conflicting dependencies exist.
+
+o-colors:
+- Required at version 1.7 by o-nav
+- Required at version 1.9 by o-cookiewarn
+</code></pre><p>Wouldn’t it be nice if tools like Sketch could automate detection of old and new text and layer styles across a catalog? Yes, yes it would.</p>
+<p><i>Takeaway</i>: Establish moments in a release process to check and require authors to confirm and communicate change chained across the library.</p>
+<hr>
+
+<h2>Dependencies Across System Outputs</h2>
+
+<p>Most of our time as a system team is spent discussing the composible intricacies of the components we build. However, dependencies also span across the high-level outputs we deliver, from demo page types to the documentation and tokens too.</p>
+<h3>Beyond Just Components: Example Compositions and Page Types</h3>
+
+<p>Many teams offer sample page types composed with many components composed together.</p>
+<figure class="escom-article-figure escom-article-figure--wide">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/8.png" alt="Discovery Education Comet’s page example, demoing a Product Bar component’s responsiveness when composed with other components.">
+    <figcaption class="escom-article-figure__caption">Discovery Education Comet’s page example, demoing a Product Bar component’s responsiveness when composed with other components.</figcaption>
+</figure>
+
+
+
+<p>For example, Discovery Education’s Comet design system provides a link on the Product Bar component page to demo the component composed along with a nav on the left, a footer at the bottom, and content like cards in rows.</p>
+<p>When releasing a new version of the library, system teams themselves must cope with the cascading changes beyond just the component library. The examples aren’t dependencies of other teams. But they are essential demos, starting points, and even fertile ground for testing whether a component works as expected. For testing, Morningstar’s form compositions reveals impacts in composed dependencies by signaling failures in automated visual regression testing.</p>
+<p><i>Takeaway</i>: Arranging components into compositions is a great way to stress test the library, yet it comes with a production and maintenance cost. Justify that cost by fortifying system quality through manual or automated tests that trace the impacts of dependencies.</p>
+<hr>
+
+<h3>Chained System Repositories Release in Sequence</h3>
+
+<p>Opinions are as varied as there are system teams, but some choose to separate high-level system concerns. For example, at EightShapes we’ll often separate UI component code for the library from design tokens, documentation content and templating, documentation components, and even build tools across separate chained repositories (refer to ESDS Build).</p>
+<figure class="escom-article-figure">
+    <img class="escom-article-figure__image" src="/images/articles/dealing-with-dependencies-inside-design-systems/9.png" alt="Dependency chain for some design system repository setups, from tooling to documentation site">
+    <figcaption class="escom-article-figure__caption">Dependency chain for some design system repository setups, from tooling to documentation site</figcaption>
+</figure>
+
+
+
+<p>This suggests releases must be coordinated across and published sequentially through that dependency chain. First, build tooling, then tokens, library, doc components, and ultimately the documentation site itself. Other teams like Shopify sequence releases similarly:</p>
+<p>Tokens, then React, UI Kit, then Doc Site for changed links to those + release docs” — Kaelig Deloumeau-Prigent, Developer, Shopify’s Polaris
+A separated token dependency affords the flexibility to more quickly publish changes to a visual foundation prior to releasing component library outputs. However, that separation is more useful for token adopters avoiding your component library code and potentially just taking advantage of design tokens, sketch assets, doc or all three together.</p>
+<p><i>Takeaway</i>: Do your best to synchronize system assets. While some assets (like documentation components) may rarely change, others — particularly design tokens, UI component code, Sketch assets, and a documentation site—can often change simultaneously from release to release.</p>
+<hr>
+
+<h3>On Frameworks and Third-Party Dependencies</h3>
+
+<p>This post focused on dependencies within a system team’s features. However, it’s worth recognizing two external dependencies that have impacted my system teams more than most: frameworks and third-party scripts.</p>
+<p>Frameworks impact both engineers and designers. When coding components compliant to a JavaScript framework like Vue, Angular, or React, it can be an extraordinary cost to upgrade a library from one version to another. One team starting a library in early 2018 was extra flummoxed: build for React v15, v16, or… both? Picking the correct option is essential.</p>
+<p>The same goes for designers with fast changing products like Sketch. Count me among the elated to hear about Sketch 52’s Text and Layer Style overrides. Count me also among the freaked out, since a month prior I’d built a library using cruder styling methods that were “state of the art” before. There’s now a huge cloud hanging over my increasing design debt strewn across system assets as I continue making edits in the old way.</p>
+<p>System teams have control over how often they upgrade their dependency. But they don’t control how often the dependency gets upgraded. More than one system team I’ve found depends heavily on Select2 for quickly implementing combo boxes, yet laments it’s slow growth and incomplete accessibility configurations. Every six month planning session diverts into the “Should we just build this ourselves? When will it change? Should we ditch it?” 10 minute conversation before a facilitator urges the team to move on.</p>
+<p><i>Takeaway</i>: Integrate third-party and framework dependencies that you are comfortable with depending on at least the current version offered. Avoid avoidable dependencies if you can, yet be cautious of building things yourself that the world struggles to do as community.</p>
+
+
+
+    
+        
+    </div>
+</div>
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/scripts/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>
