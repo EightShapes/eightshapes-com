@@ -1938,7 +1938,7 @@ body {
   display: grid;
   grid-column-gap: 16px;
   -ms-grid-columns: 20% 80%;
-  grid-template-columns: 20% 80%; }
+      grid-template-columns: 20% 80%; }
 
 .escom-link-list__image {
   border-radius: 8px;
@@ -3334,7 +3334,7 @@ body {
       display: -ms-grid;
       display: grid;
       -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr; } }
+          grid-template-columns: 1fr 1fr; } }
 
 .escom-fifty-fifty__image {
   background-color: #F3F1F1;
@@ -3723,7 +3723,7 @@ body {
           grid-auto-rows: 1fr;
           grid-gap: 32px;
           -ms-grid-columns: 1fr 1fr;
-          grid-template-columns: 1fr 1fr; } } }
+              grid-template-columns: 1fr 1fr; } } }
 
 .escom-image-grid__item {
   margin: 0 0 16px;
@@ -3812,16 +3812,16 @@ body {
       display: grid;
       grid-row-gap: 16px;
       -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr);
       margin: 0; }
       @media screen and (min-width: 768px) {
         .escom-logo-grid {
           -ms-grid-columns: (1fr)[6];
-          grid-template-columns: repeat(6, 1fr); } }
+              grid-template-columns: repeat(6, 1fr); } }
       @media screen and (min-width: 1200px) {
         .escom-logo-grid {
           -ms-grid-columns: (1fr)[6];
-          grid-template-columns: repeat(6, 1fr); } } }
+              grid-template-columns: repeat(6, 1fr); } } }
 
 .logo-grid__image {
   display: block;
