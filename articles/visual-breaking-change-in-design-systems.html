@@ -1,0 +1,1610 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+        
+        <title>EightShapes &gt; @components &gt; Visual Breaking Change in Design Systems</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/styles/escom.css">
+
+        
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/articles/systems.html" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components Blog</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+            <div class="escom-article__author-row">
+                <div class="escom-article__author-avatar"
+                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+                </div>
+                <div class="escom-article__author-text">
+                    <p class="escom-article__author">
+                        <a href="/nathan-curtis.html">Nathan Curtis</a>
+                    </p>
+                    <p class="escom-article__author-role">
+                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                    </p>
+                    <p>
+                        <span class="escom-article__published-date">
+                            Originally published 8/24/2018 •
+                        </span>
+                        <span class="escom-article__read-duration">
+                            8min
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="escom-article__title-row">
+                <h1 class="escom-article__title">Visual Breaking Change in Design Systems</h1>
+                
+                <h2 class="escom-article__deck">We Respect Code APIs. But What About Color, Type and Space?</h2>
+                
+            </div>
+
+    
+        </div>
+    </div>    
+    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+        <div class="esds-row__inner">
+            <img src="/images/articles/visual-breaking-change-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+        </div>
+    </div>
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+    
+
+    
+    <p>Design systems establish a baseline visual style that’s an essential dependency. These choices — color, typography, space and more — are robustly specified and expected to stably, predictably change release by release. When an adopter upgrades, a design system shouldn’t break their stuff unexpectedly.</p>
+<p>So, ask yourself…</p>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Can adopters upgrade to a minor release confident that their UI won’t break due to a system’s visual changes?
+            </div>
+            
+            
+        </div>
+
+
+
+  <p><a href="https://semver.org/">Semantic Versioning</a> (SemVer) offers clear criteria to communicate change across releases using major, minor and patch designations. Every design system I encounter uses SemVer and monitoring change in their package’s application programming interface, or <a href="about:invalid#zSoyz">API</a>. This is familiar territory for developers coding JavaScript props and HTML markup. Break your API, and your next version <em>must</em> increment the version to a next major release, such as from <code>1.4.0</code> to <code>2.0.0</code>.</p>
+<p>Specifying an interface to compositional visual style eludes us. It’s feels so difficult to define clear, simple rules to monitor style changes. System makers struggle to articulate what or why “Changing <em>this</em> style breaks an adopter’s UI” versus “Changing <em>that</em> style doesn’t.” Few system teams document such criteria. I ask “What specific types of visual changes trigger a major version for you?” Their response: ¯_(ツ)_/¯.</p>
+<p>In this article, I propose that <em>at least</em> <strong>Color</strong> , <strong>Typography</strong> , and <strong>Space</strong> warrant criteria that constitute breaking change. There are other properties to consider, too. A design system can define, document and communicate these criteria so that adopters can upgrade release by release with confidence.</p>
+<hr>
+<h2 id="breaking-color">Breaking Color</h2>
+<p>Most system teams feel safe in tuning a primary button’s background color. Maybe their motivation is to improve contrast against a usually white text label. “Let’s darken the teal a bit,” they say. “We’ll improve button’s accessible color contrast from a AA to AAA rating.”</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/1.png" alt="Adjusting background color of a primary button">
+        </div>
+        <figcaption class="escom-article-figure__caption">Adjusting background color of a primary button</figcaption>
+    </figure>
+
+
+
+  <p>Certainly, adopting teams shouldn’t override a standard primary button’s color set. Overriding a system choice severs the connection with a system. At that point, an adopter is on their own. Therefore, adjusting the shade of primary button’s background color is safe and is not a breaking change.</p>
+<p>However, changing colors elsewhere may put adopters in peril. Consider the following scenarios.</p>
+<h3 id="example-system-text-on-custom-backgrounds">Example: System Text on Custom Backgrounds</h3>
+<p>Imagine a system team fine-tuning interactive blue to improve color contrast. The <code>interactive-blue</code> of <code>v1.4.0</code> was accessible on a <code>white</code> background but failed on the <code>charcoal</code> background.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/2.png" alt="Grid of accessibility contrast scores">
+        </div>
+        <figcaption class="escom-article-figure__caption">Color contrast checking via <a href="http://contrast-grid.eightshapes.com/?background-colors=%23FFFFFF%2C%20White%0D%0A%23DDDDDD%2C%20Light%20Gray%0D%0A%23404040%2C%20Charcoal&amp;foreground-colors=%230F60B6%2C%20v1.4.0%0D%0A%23398EEA%2C%20v1.5.0&amp;es-color-form__tile-size=compact" rel="noopener nofollow" target="_blank">contrast-grid.eightshapes.com</a></figcaption>
+    </figure>
+
+
+
+  <p>So, for <code>v1.5.0</code>, the team adjusted <code>interactive-blue</code> to a lighter, more saturated tone that worked on both <code>white</code> and <code>charcoal</code>.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/3.png" alt="Adjusting text color of a ghost button label on unpredictable backgrounds">
+        </div>
+        <figcaption class="escom-article-figure__caption">Adjusting text color of a ghost button label on unpredictable backgrounds</figcaption>
+    </figure>
+
+
+
+  <p>However, an adopter had used the Ghost button dependent on that color on a light gray background. After the system change, the label&#39;s text color contrast is inaccessible. <em>Your system broke their product</em>.</p>
+<h3 id="example-system-backgrounds-with-custom-overlaid-text">Example: System Backgrounds with Custom Overlaid Text</h3>
+<p>Similarly, imagine a system darkens the Card component’s<code>background-color</code>. The Card’s content area includes a &quot;safe&quot; <code>content-container</code> zone where adopters insert whatever content and markup they want.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/4.png" alt="Adjusting background color of a Card that allows contained custom content">
+        </div>
+        <figcaption class="escom-article-figure__caption">Adjusting background color of a Card that allows contained custom content</figcaption>
+    </figure>
+
+
+
+  <p>In that presumably safe zone, an adopter added secondary text that, while subtle moderate gray, passed a color contrast test. After the system change, the color contrast is no longer accessible. <em>Your system broke their product</em>.</p>
+<p>Imagine your system’s minor release included those adjustments. Backward compatible, you said? No risk in upgrading, they trusted? Nope! Your system broke their product!</p>
+<p>Therefore, evaluate changed colors properties to determine if a system changed, such as:</p>
+<ul>
+<li>Text <code>color</code> that could appear above an adopter&#39;s <code>background-color</code>, image, or other texture.</li>
+<li><code>background-color</code> on which an adopter&#39;s text <code>color</code> is overlaid.</li>
+<li><code>background-color</code>, <code>border-color</code>, text <code>color</code>, <code>box-shadow</code>, or other property composed beside, above, or below another component&#39;s edge or content so as to diminish contrast between elements.</li>
+</ul>
+<p>Accessibility drove these examples. There’s aesthetic risk as well, in that well-intentioned system changes could disrupt the colorful harmony achieved by a product designer. Color interactions abound throughout UI that a system designer doesn’t control or have visibility into.</p>
+<p><em>Takeaway</em>: Start breaking change conversation with color criteria. It’s easier to convey risk, it’s objectively measurable, and it’s tied to accessibility that stirs passions. Armed with a few criteria, you can move on to other concerns.</p>
+<hr>
+<h2 id="breaking-typography-by-wrapping-">Breaking Typography (By Wrapping)</h2>
+<p>Typography is a core facet of any visual style. Teams want to get it just right. And there are so many dials to tune: <code>font-family</code>, <code>font-weight</code>, <code>font-size</code>, <code>text-transform</code>, <code>line-height</code>, <code>letter-spacing</code>, and more.</p>
+<p>Not all experiences risk breaking if a system adjusts typography. For content-heavy experiences, each element’s content can be unpredictable, of varying length, and designed to wrap and respond to changes in viewport width.</p>
+<p>For denser interfaces, typography must be precise. Designers grind for hours fine-tuning typography, arranging labels to fit in compact areas. If you adjust system typography, their elements may wrap or crop in unexpected ways.</p>
+<h3 id="example-wrapping-tabs-are-awful">Example: Wrapping Tabs Are Awful</h3>
+<p>Imagine your system adjusts tab label<code>font-weight</code> from normal to bold.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/5.png" alt="Display of wrapping text after a minor upgrade">
+        </div>
+        <figcaption class="escom-article-figure__caption">After a minor version upgrade, unresponsive tabs wrap. Not good.</figcaption>
+    </figure>
+
+
+
+  <p>An adopter upgrades. Their existing unresponsive tabs exceed allocated space, so they wrap. Ghastly! <em>Your system broke their product.</em></p>
+<h3 id="example-letter-spacing-mayhem">Example: Letter Spacing Mayhem</h3>
+<p>Brand guidelines evolve, yielding new heading hierarchy and style. Thus, your system adapts by increasing each heading’s <code>letter-spacing</code>.</p>
+<p>An adopter upgrades their dense, single page radiology app that’s translated into 14 languages, composed of myriad control panels, each chock full of form elements and headings. They upgrade, and the UI is awash with headings unpredictably cropped. They call a crisis meeting. They invite the back-end data engineers, for goodness sakes! <em>Your system broke their product!</em></p>
+<p>Adjusting system typography can be dangerous. To you, it’s a refreshing typographic evolution deployed effortlessly across a library. To them, text begins misbehaving. They blame you. Maybe they flame you in the <code>#system-design</code> Slack channel. Nobody needs that.</p>
+<p><em>Takeaway</em>: Prior to <code>1.0.0</code>, work diligently to to experiment, refine, and finalize type styles suitable to customer’s variety. Once <code>1.0.0</code> passes, sustain a stable base and consider change cautiously. Consider reserving dangerous shifts for the next major release. Until then, incrementally add contained features, such as a Long Form Text component for styling <em>just</em> article copy.</p>
+<hr>
+<h2 id="breaking-space-and-size">Breaking Space and Size</h2>
+<p>At least you can see color and typography. <a href="/articles/space-in-design-systems.html">Space</a> and size? Those are harder to define as concretely reusable, let alone monitor for breaking change.</p>
+<p>In HTML, when you change a component’s box model properties — <code>padding</code>, <code>margin</code>, <code>width</code>, <code>height</code>, <code>display</code>, <code>box-sizing</code>, <code>position</code>, <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code> — you risk impacting layout composition that arranges that component with other page elements.</p>
+<h3 id="example-1-removing-vertical-spacing">Example 1: Removing Vertical Spacing</h3>
+<p>Your system team decides to remove vertical spacing applied form controls in the form of <code>margin-bottom</code>. This impacts <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;label&gt;</code>, microcopy and other elements.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/6.png" alt="Display of form controls no longer including space between inputs and labels">
+        </div>
+        <figcaption class="escom-article-figure__caption">Originally set with vertical spacing built in, a system removes margins. And so forms look smooshed.</figcaption>
+    </figure>
+
+
+
+  <p>An adopter had laid out 38 different forms relying upon that spacing. After the system change, all their forms no longer vertically separate elements. <em>Your system broke their product</em>.</p>
+<h3 id="example-2-custom-sizing-based-on-assumed-spacing">Example 2: Custom Sizing Based on Assumed Spacing</h3>
+<p>After extensive design community debate, your system concedes to expand a Card’s content block’s <code>padding</code>.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/7.png" alt="Display of a card with wrapping icon toolbar">
+        </div>
+        <figcaption class="escom-article-figure__caption">A custom icon toolbar wraps after a padding change. Ewww.</figcaption>
+    </figure>
+
+
+
+  <p>An adopter had arranged and sized Cards based on their customer’s hardware settings. They’d also added an icon-only toolbar in the bottom row. After the system change, the icons wrap to two rows. <em>Your system broke their product</em>.</p>
+<p><em>Takeaway</em>: First, avoid spatial rules (usually <code>margin</code>) outside a component’s boundary. Second, make spatial adjustments very, very cautiously. Degrading an adopter’s layout is a surefire way to create friction, diminish trust, and result in justifiable bad PR across a community.</p>
+<hr>
+<h3 id="contained-non-breaking-spatial-change">Contained, Non-Breaking Spatial Change</h3>
+<p>Some spatial change doesn’t impact adjacent elements or page composition. For example, tightening or expanding the inset <code>padding</code> or stacked <code>margin</code> between items in a Menu would not be a breaking change because these adjustments are contained within a block that&#39;s completely specified by the system, includes no other customizable elements, and is layered in a manner that doesn’t otherwise impact page layout when opened and closed.</p>
+<hr>
+<h2 id="what-else-can-break-visual-style-">What Else Can Break Visual Style?</h2>
+<p>In general, changes in visual style could be specified as changes to a bevy of CSS properties, the range of which is exemplified by <a href="/articles/tokens-in-design-systems.html">design token</a> collections in <a href="https://www.lightningdesignsystem.com/design-tokens/">Salesforce Lightning</a>, <a href="http://designsystem.morningstar.com/visual-language/constants.html">Morningstar</a>, <a href="https://github.com/rei/rei-cedar-tokens/tree/master/tokens/foundations">REI</a>, and <a href="https://github.com/opentable/design-tokens#otkit">Open Table</a>.</p>
+<p>What other properties could you monitor beyond those of color, typography, space, and size described above? <code>z-index</code> applied across components like Popovers, Dialogs, Modals, and Tooltips is central to composition in the third, layered dimension of a layout. <code>opacity</code> applied widely to semi-transparent layers (such as under a Modal) also seem a strong candidate. Even subtle changes like a <code>border-bottom</code> have an impact.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/visual-breaking-change-in-design-systems/8.png" alt="Display of a table and subsequent component no longer visually distinct">
+        </div>
+        <figcaption class="escom-article-figure__caption">Adjusting border colors of a component arranged near other components</figcaption>
+    </figure>
+
+
+
+  <ul>
+<li>Your system makes the <code>border-bottom</code> of a vertical list&#39;s last item transparent. An adopter had positioned that list snugly above another block, relying on the line to create contrast. After the system change, the block&#39;s header blends with the label of the list&#39;s last item in a manner not obvious to distinguish.<br>If so, <em>your system broke their product</em>.</li>
+</ul>
+<p>But what of adjusting <code>box-shadow</code>? Or fine tuning <code>border-radius</code>? Cue designer ambivalence. It&#39;d be hard to convince that those adjustments would break an adopter&#39;s experience.</p>
+<p><em>Takeaway</em>: Review the vast collection of possible CSS properties and discuss the consequences of candidate properties with your team. A working session will fruitfully reveal the group’s tolerance for protecting adopters and drive towards documenting how far you’ll go.</p>
+<hr>
+<h2 id="so-what-s-a-visual-breaking-change-">So, What’s a Visual Breaking Change?</h2>
+<p>At this point, are you thinking: does this really matter? Shouldn’t we use our system to control our visual language? Are adopters really going to care?</p>
+<p>Engineers may care. Designers DEFINITELY care. They spend hours fine-tuning layouts, annotating, and communicating detail to collaborating devs. Therefore, a design system should describe how it changes. And, each time it changes, if it’s going to be a change that degrades their design.</p>
+<p>In conversations with design system colleagues, sentiments are:</p>
+
+
+  
+
+
+
+        <div class="escom-bar-quote">
+            “We kinda sorta know what’s a visual breaking change.”<br>“We discuss visual breaking changes when someone’s instinct suggests too.”<br>“I agree this is a thing, we’d don’t do it rigorously, and it’s important.”
+        </div>
+
+
+
+  <p>In our work on the <a href="http://designsystem.morningstar.com/about/versioning.html">Morningstar Design System</a>, we’ve documented what changes are considered major, minor, and patch. Our team asserts opinions confidently in critique discussions, comments on pull requests, and in our discussions with adopting and upgrading teams.</p>
+<p>Our field will adapt to versioning as it deeply engrains in our practice. We’ll do what we can to communicate well with and protect our adopters.</p>
+<hr>
+<p><strong>#3.</strong> <a href="/articles/versioning-design-systems.html"><strong>Versioning</strong></a> ← Previous | Next → <strong>#5.</strong> <a href="/articles/dealing-with-dependencies-inside-design-systems.html"><strong>Dependencies</strong></a></p>
+
+
+
+        </div>
+    </div>
+    
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Visual Style</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems.html">Color</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems.html">Typography</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems.html">Space</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems.html">Size</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/light-dark.html">Light &amp; Dark Modes</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems.html">Tokens</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems.html">Reference Designs</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height.html">Cropping Line Height</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components.html">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions.html">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples.html">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines.html">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components.html">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation.html">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components.html">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems.html">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy.html">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems.html">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems.html">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components.html">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles.html">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems.html">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans.html">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system.html">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems.html">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence.html">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems.html">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems.html">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems.html">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products.html">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems.html">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems.html">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems.html">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system.html">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products.html">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success.html">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach.html">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers.html">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries.html">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems.html">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams.html">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system.html">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems.html">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step.html">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems.html">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system.html">Contribution Criteria</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications.html">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems.html">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems.html">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system.html">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team.html">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s.html">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop.html">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people.html">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity.html">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/scripts/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

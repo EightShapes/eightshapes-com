@@ -1,0 +1,1758 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+        
+        <title>EightShapes &gt; @components &gt; Cards and Composability in Design Systems</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/styles/escom.css">
+
+        
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/articles/systems.html" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components Blog</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+            <div class="escom-article__author-row">
+                <div class="escom-article__author-avatar"
+                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+                </div>
+                <div class="escom-article__author-text">
+                    <p class="escom-article__author">
+                        <a href="/nathan-curtis.html">Nathan Curtis</a>
+                    </p>
+                    <p class="escom-article__author-role">
+                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                    </p>
+                    <p>
+                        <span class="escom-article__published-date">
+                            Originally published 4/20/2018 •
+                        </span>
+                        <span class="escom-article__read-duration">
+                            10min
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="escom-article__title-row">
+                <h1 class="escom-article__title">Cards and Composability in Design Systems</h1>
+                
+                <h2 class="escom-article__deck">Structure, Content, Style &amp; Behavior of Composed Components</h2>
+                
+            </div>
+
+    
+        </div>
+    </div>    
+    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+        <div class="esds-row__inner">
+            <img src="/images/articles/cards-and-composability-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+        </div>
+    </div>
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+    
+
+    
+    <p>I’m a sucker for a <code>card</code> component. It takes me back nostalgically to my adolescence when baseball cards introduced me to information design. I collected and organized thousands, each exhibiting a hero’s photo, team as theme, positions as identity. My brain engaged with the design, data, and in-depth inquiry they fostered.</p>
+<p>Today’s digital <code>card</code> serves the same purpose. More than just a generic container, a card is a scannable snapshot of an object’s vitals. It previews enough to identify. It invites us to learn more and interact, in that order.</p>
+
+
+  
+
+
+
+        <div class="escom-bar-quote escom-pull-quote--light">
+            A card is a sheet of material that serves as an entry point to more detailed information. Cards may contain a photo, text, and a link about a single subject. — <a href="https://material.io/guidelines/components/cards.html" rel="nofollow noopener" target="_blank">Google Material Design’s Card</a>
+        </div>
+
+
+
+  <p>Often, the <code>card</code> also signals a pivot in the growth of a component library. Unlike primitives like <code>button</code> and <code>input</code>, a <code>card</code> requires composition. It relates many elements (some already in our library) and as content flows into each. Also, <code>card</code>s are almost always shown as a set, siblings side by side. Composition triggers higher-order thinking critical to system design.</p>
+<p>Hardening a composition like <code>card</code> forces a system to mature. Sometimes, a system solves the challenges, increasing library complexity. Other times, a system’s burgeoning maturity steers away from complexity, keeping things simple. These challenges take the form of <strong>structure</strong> , <strong>content</strong> , <strong>style</strong> and <strong>behavior</strong>. May the lessons here inspire your system compositions to come.</p>
+<hr>
+<h2 id="composing-structure">Composing Structure</h2>
+<p>Libraries start with primitives—<code>input</code>, <code>heading</code>, <code>checkbox</code>, <code>radio-button</code>, <code>label</code>, <code>icon</code>—to serve as building blocks. A <code>button</code>’s composability is fairly mundane: an <code>icon</code> to the left or right of a label, maybe a split bar or animation. Then<code>button-group</code> combines <code>button</code>, forcing sibling relationships. These are low-level challenges. Things get more interesting when composing components like <code>card</code> with many elements.</p>
+<h3 id="identify-core-elements">Identify Core Elements</h3>
+<p>A composable component starts with essential core of required elements, so you’ll want to ask: What elements are required of each and every display? What happens if a required element is missing?</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/1.png" alt="Illustration of a card component anatomy">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p><code>card</code> often requires:</p>
+<ul>
+<li><em>image</em>, paired with a…</li>
+<li><em>title</em> (usually a styled <code>heading</code>), maybe supplemented with a…</li>
+<li><em>description</em> (or “<em>deck</em>” or other elaborating content).</li>
+</ul>
+<hr>
+<h3 id="identify-all-possible-elements-cases">Identify All Possible Elements &amp; Cases</h3>
+<p>Cast the discovery net wide across many products. Inventory each example. Analysis should yield a growing diversity of cases and elements should inform a design and guidance useful for later documentation.</p>
+<ul>
+<li>What is a complete possible elements included?</li>
+<li>What element combinations discouraged or forbidden? For example, a <code>card</code> may include <code>button</code>s or <code>icon</code>s for actions, but never both.</li>
+</ul>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/2.png" alt="Card annotation of content elements">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p><code>card</code>s serve varying needs across many moments of an experiences, and can include a range of other content types:</p>
+<ul>
+<li><em>label</em> or <em>type</em>, often signaling a group to which the object belongs and possibly displayed as a <code>tag</code> or an <code>icon</code>/label pair.</li>
+<li><em>action(s)</em> offered as <code>button</code>(s), <code>icon</code>(s), or both.</li>
+<li><em>price</em> and <em>ratings</em> for products</li>
+<li><em>metadata</em>, distinct from a description to highlight key properties</li>
+<li><em>related list(s)</em> as a set of items related to the object</li>
+</ul>
+<hr>
+<h3 id="solidify-element-relationships">Solidify Element Relationships</h3>
+<p>A composable component’s many elements raise questions of order, combinations, groups, and more:</p>
+<ul>
+<li>Are there named zones, such as actions?</li>
+<li>Are there element subgroups? Can subgroups reordered or hidden?</li>
+<li>What logic is needed to sort, combine, or separate combinations? </li>
+<li>How many alternative arrangements should we test?</li>
+<li>How many variations should be revealed and described in doc?</li>
+</ul>
+<p>For many <code>card</code>s, the stacked order is fixed: image then title then actions. In other systems, more flexible needs may suggest reordering elements. For example, <a href="http://designsystem.morningstar.com/components/cards.html">Morningstar Design System</a>’s <code>card</code> enables users to place an image above or below a title.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/3.png" alt="Card displaying an image either on the top or bottom">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>Like a <code>modal</code> and <code>dialog</code>, <code>card</code> could identify zones for a <em>header</em>, <em>main</em> and <em>footer</em> or <em>media</em>, <em>copy</em>, and <em>actions</em> to firmly identify content relationships.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/4.png" alt="Card stacking the media image, then copy, then actions">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <hr>
+<h3 id="cope-with-regions-allowing-flexible-input">Cope with Regions Allowing Flexible Input</h3>
+<p>The bigger the component, the more likely it offers a region that welcomes, well, whatever an system user wants to put there. The region’s content can be as innocuous as a paragraph or bulleted list.</p>
+<ul>
+<li>Are there generic regions into which you can place flexible markup?</li>
+<li>How do regions zones impact fluid and/or fixed displays?</li>
+<li>Do you expect or recommend certain content types for such containers?</li>
+</ul>
+<p>But that region opens a dangerous door. Maybe an adopter adds a legend… under a chart… with an adjoining four column data table… in the content portion of a card. Hint: that’s not what a <code>card</code> is for.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/5.png" alt="Card offering flexible slots to inject custom content">
+        </div>
+        <figcaption class="escom-article-figure__caption">Flexible regions for a system user to inject their own content.</figcaption>
+    </figure>
+
+
+
+  <p>Regions offer flexibility but invite abuse. Nobody argues opening up a <code>modal</code>’s main content area to uncertain markup. For a <code>card</code>, an <em>action bar</em> zone could include <code>button</code>, <code>icon</code>, and <code>menu.</code> However, it’s not up to <code>card</code> to hard wire every case. Some components may need to offer regions and relinquish control of and responsibility for what’s goes inside.</p>
+<p><em>Takeaway:</em> With <a href="https://youtu.be/_5d6rTQcU2U?t=1m28s">great container power comes great responsibility</a> of adopting teams. Don’t fool yourself to believe you can predict, build, test, or doc every possible case. If a region is intended for a few expected variants, do adopters a favor and create examples exhibiting each one.</p>
+<hr>
+<h2 id="composing-content">Composing Content</h2>
+<p>Titles, prose, metadata, pricing. An image that packs a powerful punch. No matter the elements you include, a <code>card</code> requires thoughtful consideration of media and copy. Unlike primitives you handled yourself, composable components require collaboration with those that know content best.</p>
+<h3 id="content-varies-form-conventions-based-on-real-content-">Content Varies. Form Conventions Based on Real Content.</h3>
+<p>An image above text. It’s simple, right? Not always. The <em>image</em>’s aspect ratio is pivotal not just for visual harmony, but content production too.</p>
+<p>At one client, we analyzed existing inconsistent cards across products. It was a treasure trove of real content. Except: yikes, the aspect ratios of images varied wildly! Some products rocked a 16x9 or 3x2 ratio. Others only squared images. Search presented the gamut, including exceedingly tall portraits.</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/6.png" alt="Illustration of card images of varying aspect ratios">
+        </div>
+        <figcaption class="escom-article-figure__caption">Variety of aspect ratios encountered in real images spread across existing products</figcaption>
+    </figure>
+
+
+
+  <p>Content experts were understandably fatigued by years of design flip flop. To them, the system was an opportunity to end image size conversation. A standard aspect ratio would not just improve display consistency, but also vastly simplify their vendor requirements and image delivery.</p>
+<p>As a result, <code>card</code> settled on a 16x9 landscape ratio, augmented by a square alternative. This process also yielded code to solve ratio-specific display on the front-end. As a result, composability led to a <code>thumbnail</code><a href="https://comet.discoveryeducation.com/components/thumbnails.html">component</a> useful for other components too.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/7.png" alt="Illustration of a fixed aspect ratio image with contain or cover properties">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>To address legacy content, <code>card</code> offered a prop to <em>contain</em> images (using the background-size CSS property) within the 16x9 space. Designers achieved visual grid harmony in search results, while producers adjusted displays per card to address undesirable photograph crops.</p>
+<p><em>Takeaway</em>: The more composable a component, the more vital that you incorporate content considerations. Stress test design and builds with real content. Engage those that cope with the content that flows into your components every day. You may become their new best friend.</p>
+<hr>
+<h3 id="too-much-content-address-wrapping-truncation">Too Much Content? Address Wrapping &amp; Truncation</h3>
+<p>While images dominate a display, copy also plays a critical role in headings, descriptions, and metadata. But it’s a card, not an opus, so copy can’t go wild.</p>
+<p>Longer titles and descriptions are bound to wrap once or — if you can stomach it — twice. So design for margins <em>and</em> line height. But if copy lengthens, <code>card</code> effectiveness diminishes fast.</p>
+<ul>
+<li>What’s the max length of each copy element?</li>
+<li>What’s the max and min character count we’re comfortable width?</li>
+</ul>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/8.png" alt="Illustration of a card with too much descriptive content">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>Truncation provides an escape hatch, protecting against copy length that we can’t predict. Truncation divides opinion: some clients loathe truncation, while others release a <code>truncate</code> utility in a first component batch. Truncate a <code>card</code> <em>title</em> or even <em>subtitle</em> or <em>description</em>, and you risk damaging context and understanding. In composable components, defer to priorities: truncate a <em>description</em> before <em>title</em>, or after three lines instead of two, amid an appearance that sufficiently flexes.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/9.png" alt="Illustration of a truncated card description">
+        </div>
+        <figcaption class="escom-article-figure__caption">Truncation results in a shorter, but potentially not preferable, description.</figcaption>
+    </figure>
+
+
+
+  <p>It’s not just copy wrapping, either. Consider rows of actions like a horizontal button and icon list that could collide when settings get narrow.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/10.png" alt="Illustration of a wrapping set of card icon actions">
+        </div>
+        <figcaption class="escom-article-figure__caption">Narrow card width causes a left-aligned button to collide with a right-aligned icon list.</figcaption>
+    </figure>
+
+
+
+  <p><em>Takeaway</em>: Copy length maximums and truncation appeal to our sense of control over flowed content. As components complexity grows, strengthen editorial opinion and code control on copy length, line measure, and impacts of fluid card width. If you offer utilities, do so as moderation not a crutch.</p>
+<hr>
+<h3 id="not-enough-content-when-image-s-and-or-copy-go-missing">Not Enough Content? When Image(s) and/or Copy Go Missing</h3>
+<p>On the other hand, sometimes content is unavailable. Card content often reaches into the depths, plucking this related article or that legacy profile for display. Is your card ready for the absence of a <em>description</em>, <em>metadata</em> or even <em>image</em>? No <em>image</em>, oh, the scandal! What do you do?</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/11.png" alt="Illustration of a card with no image">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>The most opinionated of us say: Never! Want to use a <code>card</code>? Include required elements or don’t bother. Yet, that’s harsh. Often unrealistic. Elegant composable components should bend but not break as the content flows.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/12.png" alt="Illustration of three cards, one without a description">
+        </div>
+        <figcaption class="escom-article-figure__caption">Instances with wrapping titles and missing descriptions.</figcaption>
+    </figure>
+
+
+
+  <p>In the absence of copy, <code>card</code> composition relies upon solid stackable space, considerate of the many combinations you may or may not expect.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/13.png" alt="Illustration of cards, some with an icon and color display rather than an image">
+        </div>
+        <figcaption class="escom-article-figure__caption">Instances with missing images replaced by background fill &amp; icon to indicate asset type.</figcaption>
+    </figure>
+
+
+
+  <p>In the absence of image, we’ve got options. You could attractively distinguish types via a flat color, a site’s overlaid identity mark, or even an icon/color combo for type (asset format? activity type? content channel?).</p>
+<hr>
+<h2 id="composing-style">Composing Style</h2>
+<p>Styling atomic elements is easier (elements require fewer decisions) and harder (those decisions carry foundational impact). However, <code>card</code> raises challenges and expands our style choices as elements interact in tight spaces.</p>
+<h3 id="expand-a-system-s-visual-language">Expand a System’s Visual Language</h3>
+<p>My experience suggests that components like <code>card</code> trigger incremental conversation about system conventions of modular shape and layering. Conversations can steer towards <em>border-radius</em>, <em>shadow</em>, and subtleties of <em>background-color</em> contrast between the object and canvas below.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/14.png" alt="Annotation of a card drop shadow and border radius">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p><em>Takeaway</em>: A composed component sets a tone for the shape of many designs to come, both in a library and for those working projects. Such decisions bleed into the experience in unimaginable ways both dangerous and delightful.</p>
+<hr>
+<h3 id="style-within-and-across-components">Style Within and Across Components</h3>
+<p>A <code>card</code> evokes color relationships, beginning with contrast against the canvas below. Some opt for simplicity: only white <code>card</code> on a white canvas, no alternative backgrounds, and use other properties like <code>shadow</code> for contrast.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/15.png" alt="Different colored cards on different color backgrounds">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>Richer visual environments solve for <a href="/articles/light-dark.html">foreground/background combos in light and dark settings</a>. <a href="https://comet.discoveryeducation.com/components/cards.html">Discovery Education’s Comet</a> system offers many backgrounds, often displayed in concert in a single page. Therefore, the system offered light and dark cards across each by way of mixins and tokens. Such cards create another level of hierarchy: text on component background on canvas background.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/16.png" alt="A card description on top of a dark background, annotated">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p><em>Takeaway</em>: Composability challenges your tolerance for visual complexity. Powerful, opinionated components tempt a system team to solve every combination in hopes of saving collaborator time. But complex, well modeled solutions invoke a higher cost of creation and maintenance. “Just enough” complexity is not always clear cut.</p>
+<hr>
+<h3 id="arranging-in-layouts">Arranging in Layouts</h3>
+<p>Separation, often via <em>margin</em>, also plays a role. A <code>card</code> layout can leverage a <code>layout_grid</code> or define its own to arrange many cards in a row or grid. While grid mechanics are straightforward, <code>card</code> layout raises more questions:</p>
+<ul>
+<li>How many cards can we have in a single row?</li>
+<li>Do cards rearrange based on responsive considerations?</li>
+<li>Does card width flex fluidly within a fluid grid? If so, how wide or narrow can a card be? Are there responsive rules that adjust elements inside a card?</li>
+<li>Should all cards in a row, or in an entire grid, always be the same height?</li>
+</ul>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/17.png" alt="Cards in a row with an overlaid columnar grid">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <hr>
+<h2 id="composing-behavior">Composing Behavior</h2>
+<p>The <code>card</code>’s primary purpose is as gateway to deeper detail somewhere else. A <code>card</code> also elevate subtle interactions, too. The former isn’t up for debate. The latter can lead to contentious discussions about “What’s clickable?”</p>
+<p>As an entryway, a <code>card</code>’s navigation is simplest when the entire <code>card</code> is clickable. In that case, the whole <code>card</code> can respond to cursor events like <em>:hover</em> and <em>:focus</em> to trigger an <em>image</em> or block to zoom, <em>title</em> to recolor, and shadow to darken. If a <code>card</code> won’t contain more specific interactions, making the entire block afford a single interaction simplifies these concerns.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/cards-and-composability-in-design-systems/18.png" alt="Cards annotated with a dashed border connoting the HTML box model">
+        </div>
+        <figcaption class="escom-article-figure__caption">Many elements that can potentially respond to events like click and hover</figcaption>
+    </figure>
+
+
+
+  <p>On the other hand, a composed component like <code>card</code> can include many interactive zones—<em>title</em>, <em>image</em>, <code>button</code>, <code>icon</code>, <code>link</code>— that impact both markup, style, and behavior. Do your engineer a favor and discuss these during design iteration and handoff, before changing the implementation becomes painful.</p>
+
+
+
+        </div>
+    </div>
+    
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Visual Style</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems.html">Color</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems.html">Typography</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems.html">Space</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems.html">Size</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/light-dark.html">Light &amp; Dark Modes</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems.html">Tokens</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems.html">Reference Designs</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height.html">Cropping Line Height</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components.html">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions.html">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples.html">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines.html">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components.html">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation.html">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components.html">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems.html">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy.html">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems.html">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems.html">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components.html">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles.html">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems.html">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans.html">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system.html">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems.html">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence.html">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems.html">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems.html">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems.html">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products.html">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems.html">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems.html">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems.html">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system.html">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products.html">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success.html">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach.html">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers.html">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries.html">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems.html">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams.html">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+    
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system.html">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems.html">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step.html">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems.html">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system.html">Contribution Criteria</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications.html">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems.html">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems.html">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system.html">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team.html">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s.html">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+                
+    
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop.html">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people.html">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity.html">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/scripts/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>
