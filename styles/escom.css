@@ -1,6 +1,8 @@
 @media screen and (min-width: 768px) {
   .esds-breadcrumb__crumb-section {
-    font-size: 24px; } }
+    font-size: 28px;
+    left: 3px;
+    top: -1px; } }
 
 .esds-link {
   color: #068194;
@@ -3865,6 +3867,11 @@ body {
 
 .escom-cta__action-button {
   text-transform: uppercase; }
+
+.escom-cta--components-publication .esds-row__inner {
+  max-width: 800px;
+  padding-left: 0;
+  padding-right: 0; }
 
 .escom-logo-grid {
   display: -webkit-box;
