@@ -21,27 +21,39 @@
         <link rel="stylesheet" href="/styles/escom.css">
 
         
-<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-<!-— facebook open graph tags -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.eightshapes.com/articles/defining-design-systems.html" />
-<meta property="og:title" content="Defining Design Systems" />
-<meta property="og:description" content="Getting to the Root of What Your System Really Is" />
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+  <!-— facebook open graph tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.eightshapes.com/articles/defining-design-systems.html" />
+  <meta property="og:title" content="Defining Design Systems" />
+  <meta property="og:description" content="Getting to the Root of What Your System Really Is" />
+  
+  <meta property="og:image" content="https://eightshapes.com//images/articles/defining-design-systems/masthead.png" />
+  
 
-<meta property="og:image" content="https://eightshapes.com//images/articles/defining-design-systems/masthead.png" />
+  <!-— twitter card tags additive with the og: tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" value="eightshapes.com" />
+  <meta name="twitter:title" value="Defining Design Systems" />
+  <meta name="twitter:description" value="Getting to the Root of What Your System Really Is" />
+  
+  <meta name="twitter:image" content="https://eightshapes.com//images/articles/defining-design-systems/masthead.png" />
+  
+  <meta name="twitter:url" value="https://www.eightshapes.com/articles/defining-design-systems.html" />
 
- 
-<!-— twitter card tags additive with the og: tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:domain" value="eightshapes.com" />
-<meta name="twitter:title" value="Defining Design Systems" />
-<meta name="twitter:description" value="Getting to the Root of What Your System Really Is" />
+  <!-- No Shadow DOM, so link directly to styles -->
+  <link rel="stylesheet" href="/styles/dependencies/esds-code-snippet.css"/>
 
-<meta name="twitter:image" content="https://eightshapes.com//images/articles/defining-design-systems/masthead.png" />
+  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+  <script type="text/javascript" src="/scripts/dependencies/custom-elements.min.js"></script>
 
-<meta name="twitter:url" value="https://www.eightshapes.com/articles/defining-design-systems.html" />
+  <!-- ESDS Doc components -->
+  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+  <script type="module" src="/scripts/dependencies/esds-code-snippet-web-component.js"></script>
 
+  <!-- A babel-compiled version of the component for IE11 -->
+  <script nomodule type="text/javascript" src="/scripts/dependencies/esds-code-snippet-legacy.js"></script>
 
     </head>
     <body class="">
@@ -114,7 +126,7 @@
 
     
         </div>
-    </div>    
+    </div>
     <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
         <div class="esds-row__inner">
             <img src="/images/articles/defining-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >

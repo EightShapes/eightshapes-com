@@ -21,27 +21,39 @@
         <link rel="stylesheet" href="/styles/escom.css">
 
         
-<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-<!-— facebook open graph tags -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.eightshapes.com/articles/versioning-design-systems.html" />
-<meta property="og:title" content="Versioning Design Systems" />
-<meta property="og:description" content="Communicating Change Clearly to People Using Systems" />
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+  <!-— facebook open graph tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.eightshapes.com/articles/versioning-design-systems.html" />
+  <meta property="og:title" content="Versioning Design Systems" />
+  <meta property="og:description" content="Communicating Change Clearly to People Using Systems" />
+  
+  <meta property="og:image" content="https://eightshapes.com//images/articles/versioning-design-systems/masthead.png" />
+  
 
-<meta property="og:image" content="https://eightshapes.com//images/articles/versioning-design-systems/masthead.png" />
+  <!-— twitter card tags additive with the og: tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" value="eightshapes.com" />
+  <meta name="twitter:title" value="Versioning Design Systems" />
+  <meta name="twitter:description" value="Communicating Change Clearly to People Using Systems" />
+  
+  <meta name="twitter:image" content="https://eightshapes.com//images/articles/versioning-design-systems/masthead.png" />
+  
+  <meta name="twitter:url" value="https://www.eightshapes.com/articles/versioning-design-systems.html" />
 
- 
-<!-— twitter card tags additive with the og: tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:domain" value="eightshapes.com" />
-<meta name="twitter:title" value="Versioning Design Systems" />
-<meta name="twitter:description" value="Communicating Change Clearly to People Using Systems" />
+  <!-- No Shadow DOM, so link directly to styles -->
+  <link rel="stylesheet" href="/styles/dependencies/esds-code-snippet.css"/>
 
-<meta name="twitter:image" content="https://eightshapes.com//images/articles/versioning-design-systems/masthead.png" />
+  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+  <script type="text/javascript" src="/scripts/dependencies/custom-elements.min.js"></script>
 
-<meta name="twitter:url" value="https://www.eightshapes.com/articles/versioning-design-systems.html" />
+  <!-- ESDS Doc components -->
+  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+  <script type="module" src="/scripts/dependencies/esds-code-snippet-web-component.js"></script>
 
+  <!-- A babel-compiled version of the component for IE11 -->
+  <script nomodule type="text/javascript" src="/scripts/dependencies/esds-code-snippet-legacy.js"></script>
 
     </head>
     <body class="">
@@ -114,7 +126,7 @@
 
     
         </div>
-    </div>    
+    </div>
     <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
         <div class="esds-row__inner">
             <img src="/images/articles/versioning-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
@@ -212,24 +224,38 @@
 <p>A design system team versions its library as a single, monolithic package or separately per feature, such as component by component.</p>
 <h3 id="versioning-the-library">Versioning the Library</h3>
 <p>A design system versioning by library applies the same version number to all system assets simultaneously, such as <code>1.4.0</code> applies across all components.</p>
-<pre>
-    library 1.4.0
-    ├─ visual style└─ components ├─ button
-    ├─ button group ├─ card
-    ├─ checkbox ├─ radio button └─ ...
-</pre>
+
+
+<esds-code-snippet copyable="false" preformatted max-height="none">
+  library 1.4.0
+  ├─ visual style
+  └─ components
+      ├─ button
+      ├─ button group
+      ├─ card
+      ├─ checkbox
+      ├─ radio button
+      └─ ...
+</esds-code-snippet>
+
 
 <p>If <em>any</em> component adds a backwards-compatible feature, then the entire library increments a minor version from <code>1.4.0</code> to <code>1.5.0</code>. Similarly, if <em>any</em> component has a breaking change, the entire library increments the major number from <code>1.4.0</code> to <code>2.0.0</code>.</p>
 <p>Versioning “by library” is the comment choice for teams delivering vanilla HTML &amp; CSS. Adopters typically integrate markup and style into their app and refer to a library’s collectively compiled CSS, such as <code>core.css</code>.</p>
 <p>You can’t include a <code>core.css</code> from 2 or more versions without CSS conflicts. The only way to do so is if the system supports namespacing CSS files <em>and</em> classes across versions. I’ve not seen a system do that. Instead, they all operate like this: Want button from library version <code>1.4.0</code>? Then <em>every</em> component on that page must use library version<code>1.4.0</code>. Otherwise, things may break.</p>
 <h3 id="versioning-by-component">Versioning By Component</h3>
 <p>Versioning “by component” enables adopting teams to mix and match button version <code>5.3.1</code> with form checkbox <code>3.1.0</code> and radio <code>1.1.0</code> in the same page.</p>
-<pre>
-    library
-    ├─ visual style└─ components ├─ button 5.3.1
-    ├─ button group 2.1.0 ├─ card 3.7.6
-    ├─ checkbox 3.1.0 ├─ radio button 1.1.0 └─ ...
-</pre>
+
+<esds-code-snippet copyable="false" preformatted max-height="none">
+  library
+    ├─ visual style
+    └─ components
+        ├─ button 5.3.1
+        ├─ button group 2.1.0
+        ├─ card 3.7.6
+        ├─ checkbox 3.1.0
+        ├─ radio button 1.1.0
+        └─ ...
+</esds-code-snippet>
 
 <p>Adopters need not worry about when each was released, since HTML markup, style and script is encapsulated and won’t conflict with other components types included in the the same page. This may or may not mean you can uses multiple versions of one component simultaneously. “Can I include button’s <code>1.7.0</code> in one part of the page along with button <code>1.2.0</code> and <code>2.5.0</code> elsewhere on the same page?&quot; Depends on how the library works.</p>
 <p>Versioning by component is consistent for teams using a <a href="/articles/design-system-release-cadence.html">continuous release model</a> and using a JavaScript framework (React, Vue, etc) or delivering web components. They’ll make much smaller changes more modularly more often.</p>
@@ -385,32 +411,33 @@
 <p>Should doc update every time the code releases? Absolutely. It must always reflect up-to-date examples and reference tables.</p>
 <p>Should the library release for every little doc change? No. A UX pattern or workflow description may be pages-long, yet have no code. Why block publishing until the next code drop and/or increment a library’s version to make a content change?</p>
 <p>Systems teams I lead take the mindset that the “doc site” (and its content) is a product consuming the system library. We separate the two codebases.</p>
-<pre>
-    /doc-site
-     /components ## Doc site-only components
+
+<esds-code-snippet copyable="false" preformatted max-height="none">
+  /doc-site
+   /components ## Doc site-only components
      /code-example-pair
      /do-dont
      /tint-stack
-     /docs ## Doc site content
+   /docs ## Doc site content
      /about
      /components
      /contribute
      /getting-started
      /ux-patterns
      /visual-style
-</pre>
-<pre>
-    /library
-     /style ## Library core style
+</esds-code-snippet>
+<esds-code-snippet copyable="false" preformatted max-height="none">
+  /library
+   /style ## Library core style
      /color
      /space
      /typography
-     /components ## Library & testing HTML, CSS, & JS
+   /components ## Library & testing HTML, CSS, & JS
      /card
      /button
      /icon
      /radio\_button
-</pre>
+</esds-code-snippet>
 
 <p>I’m also unwilling to cede another tradeoff: diminished non-developer participation <em>and</em> content serving wider audiences. The more doc is woven into complex code, the less flexible your content model and the less capable your other authors—designers, content strategists, accessibility specialists—are in editing or expanding it. A tight coupling of code and doc could also slow down how you publish a guideline in response to a community resolving a standard in critique.</p>
 <p><em>Takeaway</em>: Consider decoupling documentation versions from library code. This separation can trigger useful yet indistinct workflows for each.</p>

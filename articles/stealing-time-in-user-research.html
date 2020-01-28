@@ -24,6 +24,19 @@
 <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
 
+<!-- No Shadow DOM, so link directly to styles -->
+<link rel="stylesheet" href="/styles/dependencies/esds-code-snippet.css"/>
+
+<!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+<script type="text/javascript" src="/scripts/dependencies/custom-elements.min.js"></script>
+
+<!-- ESDS Doc components -->
+<!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+<script type="module" src="/scripts/dependencies/esds-code-snippet-web-component.js"></script>
+
+<!-- A babel-compiled version of the component for IE11 -->
+<script nomodule type="text/javascript" src="/scripts/dependencies/esds-code-snippet-legacy.js"></script>
+
     </head>
     <body class="">
         
