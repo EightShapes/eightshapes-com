@@ -453,6 +453,9 @@
     .esds-typography-sink--body-text-s {
       font-size: 14.4px; } }
 
+.esds-list__item--tight {
+  margin: 0 0 4px; }
+
 body {
   background-color: #262626;
   margin: 0;
@@ -854,6 +857,11 @@ body {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 10%;
               flex: 0 0 10%; } }
+  @media screen and (min-width: 768px) {
+    .escom-timeline--agenda-sections .escom-timeline__heading {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 40%;
+              flex: 0 0 40%; } }
 
 .escom-timeline__content-right,
 .escom-timeline__content-bottom {
