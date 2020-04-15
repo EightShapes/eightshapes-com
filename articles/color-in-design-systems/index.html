@@ -1,0 +1,1642 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        
+            <title>Eightshapes > @components > Color in Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/color-in-design-systems/" />
+            <meta property="og:title" content="Color in Design Systems" />
+            <meta property="og:description" content="16 Tips for Setting Up a System That Endures" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Color in Design Systems" />
+            <meta name="twitter:description" value="16 Tips for Setting Up a System That Endures" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/color-in-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+    </head>
+    <body class="">
+        
+
+
+
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 4/13/2016 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        11 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Color in Design Systems</h1>
+            
+            <h2 class="escom-article__deck">16 Tips for Setting Up a System That Endures</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/color-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>I’m no color expert. Far from, actually. Throughout my career, I’ve depended on visual designers better than myself to produce an engaging palette and apply it harmoniously across a UI.</p>
+<p>Yet, as a systems designer, I’m often in the position to provoke and validate color decisions as a system takes shape. Here’s a 16 lessons I’ve learned while stabilizing a <strong>primary palette</strong> , <strong>tint and shade choices</strong> , <strong>secondary palettes</strong> , and solving for <strong>accessible</strong>  <strong>contrast</strong>.</p>
+<hr>
+<h2>Primary Palette</h2>
+<p>By primary, we’re talking colors used everywhere including your <strong>brand colors</strong> , <strong>neutrals</strong> , and a typically <strong>interactive</strong> digital blue.</p>
+<h3>#1. Stabilize Brand Colors Quickly</h3>
+<p>︎Every organization has one, two, or no more than a few core brand colors. THE red. THE blue. THE orange. Settle on them. Even if reasonably set up with a color variable or two, nothing signals a design system team that can’t get their act together than constantly changing primary colors.</p>
+<p><em>Takeaway</em>: Decide your essential brand colors early, because they spread widely, quickly.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/2.png&quot; alt=&quot;Primary red, white and blue colors&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#2. Involve Brand (If You Alter a Brand Color)</h3>
+<p>Is brand blue a bit dull? Can’t resist the urge to liven it up? Nothing poisons early collaboration more than a casual “We saturated the brand orange for web” followed by brand reacting with “You did <em>what</em>?” Oh the sacrilege!</p>
+<p><em>Takeaway</em>: Brand colors are the brand team’s territory. So discuss adjustments with them and defer to their judgment as needed.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/3.png&quot; alt=&quot;Alternative orange tints for brand versus digital display&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#3. Drop the Neutral Neutrals</h3>
+<p>From dark-as-night charcoal to fluffy light gray, neutrals provide essential UI scaffolding. Loading a system with neutrals, even a few, risks giving teams access to muddy colors. They can also lead to “wireframey” designs. And, neither dark nor light type has sufficiently accessible contrast on a medium gray background.</p>
+<p><em>Takeaway</em>: Provide a few light grays and a few dark grays to achieve useful contrast, but don’t get wishy washy wireframey. Consider avoiding medium grays in between.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/4.png&quot; alt=&quot;Spectrum of neutral tints, with medium neutrals as an accessibility challenge to avoid&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#4. Go “Digital Blue.” Everybody Else Does.</h3>
+<p>My past five design systems settled on a saturated blue as a default button and link color. Links have always been blue, perhaps since the dawn of the first browser. This “Digital” blue, a utility color for links and clickable items, is essential in any core palette.</p>
+<p><em>Takeaway</em>: When (not if ;) ) you go with your “Digital Blue,” choose an accessible one and make sure it doesn’t clash with the brand’s own blue, or red, orange, purple, or green.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/5.png&quot; alt=&quot;Blue used in links and buttons&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h2>Tints &amp; Shades Per Color</h2>
+<p>You can’t have just a few colors and call it a day, right? System users often need to tune a color choice across a range, reuse with ease, and know their boundaries.</p>
+<h3>#5. Stack the Tint &amp; Shade Range, Per Color</h3>
+<p>Color palette display patterns long predate the web. Yet I still love me a compactly arranged tint stack. They can be just…gorgeous. The best stacks visualize more than just a color, combining its name with HEX codes, code variables, and other indicators (such as prohibiting overlaid type). A quick scan is all you need.</p>
+<p><em>Takeaway</em>: Stack available colors in each hue, and treat the stack as a visualization to include important details compactly.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/6.png&quot; alt=&quot;Tint stacks of blue and orange from Google Material design&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;a href=&quot;https://www.google.com/design/spec/style/color.html&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;Material Design&lt;/a&gt;’s Indigo and Deep Orange&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#6. Name Tints &amp; Shades by Lightness</h3>
+<p>We’ve all been there. A month into the system, the neutrals <code>$color-gray-1</code>, <code>$color-gray-2</code>, ... , <code>$color-gray-7</code> — are stable. And then, in a stroke, you’ve got another tint to add stuck between -1 and -2. That numbering system stinks.</p>
+<p><em>Takeaway</em>: Scale color names between 0 and 100 based on HSL’s lightness, such as <code>$color-gray-05</code> and <code>$color-gray-92</code>. The scale reflects a familiar range from dark to light, allows for injecting new options between, and heck if I won’t remember <code>$color-gray-93</code> until we retire it later.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/7.png&quot; alt=&quot;Tint stacks of gray named poorly (enumerated) and well (using lightness)&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#7. Limit Tint &amp; Shade Quantity</h3>
+<p>At the core of a good system is choice without endless options, a stable aesthetic to serve as a starting point. Odds are, you aren’t <a href="https://www.google.com/design/spec/style/color.html">Material Design</a>, intended to serve countless products. In most cases, a design system need not offer boundless choices. The more choices you provide, the tougher it’ll be to control harmonic combinations and a consistent feel across applications.</p>
+<p><em>Takeaway</em>: Offer a handful of options and avoid tedious variety. Empower system users with just enough choice: more than a single option, but only up to a few intentional choices.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/8.png&quot; alt=&quot;Two orange tint stacks, one from Google Material with many and another with only a few&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#8. Tell Me How To Transform: Hand-Pick or Functionally</h3>
+<p>Modern tools like SASS and Stylus offer transformation functions like darken and lighten to shift a color by a brightness percentage. These handy tools enable a you to alter a color for subtle contrasts like a hovered button or tiered navigation.</p>
+<p>But transforms can be troublesome: carefully crafted base colors can become inaccessible alternatives (see below), a page’s overall palette can muddy, or a “5% system” that works on moderately bright colors yields insufficient contrast for a very light or dark case.</p>
+<p><em>Takeaway</em>: Deliberately allow — or avoid — color transformations in your system. If you endorse the practice, then offer examples of when and how to do it effectively in your system, such as 5–10% for moderately bright cases and 10–20% in more extreme cases. If transformations should be avoided , document that succinctly.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/9.png&quot; alt=&quot;Two orange tint stacks annotated for handpicked and functionally transformed colors, respectively&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h2>Secondary Palettes</h2>
+<p>Beyond the brand colors and their variants, well-considered color systems array the broader variety of colors reserved for varied purposes.</p>
+<h3>#9. Define Meaningful Sets Like Feedback Colors</h3>
+<p>Most systems reserve a certain red for errors, green for success, yellow for warning, and (possibly a lighter sky) blue for informational messages. Feedback color is critical, because it’s positioned at the top of the page interacting with other key components and/or encountered as a result of an unwelcome circumstance. Without system guidance, such messages become embedded in product code, the result of product teams solving a challenge quickly and moving on.</p>
+<p><em>Takeaway</em>: Explore and define the standard feedback colors and other relevant sets to ensure that colors fit harmoniously rather wedging them in later or having teammates recall “I just grabbed it from Google.”</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/10.png&quot; alt=&quot;Green, yellow, red and blue colors as success, warning, error and informational&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Typical feedback colors: success, warning, error and informational&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#10. Illustrate Theme Variety</h3>
+<p>In some systems, color use is customized per product, section, or brand. Often, this may be a result of relating a master brand (think, Marriott International) to its sub-brands (think Courtyard Hotels, Ritz Carlton, and Moxy Hotels). Or it’s a prefab themes like <em>Ambient Warmth</em> and <em>Frozen Blue</em>. Maybe the user is complete control, and you need to illustrate the breadth of (all the havoc of) what they can do.</p>
+<p><em>Takeaway</em>: Reveal the range of themes available compactly, and set boundaries around allowable theme colors in certain contexts.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/11.png&quot; alt=&quot;A variety of theme colors for Marriott hotels&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Theme colors for multiple Marriott.com hotels, derived from &lt;a href=&quot;http://www.marriott.com/hotels/travel/wasrw-renaissance-washington-dc-dupont-circle-hotel/&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;product pages&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#11. Define <em>How</em> Theming Works</h3>
+<p>It’s not enough to simply say “Go ahead and theme it!” A theme color may apply to predictable accents throughout a UI such as button <em>background-color</em>, active tab <em>background-color</em>, or a primary navigation’s thick <em>border-top</em>. Just as important, theme colors may be forbidden from altering other bits, such as <em>long form type</em> or — yikes! — a <em>link color</em> that ends up invisible.</p>
+<p><em>Takeaway:</em> Identify how theming works, particularly via reference to specific UI element properties in play. Just as important, articulate which — if not most — elements are off limits.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/12.png&quot; alt=&quot;Theming color applied to a background, button and link&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#12. Avoid Guiding on Color-Mixing Until (At Least) Dust Settles</h3>
+<p>One of my favorite all time design system tools is <a href="http://www.getmdl.io/customize/index.html">Google’s MDL Color Customizer</a>, which enables users to combine primary and secondary UI colors effectively. It’s so easy, and the outcome so helpful. Yet, the system teams I work with either don’t want to provide this kind of flexibility or lack the time and care necessary to solve such a combinatoric challenge.</p>
+<p><em>Takeaway</em>: Avoid the rabbit hole of solving for a vast array of color combinations unless it’s a core system value. In most cases, system users will pair up their own combinations or benefit from a tool more dedicated to doing just that. Help them propagate their choice rather than solving for every combination they may consider. That experimentation is their job.</p>
+<p>Serve users of your system by making it efficient to <em>propagate </em>their choice through a product, rather than <em>making the choice</em> for them.</p>
+<hr>
+<h2>Contrast &amp; Accessibility</h2>
+<p>Solving for accessible color contrast should a core practice of setting up any digital color system from the get go. However, design can be tumultuous place, and teams can lose sometimes. Or some members don’t know about accessibility. Or they simply don’t prioritize it.</p>
+<p>A systems team can engrain accessible practices into a workflow to provoke and spread values in accessibility broadly across an enterprise.</p>
+<h3>#13. Check Contrast Early &amp; Ritually</h3>
+<p>It happens often: a few weeks or days before a product — or design system — launch, <em>finally</em> somebody notices. The design team hasn’t taken necessary care to ensure the primary and secondary color palette is being applied in a way to meet WCAG 2.0 color contrast of 3.0 (for large, heavier type) or 4.5 (for standard type). So designers — and then, their developers — scramble to determine fixes and inject it into the code.</p>
+<p><em>Takeaway</em>: Any system designer responsible for color must be familiar with WCAG 2.0 rules, have a tool (like Tanaguru) to test color pairs, and incorporate the practice into color selection.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/13.png&quot; alt=&quot;A screenshot of the Tanaguru color contrast finder&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;a href=&quot;http://contrast-finder.tanaguru.com/&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;Tanaguru&lt;/a&gt;, one of many accessibility calculators online&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#14. Explore Accessible Color Choices Across Ranges</h3>
+<p>A drawback of WCAG guidelines is its stark threshold: a color pair passes or fails. This leaves designers yearning for more, but worse leaves stakeholders flummoxed at how bad the color pair fails and how much it needs to change.</p>
+<p>Conversation quickens when we reveal a spectrum of choices. There are a bevy of tools in the design community for visualizing the contrast between foreground and background colors, including:</p>
+<ul>
+<li><a href="webaim.org/resources/contrastchecker/">webaim.org/resources/contrastchecker/</a></li>
+<li><a href="contrast-finder.tanaguru.com/">contrast-finder.tanaguru.com/</a></li>
+<li><a href="snook.ca/technical/colour_contrast/colour.html">snook.ca/technical/colour_contrast/- colour.html</a></li>
+<li><a href="www.checkmycolours.com/">www.checkmycolours.com/</a></li>
+<li><a href="https://usecontrast.com/">usecontrast.com/</a> (Mac app)</li>
+<li><a href="http://www.brandwood.com/a11y/">www.brandwood.com/a11y/</a> (Text on images)</li>
+<li><a href="http://www.webaxe.org/color-contrast-tools/">www.webaxe.org/color-contrast-tools/</a > (Comprehensive list of many tools)</li>
+</ul>
+<p>We even built our own tool at EightShapes called the <a href="http://contrast-grid.eightshapes.com/">Contrast Grid</a>. This tool enables you to easily input a range of HEX codes, name them, and contrast every combination (even distinct colors for foreground and background).</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/14.png&quot; alt=&quot;Interactive colors displayed across a range of neutral backgrounds&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Explore foreground and background color contrast across ranges using &lt;a href=&quot;http://contrast-grid.eightshapes.com/&quot;&gt;Contrast Grid&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>This quick visualization isn't just efficient for experimenting and choosing the right color, but also communicating contrast ranges to those less familiar with contrast subtleties. Recently, we're really encouraged about how such exploratory tools are being integrated directly into design tools, too.</p>
+<p><em>Takeaway</em>: When exploring accessible color contrast, show a range of choices to help a team select a color that passes the test.</p>
+<hr>
+<h3>#15. Solve the Reverse Light on Dark and Dark on Light</h3>
+<p>When creating a system, it’s up to the systems designer to be mindful of and solve for the entire range of choices on offer. It’s not enough to just test for accessibility problems as they arise. Instead, a color palette should be thoroughly reviewed prior to publishing a system for reuse.</p>
+<p>This is especially true for reverse color treatments. It’s very common for a system to default to dark text on a light background. However, most find themselves reversing color treatments, whether a black and white on light and dark neutrals or tints of another primary or secondary color.</p>
+<p><em>Takeaway:</em> Solve for and recommend reversed pairings to adopt or avoid.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/color-in-design-systems/15.png&quot; alt=&quot;Link colors explored on light and dark neutral backgrounds&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;A table of calculated contrast (using a SASS function) between neutral backgrounds and interactive blue alternatives&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>#16. Use Color to Provoke Broader Accessibility Awareness</h3>
+<p>Color is fundamental to a system, and accessible color contrast is fundamental to color. This injects accessibility smack dab into the middle of a system’s formation. People that matter are paying attention: brand managers, design leads, developers, and execs. What a wonderful opportunity to use color to open a door to the broader array of accessibility considerations.</p>
+<p><em>Takeaway</em>: Seize the opportunity to advocate for accessibility. Always be probing a collaborator’s knowledge of accessibility (or lack thereof) and educate and advocate all you can.</p>
+<hr>
+<h2>Revision History</h2>
+<p><strong>2020-01-24</strong>: Revised color contrast section to highlight EightShapes contrast grid (including image), list other relevant contrast tools.</p>
+
+    </div>
+</div>
+
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

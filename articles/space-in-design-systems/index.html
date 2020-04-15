@@ -1,0 +1,1681 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        
+            <title>Eightshapes > @components > Space in Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/space-in-design-systems/" />
+            <meta property="og:title" content="Space in Design Systems" />
+            <meta property="og:description" content="From Basics to Expanded Concepts to Apply Space with Intent" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Space in Design Systems" />
+            <meta name="twitter:description" value="From Basics to Expanded Concepts to Apply Space with Intent" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/space-in-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+    </head>
+    <body class="">
+        
+
+
+
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 9/25/2016 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        11 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Space in Design Systems</h1>
+            
+            <h2 class="escom-article__deck">From Basics to Expanded Concepts to Apply Space with Intent</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/space-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>I’ve long referred to <a href="/articles/color-in-design-systems">Color</a>, Type and Icons as the “Big 3” of a system’s visual language. All UI components — from <a href="/articles/buttons-in-design-systems">Buttons</a> on up — are built with them. But I left something out. Space, our final frontier.</p>
+<h3>Space Rivals Color</h3>
+<p>Space is everywhere. CSS uses properties like <em>padding</em>, <em>margin</em>, and absolute positioning’s <em>left</em>, <em>right</em>, <em>top</em> and <em>bottom</em> to separate objects. Across five libraries (Bootstrap, Salesforce Lightning, Foundation, a previous project, and a current project), I compared occurrence of these <em>space</em> properties relative to property groups of <em>color</em>, <em>size</em>, <em>type</em>, <em>layout</em> and more.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/2.png&quot; alt=&quot;Bar chart of CSS properties by frequency of use&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Space rivals color in frequency of use within a library’s style rules&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>After removing effects (“zeroed” values like <em>:0;</em> and reserved terms like <em>transparent</em> or <em>auto</em>) where CSS already offers us a system for decisions, <em>space</em> rules appeared more than anything except <em>color</em>. Nothing else — not <em>type</em>, <em>size</em>, <em>layout</em> — was even close. There’s so much spatial complexity built into our libraries, let alone our products!</p>
+<h3>Space Divides Us</h3>
+<p>Space epitomizes the “I design this way, you build that way” gap between design and dev. We’ve long lamented the red-lined specs sprinkled over our designs. It never feels worth it. Yet they persist, uninformed by our product’s finished material: HTML’s box model.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/3.png&quot; alt=&quot;Card annotated as a box model for spacing&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Costs are huge: annotating, translating, discussing, visually scrubbing during QA. All that work … for something still not good enough. Thus space exacts an emotional toll, too.</p>
+<h3>Space Concepts Are Primitive</h3>
+<p>We could weave more intentional spatial concepts through design, code, and conversation. But we don’t. We just use T-shirt sizes and call it a day. We can do better. We can replace red-lined, red-faced rage to inset, squish, stretch, and stack our way towards a future of spatial clarity.</p>
+<p>With that in mind, here’s fundamentals, an expanded vocabulary, and further experiences I’ve had when applying space to systems work.</p>
+<hr>
+<h2>Space Fundamentals</h2>
+<h3>Grid ≠ Space. Grid is a Component, Using Space.</h3>
+<p>Grids are rich with spatial decisions for columns, gutters, outer margins, and responsive nuance.Teams tackle grids early so users can easily make a page. Unfortunately, that’s often when spatial conversations stop.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/4.png&quot; alt=&quot;Grid of margins and gutters&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Grid conventions for margin (blue) and gutter (lime green)&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>A grid isn’t a complete spatial system. A grid is a component that <em>uses</em> space, just like every other component. A grid feels different. It’s invisible, comes early, and only does space. But there’s more to space than grid.</p>
+<p><em>Takeaway</em>: Introduce spatial convention with a grid, but don’t stop there. Align a grid’s margins, gutters, and column values with deeper spatial concepts woven through an entire component library.</p>
+<hr>
+<h3>Set a Memorable Base Number &amp; Expectations</h3>
+<p>Teams setup a memorable, even magical base number to ground all other spatial values. Some teams prefer base 10, because of how we count (due to our ten fingers, by the way). I’ve even seen a team use a base 6 — with helpful factors of 2 and 3 — to make way for an uber-flexible array of 3s, 4s, 6s, 8s, 9s, 12s, 15s, 16s, 18s, 21s, 24s, 32s, and more. Stop the madness!</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/5.png&quot; alt=&quot;Spacing system, with base 6&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;A set of spacing options, based on 6 but supplying any multiple of 3s &amp;amp; 2s. Really? All these options?&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Most systems I’ve worked use 16. It’s a good default font size. It’s a factor of all screen resolutions (320, 768, 1024). And it provides memorable multiples greater (32, 64, …) and factors less (8, 4, 2) than where it starts.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/6.png&quot; alt=&quot;Spacing system, with base 16&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;A set of more limited spatial options, based on 16&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Ground your spatial system’s range with a memorable base number, and limit expectations on how it’s used.</p>
+<hr>
+<h3>Scale Options Nonlinearly</h3>
+<p>With an established base, teams can still slip into random steps (12, 14, 18, 22, 24, 28, 30, 32, …). To prevent that, others use a linear scale (4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, …) where each step is a fixed increment. To me, either result is unpredictably used, offering too many choices too close together. When do I use 24 or 28? I dunno.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/7.png&quot; alt=&quot;Space chart of consistent steps every four pixels&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Linear progression from 4 to 32. Really, you need all these options?&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>An alternative is non-linear. Options include the <a href="https://en.wikipedia.org/wiki/Golden_ratio">golden ratio</a>, <a href="http://zurb.com/word/modular-scale">modular scale</a>, or the similar <a href="https://en.wikipedia.org/wiki/Geometric_progression">geometric progression</a> that could double each step. Starting from the base, we’ll go in both directions to stops smaller (16, 8, 4, 2) and larger (16, 32, 64, and… that’s about it) on the scale.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/8.png&quot; alt=&quot;Space chart of stops increasing geometrically&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Geometric progression, doubling each step. %s represent proportional use in our library.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Consider a geometric progression or something similarly nonlinear. You might experience occasional tensions to add a 24 between 16 and 32. However, in my experience, such moments are rare and rarely justify breaking the simple system.</p>
+<hr>
+<h3>Name Each Step for Memorable, Accurate Reuse</h3>
+<p>I love Gmail’s Compact, Cozy, Comfortable space toggle. So when we built our space system, I suggested we use those labels in our work. Immediately, a teammate challenged me: “What do we call other steps?” My spartan, teeny, and luxurious options didn’t pass muster.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/9.png&quot; alt=&quot;Space chart illustratign naming options per stop on the scale&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;A descriptive label for each stop? Be careful.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>So we did what we always do: use a t-shirt size scale. Medium corresponds to default and S, XS, L, XL and — if necessary — XXS and XXL are other options. It’s what most libraries (Bootstrap, Lightning, etc) do.</p>
+<p><em>Takeaway</em>: Name space options simply, using a scale like t-shirt sizes to create a language people can remember and apply accurately. If you try more descriptive labels, be prepared for teammates to respond “Small, medium, large, please.”</p>
+<hr>
+<p>I’ve reviewed many libraries and talked with many designers. Simple conventions of base numbers and a named scale are where conversations usually end. Even though these few options are simple, using space still felt so…random. I needed more.</p>
+<hr>
+<h2>Extending a Vocabulary for Space</h2>
+<p>In reviewing our emerging work, there aren’t many distinct intents for applying space. For example, let’s inspect my favorite component: the card.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/10.png&quot; alt=&quot;Card with image, title, description, tags and button&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>As a front-end developer, I envision all the boxes of elements that fit elements together.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/11.png&quot; alt=&quot;Same card, with overlaid box model as dashed lines&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>The card provides a useful illustration of many spatial concept we use: insetting content from an edge, varying an inset’s shape, spacing items inline, and stacking items <em>within</em> and <em>between</em> a component.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/12.png&quot; alt=&quot;Same card with annotated space concepts of inset, stack and more&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>These concepts — inset, inset squish, inset stretch, stack, inline, and grid — cover the vast majority of our library’s CSS rules for space: <em>padding</em>, <em>margin</em>, <em>left</em>, <em>right</em>, <em>top</em>, and <em>bottom</em>. These concepts also enhance how each atomic is self-contained, improving <a href="https://en.wikipedia.org/wiki/Composability">composability</a>.</p>
+<hr>
+<h3>Concept 1: (Square) Inset</h3>
+<p>An inset offers indents content on all four sides like the matte of the framed photo on a wall. It’s use is widespread, across many components at varying sizes, whether our 3-Up module and block messages medium feel, extra compact pills, or spacious footers and mastheads.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/13.png&quot; alt=&quot;Inset spacing overlaid on card, message, icon and tag&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>The default is also a useful starting point for mobile first design, expanding to large at a relevant viewport width like 768px.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/14.png&quot; alt=&quot;Inset spacing overlaid on alerts&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>Concept 2: Squish Inset</h3>
+<p>A squished inset reduces space top and bottom, in our case by 50%. While less common than its squared counterpart, a squish occurred frequently in elements (like a button) and cell-like containers like a data table or list item.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/15.png&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Squished inset in buttons, data table cells, and list group items&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>Concept 3: Stretch Inset</h3>
+<p>Contrasted with a button or pill’s squish, we found ourselves vertically stretching the insets of textboxes, textareas, and other form elements.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/16.png&quot; alt=&quot;Stretched inset applied to text input and textarea&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>Concept 4: Stack</h3>
+<p>With all due respect to horizontally scrolled UI, the overwhelming majority scroll vertically. And that means one thing: we stack things. We stack message on heading on data table. We stack modules in rails. We stack copy, pills &amp; toolbars, all in a card, each in a grid. Heck, infinite scroll means infinite stack! We stack, stack, stack.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/17.png&quot; alt=&quot;Stacked spacing example, applied to a card and text inputs and their labels&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>Concept 5: Inline</h3>
+<p>We also arrange objects inline, wrapping as they flow like text from the left or right. Such objects — pills, tags, breadcrumbs, and more — may stand alone or stack and mingle with other objects.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/18.png&quot; alt=&quot;Inline spacing annotated to tags, breadcrumbs and footer links&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3>Concept 6: Grid</h3>
+<p>Ah, save the grid for last? As spacing stabilizes, we find ourselves revisiting grid margins and gutters, aligning these spaces with our magical starting point and other uses.</p>
+<hr>
+<p>So, as applied to a Card component, your styled padding and margin may look something like:</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/19.png&quot; alt=&quot;Notional application of insets, stacks, and inlines (or generic spacers — ack!) onto a Card&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Notional application of insets, stacks, and inlines (or generic spacers — ack!) onto a Card&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h2>What We Learned</h2>
+<p>Using space concepts requires us to adapt to something new. On my team, it took a day for light skepticism to give way to embracing the new model.</p>
+<h3>Teach a System of Space Visually</h3>
+<p>Most collaborators can’t <em>see</em> space, a primary reason it’s so arbitrarily applied. But now we’ve got a system: a limited number of concepts, each offering a limited range of options.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/20.png&quot; alt=&quot;Space concepts in a dense diagram&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;A visual reference, akin to a cheatsheet, of spatial concepts&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Teach your spatial concepts using a tight doc diagram or cheat sheet. Such references quicken how we grasp, apply, and sustain the concepts through design and code.</p>
+<hr>
+<h3>Offer Simple Helpers, and Monitor Use</h3>
+<p>Don’t be foolish. These six models don’t solve everything. We still adjusted a <em>margin-bottom</em> here and <em>left</em> there from time to time. So, there’s justification for following more intentional space options with more generic alternatives (like <em>$space-m</em>).</p>
+<p><em>Takeaway</em>: Provide generic options, use them sparingly, and expect product teams to use them. When they arise in a critique or pull request, educate teammates on more specific concepts like <em>inset</em> or <em>stack</em>.</p>
+<hr>
+<h3>Avoid Variable Names with Padding or Margin</h3>
+<p>When you introduce something more complicated, others justifiably advocate for something familiar, like “Why can’t we use <em>padding</em> and <em>margin</em> in our variable names?” In this case, 2+ space concepts using padding, and those concepts can be applied via <em>left</em> and <em>right</em> properties too. <em>margin</em> is used to stack, grid, and space inline. Plus, how about non-web platforms that don’t use HTML?</p>
+<p><em>Takeaway</em>: Tease apart concepts from property names. They are many to one and limit reuse to a single platform.</p>
+<hr>
+<h3>Solve Collisions like Line Height Systematically</h3>
+<p>Simple inset <em>padding</em> and stack <em>margin</em> rules collided with a long-known spatial adversary: <em>line-height</em>. This interaction increments space unpredictably, adding a pixel above and below our simpler <em>inset-default</em> of 16px.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/21.png&quot; alt=&quot;Comparative example of a card design before and after applying a line height adjustment&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>However, we followed an idea’s spark (@kevinmpowell’s “Let’s negative margin space using pseudo elements! But how much?”) with some math (I can use my college degree!). The result was a <a href="/articles/cropping-away-negative-impacts-of-line-height">mixin formula combining type size and line-height to collapse space above and below colliding objects</a>.</p>
+<p><em>Takeaway</em>: Don’t give up on systematic clarity because of exceptions. Try to solve them. If you can overcome such nuances, even with a bit of CSS trickery, you can persist a simpler concept everyone can stick to.</p>
+<hr>
+<h3>Use Spatial Concepts to Dial Density</h3>
+<p>With concepts like inset, stack, and grid, you can tune the dials of density with aplomb. Search a repository, find _inset_s and _stack_s of interest, and extend or override those rules to fine tune display density.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/space-in-design-systems/22.png&quot; alt=&quot;Comparative example of spacing with looser and denser spacing applied using the same model&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;On the left, default spacing. On the right, tuning by increasing just the inset by 50%.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: You can tune spatial density even with a barely-beyond primitive set of options. Without them, density control is a dream. With them, you can gradually build towards a powerful engine to find, adjust, and tune space with great intent and less risk.</p>
+
+    </div>
+</div>
+
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

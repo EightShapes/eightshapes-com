@@ -1,0 +1,1584 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        <title>EightShapes &gt; @components &gt; Picking Parts, Products and People</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+
+        
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+  <!-— facebook open graph tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.eightshapes.com/articles/picking-parts-products-people" />
+  <meta property="og:title" content="Picking Parts, Products and People" />
+  <meta property="og:description" content="A Team Activity to Start a Design System" />
+  
+  <meta property="og:image" content="https://eightshapes.com//images/articles/picking-parts-products-people/masthead.png" />
+  
+
+  <!-— twitter card tags additive with the og: tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" value="eightshapes.com" />
+  <meta name="twitter:title" value="Picking Parts, Products and People" />
+  <meta name="twitter:description" value="A Team Activity to Start a Design System" />
+  
+  <meta name="twitter:image" content="https://eightshapes.com//images/articles/picking-parts-products-people/masthead.png" />
+  
+  <meta name="twitter:url" value="https://www.eightshapes.com/articles/picking-parts-products-people" />
+
+  <!-- No Shadow DOM, so link directly to styles -->
+  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+  <!-- ESDS Doc components -->
+  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+  <!-- A babel-compiled version of the component for IE11 -->
+  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+            <div class="escom-article__author-row">
+                <div class="escom-article__author-avatar"
+                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+                </div>
+                <div class="escom-article__author-text">
+                    <p class="escom-article__author">
+                        <a href="/nathan-curtis">Nathan Curtis</a>
+                    </p>
+                    <p class="escom-article__author-role">
+                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                    </p>
+                    <p>
+                        <span class="escom-article__published-date">
+                            Originally published 3/22/2016 •
+                        </span>
+                        <span class="escom-article__read-duration">
+                            6min
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="escom-article__title-row">
+                <h1 class="escom-article__title">Picking Parts, Products and People</h1>
+                
+                <h2 class="escom-article__deck">A Team Activity to Start a Design System</h2>
+                
+            </div>
+
+    
+        </div>
+    </div>
+    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+        <div class="esds-row__inner">
+            <img src="/images/articles/picking-parts-products-people/masthead.png" alt="Masthead" class="escom-article__masthead" >
+        </div>
+    </div>
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+    
+
+    
+  <p>Teams can be awed by the scale and spread visible in finished systems like <a href="https://design.google.com/resources/">Material Design</a> or <a href="http://lightningdesignsystem.com">Lightning Design System</a>. Systems can be both incredibly broad and deep once fully formed, if they ever get that far. Faced with such scale, getting started can be quite daunting or avoided altogether.</p>
+<p>I’ve had success leading small teams through a quick, two-stage activity that, over ~60 minutes, bridges from exploring the myriad Parts of a system to considering People involved and Products it’ll impact. The activity is grounded by participants completing and sharing work of a two-page worksheet (download the <a href="http://eightshapes.com/images/documents/PickingParts-Products-People.pdf">PDF</a> or <a href="http://eightshapes.com/images/documents/PickingParts-Products-People.indd">INDD</a> source).</p>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/picking-parts-products-people/2.png" alt="Screenshot of picking parts worksheet">
+        </div>
+        <figcaption class="escom-article-figure__caption">Two page worksheet, starting with Parts before proceeding to prioritizing Parts, Products and People</figcaption>
+    </figure>
+
+
+
+  <p>The moderator — often, a design system lead — walks away with well-structure data to inform system strategy and priorities.</p>
+<p>Equally important, however, is how the activity effectively reveals a lack of alignment and personal biases across a team. By recognizing these gaps and discontinuities early, a team can draw boundaries around and break barriers of what the system can become sooner and later.</p>
+<p>Here’s how the activity works.</p>
+<hr>
+<h2 id="stage-1-pick-the-parts">Stage 1: Pick the Parts</h2>
+<p>The first stage orients the group around tangible parts. Each person identifies what matters—and doesn’t matter—to them.</p>
+<h3 id="the-protocol">The Protocol</h3>
+<p>Distribute the first page and briefly <strong>introduce the categories</strong> and kinds of parts they’ll see (visual language, elements, components, etc). Then instruct participants to:</p>
+<ol>
+<li>Draw a thick line or X through <strong>irrelevant categories.</strong></li>
+<li>Circle the labels of up to the <strong>5 most-important categories</strong> (such as Design Language, Patterns, or Editorial) for your system.</li>
+<li>Check up to <strong>25 important parts</strong> for your system. Each item (Typography) and sub-item (Web Fonts) is a <em>separate</em> check, and checking an item does not imply all subitems are checked.</li>
+<li>Of the 25 checked, circle labels of up to the <strong>10 most-important parts.</strong></li>
+</ol>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/picking-parts-products-people/3.png" alt="Photograph of completed worksheets">
+        </div>
+        <figcaption class="escom-article-figure__caption">Parts worksheets, by participant, arranged to compare and discuss</figcaption>
+    </figure>
+
+
+
+  <p>As participants finish, arrange all worksheets on a table. Let them scan the results and hunt for patterns, and then begin the discussion.</p>
+<h3 id="the-discussion">The Discussion</h3>
+<p>Foster conversation on:</p>
+<ul>
+<li><strong>Breadth &amp; Realism.</strong> Wow, there’s so much! Recognize the scale and spread of parts, and how building a system requires a team to break down the work and prioritize.</li>
+<li><strong>What We All Value</strong> : First find shared categories, then notable part(s). It’s common for (most of) <em>Visual Language</em> and (a few) <em>Elements</em> and <em>Components</em> to emerge as a shared core.</li>
+<li><strong>What We All <em>Don’t</em> Value</strong> : Outline system boundaries everyone shares outside of which — for now — you’ll not focus.</li>
+<li><strong>What Few / One Value</strong> : Note categories that only one or two participants selected. It’s common to address <em>Branding</em>, <em>Editorial</em> and <em>Patterns.</em> Stoke the conversation around such boundaries. In or out? Now or later? Contrast perspectives, and let the discussion flow. Also listen for passions that signal people who may make or coordinate integrating less universally required parts.</li>
+<li><strong>Breadth vs Depth</strong>? Most-oft selected parts (like <em>Color</em>, <em>Typography</em>, and <em>Buttons</em>) include deeper considerations as children (like <em>Contrast</em>, <em>Web Fonts</em>, and <em>Menu Buttons</em>). Use these to sensitize and trigger conversations on how much meticulous design, tooling, and variation is needed for certain parts.</li>
+<li><strong>Things That Surprise Us</strong> (including the Moderator): Every group has a peculiar focus on certain parts, such as Ritz Carlton’s laser focus on branding and logo use when amid a rebranding of such a classic mark. Draw upon these surprises to denote what could be special vs. wrote within your system.</li>
+</ul>
+<hr>
+<h2 id="stage-2-prioritize-the-system">Stage 2: Prioritize the System</h2>
+<p>The system’s tangible <em>Parts</em> are familiar to beginners and experts alike. Using a second worksheet, you can bridge their appreciation of these parts to equally important and complicated concerns prioritization, <em>Products</em> to which the system applies and <em>People</em> that may be involved.</p>
+<h3 id="column-1-prioritized-parts"><strong>Column 1: <em>Prioritized</em> Parts</strong></h3>
+<ol>
+<li><strong>Transcribe the 10 most-important parts</strong> to the second worksheet, listing them in a rough prioritized order in the first column.</li>
+<li>Asking “How much should we work on each important part?”, prioritize <strong>effort per part</strong> using no more than 25 tally marks, commensurate with the effort you’d expend on each of the 10 transcribed parts.</li>
+</ol>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/picking-parts-products-people/4.png" alt="Photograph of priortized parts">
+        </div>
+        <figcaption class="escom-article-figure__caption">Parts transcribed from the first sheet, with tally marks revealing proportional effort to invest</figcaption>
+    </figure>
+
+
+
+  <h3 id="column-2-products">Column 2: Products</h3>
+<ol>
+<li>Freelist as many <strong>products by name</strong> in your organization’s portfolio that you’ll apply the system. Time permitting, also identify a product’s <strong>type</strong> (WA: Web App, WS: Web Site, iOS, etc).</li>
+<li>Asking “What are our most important products?”, prioritize <strong>products by tier</strong> up to 4 “Flagship” (most important) and 4 “Secondary” (next most important), marking them with an F or S, respectively.</li>
+</ol>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/picking-parts-products-people/5.png" alt="Photograph of listed products">
+        </div>
+        <figcaption class="escom-article-figure__caption">Products, prioritized into tiers (like F = Flagship) and grouped by platform (like WS = Web Site)</figcaption>
+    </figure>
+
+
+
+  <h3 id="column-3-people">Column 3: People</h3>
+<ol>
+<li>Name <strong>centralized team members</strong> who already have or will have nontrivial allocated time dedicated to the effort, and designate their primary discipline (such as UX, FED: Front End Development, or PdM: Product Management).</li>
+<li>Identify <strong>federated influencers</strong> , often the talented designers and front-end developers from top products, that will play a key role in decision-making and creating things.</li>
+<li>Include more <strong>distant leaders to align</strong> with, such as a director in Brand/Marketing, portfolio manager in Product Management, or similar systems experts in the enterprise.</li>
+</ol>
+
+
+  
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/picking-parts-products-people/6.png" alt="Photograph of proposed people">
+        </div>
+        <figcaption class="escom-article-figure__caption">People by discipline</figcaption>
+    </figure>
+
+
+
+  <h3 id="discussion">Discussion</h3>
+<p>Generally, it’s good to provoke discussion after each column (Parts then Products then People) but that can elongate the session and limit discussion on Products and especially People.</p>
+<p>For each column, highlight:</p>
+<ul>
+<li><strong>Patterns</strong> of consensus across the team</li>
+<li><strong>Outliers and contrasts</strong> that reveal distinct perspectives, such as those of a designer with a strong connection to the Brand team or a developer with work limited to a platform like iOS or Windows.</li>
+<li><strong>Opportunities</strong> for each participant to tell a story, be delegated a topic to focus on, or conversation to have next.</li>
+</ul>
+<h3 id="closing-the-activity">Closing the Activity</h3>
+<p>End with “Closing Standup,” where each person articulates the 1 or 2 key themes or impressions one-by-one, around the circle. This should take no more than 3 to 5 minutes, give each participant a (last) voice, and enable a moderator to conclude with final thoughts and next steps.</p>
+<hr>
+<h2 id="whats-next-after-the-activity">What’s Next After the Activity?</h2>
+<p>After the activity, the moderator can:</p>
+<ul>
+<li>Jot down <strong>themes</strong> , <strong>opportunities</strong> , and <strong>risks</strong> that’ll season a system’s strategy presentations and suggest blind spots to monitor.</li>
+<li>Aggregate and <strong>transform Parts data</strong> from worksheets to items prioritized in a backlog or task management system</li>
+<li>Inventory <strong>Products</strong> to plan engaging each, and a stronger sense of what Flagships to align with</li>
+<li>Reach out to the <strong>People</strong> that matter: potential members of a central team, influential designers and devs that’ll contribute, brand management, and—if you haven’t already—sponsoring and endorsing execs. Schedule a coffee. Or lunch. Or 10.</li>
+</ul>
+<p>Best of luck getting your system off the ground!</p>
+
+
+
+        </div>
+    </div>
+    
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

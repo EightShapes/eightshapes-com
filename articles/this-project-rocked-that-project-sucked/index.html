@@ -1,0 +1,1758 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        <title>EightShapes &gt; Systems &gt; Workshops</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+
+        
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+
+<!-- No Shadow DOM, so link directly to styles -->
+<link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+<!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+<script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+<!-- ESDS Doc components -->
+<!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+<script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+<!-- A babel-compiled version of the component for IE11 -->
+<script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components Blog</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+            <div class="escom-article__author-row">
+                <div class="escom-article__author-avatar"
+                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+                </div>
+                <div class="escom-article__author-text">
+                    <p class="escom-article__author">
+                        Nathan Curtis
+                    </p>
+                    <p class="escom-article__author-role">
+                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                    </p>
+                    <p>
+                        <span class="escom-article__published-date">
+                            Originally published Oct 26, 2015 •
+                        </span>
+                        <span class="escom-article__read-duration">
+                            10 min
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="escom-article__title-row escom-article__title-row--no-masthead-next">
+                <h1 class="escom-article__title">This Project Rocked! That Project Sucked!</h1>
+                
+                <h2 class="escom-article__deck">What We Learned Measuring Designer Satisfaction To Keep Our Best Talent</h2>
+                
+            </div>
+
+    
+
+    
+    
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/1.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <hr>
+<p>Admit it. Some projects are better than others.</p>
+<p>Sometimes, you get magic. Everything clicks, team chemistry is maxed, and you all —designers and stakeholders, together—make something you’ll reflect on nostalgically for years to come. This project rocked!</p>
+<p>And, sometimes, you don’t. You lament a friction-filled arc with a disengaged client assigning things that don’t challenge you or your unaligned team. You make things that are…bleh. Whatever. That project sucked!</p>
+<h2 id="satisfying-work-is-essential">Satisfying Work is Essential</h2>
+<p>At EightShapes, <a href="https://medium.com/@brownorama">Dan</a> and I are grateful for every client that trusts us to help them. But we try to avoid sucky projects and provide satisfying work for ourselves and our staff. In 2006, we set out to work with clients that valued and understand UX, which we believe correlates with satisfying projects.</p>
+<p>As we’ve hired a diverse legion of designers, we refined and hardened that belief to:</p>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                EightShapes must provide work that staff find enjoyable and intrinsically meaningful to serve clients best and retain the best talent.
+            </div>
+            
+            
+        </div>
+
+
+
+  <p>In late 2012 and early 2013, I read Daniel Pink’s <a href="http://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1594484805">Drive:The Surprising Truth About What Motivates Us</a> amid a period of challenging work. The book helped me understand satisfaction as it related to what I do every day. In the book, he states:</p>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                “Human beings have an innate inner drive to be <strong>autonomous</strong>, <strong>self-determined</strong>, and <strong>connected</strong> to one another. And when that drive is liberated, people achieve more and live richer lives.”<br>Daniel Pink, Drive
+            </div>
+            
+            
+        </div>
+
+
+
+  <p>Pink separates extrinsic rewards (such as compensation or punishment) from intrinsic satisfaction that leads to the autonomy, self-determination, and connectedness. The separation nudged me to consider the intrinsic satisfaction we pursued for own work, and extrinsic forces (beyond compensation, health insurance, and the basics) that influence satisfaction.</p>
+<p>What about our work makes it rock or suck? How do our projects, our clients, our team, and our own individual needs relate to whether we are satisfied with and rewarded by a project?</p>
+<h2 id="setting-up-a-project-by-project-survey">Setting Up a Project-by-Project Survey</h2>
+<p>I designed and deployed a recurring, end-of-project questionnaire to connect satisfaction to the myriad of wants and needs we have as designers, such as an <strong>engaged</strong> client, <strong>exciting</strong> project, opportunity to <strong>hone our craft</strong> , and team with great <strong>chemistry</strong>.</p>
+<h3 id="primary-response-project-satisfaction">Primary Response: Project Satisfaction</h3>
+<p>The survey is grounded in a satisfaction score, with a first question inquiring “I found the project…” and a response scaled from 0 to 10.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/2.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Satisfaction scale (from 0 = Extremely Dissatisfying to 10 = Extremely Satisfying)</figcaption>
+    </figure>
+
+
+
+  <p>As a business owner, manager, and project lead, I’m hoping for scores 6 and above, am curious if scores emerge in the 4 to 5 range, and am downright driven into action with anything lower.</p>
+<h3 id="related-project-client-team-and-individual-factors">Related Project, Client, Team and Individual Factors</h3>
+<p>Additionally, I sought to understand what other factors are correlated with satisfaction, such as:</p>
+<ul>
+<li>Did the <em>project</em> stay <strong>fresh</strong>?</li>
+<li>Was the <em>project</em> <strong>well-defined</strong> with achievable goals?</li>
+<li>Was the <em>client</em> <strong>adaptable</strong> to the change our work triggered?</li>
+<li>Did the <em>client</em> <strong>protect</strong> us from “internal noise” in their organization?</li>
+<li>Did <em>I</em> create <strong>quality</strong> work I can share with people outside the company?</li>
+<li>Did <em>I</em> have <strong>ample time</strong> to explore the problem space?</li>
+<li>Did our <em>team</em> <strong>lead trust</strong> us to make decisions?</li>
+<li>Did our <em>team</em> provide mutual <strong>feedback</strong> and discuss decisions effectively?</li>
+</ul>
+<p>I brainstormed many factors like those above, got feedback, and organized a final set into four groups describing <strong>project</strong> , <strong>client</strong> , <strong>team</strong> , and <strong>individual</strong> pursuits. The initial 2013 survey, as well as 2014 and 2015 versions that followed, served ~30–40 factors for respondents to complete.</p>
+<p>Each factor was written to the positive sense (agreement corresponded to a positive outcome) and measured on a near-Likert scaled from 1 to 5.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/3.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Factor agreement, for one of ~40 questions on the survey</figcaption>
+    </figure>
+
+
+
+  <hr>
+<h3 id="the-complete-survey">The Complete Survey</h3>
+<p>Initially, the survey felt somewhat daunting. Light introductory fields (client, project, name, satisfaction) and a couple open-ended responses were followed by a litany of project, client, individual and team factors.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/4.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Most recent complete survey design, managed as a Google Form</figcaption>
+    </figure>
+
+
+
+  <p>However, staff grew adept at completing it fairly quickly, encouraged to do within 10 minutes or less after each project around 8 to 12 times annually.</p>
+<p>You can view the <a href="http://goo.gl/forms/WRRK3px5Gd">survey as a Google Form</a>.</p>
+<hr>
+<h3 id="distributing-the-survey">Distributing the Survey</h3>
+<p>As each project concluded, I amended my end-of-project checklist (close Harvest timekeeping, archive github.com repo, etc) to include sending each team member an invitation to complete the survey by the Friday prior to the project’s retrospective.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/5.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Project satisfaction survey invitation template</figcaption>
+    </figure>
+
+
+
+  <p>I collected data for over two years, collecting more than 50 responses in 2013 and over 100 more across most 2014 projects.</p>
+<hr>
+<h2 id="satisfaction-survey-says">Satisfaction Survey Says…</h2>
+<h3 id="were-usually-satisfied-and-its-improved-over-time">We’re Usually Satisfied, and It’s Improved Over Time</h3>
+<p>Over a two year period, designers tended to be satisfied by most projects, with the a majority of projects scoring a 6 or above.</p>
+<p>Additionally, year-over-year, we found that:</p>
+<ul>
+<li>average satisfaction improved year-over-year (though assuredly not because of the survey itself, but perhaps influenced by what the survey’s instantiation and data revealed),</li>
+<li>somewhat dissatisfied experiences (4s and 5s) diminished, and</li>
+<li>very dissatisfying projects were rare.</li>
+</ul>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/6.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Satisfaction responses compared across 2013 &amp; 2014, with average score per year superimposed</figcaption>
+    </figure>
+
+
+
+  <hr>
+<h3 id="some-clients-satisfy-more-than-others-lets-pursue-those">Some Clients Satisfy More Than Others, Let’s Pursue Those!</h3>
+<p>Satisfaction scores across clients aren’t surprising, reflecting the mood we’d already sensed on a project team. However, designers don’t necessarily have visibility on what it’s like with other clients. So they observe how our leaders pursue and justify new &amp; recurring business relative to what the survey makes clear.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/7.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Satisfaction by client and score, ordered by descending average satisfaction</figcaption>
+    </figure>
+
+
+
+  <p>Additionally, individual responses varied within a client, especially larger clients served by many designers across many projects.</p>
+<p>Even in recurring clients, we watch for stinker assignments and establish reasonable boundaries for what projects would be good or not for our team.</p>
+<hr>
+<h3 id="individual-scores-merit-merit-management-attention">Individual Scores Merit Merit Management Attention</h3>
+<p>Just as important as our clients, we take a look at how individual designers respond. We paid attention to two signals: low and highly variable scores.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/8.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Satisfaction scores by staff member</figcaption>
+    </figure>
+
+
+
+  <p>As surveys rolled in over the year—and particularly at annual review time—we’d check in with people like #7 and #15 above. Some people are hard to satisfy, while others found themselves in a rut. The survey triggered useful discussions to ensure that they were OK and we weren’t losing them.</p>
+<p>More curiously, some staff (such as #7 and #10) were wildly all over the map. It can be challenging to manage designers on the extremes, with the severe distinction drawing attention to the negatives and also impairing their relationship with teammates on less satisfying projects. Others like myself (#14) might just be hard to please.</p>
+<hr>
+<h2 id="specific-factor-reveal-how-we-can-improve">Specific Factor Reveal How We Can Improve</h2>
+<h3 id="visualizations-reveal-patterns-and-signals-to-probe">Visualizations Reveal Patterns and Signals to Probe</h3>
+<p>One of the favorite visualizations I prepared displayed factors (for example, strong client <strong>vision</strong> ) within groups ( <strong>clients</strong> ) as columns, individual clients as rows, and factor averages in each cell. The staff loved this visualization, rich with detail and highlighting such a range of good and bad.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/9.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Grouped factors (such as Values within Client as columns) by Client (rows), with Factor average per cell</figcaption>
+    </figure>
+
+
+
+  <p>Big clients (#3, #5, #6) all indicate strong <strong>individual</strong> and <strong>team</strong> factor scores. Despite the variety afforded by small projects and shorter client engagements, our teams tend to find their best rhythm and individual opportunity in deeper client relationships.</p>
+<p>In contrast, lower scoring clients (#7, #8, #9, #11) were all newer clients. Notice lower, whiter <strong>individual</strong> and <strong>team</strong> scores and prevalent red in <strong>client</strong> and <strong>project</strong> categories.</p>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Lesson: It takes time and patience to get to know each other, both between EightShapes and client as well as within the EightShapes team itself.
+            </div>
+            
+            
+        </div>
+
+
+
+  <p>While these broader patterns are important, our staff quickly zoomed in on clients they’d worked and hunted for signals, like:</p>
+<ul>
+<li>An extremely satisfying client engagement (#1) that nevertheless was poorly defined (by both parties) for an <strong>indecisive</strong> client that lacked <strong>vision</strong>.</li>
+</ul>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Lesson: No client or project is ever perfect.
+            </div>
+            
+            
+        </div>
+
+
+
+  <ul>
+<li>A big, admired client with interesting projects (#5) served by a high-performing team that nevertheless was showing cracks by lacking individual <strong>rotation</strong> across clients (1.9).</li>
+</ul>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Lesson: Beware complacency and openly discuss rotation even on high-performing teams.
+            </div>
+            
+            
+        </div>
+
+
+
+  <ul>
+<li>One of our senior leads notice a lower-than-expected score for team <strong>routine.</strong> Recognized during group discussion, the leader marked it as an area to improve via his personal development plan.</li>
+</ul>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Lesson: Leaders aren’t perfect, and can lead by modeling how they can improve.
+            </div>
+            
+            
+        </div>
+
+
+
+  <ul>
+<li>A bottom client (#11) filled with low, red scores, reflecting a <strong>disempowering, vision</strong> -erratic, <strong>absent</strong> and <strong>indecisive</strong> client that was led by a revolving door of project owners. However, notice the contrast of strong individual and team scores.</li>
+</ul>
+
+
+  
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Lesson: Despite chaos, a team can rally to achieve something they are proud of and then move on.
+            </div>
+            
+            
+        </div>
+
+
+
+  <hr>
+<h2 id="do-well-where-it-matters">Do Well Where It Matters</h2>
+<h3 id="correlate-satisfaction-with-factors-to-know-what-does-or-doesnt-need-attention">Correlate Satisfaction with Factors To Know What Does or Doesn’t Need Attention</h3>
+<p>After 2013&#39;s first year of data collection, compared satisfaction with the myriad factors that could influence. I calculated correlations, drilled into groups, and explored data deeply.</p>
+<p>One money visualization was plotting each factor’s agreement score (y-axis, “How Are We Doing?”) against its correlation with project satisfaction (x-axis, “How Much Does It Matter”). This relationship reveals how much a factor like team chemistry matters to how satisfying a project can be.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/10.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+  <p>Two-by-two plots reveal quadrants where factors should be more or less of a concern.</p>
+<ul>
+<li>The upper right revealed how EightShapes is <em>doing well on things that matter</em>. That year, we were especially strong at team <strong>chemistry</strong> and <strong>feedback</strong> , cultivating our individual <strong>technique,</strong> and working with <strong>trusting</strong> , <strong>appreciative</strong> clients.</li>
+<li>The lower right quadrant is particularly important, highlighting <em>poorer performance on things that matter</em>. In 2013, we found ourselves in a rut of too-much design system work that some designers felt limited <strong>freedom to innovate</strong>.</li>
+<li>In the lower left quadrant, we may be <em>performing poorly on things that don’t matter</em> (as much). Sure, some didn’t work with <strong>new clients</strong> or use <strong>new</strong>  <strong>activity types</strong> (that they’d never done before), and no client was sponsoring <strong>persistent research</strong>. But none of those factors correlated with satisfaction strongly, so not areas we focused on changing.</li>
+</ul>
+<hr>
+<h2 id="foster-individual-relationships">Foster Individual Relationships</h2>
+<h3 id="teammate-connections-are-critical">Teammate Connections Are Critical</h3>
+<p>An introductory, open-ended question “What were the aspects of working on this project that you found particularly satisfying or rewarding?” yielded countless comments citing teammate love.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/11.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Many personalized shout outs about satisfying projects with a teammate or two</figcaption>
+    </figure>
+
+
+
+  <p>Our staff valued not just working on different projects but also different people. Furthermore, they reveled in the enjoyable moments and personal growth they experienced due to those connections.</p>
+<p>Over the years, status meetings and one-on-ones consistently yield comments like “When do I get to work with [so and so]?” and survey responses reinforced that staff rotation to maximize exposure to other good people was visible and desirable. In strong teams, satisfaction can originate not from the success but from working together to get there.</p>
+<hr>
+<h2 id="incorporate-satisfaction-into-deeper-post-project-routines">Incorporate Satisfaction into Deeper Post-Project Routines</h2>
+<h3 id="early-survey-returns-led-to-expanded-post-project-practices">Early Survey Returns Led to Expanded Post-Project Practices</h3>
+<p>Over the survey’s two years, we began to adjust and prune survey factors, routinely distribute results to lead(s) and manager(s), and enable staff to tie results to annual performance development plans.</p>
+<p>In particular, satisfaction data was influential for subsequent project retrospectives we’d began to conduct routinely. Prior to the retrospective, I’d extract project responses, transform and format them, and send the PDF to team members to prep for the meeting.</p>
+
+
+  
+
+    <figure class="escom-article-figure">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/this-project-rocked-that-project-sucked/12.png" alt="">
+        </div>
+        <figcaption class="escom-article-figure__caption">Project-specific satisfaction data (as PDF) extracted, transformed and highlighted as an input for retrospectives</figcaption>
+    </figure>
+
+
+
+  <p>The artifact exposed open-ended responses and revealed where members experienced the project in different ways. Even the sample above exposes disagreement, with negative view (column 1), a neutral view (column 2), and a positive view (column 3). While the artifact wasn’t an agenda, the data improved project reflection and suggested discussion topics.</p>
+<hr>
+<h2 id="my-big-takeaways">My Big Takeaways</h2>
+<h3 id="how-i-view-clients-teammates-and-myself-differently">How I View Clients, Teammates, and Myself Differently</h3>
+<p>There’s no doubt I look at projects and teams differently. I’ve softened my starker focus on delivering deep, promised quality to clients based on early project promises (such as a statement of work). And I’m now equipped to seek, launch, and run projects based on what I value most (the survey factors).</p>
+<p>I’m also more in tune with individuals I manage and team members I direct, yielding an unexpected reward. During our December 2014 year-end meeting, many EightShapes designers mentioned my influence as a project leader and mentor. They didn’t know it, but I was touched by something I’d not heard in such density before.</p>
+<p>Maybe, just maybe, my career isn’t about yearning to be a great designer. Instead, maybe it’s (also?) about helping craft a rich and rewarding environment for my company’s projects and clients in which our designers can thrive.</p>
+
+
+
+        </div>
+    </div>
+    
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

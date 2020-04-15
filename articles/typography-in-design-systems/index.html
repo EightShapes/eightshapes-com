@@ -1,0 +1,1664 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        
+            <title>Eightshapes > @components > Typopgraphy in Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/typography-in-design-systems/" />
+            <meta property="og:title" content="Typopgraphy in Design Systems" />
+            <meta property="og:description" content="Choose Fonts Set a Hierarchy and Integrate with Components" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Typopgraphy in Design Systems" />
+            <meta name="twitter:description" value="Choose Fonts Set a Hierarchy and Integrate with Components" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/typography-in-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+    </head>
+    <body class="">
+        
+
+
+
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 5/19/2019 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        13 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Typopgraphy in Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Choose Fonts Set a Hierarchy and Integrate with Components</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/typography-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>Everyday digital interfaces include a rich variety of images, visualizations, and other pictures. However, more than anything else, they are made of words. Oh so many words. As we equip teams to design and code usable, consistent, beautiful interfaces using systems, it’s essential that words depend on a strong foundation of typography.</p>
+<p>I’ll admit, I am not a typography expert. I lack a graphic design degree. I’m never the person choosing a font, scaling type, or finessing letter spacing. As a result, I’ve always been reluctant to write about typography.</p>
+<p>On the other hand, I am a pattern hunter. Over the years, I’ve contributed to many design systems that set a foundation for typography. Each traversed of steps and decisions to set a foundation and apply it to an emerging library of interface components. This article summarizes those patterns.</p>
+<p>Typography starts by setting a foundation of <strong>font families</strong> and <strong>weights</strong> along with fallbacks. It then explores how to build <strong>hierarchy</strong> using size, color, additional details like line-height, and layering responsiveness. Those models are then applied to <strong>components</strong> in a system’s library (like Article and Header) as well as custom components made by other teams.</p>
+<hr>
+<h2>Fonts</h2>
+<p>Before you dig into details, you have to settle on basics: font(s). Through exploration, comparison, research, and often — for large companies — making a font themselves, every display cascades from and depends on this choice.</p>
+<h3>Families, Weights, and Fallbacks</h3>
+<p>While systems can vary fonts based on theming, most ground themselves initially by identifying primary serif and/or sans-serif font family. Each font is augmented with a cascade of fallbacks (Hello, Arial and Times), and many systems throw in a monospace font for code displays (even if only their own).</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/1.png&quot; alt=&quot;Type specimens across three weights of the Barlow font&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Type specimens across three weights of the Barlow font&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Some systems can get away with as few as two or three weights of their primary typeface, seeking to balance variety and flexibility with governance and download weight.</p>
+<p><em>Takeaway</em>: Getting to a primary font isn’t always hard, but choosing what weights to include carries long term consequences. Adding fonts and weights is easy. Managing download size and changing them is hard.</p>
+<h3>Getting the Fonts, Whether by Download, Link, or CDN</h3>
+<p>Whether or not a design system program owns the fonts, users of a design system expect a system to provide the instructions necessary to use the fonts.</p>
+<p>From a designer’s perspective, it’s all about downloads. Some fonts are tightly held intellectual property with very intentionally limited sharing. So, at a minimum, a Typography page must provide direct download or instructions on how to get approval to obtain them. Most teams provide a downloadable ZIP that includes all the files you need to install and use fonts locally.</p>
+<p>For developers, it depends on approach, providing options like:</p>
+<ul>
+<li>Direct font download to serve the fonts themselves</li>
+<li>Instructions for linking to a service like Google Fonts</li>
+<li>CDN references that all products refer to collectively</li>
+<li>An invitation to contact a technical architect, since a license for the font is required. Organizations requires this to control the recurring and often non-trivial cost of hosting and serving the font.</li>
+</ul>
+<p><em>Takeaway</em>: Fonts are needed by different people in different ways. System users expect the system to explain how to use everything easily, even if it’s not the system team’s job to make custom fonts or serve fonts themselves.</p>
+<hr>
+<h2>Typography Scale &amp; Hierarchy</h2>
+<p>Most design systems demonstrate a typography scale in documentation as a vertical stack. That’s not enough. A typographic system should also establish constructs like body text, headings, color, responsiveness, color, and other fine-grained details.</p>
+<h3>Body Text</h3>
+<p>Systems leverage a type scale to offer core text sizes — often named simply as text or body — that include small, medium, large, and if you need it, xs, xl, and so on. Most systems need three or so (thus, my comfort with using t-shirt sizes). Start with a few and expand as necessary as component designs – and page compositions in the wild.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/2.png&quot; alt=&quot;Small, medium and large text sizes&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Small, medium and large text sizes&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Body copy may also offer a distinct <a href="https://en.wikipedia.org/wiki/Lead_paragraph">“Lead” (alternatively, “Lede”) paragraph</a> to open a page, such as in an article (more on that later). Thus, a simple S/M/L scale may also need other variants lead. This is especially relevant in systems offering multiple sizes, since a Lead for larger, lower density displays would be larger than a Lead for smaller, high density alternatives.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/3.png&quot; alt=&quot;Contrasting a Lead paragraph from medium or large text&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Contrasting a Lead paragraph from medium or large text&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Keep body sizes simple and few, but allow for specific variants outside the scale. Since body copy weaves through most components, these options each offer properties — size, weight, line-height, … — to tune to get each just right.</p>
+<h3>Text Color</h3>
+<p>Color also plays a key role in an interface’s typographic hierarchy, often by established types like:</p>
+<ul>
+<li><strong>Primary</strong>, for most interface text whether body or heading.</li>
+<li><strong>Secondary</strong>, for diminished contrast (often, the “gray text”) for supplemental information.</li>
+<li><strong>Interactive</strong>, not just for links but also flat buttons, tab labels, and more</li>
+<li><strong>Disabled</strong>, often resulting is especially lower contrast treatments</li>
+<li><strong>Error</strong>, usually red, for the highest contrast with its surroundings</li>
+</ul>
+<p>When it comes to naming text colors based on intent, I find the <a href="http://uniform.hudl.com/guidelines/colors/content/design">Hudl Uniform</a> names the most intriguing: default, contrast, subtle, and nonessential. Such names balance the tradeoffs of stronger control with greater abstraction (and thus, less self-evident reuse).</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/4.png&quot; alt=&quot;Text color across backgrounds&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Text color across backgrounds&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>These types are typical, encountered during early component designs like button, input and link. As a library grows, they become littered throughout the component catalog via tools like tokens and mixin. Notably, they become necessary as component designs span in <a href="light-dark.html">light and dark settings</a>.</p>
+<p>For example, in the <a href="https://github.com/EightShapes/esds-library/blob/master/library/styles/shared/color.scss">eightshapes.com library</a> (far less rigorously maintained, cobbler’s children and all), we employ a text coloring mixin that iterates through background colors, by type.</p>
+<script src="https://gist.github.com/nathanacurtis/e76777cf8a6e52b6c46888e40ddb2975.js"></script>
+<p><em>Takeaway</em>: Typographic hierarchy isn’t limited to size and weight; color carries considerable impact too. Design systems require consistent color application to create contrast within and across components, and relying upon well-modeled types is essential to managing such relationships.</p>
+<h3>Heading Levels and Special Cases</h3>
+<p>Headings are a critical contributor to page hierarchy. Most systems offer at least four, although some offer many more. Page titles usually (but not always) align with the largest heading level. Remaining levels are woven throughout components: a Card title here, Alert Message title there, and Modal two level title too.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/5.png&quot; alt=&quot;Typography scale&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Additionally, some systems offer specialized headers outside the typical heading scale, such as a picture’s caption or an eyebrow (see Morningstar Design System). Just because a header exists outside the traditional scale doesn’t mean it’s not a header viably reused across a catalog.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/6.png&quot; alt=&quot;Eyebrow heading&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Eyebrow heading&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Systems can offer more sophisticated combinations of headings and body text, too. For example, IBM Carbon grounds typography in the IBM Plex typeface, and distinguishes headings relevant for either web-based product (Productive) and digital marketing (Expressive) interfaces.</p>
+<p><em>Takeaway</em>: Solve for just enough heading types , and layer more complicated header controls only as needed and context is clear. Usually, four to six heading level and a sprinkle of special variants will do.</p>
+<h3>Heading Levels ≠ H# Tags</h3>
+<p>In HTML, heading tags assign semantic meaning to an element’s role within a page’s hierarchy. However, a component’s tags don’t or can’t align with each every page’s HTML on which it’s used, especially across pages or a whole app. In addition, what might be the largest heading on one screen (such as a product spec’s page title) may be the third largest heading on another page (such as a product’s home page).</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/7.png&quot; alt=&quot;Heading levels distinct, yet using same HTML tag&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Heading levels distinct, yet using same HTML tag&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>As a result, I strongly encourage teams to separate the concept of heading level (the visual outcome of applying style properties) from H tag (HTML elements like H1, H2, H3, and so on).</p>
+<p><em>Takeaway</em>: Applying heading scales shouldn’t require use of a specific HTML element. Instead, tease apart the two concerns. A system should weave heading levels consistently throughout components and offers tools for adopters to do the same with their custom creations.</p>
+<h3>Line Height &amp; Other Properties</h3>
+<p>Typography is influenced by many other properties, including:</p>
+<ul>
+<li><code>line-height</code></li>
+<li><code>letter-spacing</code></li>
+<li><code>text-transform</code> (such as uppercase)</li>
+<li>alignment (rarely controlled at the system level, usually defaulting to left)</li>
+</ul>
+<p>In particular, line-height is challenging. In some libraries, we’ll use conventions and tools to <a href="https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce">crop away negative space established by line-height</a> from all text included in components, as described in Space in Design Systems.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/8.png&quot; alt=&quot;Cropped line height vs text elements that include impacts of line height&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Cropped line height vs text elements that include impacts of line height&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Libraries cropping line height include <a href="https://designsystem.morningstar.com/visual-language/space.html#line-height-and-cropping-text">Morningstar Design System</a>, Discovery Education’s <a href="https://comet.discoveryeducation.com/visual-language/space.html#vertical-text-crop-mixin">Comet Design System</a>, and ~50% of others we’ve made since 2016. In all the other libraries, we’ve “let <code>line-height</code> do its thing,” predictably colliding with padding of containing elements.</p>
+<p><em>Takeaway</em>: As a system gets started with type, dig into details and start some conventions, such as how you’ll cope with line-height. However, avoid finalizing all rules before making the first thing. Instead, be comfortable with chaos early and smooth details as a library takes shape. As you near a major release, lock in conventions and ensure tools are consistently applied.</p>
+<h3>Responsive Typography</h3>
+<p>Systems can offer centrally-tuned responsive type sizes across a predictable set of breakpoints. For body text, size increases slowly. On the other hand, larger headings can increase dramatically across those same breakpoints.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/9.png&quot; alt=&quot;Responsive typography scaling&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>If responsiveness is included, a system must choose whether it’s “always on” or optional. If it’s optional, is responsiveness on or off by default? If off by default, responsiveness may be enabled via an API for tools like mixin like sys-heading-level-2:</p>
+<pre><code class="language-scss">@mixin sys-heading-level-2($responsive: false);
+</code></pre>
+<p>and CSS modifier class like sys-header--responsive:</p>
+<pre><code class="language-html">&lt;div class=&quot;sys-header sys-header--responsive&quot;&gt;
+      &lt;h2 class&quot;sys-header__title&quot;&gt;
+      Heading
+      &lt;/h2&gt;
+    &lt;div class=&quot;sys-header__actions&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Systems can release components that lack responsive typography. It’s OK. Don’t feel too bad. In fact, some systems lack centralized responsive type controls for months or beyond a year. However, doing so risks a cost down the road. So early technical design may be warranted so that code tools and <a href="component-testing-plans.html">testing plans</a> anticipate responsiveness eventually.</p>
+<p><em>Takeaway</em>: While an MVP might not solve for it, responsive typography is a hallmark of a mature, stable system. Establish a scale per breakpoint, and make invokable at varying hierarchy composition levels: by element, by component, by region of a page, and for an overall page.</p>
+<hr>
+<h2>Relating Typography to Components</h2>
+<h3>If Tempted to Reset Pages, Control What You Can Control</h3>
+<p>In rarer ecosystems, a system is central and authoritative. It defines how all front end development works and how all pages are constructed. In most enterprises, including those I serve, a system lacks that luxury. One product may integrate code of many product squads depending on different system versions or system altogether.</p>
+<p>In those scenarios, a system can’t rely on page-level resets. Instead, elements are reset at a boundary that is controlled, such as a component block mixin…</p>
+<pre><code class="language-css">.system-button {
+  @include component-font-reset();
+  ...
+</code></pre>
+<p>…to reset at least a range of type properties, such as:</p>
+<script src="https://gist.github.com/nathanacurtis/d19ab018485ccea1346999a21c51de16.js"></script>
+<p><em>Takeaway</em>: There’s hubris in believing a system controls everything on a page, convinced it won’t collide with anything other styles. So fortify what you ship in the context you control, including reseting elements for typography.</p>
+<h3>Tools for Adopters to Make Components Themselves</h3>
+<p>A system never offers “all the components you’ll ever need.” Adopters build anywhere from 30% to 70% of their remaining interface . Therefore, they’ll depend on system tools to style text in what they build, such as Sass mixins.</p>
+<p>For example, an adopter could want to apply a heading to title element…</p>
+<pre><code class="language-css">.my-custom-component-title {
+    @include system-level-3-heading();
+}
+</code></pre>
+<p>…in order to obtain system-compliant CSS like:</p>
+<pre><code class="language-css">.my-custom-component-title {
+    font-size: 24px;
+    font-family: &quot;Barlow&quot;, ...;
+    font-style: normal;
+    font-weight: &quot;Semibold&quot;;
+    line-height: 1.2;
+}
+</code></pre>
+<p>While code tools shouldn’t overwhelm gorgeous typography doc, that page is a reasonable location many developers should find handy, powerful tools.</p>
+<p><em>Takeaway</em>: Don’t limit access to typography using only pre-built components. Instead, empower users to make their components aligned with the system’s typography. Lower level tools help and lead to clean contributions later, too.</p>
+<h3>UI Typography ≠ Articles (former lacks spacing)</h3>
+<p>A misconception I debunk early and often: developing a typography system for UI components is equivalent to solving for long-form reading displays involving mostly headings and body text.</p>
+<p>This isn’t the case, since:</p>
+<ul>
+<li>Article typography is made of headings, body text, and a few other components (like an captioned image); UI typography addresses a very diverse range of components and elements within.</li>
+<li>Article typography density tends looser.; UI typography density varies.</li>
+<li>Article typography headings start at 2 and ascend one by one; UI typography uses irregular combinations of heading levels like 3, 4 and 5.</li>
+<li>Articles command a main, often wide column down the middle of a page; UI typography occupies spaces narrow and wide all over a page.
+Articles typography include a small set of predictable combinations; UI typography addresses an incalculable quantity component combinations.</li>
+<li>UI typography resides in many-column layouts across which text is impossible to align consistently on a shared baseline grid. Frankly, I don’t even try. Yet, baseline grids dominates discussion of article typography.</li>
+</ul>
+<p><em>Takeaway</em>: Typography contexts around a UI vary substantially, and an article format is just one among many. Separate rules applicable across a UI component library from those relevant to narrower contexts like an article.</p>
+<h3>The Header Component</h3>
+<p>Heading level styles are widely applied throughout a component library. But that doesn’t mean that page compositions couldn’t create their own hierarchy by including a Header component that offers a few bells and a whistle.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/10.png&quot; alt=&quot;The Header Component from Morningstar Design System&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;The Header Component from Morningstar Design System&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>For example, <a href="https://designsystem.morningstar.com/components/headers.html">Morningstar’s Header component</a> solidifies the arrangement of many oft-related elements, including properties for:</p>
+<ul>
+<li>An <strong>icon</strong> (with built-in <strong>tooltip</strong>?) adjacent to the heading label</li>
+<li><strong>Actions</strong>, whether as buttons or icon buttons</li>
+<li><strong>Border options</strong> to create contrast between page regions</li>
+</ul>
+<p><em>Takeaway</em>: Heading typography is but a part of a potential Heading component, which relates that type to adjacent signals, interactions, and additional type. Package those rules and relationships in a Heading component as needed, separate from generic heading style tools.</p>
+<h3>The Article Component, Including Line Length &amp; Element Pairings</h3>
+<p>An Article (or Long Form Text) component contains rules separating heading levels, body texts, lists (unordered and ordered), and other “basic” elements such as an image with a caption. It also may offer an author byline and a few other element types. Essentially, the range of elements you traverse in a Medium article like this or a system’s component documentation page.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/typography-in-design-systems/11.png&quot; alt=&quot;Article component’s basic elements, including spacing embedded&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Article component’s basic elements, including spacing embedded&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>I like to equate an Article component to “All the styles you’d need to properly format typical content entered into a CMS’s rich text editor.” The Morningstar Design System also includes a robustly featured <a href="https://designsystem.morningstar.com/components/articles.html">Article component</a>.</p>
+<p>One must be very wary of paired relationships outside context controlled by a component. However, an article context offers a closed set of predictable element combinations: <code>h2</code> then <code>h3</code>, <code>h3</code> then <code>p</code>, or <code>h2</code> then <code>p</code>, and so on. Each of those combination can be perfected based on spacing model (such as “used <code>margin-bottom</code>&quot; or “use <code>margin-top</code>&quot;).</p>
+<p><em>Takeaway</em>: Take great care in refining the long form reading experience of your users. The challenge includes not just hierarchy, but also line length, space between lines, relationships with other article elements — <code>deck</code>, <code>author byline</code>, images, and more — within that broader, widely reusable block.</p>
+<hr>
+<p>Typography’s depths require more days, months and years of learning than this article provides. Nevertheless, armed with a strong foundation, design systems and the teams they support can produce so much faster, better, and consistent experiences than before. May these tools be a helpful start.</p>
+
+    </div>
+</div>
+
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

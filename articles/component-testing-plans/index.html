@@ -1,0 +1,1589 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        <title>EightShapes &gt; @components &gt; Component Testing Plans</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+
+        
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+  <!-— facebook open graph tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.eightshapes.com/articles/component-testing-plans" />
+  <meta property="og:title" content="Component Testing Plans" />
+  <meta property="og:description" content="Building a Quality Base, One Criteria at a Time" />
+  
+  <meta property="og:image" content="https://eightshapes.com//images/articles/component-testing-plans/masthead.png" />
+  
+
+  <!-— twitter card tags additive with the og: tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:domain" value="eightshapes.com" />
+  <meta name="twitter:title" value="Component Testing Plans" />
+  <meta name="twitter:description" value="Building a Quality Base, One Criteria at a Time" />
+  
+  <meta name="twitter:image" content="https://eightshapes.com//images/articles/component-testing-plans/masthead.png" />
+  
+  <meta name="twitter:url" value="https://www.eightshapes.com/articles/component-testing-plans" />
+
+  <!-- No Shadow DOM, so link directly to styles -->
+  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+  <!-- ESDS Doc components -->
+  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+  <!-- A babel-compiled version of the component for IE11 -->
+  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+
+    </head>
+    <body class="">
+        
+    
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+            <div class="escom-article__author-row">
+                <div class="escom-article__author-avatar"
+                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+                </div>
+                <div class="escom-article__author-text">
+                    <p class="escom-article__author">
+                        <a href="/nathan-curtis">Nathan Curtis</a>
+                    </p>
+                    <p class="escom-article__author-role">
+                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                    </p>
+                    <p>
+                        <span class="escom-article__published-date">
+                            Originally published 4/3/2019 •
+                        </span>
+                        <span class="escom-article__read-duration">
+                            7min
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="escom-article__title-row">
+                <h1 class="escom-article__title">Component Testing Plans</h1>
+                
+                <h2 class="escom-article__deck">Building a Quality Base, One Criteria at a Time</h2>
+                
+            </div>
+
+    
+        </div>
+    </div>
+    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+        <div class="esds-row__inner">
+            <img src="/images/articles/component-testing-plans/masthead.png" alt="Masthead" class="escom-article__masthead" >
+        </div>
+    </div>
+    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+        <div class="esds-row__inner">
+    
+
+    
+  <p>Whether standing up a system from scratch or engaging in incremental planning, teams wonder: what’s a mature component catalog look like? Conversations quickly hone in on quantity: 30 components? 50? 70?</p>
+
+
+
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                How many components does our catalog need?
+            </div>
+            
+            
+        </div>
+
+
+
+<p>Making components—a repetitive and reliable process yielding measurable outputs—can become a team’s comfort zone. Yet, on average, each additional is more complicated, has more dependencies, and costs more to make and maintain. These same components also tend to be less relevant to fewer customers. There’s a point when the next component, centrally made and maintained, isn’t worth it. There must be a quantity ceiling. This ceiling has teams thinking.</p>
+<p>In later 2018, multiple teams gauged the stakeholder sentiment of: “If you had to choose only one, should the system…</p>
+<ul>
+<li>Add more components?</li>
+<li>Remove components, shedding what we don’t need?</li>
+<li>Improve the quality of components we already have?</li>
+<li>Do nothing?</li>
+</ul>
+<p>The question’s premise shook respondents:</p>
+
+
+
+
+
+
+        <div class="escom-pull-quote escom-pull-quote--light">
+            <div class="escom-pull-quote__the-quote">
+                Hold on. Our components aren’t already top quality?
+            </div>
+            
+            
+        </div>
+
+
+
+<p>An insatiable instinct for more components was halted by challenging their assumption of perfect quality. No system I’ve worked on has perfect components. Shouldn’t teams assessing system maturity based on quality as much as quantity?</p>
+<p>Quality stems from and is proven by an implemented testing plan by which components are inspected prior to release. This article describes <strong>criteria and tools</strong> for testing components and how to <strong>order making them</strong> at a high level to help teams plan.</p>
+<hr>
+<h2 id="planning-testing-by-capability-across-components">Planning Testing by Capability, Across Components</h2>
+<p>Any time is the right time to assess a testing plan, whether starting from scratch, coming out of a hectic delivery a first generation, or assessing the health of a mature system. The list of potential capabilities is intimidating in it’s length and cost. Yet, a team can add such capabilities incrementally, intensely at first but even more gradually over time.</p>
+<p>During the planning of a system program’s increment (usually, three or six months), I’ll weave testing into the our discussion of what components are in and out of scope. Invariably, that component list reveals itself as a list in a spreadsheet or on a whiteboard.</p>
+
+
+
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/component-testing-plans/1.png" alt="Table of testing capability completed by component">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+<p>I’ve gotten into the habit of listing prospective capabilities as columns above and to the right of that list, creating a tabular structure. This helps teams to:</p>
+<ul>
+<li>Visualize and relate testing criteria relevant across all components</li>
+<li>Identify tooling or processes the team lacks</li>
+<li>Appreciate the rigor that lies ahead</li>
+</ul>
+
+
+
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/component-testing-plans/2.png" alt="Photograph of whiteboard where team prioritized testing capabilities">
+        </div>
+        <figcaption class="escom-article-figure__caption"></figcaption>
+    </figure>
+
+
+
+<p>Testing plan criteria listed on a whiteboard and subsequently prioritized as critical, yes, maybe, or not pursued</p>
+<hr>
+<h2 id="get-started-with-testing-basics">Get Started with Testing Basics</h2>
+<p>As development begins, tooling must enable both developers and designers to inspect visual test cases and code practices. Avoid blocking early work by the misguided notion of starting with a perfect, comprehensive test suite. Instead, focus on testing fundamentals as you iterate early work. As a team establishes environments, I suggest that they set up:</p>
+<h3 id="✔︎-visual-testing-page-aka-the-kitchen-sink">✔︎ Visual Testing Page (aka, “The Kitchen Sink”)</h3>
+<p>A testing page visualizes and enables inspection of component variations, states, behaviors, content examples. Visible to all, it evokes every possibility including background settings, sizes, and responsive qualities.</p>
+<h3 id="✔︎-display-on-a-default-white-background-setting">✔︎ Display on a Default (White?) Background Setting</h3>
+<p>Every component catalog I’ve worked on must work on a white background. Therefore, components are built at least to display properly in that setting.</p>
+<h3 id="✔︎-resilient-to-a-hostile-style-environment">✔︎ Resilient to a Hostile Style Environment</h3>
+<p>Components must not be impacted by styling applied elsewhere in the page. Introduce hostile styles on generic, page-level selectors to pollute the cascade, triggering visual errors in a component that’s insufficiently styled.</p>
+<h3 id="✔︎-styled-with-design-tokens">✔︎ Styled with Design Tokens</h3>
+<p>Components must be infused with <a href="tokens-in-design-systems.html">design tokens</a> codifying visual style, which requires a token dependency setup from the beginning. Both developers and designers are expected to review how tokens are applied via code reviews.</p>
+<h3 id="✔︎-tested-across-browsers-manually">✔︎ Tested Across Browsers, Manually</h3>
+<p>Components must work across supported browsers, each tested manually as every feature, defect, or optimization is added. Obtaining access to browsers can be painstaking (particularly, IE11 and Edge for those working on Macs).</p>
+<h3 id="✔︎-linted-code">✔︎ Linted Code</h3>
+<p><a href="https://en.wikipedia.org/wiki/Lint_(software)">Linting</a> tools analyze source code for easy-to-detect programming errors, bugs, suspicious constructs, and of adherence to team conventions. It’s easy to setup, confirm via pull requests, and require corrections prior to approval.</p>
+<hr>
+<h2 id="layer-more-procedures-leading-to-launch">Layer More Procedures Leading to Launch</h2>
+<p>As development accelerates, adopters begin using alpha and beta releases. Expectations rise. At this point, testing rigor must expand based on what the team values most. Equally important is establishing who reviews each, whether the assigned developer, one or more reviewers, or a team’s outsider.</p>
+<h3 id="✔︎-functional-testing">✔︎ Functional Testing</h3>
+<p>At their core, a component must work. A team must establish conventions of how they’ll test functionality, such as a modal’s open/close toggle, a tooltip’s sensitivity to a viewport’s edge, and more.</p>
+<h3 id="✔︎-automated-visual-regression-avr-of-htmlcss-display">✔︎ Automated Visual Regression (AVR) (of HTML/CSS display)</h3>
+<p>AVR establishes a baseline result of all visual test cases (variations, states, content examples, etc) and then automates comparison of the baseline with the result of each successive change. Our tool of choice: BackstopJS.</p>
+<p>✔ Unit Testing (of JS-based components)</p>
+<p>Unit tests are short code fragments written to test the success of small units of source code. One reference: Morningstar Design System’s documented test driven development (TDD) approach for making web components.</p>
+<h3 id="✔︎-accessibility-audit">✔︎ Accessibility Audit</h3>
+<p>System designers and developers deliver with accessibility in mind. However, they may lack in-depth expertise of an accessibility specialist. Audits canvas an entire library or changes since a previous audit. Some specialists drop in to assess each component as it’s completed, whereas others engage at regular intervals (quarterly? semi-annually? annually?).</p>
+<h3 id="✔︎-semantic-versioning">✔︎ Semantic Versioning</h3>
+<h3 id="✔︎-changes-logged-readably">✔︎ Changes Logged Readably</h3>
+<p>I’d expect a team to norm on how to version components, deal with dependencies, and assess <a href="visual-breaking-change-in-design-systems.html">breaking changes</a> as they get started. Nevertheless, they’ll acclimate to making—and documenting—those decisions as they iterate through early cycles. Proof will be in how successful features are packaged and changes logged.</p>
+<hr>
+<h2 id="address-other-scope-as-needed">Address Other Scope, As Needed</h2>
+<p>Depending on the features of your system, there may be additional criteria relevant to most components in a catalog. These can include validation of:</p>
+<h3 id="✔︎-display-in-both-light--dark-settings">✔︎ Display in both Light &amp; Dark Settings</h3>
+<p>Also known as “Light and Dark Mode,” a component can be placed on both <a href="light-dark.html">light and dark background settings</a>. Many start with white and “black” (which actually may be a darkest gray like #222). More sophisticated systems may offer four (white, black, light gray and dark gray) or even eight settings.</p>
+<h3 id="✔︎-display-on-additional-brand-background-settings">✔︎ Display on Additional “Brand” Background Settings</h3>
+<p>Some systems support backgrounds for one brand color (“Brand Blue”), many brand colors (blue and teal and green and …), or even multiple tints of each brand color (light, medium and dark teal, …). If components promise to work everywhere, testing must address variations and states in each setting.</p>
+<h3 id="✔︎-themed-for-subbrands-andor-via-user-customization">✔︎ Themed for Subbrands and/or Via User Customization</h3>
+<p>Some systems can revel in the simplicity of a single theme. Others must test for a closed set (such as a company’s 37 subbrands) or an open field (think: <a href="https://themes.getbootstrap.com/">Bootstrap</a> or <a href="https://material.io/design/material-theming/overview.html">Material</a> supporting any theme). Such an API into component styles warrants markedly incremental testing procedures.</p>
+<h3 id="✔︎-sized-for-varying-density">✔︎ Sized for Varying Density</h3>
+<p>Systems like <a href="https://designsystem.morningstar.com/components/component-status.html">Morningstar Design System</a> apply consistent schemes to size components for varied settings. They’ll position small, medium, and large size variants for <a href="https://designsystem.morningstar.com/components/list-groups.html#sizing">List Group</a>, <a href="https://designsystem.morningstar.com/components/buttons.html#sizing">Button</a>, and most of the remaining catalog. Testing would address both component-specific sizing across contained elements as well as the composability across components of the same size.</p>
+<h3 id="✔︎-touch-ready">✔︎ Touch Ready</h3>
+<p>How well are interactions tuned to the conventions of varying platforms in which a component is displayed?</p>
+<h3 id="✔︎-internationalization--localization">✔︎ Internationalization &amp; Localization</h3>
+<h3 id="✔︎-supports-right-to-left-display">✔︎ Supports Right-to-Left Display</h3>
+<p>Validating the display for a range of languages isn’t as easy as inserting a long German label in a title field (although that’s a good place to start). Know your languages, and then ensure you can promise each component addresses those needs. Easier is a price displayed in Japanese Yen, far wider than USD. More challenging: a “global” header bar supporting German, Chinese, Arabic and Cyrillic. Many more visual test cases are required, indeed.</p>
+<hr>
+<h2 id="advanced-capabilities-out-of-reach-of-most-teams">Advanced Capabilities, Out of Reach of Most Teams</h2>
+<h3 id="✔︎-a-dedicated-qa-team-member">✔︎ A Dedicated QA Team Member</h3>
+<p>Recently, I was elated to learn that a team I coach announced they’d be adding a team member dedicated to QA. Such is a luxury at this stage when establishing a core team in our burgeoning field, with nearly every other team falling back on designers and developers filling that void.</p>
+<h3 id="✔︎-automated-browser-testing">✔︎ Automated Browser Testing</h3>
+<p>Teams alleviate considerable manual rigor by automating the testing of visual test cases across browsers. Tools like Selenium also multiply the range of browsers and devices teams can and are willing to test against. Nevertheless, such automation seems beyond the grasp of most system teams.</p>
+<h3 id="✔︎-advanced-responsive-testing">✔︎ Advanced Responsive Testing</h3>
+<p>As individual components become more complicated, their responsive capabilities may become quite varied and sophisticated. Testing environments must be easy to setup and ideally automated to validate displays across a range of widths, contexts, and triggers.</p>
+<h3 id="✔︎-user-behavior--component-use-analytics">✔︎ User Behavior &amp; Component Use Analytics</h3>
+<p>I’m very impressed by (and jealous of) <a href="https://atlaskit.atlassian.com/packages/core/analytics">Atlassian’s Component Analytics</a> Framework. The framework enables teams to track how customers use an app (via public events) and component authors to monitor how teams use their components (via private events). Once established, a team must validate the setup and performance of such tooling across each component.</p>
+
+
+
+        </div>
+    </div>
+    
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>

@@ -1,0 +1,1593 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        
+            <title>Eightshapes > @components > Tokens in Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/tokens-in-design-systems/" />
+            <meta property="og:title" content="Tokens in Design Systems" />
+            <meta property="og:description" content="10 Tips to Architect &amp; Implement Design Decisions for Everyone" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Tokens in Design Systems" />
+            <meta name="twitter:description" value="10 Tips to Architect &amp; Implement Design Decisions for Everyone" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/tokens-in-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/dist/escom.css">
+    </head>
+    <body class="">
+        
+
+
+
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 6/24/2016 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        10 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Tokens in Design Systems</h1>
+            
+            <h2 class="escom-article__deck">10 Tips to Architect &amp; Implement Design Decisions for Everyone</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/tokens-in-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>In a recent code review, my passions stirred as I walked through a <em>Pill</em> component’s style with a designer teammate. I could hardly contain my excitement:</p>
+<script src="https://gist.github.com/nathanacurtis/2ec08026c75e280d558d65e472f6b465.js"></script>
+<p>“Look. Yes, it’s code, but look closely at those tokens. You know what this looks like? Like specs! So what? I can read this, as can you. And we can thread these everywhere: doc, designs, and convos too. <em>Everywhere</em>!“</p>
+<p>My teammate’s reaction hinted curiosity, even if didn’t match my outburst’s emotional punch. He’s not a system’s geek like me. Not yet, at least. But he got what mattered: there’s a visible path for decisions we make to where they are implemented.</p>
+<p>We’ve spent so much effort trying to get design <em>out</em> of our variables — those most atomic of reusable code bits — I felt instantaneously attracted to the idea of putting design back in.</p>
+<p>Here’s how we evolved, architected, and implemented tokens throughout design, code and collaboration.</p>
+<hr>
+<h2>From Variables to Tokens</h2>
+<p>Every design system offers <strong><em>options</em></strong>. For example, colors can scale from black through neutrals to white. Each neutral — identified via a HEX code like <code>#2B303B</code> — can be stored and made available in a variable <code>$color-neutral-20</code>, for use in a preprocessor like Sass.</p>
+<script src="https://gist.github.com/nathanacurtis/001acf3297a30179ced491349ba6de1c.js"></script>
+<p>Variables take the mystery out of obscure values. But they don’t bridge the gap between naming and use. They answer “What options do I have?” yet leave “What choice do I make?” unclear.</p>
+<p>Options aren’t good enough.</p>
+<hr>
+<h3>Design Decisions, an Option Applied to a Context</h3>
+<p>A system’s strength comes from knowing how to apply options (like <code>$color-neutral-20</code>) to contexts (like a conventional dark background color). This grounds the option as a <strong><em>decision</em></strong>.</p>
+<p>Those are decisions I can use with confidence!</p>
+<p>However, such decisions are usually still buried in some file in some repo used by <em>developers</em> working on the <em>web-based</em> product they own. What about <em>designers</em>? Other web <em>products</em>? Across to other platforms like <em>iOS</em> and <em>Android</em>? We’ve encoded decisions meant for everyone, but they owned in some dungeon of a repo nobody else can find.</p>
+<hr>
+<h3>Design Tokens, Decisions Propagated Through a System</h3>
+<p>Salesforce UX provides a glimpse. Their ideas captivate me, most of all their <a href="https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7#.r26jko9u3">Living Style Guide</a> concept that applies <a href="https://www.lightningdesignsystem.com/tokens/">Design Tokens</a> across products using their open source <a href="https://github.com/salesforce-ux/theo">Theo</a> tool.</p>
+<p>Here, options and decisions aren’t buried in Sass files. Instead, they are centralized and propagated as <strong><em>tokens</em></strong> to any product, designer or developer adopting the system, in easy-to-use, predictable formats.</p>
+<p>Hundreds of tokens can become readable, intentional, and traceable decisions woven into a portfolio’s or enterprise’s products.</p>
+<p>See the decisions as a big spec sheet? I can. Designers can too. With such visibility and tooling, they recognize the impact of their decisions. Before, we decided on <code>$color-neutral-80</code> for a border or background with a bit of whimsy. Now, we’re applying <code>$border-hairline</code> or a <code>$background-color-light</code> in a thoughtful, conventional manner.</p>
+<p>Designers start to collaborate. They make decisions with more deliberation and confidence, organized their thoughts in a structure they share. Developers follow suit.</p>
+<p>This can transform painstaking activities like redlines and pixel measuring into collaboration rich with token talk. Across our work — critiquing design concepts, writing acceptance criteria, reviewing pull requests — the <strong>architecture</strong> and <strong>implementation</strong> of tokens is ever-present.</p>
+<hr>
+<h2>Architecting Tokens</h2>
+<p>A successful, enduring token architecture depends on straightforward grouping, ordering, classification and decision-making.</p>
+<h3>#1. Show Options First, Then Decisions Next</h3>
+<p>You can’t make decisions without options. Tokens are an effective instrument for illustrating the path from one to the other.</p>
+<script src="https://gist.github.com/nathanacurtis/0e02631e1e47c0c5c1d061e5462cb557.js"></script>
+<p>In our token files, we begin with options like available colors. After that, we apply options to contexts like <code>text-color</code> and <code>background-color</code>.</p>
+<p><em>Takeaway</em>: Organize your decisions to suggest their atomic basis: building from options to decisions and simple to complex.</p>
+<hr>
+<h3>#2. Start with Color &amp; Font, and Don’t Stop There!</h3>
+<p>I often talk of a design language’s big three: color, typography, and iconography. So it’s no surprise that our token file begins with color and type options and decisions (icons are automated elsewhere). However, visual style is composed of so much more, and so could tokens.</p>
+<p>While we’ll start with applying color to background and text, we’ll expand to many other types of decisions, including things like:</p>
+<script src="https://gist.github.com/nathanacurtis/39c9a3bcc5cbf25f3c236be5f620ed9b.js"></script>
+<p><em>Takeaway</em>: Start with but don’t stall with just color &amp; type. Expand your decisions to cover the myriad concerns of a design language.</p>
+<hr>
+<h3>#3. Vary Options Across Meaningful Scales</h3>
+<p>Many tokenized concepts include scales to choose from, such as t-shirt sizing (<code>XS</code>, <code>S</code>, <code>M</code>, <code>L</code>, <code>XL</code>, <code>XXL</code>), progressions (like a geometric <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>), or custom terminology (like <code>compact</code>, <code>cozy</code>, and <code>comfortable</code>). Scales can also start with a few options (only <code>S</code> &amp; <code>M</code>) and grow to include more as warranted.</p>
+<script src="https://gist.github.com/nathanacurtis/d2d2984de8a56700154024df1d3e1f45.js"></script>
+<p>Scales afford branching a token hierarchy to similar yet distinct variants, such as enriching <code>space-inset</code> (from <code>XS</code> to <code>XL</code>) to variants of <code>space-inset-squish</code> and <code>space-inset-stretch</code> (both of which also offer <code>XS</code> to <code>XL</code>).</p>
+<p>Agreeing on a scaling model — t-shirts or progressions, you decide! — for ranges like these is a team-specific endeavor. Even tougher, you’ll need to avoid hardened scales not resilient to inserting a step in between later.</p>
+<p><em>Takeaway</em>: Adopt and tokenize scales and demonstrate how they apply across different scenarios.</p>
+<hr>
+<h3>#4. Invite Contribution, but Curate the Collection</h3>
+<p>When does a choice warrant becoming a token? A single use: nope, not enough. A second may lack conviction. But three? If it shows up that much, it’s usually token-worthy. Exceptions exist, but “Used 3 times?” criteria grounds discussion.</p>
+<p>So who’s the token gatekeeper? Nobody, if we employ healthy processes for design and dev reviews. Anyone can propose tokens, surfacing candidates in a concept or pull requests. Our Slack channel has much token talk, too.</p>
+<p>Nevertheless, I serve as a token <em>curator</em>, scanning work with an eye for token candidates. I may skim a request’s markup and skip the JavaScript. However, I thoroughly scan style and token files to finesse names, reclassify wayward nominees, and challenge excessive expansion. Everyone has a token voice. But not everyone cares enough or has time to keep tokens clean.</p>
+<p><em>Takeaway</em>: Make tokens a team endeavor, and (even if implicitly) designate a structured architectural mind to curate the collection.</p>
+<hr>
+<h3>#5. Graduate Decisions from Components to Tokens</h3>
+<p>It’s a distraction to divert brainpower to constantly think tokens, tokens, tokens. “Should this be a new token? Is that a token? I’m not using a token? Oh no!” Nobody needs this friction.</p>
+<p>However, my teammate Kevin Powell has a healthy habit of stockpiling variables at the top of a component style file. For example, a portion of variables in use in his <em>form</em> component’s style identify many applications of text color to form elements like inline errors, input, labels, and placeholder text.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/2.png&quot; alt=&quot;Comparative code display showing variables and a hierarchy of yaml code&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Emerging component file on the left, with file-specific variables at the top easy to compare with and consider for the tokens file on the right.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>These component-specific variables offer a helpful inventory of candidates to graduate to the token library. Here, we can catch an opportunity to replace a less-specific disabled color of <em>$color-neutral-90</em> with it’s more intentional <em>$background-color-disabled</em> in the <em>form_elements.styl</em> file. On the other hand, the component’s <em>$border-color-input-hover</em> is less likely for reuse beyond forms and thus a poor token candidate.</p>
+<p><em>Takeaway</em>: Encourage habits in design and development that park reusable decisions — token <em>candidates</em> — in a predictable place such as the top of a text file or corner of design art.</p>
+<hr>
+<h3>#6. Cope with Systemic Change Predictably</h3>
+<p>Tokens are a wonderful tool as you formulate a pristine system from scratch. But what about 18 months from now, when design decisions evolve? How does a token change cascade? What are the risks, and how do you mitigate them?</p>
+<p>Tokens protect you from unpredictable, widespread change given their specificity and – as a result – more limited and intentional use.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/3.png&quot; alt=&quot;Screenshot of a UI dialog searching for a variable&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Searching for a generic variable&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Previously, you comb and assess a repository for a <em>#2B303B</em> hex code or <em>$color-neutral-20</em> variable applied to myriad different elements. Boo!</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/4.png&quot; alt=&quot;Screenshot of searching for a specific term&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Searching for a specific decision.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Now, you’re tracing the breadth of use of <em>$text-color-microcopy</em> precisely and narrowing risk. Yes!</p>
+<p><em>Takeaway</em>: Take advantage of a token’s maintenance benefits, and use that as a selling point to your adopting team.</p>
+<hr>
+<h2>Implementing Tokens</h2>
+<p>Most teams start consolidating decisions as a huge stack of predictable, hierarchical variables names in a SASS or Stylus file. But that file buries decisions in one place, limiting use to that technology.</p>
+<p>That leaves the promise of tokens unfulfilled. A first step in spreading tokens throughout a system is freeing them with an open format like JSON.</p>
+<h3>#7. Make Token Data Reusable, via JSON</h3>
+<p><a href="https://en.wikipedia.org/wiki/JSON">JSON</a> is an ideal open standard for encoding hierarchical name/value pairs for reuse across tools.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/5.png&quot; alt=&quot;Diagram of JSON data converted into SASS, LESS, and Stylus&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>With tokens in JSON, you can transform decisions for multiple preprocessors — SASS, Stylus and LESS — as your community requires. This opens the door to products constrained to a preprocessor they can’t or won’t leave behind, even if it’s not the system’s “recommended” one.</p>
+<p>Similarly, JSON creates a bridge to other platforms, whether directly consumed in iOS work or transformed into XML for Android teams.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/6.png&quot; alt=&quot;Diagram of JSON data being converted to formats relevant to platforms like web, iOS and Android&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Encode tokens in a format reusable across platforms, exposing them in a form everyone can use.</p>
+<hr>
+<h3>#8. Manage &amp; Read Token Data Easily, via YAML</h3>
+<p>JSON is powerful, hierarchical, and flexible. However, it’s imperfect as a place to <em>manage</em> data. Syntax is verbose, prone to error when manually curated, lacks comment support, and lacks variables.</p>
+<p>Enter <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>, a more human-readable language for recording hierarchical property/value pairs. YAML adds variables and comments to JSON’s hierarchical capability in a more readable format. YAML helps quickly <em>show</em> tokens readably to any audience and its simplicity opens a border for designers to suggest new values and even submit pull request themselves.</p>
+<p>Our team uses <a href="https://www.npmjs.com/package/yamljs">yamljs</a> to transform the YAML data we manage as a single-source-of-truth into a JavaScript object as a step of our build process.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/7.png&quot; alt=&quot;Diagram illustrating how design decisions stored in YAML are propagated to other formats&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p><em>Takeaway</em>: Consider YAML to empower designers to engage with and <em>work in code</em>, drawing them closer to code and those that use code.</p>
+<hr>
+<h3>#9. Automate Documentation with Token Data</h3>
+<p>Embedding design decisions in code isn’t valuable if designers and developers don’t know what the decisions are and how to access them. That’s why we use tokens as <em>content</em> as much as we do <em>code</em>.</p>
+<p>In our systems, we thread tokens as a data structure (think: JSON) into templates to show decisions in a tokens reference and other topics like space and themed buttons.</p>
+<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
+    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
+        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/tokens-in-design-systems/8.png&quot; alt=&quot;Screenshot of a macros in nunjucks that reuse collections of tokens&quot;&gt;
+    &lt;/div&gt;
+    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Basic templates for documentation site, powered by token data&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>Other documentation is more customized, such as a color tint stack that includes names, accessibility scores, and more. While not a simple loop through token hierarchy, the documentation can still use tokens directly.</p>
+<p><em>Takeaway</em>: Use tokens to enrich how living your living guide can be.</p>
+<hr>
+<h3>#10. Embed Token Data in Design Tools, Too</h3>
+<p>Token data can inspire ideas for tools for not just developers, but designers too. We talk about building custom tools for our portfolio’s designer community in tools like <strong>Sketch</strong> , <strong>Photoshop</strong> , or (back in the day) <strong>InDesign</strong>.</p>
+<p>Such software offers varyingly robust hooks to use JSON data to your advantage. For example, <a href="https://www.invisionapp.com/">InVision</a>’s <a href="https://www.invisionapp.com/craft">Craft</a> relies upon JSON objects stored as text in subfolders, suggesting a possible integration with outputs of our system’s build process. Such connections were effortful and siloed enough in the past that they’d be ignored. Today, they feel more realistic as a system matures.</p>
+<p><em>Takeaway</em>: Identify opportunities to extend the system into designer tools, especially design software. Consider costs — both setup and maintenance — relative to the benefits to your <em>system user</em>’s experience.</p>
+<hr>
+<p>The more my teams use tokens, the more at home I feel discussing design. Threading smart decisions encoded with meaningful names helps me trust the output of my team is arcing towards the aspiration of a more cohesive, maintainable system.</p>
+
+    </div>
+</div>
+
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+
+
+                
+
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
+        
+    
+        
+    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
+        
+    
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
+        <script src="/dist/escom.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+    </body>
+</html>
