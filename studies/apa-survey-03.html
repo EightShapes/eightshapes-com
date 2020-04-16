@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex">
+	<title>APA Public Survey - Landing Page</title>
+    <style>
+
+      body {
+        font-family: "ProximaNova", Helvetica, Arial, sans-serif;
+        margin: 0;
+      }
+      section.home {
+      	max-width: 480px;
+      	margin: 48px auto;
+      	padding: 48px;
+      	background: #ffffff;
+      	box-shadow: 1px 1px 10px 4px rgba(0,0,0,0.1);
+      	text-align: center;
+      	border-radius: 8px;
+      }
+      section.home .heading {
+
+      }
+      section.home a {
+        display: block;
+        text-align: center;
+        color: white;
+        background: #005499;
+        padding: 16px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      var sites = [
+          'https://25goj28z.optimalworkshop.com/treejack/0nxp702f',
+          'https://25goj28z.optimalworkshop.com/treejack/0nxp702f-0'
+      ];
+
+      function randomSite() {
+          var i = parseInt(Math.random() * sites.length);
+          location.href = sites[i];
+      }
+    </script>
+	</head>
+	<body>
+		<section class="home">
+		  <div class="heading">
+			  <h2>Welcome to the American Psychological Association survey</h2>
+			  <p>Click the link below to continue.</p>
+		  </div>
+		  <a href="#" onclick="randomSite();">Start Survey</a>
+		</section>
+	</body>
+</html>
