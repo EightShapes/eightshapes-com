@@ -14,7 +14,7 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
         
-        <title>EightShapes &gt; @components &gt; Using Jira for Design Systems</title>
+        <title>EightShapes &gt; @components &gt; Design System Support</title>
         
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/styles/dependencies/esds.css"> <!-- copied from esds-library dependency -->
@@ -25,22 +25,22 @@
   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
   <!-— facebook open graph tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/using-jira-for-design-systems.html" />
-  <meta property="og:title" content="Using Jira for Design Systems" />
-  <meta property="og:description" content="Iterate Work with Stories, Epics, Versions, Tasks and More" />
+  <meta property="og:url" content="https://www.eightshapes.com/articles/design-system-support.html" />
+  <meta property="og:title" content="Design System Support" />
+  <meta property="og:description" content="Operating a Workflow to Resolve Designer and Developer Needs" />
   
-  <meta property="og:image" content="https://eightshapes.com//images/articles/using-jira-for-design-systems/masthead.png" />
+  <meta property="og:image" content="https://eightshapes.com//images/articles/design-system-support/masthead.png" />
   
 
   <!-— twitter card tags additive with the og: tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Using Jira for Design Systems" />
-  <meta name="twitter:description" value="Iterate Work with Stories, Epics, Versions, Tasks and More" />
+  <meta name="twitter:title" value="Design System Support" />
+  <meta name="twitter:description" value="Operating a Workflow to Resolve Designer and Developer Needs" />
   
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/using-jira-for-design-systems/masthead.png" />
+  <meta name="twitter:image" content="https://eightshapes.com//images/articles/design-system-support/masthead.png" />
   
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/using-jira-for-design-systems.html" />
+  <meta name="twitter:url" value="https://www.eightshapes.com/articles/design-system-support.html" />
 
   <!-- No Shadow DOM, so link directly to styles -->
   <link rel="stylesheet" href="/styles/dependencies/esds-code-snippet.css"/>
@@ -109,7 +109,7 @@
                     </p>
                     <p>
                         <span class="escom-article__published-date">
-                            Originally published 10/14/2019 •
+                            Originally published 09/10/2020 •
                         </span>
                         <span class="escom-article__read-duration">
                             12min
@@ -118,9 +118,9 @@
                 </div>
             </div>
             <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Using Jira for Design Systems</h1>
+                <h1 class="escom-article__title">Design System Support</h1>
                 
-                <h2 class="escom-article__deck">Iterate Work with Stories, Epics, Versions, Tasks and More</h2>
+                <h2 class="escom-article__deck">Operating a Workflow to Resolve Designer and Developer Needs</h2>
                 
             </div>
 
@@ -129,7 +129,7 @@
     </div>
     <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
         <div class="esds-row__inner">
-            <img src="/images/articles/using-jira-for-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+            <img src="/images/articles/design-system-support/masthead.png" alt="Masthead" class="escom-article__masthead" >
         </div>
     </div>
     <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
@@ -137,314 +137,235 @@
     
 
     
-  <p>I <em>really</em> like using Jira. I value the order it brings to the complicated chaos of making, curating, and contributing to design systems. I’m no Jira admin, and I ain’t no certified scrummaster. That said, I’ve brought enough order to design system chaos using Jira to share the durable approaches I’ve learned.</p>
-<p>Others have their <em>feelings</em> about Jira, too. I don’t know how your enterprise uses Jira. I don’t know how your team wants to manage tasks. Every team is different: what’s been good for my teams may not work well for your teams. Most of my clients use Jira, but there are some that don’t. If you don’t, or if you use Jira differently, I hope the ideas presented here still help you.</p>
-<p>I’ll start with how I approach starting a <strong>Project</strong>, add stories with good names (<strong>Summary</strong>) and organization (<strong>Epics</strong>), and iterate (<strong>Sprints</strong>) work over time and releases (<strong>Versions</strong>). Things will get complex as we break down work (<strong>Subtasks</strong>). Yet, all this data must lead us to coordinate efficiently in day-to-day ceremonies like the <strong>Grooming</strong>, <strong>Planning</strong>, and <strong>Standups</strong>. Let’s dig in.</p>
-<hr>
-<h2 id="-0-start-from-company-convention">#0. Start from Company Convention</h2>
-<p>To use Jira, you need a project instance. Avoid the hypocrisy of sidestepping conventions imperfect for your team (ahem, you are a design systems pro, so grow up!) by learning how your organization uses the tool.</p>
-<ul>
-<li>Find a <strong>Jira admin point-of-contact</strong>. Ask around. I usually get a “Oh, you need to talk to…” by the third or fourth person I ask.</li>
-<li>Learn enough about your company’s <strong>Jira project templates</strong>(s), often detailed on Confluence.</li>
-<li><strong>Discuss options</strong> with your squad and community if needed. Don’t move too fast. Huddle to ensure the template you want is best for your team.</li>
-</ul>
-<p>When ready, create a project with the help of an admin, starting with a name.</p>
-<hr>
-<h2 id="-1-name-the-project">#1. Name the Project</h2>
-<p>Every Jira project needs a name (like <code>Design System</code>) and, more importantly, a namespace (like <code>DS-</code>). That namespace shows up everywhere: screens, comments, descriptions, emails, pull requests in Bitbucket (or similar), etc.</p>
-<p>Examples here use <code>DS-</code> (for a generic <code>d</code>esign <code>s</code>ystem). In real contexts, I’ll emulate the namespace used in CSS classes or web component prefixes that our users encounter in their work. For the <a href="http://designsystem.morningstar.com/">Morningstar Design System</a>, it’d be <code>mds-</code>. Once your project is setup and named, welcome to your clean, intimidatingly empty backlog.</p>
+  <p>After building for months, <a href="https://designsystem.morningstar.com/">Morningstar Design System</a> released in <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-0-june-30-2017">June 2017</a> and celebrated the launch with our community of designers and developers.</p>
+<p>Immediately, the community used it. And, immediately, they needed help.</p>
+<p>What kind of help? Oh my goodness did those requests fly! Fix <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-3-july-28-2017">your defect</a>. Add a feature I want. Answer my question. Approve my proposal. Set up my files. Train us. Review that we used the system correctly. Link our library. On and on and on. Over eight weeks, 100+ incidents (or cases, in tech support speak) inundated the team in Slack, email, tickets, and more.</p>
 
 
 
 
-    <figure class="escom-article-figure">
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
         <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/1.png" alt="Jira empty backlog view">
+            <img class="escom-article-figure__image" src="/images/articles/design-system-support/1.png" alt="Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch">
         </div>
-        <figcaption class="escom-article-figure__caption">Jira empty backlog view</figcaption>
+        <figcaption class="escom-article-figure__caption">Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch</figcaption>
     </figure>
 
 
 
+<p>Gulp. We hadn’t anticipated the demand. Cases felt unceasing. Responses flew haphazardly. It was all quite chaotic. We figured it out, and we gained our customer’s trust. And, along the way, I learned a lesson.</p>
+<p>Design systems must be ready to resolve emerging and at times urgent needs of designers and developers. This requires upfront investment in process and ongoing commitment that isn’t handwavingly trivial. Instead, a design system team must understanding and what types of <strong>cases</strong> it supports, in what <strong>channels</strong> they arise, and who’s responsible to <strong>manage</strong> and <strong>resolve</strong> each via a well-defined <strong>workflow</strong>.</p>
 <hr>
-<h2 id="-2-add-stories">#2. Add Stories</h2>
-<h3 id="feature-development-50-of-stories-">Feature Development (50% of stories)</h3>
-<p>A design system backlog is rich with features we make, from visual style’s Color and Typography to a UI component library’s Icon, Button and Modal. Since 2016, my teams have been breaking down work per feature into repeatable steps: <code>Propose</code> (or Discover), <code>Design</code>, <code>Code</code>, <code>Doc</code>, and <code>Publish</code> as described in <a href="design-system-features-step-by-step">Design System Features, Step-by-Step</a>.</p>
+<h2 id="what-is-support-cases-to-resolve-across-channels">What is Support? Cases to Resolve Across Channels</h2>
+<p>Support is a concept interpreted in many ways. Two come to mind: “What are our supported browsers and devices?” (features) and “Do we have enough people on our core team to support the program?” (team capacity). For this article, I define support as:</p>
 
 
 
 
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/2.png" alt="Jira backlog with feature stories (such as Color [Design]) and event-based stories (such as final workflow for a release)">
+
+
+        <div class="escom-bar-quote">
+            <b>Design System Support</b>: how a design system takes in, triages, routes, assigns, and resolves customer incidents and requests on a case-by-case basis.
         </div>
-        <figcaption class="escom-article-figure__caption">Jira backlog with feature stories (such as Color [Design]) and event-based stories (such as final workflow for a release)</figcaption>
-    </figure>
 
 
 
-<p>In Jira, each step per feature is represented by a separate top-level story, such as <code>Color [Propose]</code> (scoping the work), <code>Color [Design]</code> (iterating in Sketch or Figma ), <code>Color [Code]</code> (delivering mixins and tokens), <code>Color [Doc]</code>, and <code>Color [Publish]</code>.</p>
-<p>Why multiple stories per feature? Feature delivery usually spans many sprints, each step ends with a clear definition of done, and steps are assigned to different team members, such as a designer for[Propose], [Design] and [Doc], and a developer for[Code] and [Publish].</p>
-<h3 id="recurring-events-releases-demos-and-more-10-of-stories-">Recurring Events: Releases, Demos, and more (10% of stories)</h3>
-<p>Work isn’t just feature development. Work also includes predictable routines also tracked as stories, including:</p>
-<ul>
-<li><strong>Sprint grooming</strong>, usually by a scrum master or product owner, from prior to the grooming session all the way to the planning sessions.</li>
-<li><strong>Sprint demos</strong> including inviting special presenters and attendees, forming and sending agendas, recording, and posting materials afterwards.</li>
-<li><strong>Releases</strong> that synchronize publishing design, code and documentation, including change histories, FTPing, and tools like Jenkins and Maven.</li>
-<li><strong>Communications</strong>n usually following a sprint and/or release, that’s published across channels like Slack, email, and a wiki, blog or vlog.</li>
-<li><strong>Sprint turnover</strong>, in which incomplete issues are moved, sprints are open and closed, and impacted individuals are notified.</li>
-</ul>
-<p>Each of these are added regularly to and completed within a sprint, loaded with copious repeatable subtasks (see below).</p>
-<h3 id="other-stories-40-of-stories-">Other Stories (40% of stories)</h3>
-<p>All sorts of other work crops up: special research, strategic presentations, technical spikes, process documentation. These stories round out a backlog, comprising a non-trivial array of non-repeatable work. This work is difficult or impossible to model well, so we borrow conventions (like calling a process activities Code and Doc based on it’s outcomes) but acclimate and get comfortable with the rich heterogeneity of day-to-day reality too.</p>
-<h3 id="normalizing-story-titles">Normalizing Story Titles</h3>
-<p>My pursuit of clarity (some say OCD) requires normalizing and improving story summaries that can be vaguely or imprecisely input by teammates. For example, I’ll often append a missing task type (<code>[Propose]</code>, <code>[Design]</code>, <code>[Code]</code>, <code>[Doc]</code>, <code>[Publish]</code>, <code>[Defect]</code>, etc). These small adjustments improve story scanability and consistency in Backlog and Active Sprint views.</p>
+<p>The direction is inbound and the relationship usually individual, triggered by someone who needs something and expects a response from the system. This distinguishes support from outbound efforts that enable customers like <a href="design-system-communications.html">communications</a>, <a href="adopting-design-systems.html">adopter outreach</a>, governance and training events.</p>
 <hr>
-<h2 id="-3-categorize-work-in-epics">#3. Categorize Work in Epics</h2>
-<p>Epics organize work into well understood categories for filtering (using the Epics panel on the left) and scanning (a story’s category as badge per row). Too many epics can overwhelm. So we’ll limit epics to <strong>evergreen</strong> categories, <strong>formative</strong> epics for early work, and epics representing <strong>growth</strong> or <strong>change</strong>.</p>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/3.png" alt="Jira epics set up for a formative period of a design system">
-        </div>
-        <figcaption class="escom-article-figure__caption">Jira epics set up for a formative period of a design system</figcaption>
-    </figure>
-
-
-
-<h3 id="evergreen-epics">Evergreen Epics</h3>
-<p>Some design systems work is like the mail: <a href="https://www.youtube.com/watch?v=LL6ubXD9ZjY">it never stops</a>. These persistent categories represent the work we are always doing:</p>
+<h3 id="what-is-and-is-not-support-">What is — and is not—support?</h3>
+<p>Design systems always resolve cases when a designer or developer needs to…</p>
 <ul>
-<li><strong>Visual style</strong>, including color, type, space, size, iconography, and more.</li>
-<li><strong>UI components</strong> to fix, enhance, deprecate, or add.</li>
-<li><strong>Technical architecture</strong> to improve testing, build tools, app integrations, and other technical bits beyond the source code of the library itself.</li>
-<li><strong>Operations</strong> to run the program, and refine how it’s run.</li>
+<li><strong>Get Help</strong> with system features and tools to move work forward.</li>
+<li><strong>Submit a Defect</strong> when features behave unexpectedly or lack quality.</li>
+<li><strong>Request a (Compliance?) Review</strong> emerging work to discern if a solution aligns or complies with standards.</li>
 </ul>
-<h3 id="formative-epics">Formative Epics</h3>
-<p>When <a href="starting-a-design-system.html">starting a design system</a>, big investments are required even if they eventually taper off into normal business as usual. As a result, a formative period may also deliver on epics like:</p>
+<p>These needs—and expected system response—is immediate. Lacking understanding or a defect may block someone from getting work done. If a system team isn’t responding to such needs, it strains the relationship and erodes trust.</p>
+<p>Other requests require more deliberation, such as:</p>
 <ul>
-<li><strong>Strategy</strong> including the roadshow decks, presentations, cross functional alignment, solicitation of staff capacity, and the like.</li>
-<li><strong>Early Adopter</strong> coordination to discover, align, collaborate, and experiment with how the system works.</li>
-<li><strong>Documentation</strong> site to build capabilities to host, template, and render design guidelines, code examples, and other displays we know and love.</li>
+<li><strong>(Request a) Feature</strong> when the system doesn’t yet offer something a customer expects or thinks it should.</li>
+<li><strong>(Propose a) Contribution</strong> for something a system lacks that someone else is willing to provide.</li>
+<li><strong>(Request) Training/Onboarding</strong> for an individual, team, or large group.</li>
 </ul>
-<h3 id="epics-of-growth-and-change">Epics of Growth and Change</h3>
-<p>After a formative period yields a major release, work transitions into business-as-usual. Nevertheless, the system can evolve and grown with work like:</p>
+<p>Here, customers need to know “What can the system do, by when?” rather an immediate outcome. While these requests aren’t thought of as “support,” they do flow through support channels. As a result, a support workflow will triage and route each to be declined, activated or settled into a backlog.</p>
+<p>Finally, support often invites more generic interactions, such as:</p>
 <ul>
-<li>Emerging feature categories like <strong>Charts</strong>, <strong>UX Patterns</strong>, <strong>Editorial</strong> as peers to visual style and UI components.</li>
-<li>Major initiatives to grow an existing category, such as a notable UI component expansion into <strong>Navigation</strong> or a <strong>Forms upgrade</strong>.</li>
-<li>Shifts in design or tech stacks that require strategy, experiments, and change management, like <strong>Figma</strong> (you know you’re doing it!) or <strong>Web Components</strong> (you know you want to!).</li>
+<li><strong>Give Feedback</strong> on system features, process, status, and more.</li>
+<li><strong>Contact Us</strong> with whatever else you are curious about. We’re an open door.</li>
 </ul>
 <hr>
-<h2 id="-4-order-the-delivery-with-versions">#4. Order the Delivery with Versions</h2>
-<p>Versions can break down the work into periods that result in delivering value to your users. These versions enable teammates to see badges per backlog row and filter features and other stories relate to a particular release (such as <code>1.3.0</code>) or period (such as <code>2020Q1</code>).</p>
-<p>Systems versioning at the library level may group stories into versions of:</p>
+<h3 id="where-does-support-arise-many-places-watch-informal-ones-too-">Where does support arise? Many places. Watch informal ones, too.</h3>
+<p>Support cases originate from sources formal and informal. Design systems typically promote formal paths in documentation and communications like:</p>
 <ul>
-<li><code>Alpha (0.0.x)</code> to validate a system’s design and code architecture, such as for color and typography applied to icons and buttons.</li>
-<li><code>Beta (0.x.0)</code> to progressively deliver a stabilizing set of UI component design, code and documentation to early adopters.</li>
-<li><code>Launch (1.0.0)</code> for a complete library’s first major release.</li>
-<li><code>Ongoing (1.x.x)</code> for work out-of-scope for launch, yet not breaking.</li>
-<li><code>Next Major Release (2.0.0)</code> to bucket those stories – small to large – that will be breaking changes or major shifts to save for later.</li>
-<li><code>Not Yet Prioritized</code> for work that’s come in recently but hasn’t been assigned a release.</li>
-<li><code>Business as Usual</code> for work that’s part of a day-to-day operations and not tied to any particular delivery.</li>
+<li><strong>Chat</strong> (Slack, MS Team, Google Chat,…) monitored by the team, by far the preferred, most responsive and effective channel… if it exists.</li>
+<li><strong>Task management</strong> software(Jira, Github, …), particularly defects.</li>
+<li><strong>System email inbox</strong>(es) like <a href="mailto:designsystem@company.com">designsystem@company.com</a>.</li>
+<li><strong>Online form(s)</strong> built with Google Forms or Survey Monkey.</li>
+<li><strong>Discussion boards</strong> such as Stack Overflow, Github Issues, or Confluence.</li>
+<li><strong>Modules</strong> and <strong>links</strong> in documentation, possibly triggering formal forms and/or configured with URL parameters to populate specific fields.</li>
 </ul>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/4.png" alt="Jira versions across a range of releases and business-as-usual">
-        </div>
-        <figcaption class="escom-article-figure__caption">Jira versions across a range of releases and business-as-usual</figcaption>
-    </figure>
-
-
-
-<p>Once such a team completes its Launch 1.0.0, versions can shift to:</p>
+<p>Support requests arise informally, too, amid interactions between system team members and those throughout a community. Encountered by any team member, they include:</p>
 <ul>
-<li><code>Next Minor Release (1.4.0)</code> for work to deliver in the next sprint or two, after which retire that version and add Next Minor Release (1.5.0).</li>
-<li><code>Ongoing (1.x.x)</code> for work out-of-scope the next minor release.</li>
-<li><code>Next Major Release (2.0.0)</code></li>
+<li><strong>Personal chat(s)</strong> with and email inbox(es) of system team members.</li>
+<li><strong>Reviews</strong> involving the system like design critiques and code reviews.</li>
+<li><strong>Communication</strong> like replies to a release announcement or training event.</li>
+<li><strong>Surveys</strong> with open ended questions inviting customers to comment.</li>
+<li><strong>Other meetings</strong> like working sessions, training, town halls, and more.</li>
 </ul>
-<p>If the team tends to deliver a minor release just about every sprint, then the <code>Next Minor Release</code> approach is redundant. Instead, the active sprint serves the purpose of scoping the next minor release, and all near term work organized into the Ongoing (1.x.x) version.</p>
-<p>For teams versioning at the component level, we’ll use versions to group stories by an increment of time, such as:</p>
+<p><em>Takeaway</em>: Be thoughtful about which channels to open and monitor, and don’t support too many. For formal channels with high activity, optimize data collection, response time and response quality. For informal cases, ensure staff can put requests in the right place and gather just enough information to move things forward.</p>
+<h3 id="what-s-supported-system-features-only-or-how-to-make-things-">What‘s Supported: System Features Only, or How to Make Things?</h3>
+<p>The design system serves teams throughout an organization. Unlike research and accessibility, the system makes things — visual style and (more core) UI components — in a process similar to how each team typically delivers their own product. System features are built into tools that adopters also use day to day, like Sketch for designers, frameworks (React, Angular, …) and code (CSS, JavaScript, …) for developers.</p>
+<p>As a result, many requests are more “How do I do my job?” and less if at all “How does the system help me do my job?”</p>
 <ul>
-<li><code>2019Q4</code>, <code>2020Q1</code>, and <code>2020Q2</code> for three upcoming quarters.</li>
-<li><code>Not Yet Prioritized</code>, <code>Business as Usual</code>, and other designations.</li>
+<li>“How to install this code package and manage that dependency?”</li>
+<li>“How should I apply CSS classes to apply this custom visual style?”</li>
+<li>“How should I organize my Sketch artboards for component designs?”</li>
 </ul>
-<h3 id="jira-epics-and-releases-combined-">Jira Epics and Releases, Combined!</h3>
-<p>Some teams use many, many more epics and may not even use versions. When I introduce the approach described above, their chief complaint is something like “These epics are too broad. There’s too many stories per epic to deliver something meaningful.”</p>
-<p>However, epics shouldn’t stand alone. Instead, filtering by epic and version should result in a small set of stories pursued as a meaningful objectives. Both dimensions – independent, applied together – has proven incredibly valuable.</p>
+<p>Such overlaps distort expectations. Should the design system team answer any question about Sketch, React or Angular because support other teams? Opinions are mixed, but my willingness to offer a helping hand has grown over time. This is consistent with creating a collective, nurturing environment and building trust in the system program. However, I’m also at the ready to admit “You understand your context more than I do, and I’m not informed enough to give you good advice.”</p>
+<p><em>Takeaway</em>: Be prepared for questions that are outside the scope of simply using a system. Depending on your capacity to do so, consider offering a helping hand as much as you can. However, know your role. Establish reasonable boundaries and expectations of what the system is and isn’t there to help with.</p>
 <hr>
-<h2 id="-5-filter-with-quickfilters">#5. Filter with Quickfilters</h2>
-<p>I’ll create Jira quickfilters to ease filtering stories by team members using succinct initials (such as NC for Nathan Curtis). These filters are essential during ceremonies like standup and planning as we discuss stories person by person. Recently, Jira has added an avatar-based list of assignees above this feature, also useful for filtering.</p>
-<p>Beyond names, other quickfilters have proven helpful:</p>
-<ul>
-<li><strong>Contributor</strong> assignees, filtering using a Jira Label applied to those stories assigned to those outside the core team lacking their own quickfilter.</li>
-<li><strong>My issues</strong> for anyone looking at the backlog.</li>
-<li><strong>Not done</strong>, filtering the display to show only incomplete work.</li>
-</ul>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/5.png" alt="Quickfilters for team members and other special cases">
-        </div>
-        <figcaption class="escom-article-figure__caption">Quickfilters for team members and other special cases</figcaption>
-    </figure>
-
-
-
+<h2 id="support-workflow-from-intake-to-resolution">Support Workflow: From Intake to Resolution</h2>
+<p>I’m not an authority on customer service workflow. That said, for design systems, I start simple and refine over time how a team intakes across channels, triages and routes requests responsively, and flows the work into existing scrum / kanban workflows as needed.</p>
+<h3 id="do-all-cases-require-a-workflow-no-some-resolve-immediately-">Do all cases require a workflow? No, some resolve immediately.</h3>
+<p>Not every case needs to be formally tracked, and many resolve immediately. An answer in a meeting, a quick Slack chat, a rapid email. All are best resolved quickly and informally. This means no heavy form to complete, no new ticket to track in Jira, no notifications when resolved.</p>
+<p>However, these “immediately resolved cases” are still support. The work demands attention and takes time away from other tasks. To ignore this effort is to ignore what might be consistently 20% or up to 50% of designer or developers job day-to-day.</p>
+<p><em>Takeaway</em>: Make easy-to-resolve interactions light and effective, resolving each with no loose ends. In doing so, don’t ignore—instead, recognize and plan for!—the time staff needs to handle these conversations properly.</p>
 <hr>
-<h2 id="-6-iterate-with-sprints">#6. Iterate with Sprints</h2>
-<p>Most of my systems teams iterate in two-week sprints. My habits for managing sprints include:</p>
-<ul>
-<li>Append a <strong>date the sprint ends</strong>, such as [Ends 10/1], to every sprint title.</li>
-<li>Using two or at most three <strong>upcoming sprints</strong> to collect stories from (a) the current sprint that are no longer feasible or (b) the backlog to organize and signal upcoming work to assignees.</li>
-</ul>
+<h3 id="is-every-case-urgent-gosh-no-so-set-expectations-">Is every case urgent? Gosh no, so set expectations.</h3>
+<p>Not all cases require an immediate response. Sure, a system should be able to rapidly release fixes, respond to feature requests and proposals “in the flow” of work. But not every case warrants stopping everything and getting whatever they ask for done.
+Customers may have unrealistic expectations about how a system prioritizes their needs. Imagine a request like:</p>
 
 
 
 
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/6.png" alt="Additional sprints for dragging tickets">
+
+
+        <div class="escom-bar-quote">
+            “We need a responsive, animated headline & hero photograph carousel reusable across all our marketing site landing pages. By next week. In production.”
         </div>
-        <figcaption class="escom-article-figure__caption">Additional sprints for dragging tickets</figcaption>
-    </figure>
 
 
 
+<p>Um, no. That’s not how most systems work. Instead of scrambling to respond to and resolve that demand, a response could be:</p>
+
+
+
+
+
+
+        <div class="escom-bar-quote">
+            “Given your urgency, your best bet is to make it locally in your product. We can help you align with standards and discern if it’s a need shared by others.”
+        </div>
+
+
+
+<p>Design systems play the long game, incrementally adding features relevant for everybody by collaborating with everybody. A responsive support workflow shouldn’t be confused with a willingness to rapidly release complex features on a day’s notice.</p>
+<p><em>Takeaway</em>: Gauge how much your design system is coupled or decoupled individual and imminent product delivery to production. Generally, the larger and more diverse an adopter ecosystem, the less likely the system team is release features or even fixes to douse a single customer’s fire.</p>
 <hr>
-<h2 id="-7-break-down-and-assign-work-with-subtasks">#7. Break Down and Assign Work with Subtasks</h2>
-<p>Let’s be honest. It ain’t simple to make visual style and components at high quality to serve many contexts. There are so many tasks involved to setup, make, test, present, review, and commit work each step of the way: <code>[Propose]</code>, <code>[Design]</code>, <code>[Code]</code>, <code>[Doc]</code>, and <code>[Publish]</code>. I recently created a superset of all these subtasks, across steps, that many teams conduct.</p>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/7.png" alt="Chart of subtasks per feature development steps">
-        </div>
-        <figcaption class="escom-article-figure__caption">Chart of subtasks per feature development steps</figcaption>
-    </figure>
-
-
-
-<p>Yet, once you tame the beast of all these repetitive tasks, you can use a Jira add-on to create and apply subtask templates — a collection of reusable subtasks — to common story types. There are many add-ons to choose from, such as <a href="https://marketplace.atlassian.com/apps/1216960/automatic-subtasks-add-on?hosting=cloud&tab=overview">Automatic Subtasks</a> Add-On and <a href="https://marketplace.atlassian.com/apps/1214056/sub-task-manager-for-jira?hosting=cloud&tab=overview">Subtask Manager</a> (shown here).</p>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/8.png" alt="Subtask Manager Template of many [Proposal] step subtasks">
-        </div>
-        <figcaption class="escom-article-figure__caption">Subtask Manager Template of many [Proposal] step subtasks</figcaption>
-    </figure>
-
-
-
-<p>As a step begins, apply a template to auto-generate subtasks needed. For example, a <code>[Propose]</code> story could apply a subtask template with:</p>
+<h3 id="what-initiates-a-case-intake-with-just-enough-data-">What initiates a case? Intake, with just enough data.</h3>
+<p>When a case isn’t resolved immediately or is submitted independently, you’ll want to collect the right—and just enough—data. Prioritizing, managing and resolving a case is made easier with:</p>
 <ul>
-<li><strong>Pre-proposal</strong> reviewing similar apps and sites as well as existing system components for similar patterns.</li>
-<li><strong>Proposal</strong> scoping and authoring.</li>
-<li><strong>Presentation</strong> to the system team, design community, and dev community.</li>
-<li><strong>Reviewing</strong> and commenting by system team and community members.</li>
+<li><strong>Requester name</strong>, email and — if known—team, product, or organization.</li>
+<li><strong>Type</strong>, such as Defect, Help, Review Request, and more.</li>
+<li><strong>Description</strong></li>
+<li><strong>Attachments</strong>, like screenshots of what’s experienced or proposed.</li>
+<li><strong>Channel</strong> where the request originated.</li>
+<li><strong>Group</strong>, product, squad, … to identify who the requester represents.</li>
 </ul>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/9.png" alt="Propose story, with subtasks generated and assigned">
-        </div>
-        <figcaption class="escom-article-figure__caption">Propose story, with subtasks generated and assigned</figcaption>
-    </figure>
-
-
-
-<p>For a contribution of a new <code>Dialog</code> component, we’ll populate a <code>[Propose]</code> story with relevant subtasks, assign most of them to a contributor, and also assign review tasks to the team member shepherding the work.</p>
-
-
-
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/10.png" alt="Subtask templates for feature development, releases, and sprint management">
-        </div>
-        <figcaption class="escom-article-figure__caption">Subtask templates for feature development, releases, and sprint management</figcaption>
-    </figure>
-
-
-
-<p>Subtask templates are addictive. They’ll remove the mundane repetitiveness of typing in work, and provide immediate clarity and structure as a checklist. Within days of creating our first template, we’d created templates for:</p>
+<p>For defects, you’ll also benefit from:</p>
 <ul>
-<li><strong>Feature development</strong> step (<code>[Propose]</code>, <code>[Design]</code>, <code>[Code]</code>, <code>[Doc]</code>, and <code>[Publish]</code>) as well as specialized, shorter template for [Defect].</li>
-<li><strong>Recurring sprint events</strong> like sprint planning, demos, announcements.</li>
-<li><strong>Common release</strong> types of minor, patch/fix releases.</li>
+<li>What’s experienced, like screenshots and warning copy</li>
+<li>Steps to reproduce the result, as detailed as possible</li>
+<li>Versions, both of their tools (like a browser) and the system</li>
 </ul>
-<h3 id="subtask-norms-take-time">Subtask Norms Take Time</h3>
-<p>Team norms around how to use subtasks effectively take time. Encourage patience as your team adapts. The detailed descriptions, assignment timing, and handing off work takes some getting used to. Over time, I’ve come to embrace behaviors like:</p>
+<p>For feature requests and contribution proposals, don’t go overboard. Keep it light and deepen afterwards through conversation and transitioning it to formal inquiry (such as a [DISCOVERY] task). Here, questions could include:</p>
 <ul>
-<li><strong>Mass assign most of the subtasks</strong> to the parent story’s assignee at the moment you generate subtasks. Automating these assignments is preferred to that assignee having to manually (and annoyingly) assigning each subtask to themselves later on.</li>
-<li><strong>Empower team members to generate subtasks themselves</strong>. While some resist project management as “not my job,” most are empowered and educated about work ahead when they add subtasks for themselves.</li>
-<li><strong>Prune irrelevant subtasks</strong>. If a story doesn’t require it, delete it.</li>
-<li><strong>Don’t overwhelm contributors</strong> unfamiliar with a process. Consider limiting contributor subtask assignments to only those that are active.</li>
-<li><strong>Don’t preassign review subtasks</strong>. Instead, wait until the review is ready to begin. Almost no one prefers a subtask to appear in their view if they can’t start yet.</li>
+<li><strong>Type</strong>: Is it new or an enhancement? If an enhancement, of what?</li>
+<li><strong>Shared Need</strong>: What other teams would benefit?</li>
+<li><strong>Urgency</strong>: Is this expected this week? month? quarter? year?</li>
 </ul>
+<p>While you could collect so much data, avoid making things complicated. Forms with useful but onerous inputs, task templates, and specialized properties in task management software to improve data consistency yet also increase a submitter’s effort. Additionally, autoresponders to forms and incoming emails can ensure requesters feel heard, set expectations, and point to helpful materials but can also feel noisy.</p>
+<p><em>Takeaway</em>: Identify what to collect and where to track it. Collect only essential data and be resilient to missing data.</p>
 <hr>
-<h2 id="-8-moderate-ceremonies-with-efficiency">#8. Moderate Ceremonies with Efficiency</h2>
-<p>When used most effectively, Jira becomes a hub of communication and the central tool for facilitating regular team-wide ceremonies of grooming, planning, and standups.</p>
-<h3 id="jira-for-sprint-grooming">Jira for Sprint Grooming</h3>
-<p>Working with (most often a small subset of) the team, I’ll present Jira’s Backlog view to:</p>
+<h3 id="where-when-do-you-triage-and-assign-cases-name-a-place-time-">Where, when do you triage and assign cases? Name a place, time.</h3>
+<p>Habits across teams vary. However, most teams route cases into project management rituals and tools, like:</p>
 <ul>
-<li>Tag stories with without epics and versions, properly categorizing and applying a <code>Not Yet Prioritized</code> version.</li>
-<li>Polish story summaries / titles based on team norms.</li>
-<li>Discuss and prioritize stories marked Not Yet Prioritized into a version.</li>
-<li>Communicate with submitters of proposals, defects, and feature requests.</li>
-<li>Comment to assignees / submitters to fill gaps in insufficient descriptions.</li>
-<li>Generate subtasks for design, code, and doc tasks about to be assigned.</li>
-<li>Move stories between sprints and assignees to setup for planning.</li>
+<li>a daily scrum / standup</li>
+<li>a sprint backlog</li>
+<li>a weekly planning queue</li>
+<li>“To Triage” / “Not Yet Prioritized” bucket in a Kanban board (my favorite)</li>
 </ul>
-<h3 id="jira-for-sprint-planning">Jira for Sprint Planning</h3>
-<p>After the team agrees on sprint goals, we’ll focus on Jira’s Backlog view to:</p>
-<ul>
-<li>Move incomplete tasks in the current sprint to the next sprint.</li>
-<li>Overall, align agreed objectives with stories in the next sprint.</li>
-<li>Review, prioritize, and sequence task assignment, per person using the Quickfilter filter by that assignee.</li>
-<li>Review, prioritize, and assign tasks not yet assigned.</li>
-</ul>
+<p>Ensure you’ve identified that place place and monitor it routinely. For teams with sufficient capacity, there’s people assigned to triage and assign cases in real time as they flow in during business hours. Other teams wait to discuss and assign cases in regular ceremonies like daily standup or—at most—biweekly planning.</p>
+<hr>
+<h3 id="how-fast-do-we-respond-set-expectations-with-an-sla-">How fast do we respond? Set expectations with an SLA.</h3>
+<p>Systems earn trust by responding quickly. A first response of “We heard you, we’re working on it” is different from “Your case is resolved.” At a minimum, the requester should feel heard and trusts that you are on it.</p>
+<p>Feedback from design system colleagues indicates that most design system teams promise to respond in a day or less.</p>
 
 
 
 
-    <figure class="escom-article-figure">
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
         <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/using-jira-for-design-systems/11.png" alt="Jira’s Active Sprints view of To Do, In Progress, and Done">
+            <img class="escom-article-figure__image" src="/images/articles/design-system-support/2.png" alt="Survey results of response time by design system team.">
         </div>
-        <figcaption class="escom-article-figure__caption">Jira’s Active Sprints view of To Do, In Progress, and Done</figcaption>
+        <figcaption class="escom-article-figure__caption">Survey results of response time by design system team.</figcaption>
     </figure>
 
 
 
-<h3 id="jira-for-standup">Jira for Standup</h3>
-<p>Most teams I work with conduct a standup two- to three times per week, using Jira’s Active Sprints view simple columns of <code>To Do</code>, <code>In Progress</code>, and <code>Done</code> to chart and progress current tasks. During that meeting, I’ll:</p>
+<p>I encourage teams to reveal a response time — the “<strong>service level agreement</strong>” (SLA)—in formal support channels. Advertising a SLA shifts a team to take support seriously and orient capacity to meet that commitment. Teams unprepared for support omit an SLA at their own peril, and this can’t last forever. A refusal to fluidly support your customers is a terrible signal to send.
+What tool(s) should we use? Scale tools to suit demand.</p>
+<p>System teams often mature through three or four stages of growth:</p>
 <ul>
-<li>Always filter the display to a specific assignee and Not Done, to vastly simplify the view.</li>
-<li>Review ongoing work per person based on their Quickfilter.</li>
-<li>Start with an assignee’s subtasks that review and coordinate other people’s work (where the assignee has subtasks other people depend on) before they describe larger stories they own.</li>
-<li>Move tasks across columns and add details as needed and can be done quickly, but otherwise ask assignees to do that themselves in the background to move conversation forward.</li>
+<li><strong>No tools</strong>. The system team size and/or adopter quantity is small enough doesn’t warrant responding and tracking with any formality. While every team starts here, few system programs stay here for long.</li>
+<li><strong>Spreadsheets.</strong> The first instinct: when managing cases is a challenge, track the work in a spreadsheet like Excel or Google Sheets!</li>
+<li><strong>Task management</strong> software, such as Jira, Asana, or Github Issues, managing cases in a primary team tool. Other channels—a form, a link with URL parameters, etc—tend to route submissions into that tool.</li>
+<li><strong>Ticketing software</strong>, such as Jira Service Desk or Help Scout.</li>
 </ul>
-<p>I’ve seen some teams employ a much more complex Active Sprints view, with many many columns corresponding not just to top level tasks (like <code>Design</code>) but also reviews and handoffs (like <code>PR Review</code>). That has never worked for me, in that our tasks are to heterogeneous, our steps and subtasks too fluid, to make a top-level status board that rigid.</p>
+<p>Most established teams end up in task management software like Jira, while those handling a high case load turn to tools optimized for their scale.</p>
+
+
+
+
+    <figure class="escom-article-figure escom-article-figure--break-bleed">
+        <div class="escom-article-figure__image-container">
+            <img class="escom-article-figure__image" src="/images/articles/design-system-support/3.png" alt="Chart of tools used by design system teams. 80% use task management like Jira, with a balance across other options.">
+        </div>
+        <figcaption class="escom-article-figure__caption">Survey results of what tools are used by design system teams.</figcaption>
+    </figure>
+
+
+
+<p><em>Takeaway</em>: Systems built to last include tool(s) to manage support tasks and integrate and make visible those tasks on a daily basis. A spreadsheet managed in solitude on a shared drive isn’t enough for large-scale efforts.</p>
+<h2 id="roles-who-manages-and-resolves-cases-">Roles: Who Manages and Resolves Cases?</h2>
+<h3 id="who-manages-parts-of-the-workflow-one-some-or-all-of-us-">Who manages (parts of) the workflow? One, some, or all of us.</h3>
+<p>Larger system teams benefit from project managers / scrummasters whose job it is to route tickets and manage workflow. For system teams not at that scale, designers and developers are saddled with the responsibility. Whether junior or senior, such practitioners tend to be less interested in triaging and routing support tickets than their core mandate: design and code.</p>
+<p>So who should monitor support channels, triage requests, and route assignments? Different design system teams take different approaches:</p>
+<p><strong>*A single person.</strong> Whether a lead, project manager, or practitioner, a single person may be responsible. Their day-to-day routine may be to monitor chats, inboxes and form submissions, and trigger the workflow as a result. The tradeoff here is efficiency and decisiveness with “single-point-of-failure” for responsiveness if busy with meetings, out sick or on vacation.
+<strong>*A defined subset of the team.</strong> Usually pairing a lead and project manager or practitioner, there’s few enough cooks in the kitchen that coordinate who owns what is easy via backchannel chats and st andup.
+<strong>*Anyone on the team.</strong> Should anyone respond to anything? While more responsive, it can miss cases, lead to chaos and requires consistent answers and workflow across many people.</p>
+<p>Decomposing the challenge a bit more, does everyone monitor Slack but designated individual(s) monitor an email inbox and ticket submissions?</p>
+<p><em>Takeaway</em>: Most bias towards using an entire team or a defined subset. My experience suggests that formal channels benefit from a single person accountable to route cases and ensure each resolves. On larger teams, everyone can’t do everything.
+So chalk up my vote for balance. Align a few to operate the workflow, coordinate in the backchannel, and unburden the rest of the team. Also, consider making support triage an impermanent tour-of-duty so that team members rotate and don’t get burned out.</p>
 <hr>
-<p>Jira is an acquired taste, and using it effectively across a team takes time, commitment, flexibility, and a willingness to converge on a shared language. In my work across many teams, Jira’s effectiveness seems correlated with those teams invested in a system’s long arc. Those are just the teams and systems I want to work with most.</p>
+<h3 id="it-s-not-for-everybody-">It’s not for everybody.</h3>
+<p>Some designers and developers relish back-and-forth problem solving and the connectedness provoked by support. They welcome bouncing in and out of resolving requests. Positive vibes emit from their pores as each interaction accumulates the intrinsic reward of helping others.</p>
+<p>Others? Nah. Not so much. First, not everyone can bring the patience, curiosity, and positive attitude needed. Also, many find context-switching disruptive, friction-filled, and far from the designing, coding and documenting they enjoy most. I’ve seen team members assigned enough support work that they unexpectedly leave a team. That’s sad and avoidable. Support isn’t for everyone.</p>
+<p><em>Takeaway</em>: When starting support and preceding assignments, consider frank and individual discussions with each person. You can cover topics like preferences, comfort level, flexibility, attitude, confidence, and capability. Once you are confident they are the right person for the job, away you go!</p>
+<hr>
+<h3 id="how-responsive-is-too-responsive-beware-of-the-swarm-">How responsive is TOO responsive? Beware of “The Swarm™”</h3>
+<p>If more than one person can respond (usually in chats like Slack or Teams), then two or more staff members may swarm to respond simultaneously. This sometimes works, and certainly signals you care. Yet, swarming risks crosstalk, splayed directions, and conflicting advice. Avoid overwhelming those in need, align answers, and coordinate activity when one respondent suffices.</p>
+<p><em>Takeaway</em>: Telling some team members that they can’t or shouldn’t talk to customers is a signal to avoid. Instead, establish expectations that team members coordinate in a private backchannel before inundating a requester with feedback.</p>
+<hr>
+<h3 id="how-good-are-responses-friendly-yet-authority-and-quality-matter-">How good are responses? Friendly, yet authority and quality matter.</h3>
+<p>Confidence and authority matter. While a design lead may be more knowledgable of brand and organizational nuance, others lack that context. A tech lead knows how to balance constraints, frameworks, and approaches; other developers lacks experience.</p>
+<p><em>Takeaway</em>: Incorporate moments to review responses prior to sending.</p>
+<hr>
+<h3 id="who-should-have-access-to-tools-visibility-collaboration-matter-">Who should have access to tools? Visibility &amp; collaboration matter.</h3>
+<p>Tools should permit visibility and collaboration between a requester, responder, and those managing the process. A less structured Jira board visible to all three participants is better than a spreadsheet or souped-up ticketing software only accessible by a responder alone.</p>
+<p><em>Takeaway</em>: Most system teams lack the scale to need ticketing software. However, a dependable case workflow through assignable and measurable task management is a hallmark of operations that take support seriously.</p>
+
+
+
 
 
 
