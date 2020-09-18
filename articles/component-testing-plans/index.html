@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        15 min
+                        8 min
                       
                     </span>
                 </p>
@@ -141,112 +141,6 @@
     <div class="esds-row__inner">
 
     <p>Whether standing up a system from scratch or engaging in incremental planning, teams wonder: what’s a mature component catalog look like? Conversations quickly hone in on quantity: 30 components? 50? 70?</p>
-<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
-        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
-            How many components does our catalog need?
-        &lt;/div&gt;
-        
-        
-    &lt;/div&gt;
-</code></pre>
-<p>Making components—a repetitive and reliable process yielding measurable outputs—can become a team’s comfort zone. Yet, on average, each additional is more complicated, has more dependencies, and costs more to make and maintain. These same components also tend to be less relevant to fewer customers. There’s a point when the next component, centrally made and maintained, isn’t worth it. There must be a quantity ceiling. This ceiling has teams thinking.</p>
-<p>In later 2018, multiple teams gauged the stakeholder sentiment of: “If you had to choose only one, should the system…</p>
-<ul>
-<li>Add more components?</li>
-<li>Remove components, shedding what we don’t need?</li>
-<li>Improve the quality of components we already have?</li>
-<li>Do nothing?</li>
-</ul>
-<p>The question’s premise shook respondents:</p>
-<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
-        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
-            Hold on. Our components aren’t already top quality?
-        &lt;/div&gt;
-        
-        
-    &lt;/div&gt;
-</code></pre>
-<p>An insatiable instinct for more components was halted by challenging their assumption of perfect quality. No system I’ve worked on has perfect components. Shouldn’t teams assessing system maturity based on quality as much as quantity?</p>
-<p>Quality stems from and is proven by an implemented testing plan by which components are inspected prior to release. This article describes <strong>criteria and tools</strong> for testing components and how to <strong>order making them</strong> at a high level to help teams plan.</p>
-<hr>
-<h2>Planning Testing by Capability, Across Components</h2>
-<p>Any time is the right time to assess a testing plan, whether starting from scratch, coming out of a hectic delivery a first generation, or assessing the health of a mature system. The list of potential capabilities is intimidating in it’s length and cost. Yet, a team can add such capabilities incrementally, intensely at first but even more gradually over time.</p>
-<p>During the planning of a system program’s increment (usually, three or six months), I’ll weave testing into the our discussion of what components are in and out of scope. Invariably, that component list reveals itself as a list in a spreadsheet or on a whiteboard.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-testing-plans/1.png" alt="Table of testing capability completed by component">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>I’ve gotten into the habit of listing prospective capabilities as columns above and to the right of that list, creating a tabular structure. This helps teams to:</p>
-<ul>
-<li>Visualize and relate testing criteria relevant across all components</li>
-<li>Identify tooling or processes the team lacks</li>
-<li>Appreciate the rigor that lies ahead</li>
-</ul>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-testing-plans/2.png" alt="Photograph of whiteboard where team prioritized testing capabilities">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Testing plan criteria listed on a whiteboard and subsequently prioritized as critical, yes, maybe, or not pursued</p>
-<hr>
-<h2>Get Started with Testing Basics</h2>
-<p>As development begins, tooling must enable both developers and designers to inspect visual test cases and code practices. Avoid blocking early work by the misguided notion of starting with a perfect, comprehensive test suite. Instead, focus on testing fundamentals as you iterate early work. As a team establishes environments, I suggest that they set up:</p>
-<h3>✔︎ Visual Testing Page (aka, “The Kitchen Sink”)</h3>
-<p>A testing page visualizes and enables inspection of component variations, states, behaviors, content examples. Visible to all, it evokes every possibility including background settings, sizes, and responsive qualities.</p>
-<h3>✔︎ Display on a Default (White?) Background Setting</h3>
-<p>Every component catalog I’ve worked on must work on a white background. Therefore, components are built at least to display properly in that setting.</p>
-<h3>✔︎ Resilient to a Hostile Style Environment</h3>
-<p>Components must not be impacted by styling applied elsewhere in the page. Introduce hostile styles on generic, page-level selectors to pollute the cascade, triggering visual errors in a component that’s insufficiently styled.</p>
-<h3>✔︎ Styled with Design Tokens</h3>
-<p>Components must be infused with <a href="/articles/tokens-in-design-systems">design tokens</a> codifying visual style, which requires a token dependency setup from the beginning. Both developers and designers are expected to review how tokens are applied via code reviews.</p>
-<h3>✔︎ Tested Across Browsers, Manually</h3>
-<p>Components must work across supported browsers, each tested manually as every feature, defect, or optimization is added. Obtaining access to browsers can be painstaking (particularly, IE11 and Edge for those working on Macs).</p>
-<h3>✔︎ Linted Code</h3>
-<p><a href="https://en.wikipedia.org/wiki/Lint_(software)">Linting</a> tools analyze source code for easy-to-detect programming errors, bugs, suspicious constructs, and of adherence to team conventions. It’s easy to setup, confirm via pull requests, and require corrections prior to approval.</p>
-<hr>
-<h2>Layer More Procedures Leading to Launch</h2>
-<p>As development accelerates, adopters begin using alpha and beta releases. Expectations rise. At this point, testing rigor must expand based on what the team values most. Equally important is establishing who reviews each, whether the assigned developer, one or more reviewers, or a team’s outsider.</p>
-<h3>✔︎ Functional Testing</h3>
-<p>At their core, a component must work. A team must establish conventions of how they’ll test functionality, such as a modal’s open/close toggle, a tooltip’s sensitivity to a viewport’s edge, and more.</p>
-<h3>✔︎ Automated Visual Regression (AVR) (of HTML/CSS display)</h3>
-<p>AVR establishes a baseline result of all visual test cases (variations, states, content examples, etc) and then automates comparison of the baseline with the result of each successive change. Our tool of choice: BackstopJS.</p>
-<p>✔ Unit Testing (of JS-based components)</p>
-<p>Unit tests are short code fragments written to test the success of small units of source code. One reference: Morningstar Design System’s documented test driven development (TDD) approach for making web components.</p>
-<h3>✔︎ Accessibility Audit</h3>
-<p>System designers and developers deliver with accessibility in mind. However, they may lack in-depth expertise of an accessibility specialist. Audits canvas an entire library or changes since a previous audit. Some specialists drop in to assess each component as it’s completed, whereas others engage at regular intervals (quarterly? semi-annually? annually?).</p>
-<h3>✔︎ Semantic Versioning</h3>
-<h3>✔︎ Changes Logged Readably</h3>
-<p>I’d expect a team to norm on how to version components, deal with dependencies, and assess <a href="/articles/visual-breaking-change-in-design-systems">breaking changes</a> as they get started. Nevertheless, they’ll acclimate to making—and documenting—those decisions as they iterate through early cycles. Proof will be in how successful features are packaged and changes logged.</p>
-<hr>
-<h2>Address Other Scope, As Needed</h2>
-<p>Depending on the features of your system, there may be additional criteria relevant to most components in a catalog. These can include validation of:</p>
-<h3>✔︎ Display in both Light &amp; Dark Settings</h3>
-<p>Also known as “Light and Dark Mode,” a component can be placed on both <a href="/articles/light-dark">light and dark background settings</a>. Many start with white and “black” (which actually may be a darkest gray like #222). More sophisticated systems may offer four (white, black, light gray and dark gray) or even eight settings.</p>
-<h3>✔︎ Display on Additional “Brand” Background Settings</h3>
-<p>Some systems support backgrounds for one brand color (“Brand Blue”), many brand colors (blue and teal and green and …), or even multiple tints of each brand color (light, medium and dark teal, …). If components promise to work everywhere, testing must address variations and states in each setting.</p>
-<h3>✔︎ Themed for Subbrands and/or Via User Customization</h3>
-<p>Some systems can revel in the simplicity of a single theme. Others must test for a closed set (such as a company’s 37 subbrands) or an open field (think: <a href="https://themes.getbootstrap.com/">Bootstrap</a> or <a href="https://material.io/design/material-theming/overview.html">Material</a> supporting any theme). Such an API into component styles warrants markedly incremental testing procedures.</p>
-<h3>✔︎ Sized for Varying Density</h3>
-<p>Systems like <a href="https://designsystem.morningstar.com/components/component-status.html">Morningstar Design System</a> apply consistent schemes to size components for varied settings. They’ll position small, medium, and large size variants for <a href="https://designsystem.morningstar.com/components/list-groups.html#sizing">List Group</a>, <a href="https://designsystem.morningstar.com/components/buttons.html#sizing">Button</a>, and most of the remaining catalog. Testing would address both component-specific sizing across contained elements as well as the composability across components of the same size.</p>
-<h3>✔︎ Touch Ready</h3>
-<p>How well are interactions tuned to the conventions of varying platforms in which a component is displayed?</p>
-<h3>✔︎ Internationalization &amp; Localization</h3>
-<h3>✔︎ Supports Right-to-Left Display</h3>
-<p>Validating the display for a range of languages isn’t as easy as inserting a long German label in a title field (although that’s a good place to start). Know your languages, and then ensure you can promise each component addresses those needs. Easier is a price displayed in Japanese Yen, far wider than USD. More challenging: a “global” header bar supporting German, Chinese, Arabic and Cyrillic. Many more visual test cases are required, indeed.</p>
-<hr>
-<h2>Advanced Capabilities, Out of Reach of Most Teams</h2>
-<h3>✔︎ A Dedicated QA Team Member</h3>
-<p>Recently, I was elated to learn that a team I coach announced they’d be adding a team member dedicated to QA. Such is a luxury at this stage when establishing a core team in our burgeoning field, with nearly every other team falling back on designers and developers filling that void.</p>
-<h3>✔︎ Automated Browser Testing</h3>
-<p>Teams alleviate considerable manual rigor by automating the testing of visual test cases across browsers. Tools like Selenium also multiply the range of browsers and devices teams can and are willing to test against. Nevertheless, such automation seems beyond the grasp of most system teams.</p>
-<h3>✔︎ Advanced Responsive Testing</h3>
-<p>As individual components become more complicated, their responsive capabilities may become quite varied and sophisticated. Testing environments must be easy to setup and ideally automated to validate displays across a range of widths, contexts, and triggers.</p>
-<h3>✔︎ User Behavior &amp; Component Use Analytics</h3>
-<p>I’m very impressed by (and jealous of) <a href="https://atlaskit.atlassian.com/packages/core/analytics">Atlassian’s Component Analytics</a> Framework. The framework enables teams to track how customers use an app (via public events) and component authors to monitor how teams use their components (via private events). Once established, a team must validate the setup and performance of such tooling across each component.</p>
-<p>Whether standing up a system from scratch or engaging in incremental planning, teams wonder: what’s a mature component catalog look like? Conversations quickly hone in on quantity: 30 components? 50? 70?</p>
 <pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
         &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
             How many components does our catalog need?

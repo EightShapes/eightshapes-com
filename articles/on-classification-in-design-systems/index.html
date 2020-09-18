@@ -112,7 +112,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        7 min
+                        4 min
                       
                     </span>
                 </p>
@@ -127,36 +127,6 @@
 
 
     <p>Trent Walton’s article <a href="http://trentwalton.com/2016/02/26/atomic-classification/">Atomic Classification</a> raises some excellent points and considerations when naming and organizing things in a design system. Some highlights include:</p>
-<ul>
-<li>“Choose names … that make the most sense for the most people.”</li>
-<li>“Naming components could be included … early on.”</li>
-<li>“Atomic Design, like any valuable tool, resource, or concept, doesn’t have to be an all-or-nothing proposition.”</li>
-</ul>
-<p>Absolutely. Brad Frost’s <a href="http://atomicdesign.bradfrost.com/">atomic design</a> metaphor and storytelling resonates strongly across disciplines and experience-levels. It’s elevated the conversation and equipped everyone with a foundation to build on.</p>
-<p>But naming and organizing things is hard. And abstract concepts (like atoms and molecules) applied to our own everyday objects (like HTML elements and CSS properties) creates a layer of transformation that sometimes gets in the way.</p>
-<hr>
-<h2>Organizing a Library, Back Then</h2>
-<p>In my book <a href="http://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a> (2009), I devoted an entire Chapter 9: Organize to concerns around naming and organizing components in a library, and even devote a step of the <a href="/articles/the-component-cut-up-workshop">Component Cut Up workshop</a> to naming each part.</p>
-<p>The chapter addresses two prominent concepts in naming things:</p>
-<ul>
-<li><strong>Taxonomy</strong> , including not just a (component’s) name, but grouping in <em>categories</em> (like Header/Footer, Sidebar, and the overlapping Content or Navigation, don’t get me started) and as well as <em>variations</em> and <em>examples</em> of each.</li>
-<li><strong>Codes</strong> as <em>IDs</em> (like G03v1 for global navigation’s default footer variation) that serve as shorthand verbal references for knowledgable teams (“Use an S12 there!”) as well as searchable targets used in CSS class names and HTML comments bounding each component in an assembled page.</li>
-</ul>
-<p>Such classification can be powerful, specific, and – once you get the hang of it – incredibly efficient. But cryptic codification can lead to poor learnability and memorability, a perception of exclusivity (“What the heck is an S12?”), and more challenging (and annoying) conversations around naming things.</p>
-<hr>
-<h2>How Classification Has Evolved, For Now</h2>
-<p>Seven years and ~20 libraries later, my beliefs have evolved. I still appreciate the geeked out notions of taxonomy and coded classification as described above. However, approaches have trended towards a simpler future.</p>
-<p>When working with a new system, we’ll usually:</p>
-<ul>
-<li><strong>Start with Visual Style</strong>. This category may be alternatively referred to as visual language, design language, or something else. But we’ve seen designers and devs in usability tests of a style guide accurately predict what’s in the Visual Style section: color, type, icons, and less often things like space, photography, and other properties. It’s also different from components because it’s properties of things, not the things themselves.</li>
-<li><strong>Call things Elements and Components</strong> rather than Atoms and Molecules, or whatever other platform-specific or metaphor-rich jargon is being considered. Again, to be clear: Atomic Design is awesome, but most libraries employ less metaphorical terms such as components for reusable parts.</li>
-<li><strong>Don’t distinguish Elements from Components. Just call them all Components</strong>. Sure, HTML is made of elements (P, LI, BUTTON, INPUT). But the line between what’s an element versus what’s a component is subjective. It’s annoying to constantly debate. It creates confusion in finding things. So why bother? It’s a longer list, but they’ll always find <em>Buttons</em> and <em>Forms</em> and <em>Lists</em> in that single place.</li>
-<li><strong>Even invisible things are Components.</strong> The invisible table-based layout scaffolding of yesterday is gone, but even <em>Grids</em> and/or <em>Layouts</em> can reasonably be called components.</li>
-<li><strong>Components can contain Components.</strong> “Our HTML layouts are so hierarchical, so what if this thing is inside a component?” “So what. A component contains a component. It happens.” “Oh, ok. I guess it’s not that big a deal.”</li>
-<li><strong>Distinguish Components from Patterns</strong>. So, let’s break with our trend of simplifying to persist an age old adage: patterns are principled guidance to interpret (not necessarily transformed into reusable code) whereas components are prescriptive objects coded for use. You can even have a <em>Sign In</em> pattern (encapsulating behaviors and tone across platforms) aligned with an iOS Sign In component and even multiple web-based Sign In components. Say what?</li>
-<li><strong>Centralize guidance around objects you use</strong> (Components), but still have sections of across-object guidances that’s relevant. If you are trying to teach your team how to use “Sign In” instead of “Log In,” the best place to put that editorial guidance is on the Sign In component (errr, or pattern) documentation page. Nevertheless, such guidance could also make it’s way into a word list accessed via an <em>Voice and Tone</em> or <em>Editorial</em> section.</li>
-</ul>
-<p>Trent Walton’s article <a href="http://trentwalton.com/2016/02/26/atomic-classification/">Atomic Classification</a> raises some excellent points and considerations when naming and organizing things in a design system. Some highlights include:</p>
 <ul>
 <li>“Choose names … that make the most sense for the most people.”</li>
 <li>“Naming components could be included … early on.”</li>

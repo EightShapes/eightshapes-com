@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        10 min
+                        5 min
                       
                     </span>
                 </p>
@@ -141,88 +141,6 @@
     <div class="esds-row__inner">
 
     <p><em>#1 of 6 of the series Releasing Design Systems:</em>
-<strong>Outputs</strong> | <a href="/articles/design-system-release-cadence">Cadence</a> | <a href="/articles/versioning-design-systems">Versions</a> | <a href="https://medium.com/@nathanacurtis/visual-breaking-change-in-design-systems-1e9109fac9c4">Breaking</a> | <a href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a> | Process</p>
-<p>Companies realize a design system’s value when adopting products use a system to make and ship experiences that <em>their</em> customers use. As a part of that value chain, the system releases features over time. This puts the system into the hands of <em>its</em> customer: designers and engineers doing their job.</p>
-<p>Strong system teams take releases seriously. They don’t see themselves as releasing just component library code. Instead, they deliver many more outputs: design tokens, documentation, design assets, and other resources.</p>
-<p>This series describes many facets of releasing design systems. It begins by defining a system’s many outputs and where they are delivered. Subsequent articles cover topics of cadence, versioning, breaking changes, dependencies, and a step-by-step approach.</p>
-<p>These stories reflect what I’ve learned releasing systems working with teams like <a href="https://comet.discoveryeducation.com/">Discovery Education</a>, <a href="https://designsystem.morningstar.com/">Morningstar</a>, Target, and REI. They are elevated by insights from colleagues at <a href="https://www.lightningdesignsystem.com/">Salesforce</a>, <a href="https://theblog.adobe.com/introducing-spectrum-adobe-building-design-system-scale/">Adobe</a>, <a href="https://atlaskit.atlassian.com/">Atlassian</a>, <a href="https://polaris.shopify.com/">Shopify</a> and <a href="http://origami.ft.com/">Financial Times</a>. Thanks for graciously sharing your time and practices!</p>
-<hr>
-<h2>Outputs: What‘s Released?</h2>
-<p>Design systems programs release many types of outputs, not just code. As a result, a system should differentiate and communicate this range of versioned outputs to developers, designers, and other customers.</p>
-<h3>Code, the Source of Truth</h3>
-<p>Most systems offers a single source of truth of presentation layer code as:</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/releasing-design-systems/1.png" alt="Diagram of code tokens, components, and doc site">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<ul>
-<li><strong>UI Component Library as HTML Markup &amp; CSS</strong>. Often referred to as “the CSS,” this package’s consumption rests upon using or compiling CSS as a consistent visual style baseline coupled with reusing HTML snippets.</li>
-</ul>
-<p>and/or…</p>
-<ul>
-<li><strong>UI Components Library as Javascript</strong> : Many systems wrap HTML &amp; CSS with JavaScript to fortify logic, encapsulate style, and ease integration and maintenance more directly in a framework of choice. While most libraries target a <em>specific</em> framework (React, Vue, Ember, Angular, …), industry signals suggest a shift to making web components for <em>all</em> frameworks. My last six system efforts? Later 2017: Vanilla HTML, Vanilla HTML. Early 2018: React, Vue. Later 2018: <a href="https://www.smashingmagazine.com/2018/07/reusable-components-custom-elements-shadow-dom-npm/">Web Components</a>, <a href="https://www.smashingmagazine.com/2018/07/reusable-components-custom-elements-shadow-dom-npm/">Web Components</a>.</li>
-</ul>
-<p>In addition, other prominent outputs may be released separately:</p>
-<ul>
-<li><strong>Design Tokens</strong> establishing a visual style via semantically meaningful property-value pairs. Tokens are variables available in many formats for use across platforms (web, iOS, Android), preprocessors (Sass and LESS), and frameworks (like React). Some systems manage tokens in a repository separate from UI component code. As a result, their library — along with other implementations — can depend on token as a package, too.</li>
-<li><strong>Demo Apps/Sites</strong> as a environment with page examples built using the component library. The demo’s also for tutorials and rapid prototyping, including by designers!</li>
-<li><strong>Cross-platform components</strong> suitable for iOS, Android, and Windows.</li>
-</ul>
-<hr>
-<h3>Design Assets</h3>
-<p>Most teams limit understanding of what they release to simple “we release code.” It’s eye opening for them to realize that they publish so many other tools that change over time. They include:</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/releasing-design-systems/2.png" alt="Diagram of design assets, fonts, icons and other resources">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<ul>
-<li><strong>Design Toolkits</strong> as template files and symbol libraries offered in design software. Today, almost always Sketch. Tomorrow, Figma, Invision Studio, and other emerging competitors?</li>
-<li><strong>Fonts, Icons</strong> , and even <a href="https://registry.origami.ft.com/components?search=&amp;module=&amp;imageset=true&amp;service=&amp;active=true&amp;maintained=&amp;experimental=&amp;deprecated=&amp;dead=">Origami’s Image Sets</a> due to a system’s often expected role in distributing and versioning such libraries.</li>
-<li><strong>Other Design Resources</strong> like illustration and color swatch ASE/CLR files as a springboard for bespoke artwork. These collections change slowly, less formally, and via contributions by community members not a part of a system core team. Yet, from the customer’s perspective and system’s communications, it’s part of the system.</li>
-</ul>
-<hr>
-<h3>Documentation Site</h3>
-<p>Design systems need a home, a place everyone knows they can find a path to everything that will have the latest and greatest. Housed at a memorable URL, it’s often built with UI components specific to it’s mission.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/releasing-design-systems/3.png" alt="Diagram of documentation in code and on site">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<ul>
-<li><strong>Documentation Sites</strong> describe features (like a button), onboard new users, and trigger processes like getting help or contributing. Teams build sites more often using a static site generator or less often with a content management system.</li>
-<li><a href="/articles/design-system-doc-components"><strong>Documentation Components</strong></a> – <code>code-example-pair</code>, <code>do-dont</code>, <code>hex-code</code>, <code>component-explorer</code> – depend on the UI component library and serve usually only the doc site. Such components may be versioned with the documentation site or as a third, separately versioned library relative to doc and the UI components they rest between.</li>
-</ul>
-<hr>
-<h2>Destinations: Where Does It Go?</h2>
-<p>When distributing code and design assets, it’s vital to offer the code in manners most easily consumed by your adopting engineers. This means that some systems must offer choice across a many options, while others can rely upon a single choice as organizational standard.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/releasing-design-systems/4.png" alt="Diagram of doc site, registry and hosted assets">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<h3>For Code</h3>
-<ul>
-<li>BEST: <strong>Registries</strong> like <code>npmjs</code> (or an internal counterpart like Sonatype's <code>nexus</code>) that provide access and management of released code packages. Developers then use tools like <code>bower</code>, <code>npm</code>, <code>yarn</code>, <code>webpack</code>, and <code>babel</code> to integrate and upgrade that code smoothly in their environments.</li>
-<li>BETTER: <strong>Hosted</strong> assets on CDNs for direct links to versioned style and script as well as fonts and icons that change more slowly.</li>
-<li>JUST OK: <strong>Repository Access</strong> to Github, Bitbucket or the like to clone, fork, or otherwise compile, use and maybe — eventually — contribute.</li>
-<li>IF NECESSARY: <strong>Direct Code Downloads</strong> , usually of “the ZIP file” of compiled or uncompiled system assets from the doc site for local use and/or manual integration into a separate repository.</li>
-</ul>
-<p><a href="http://getbootstrap.com/">Bootstrap</a> and <a href="https://getmdl.io/started/index.html">Material Design Lite</a> are examples releasing to 2+ destinations.</p>
-<h3><strong>For Design Toolkits</strong></h3>
-<ul>
-<li>BEST: <strong>Create New</strong> as a synced, embedded path in a design tool’s menu to create a new instance from a template.</li>
-<li>BETTER: Versioned and distributed using permission-based <strong>design asset management</strong> software such as <a href="https://www.goabstract.com/">Abstract</a> or <a href="https://www.lingoapp.com/">Lingo</a>.</li>
-<li>GOOD: <strong>Direct toolkit download</strong> from a documentation site, with clear version indicated and associated Getting Started doc nearby.</li>
-<li>JUST OK: <strong>Shared drive</strong> , via well publicized and possibly simplified internal URL (such as <code>http://system.uitoolkit</code>).</li>
-<li>NOT GOOD ENOUGH: <strong>Buried</strong> on some fourth level page on a barely organized wiki site many people can’t find.</li>
-</ul>
-<p><em>#1 of 6 of the series Releasing Design Systems:</em>
 <strong>Outputs</strong> | <a href="/articles/design-system-release-cadence">Cadence</a> | <a href="/articles/versioning-design-systems">Versions</a> | <a href="https://medium.com/@nathanacurtis/visual-breaking-change-in-design-systems-1e9109fac9c4">Breaking</a> | <a href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a> | Process</p>
 <p>Companies realize a design system’s value when adopting products use a system to make and ship experiences that <em>their</em> customers use. As a part of that value chain, the system releases features over time. This puts the system into the hands of <em>its</em> customer: designers and engineers doing their job.</p>
 <p>Strong system teams take releases seriously. They don’t see themselves as releasing just component library code. Instead, they deliver many more outputs: design tokens, documentation, design assets, and other resources.</p>

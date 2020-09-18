@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        12 min
+                        6 min
                       
                     </span>
                 </p>
@@ -141,110 +141,6 @@
     <div class="esds-row__inner">
 
     <p><em>#2 of 6 of the series Releasing Design Systems:</em>
-<a href="/articles/releasing-design-systems">Outputs</a> | <strong>Cadence</strong> | <a href="/articles/versioning-design-systems">Versions</a> | <a href="https://medium.com/@nathanacurtis/visual-breaking-change-in-design-systems-1e9109fac9c4">Breaking</a> | <a href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a> | Process</p>
-<p>For design system adopters, it’s not enough to know what you deliver. Just as important is knowing when and how often it’ll change.</p>
-<p>A design system’s age, stability, code composition, and degree of federated contribution all strongly influence it’s release cadence. Established design systems generally adopt a <strong>continuous</strong> or <strong>by increment/sprint</strong> model, consistent with <strong>longer-term release cycles</strong> consistent with the system’s vision and direction. Between these regular releases, a system program is also capable of pushing irregular <strong>hot fixes</strong> to address urgent defects.</p>
-<hr>
-<h2>Model 1: Continuous Releases</h2>
-<p>Design systems like Atlassian’s <a href="https://atlaskit.atlassian.com/">Atlaskit</a> and Financial Times’ <a href="http://origami.ft.com/">Origami</a> release continuously, not just once but upwards to TWENTY! (yes, 20) times a day.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-system-release-cadence/1.png" alt="Diagram plotting release counts by period over time">
-    </div>
-    <figcaption class="escom-article-figure__caption">Continuous releases, one or more per day, over weeks</figcaption>
-</figure>
-<p>Feature changes are narrower per release. The release process is also very automated, allowing contributors to rapidly deploy and and adopters to rapidly reintegration the small changes.</p>
-<p>Continuous models more likely break and fix small things in less risky ways along the way. Adopters absorb the cost of the constant flow of small adjustments bit by bit. But they allow it, permitting core developers the latitude given their level of engagement and trust.</p>
-<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
-        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
-            We’ve built trust in delivering over time. If we need to fix something, we do it. Our developer community trusts that we won’t let important optimizations drop off the radar.
-        &lt;/div&gt;
-        
-        
-        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
-            &lt;a href=&quot;https://twitter.com/rowanmanning&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt; Rowan Manning&lt;/a&gt;, FT &lt;a href=&quot;http://origami.ft.com/&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot;&gt;Origami&lt;/a&gt;
-        &lt;/div&gt;
-        
-    &lt;/div&gt;
-</code></pre>
-<p>These environments tend to blend central engineers driving the library with an active contributor community to evolve a codebase together and collaborate closely. The code library is positioned as a tightly coupled with and possibly blocking product development teams.</p>
-<p>On the other hand, this rapid code iteration loosens or disconnects designer participation. Doc is part of the process, but only the code reference targeted to developers. From the outset or over time, the design toolkit and documentation lag or drift from code’s interminable forward momentum.</p>
-<hr>
-<h2>Model 2: Releases By Increment (Usually, By Sprint)</h2>
-<p>Other system programs like <a href="https://designsystem.morningstar.com/">Morningstar</a>, <a href="https://comet.discoveryeducation.com/resources/release-history.html">Discovery Ed’s Comet</a>, Adobe Spectrum, and <a href="https://polaris.shopify.com/whats-new/whats-new#navigation">Shopify</a> strive for a regular cadence of a minor release (or two) per planning increment (usually, a sprint) for some if not all outputs.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-system-release-cadence/2.png" alt="Diagram of changes per sprint, accumulated into a release per sprint">
-    </div>
-    <figcaption class="escom-article-figure__caption">Features accumulated over two week increments, packaged into a bi-weekly release</figcaption>
-</figure>
-<p>From a code (via a separate <code>branch</code>), documentation, or design toolkit perspective, changes accumulate and are merged with and/or replace a previous output as the release. The team usually delivers every two weeks, from grooming existing and emerging requests, sizing and completing work, and releasing outputs regularly to a community of adopters.</p>
-<p>The release is usually invoked by or at least visibly across a team, assigned to a developer to conduct, and discussed relative to other open branches of work to minimize conflict. For example, at <a href="https://www.lightningdesignsystem.com/">Salesforce Lightning</a> and <a href="https://designsystem.morningstar.com/">Morningstar</a>, an assigned developer takes two to four hours to “run the release,” and everyone else is aware of impacts to their concurrent work.</p>
-<p>Systems operating by increment are more likely supported by multi-disciplinary teams that include developers, designers, product and/or project management, writers and other disciplines. Code remains a paramount source of truth. However, these teams are more likely to synchronize code with design assets and deeper doc that includes design guidance.</p>
-<p>In contrast to continuous models, sprint-by-sprint system release also tend to be less coupled with ongoing work of adopting product teams. Instead, regular minor releases offer adopters autonomy in identifying when and how often they upgrade, relative to other priorities and costs.</p>
-<hr>
-<h2>Mixing Continuous and By-Increment</h2>
-<p>Interestingly, teams will mix the two models depending on their release tooling and community engagement.</p>
-<p>Many systems tightly couple <strong>code</strong> and <strong>doc</strong> site releases (inhibiting more timely doc updates not in demand anyway), and update the <strong>design toolkit</strong> less frequently within the same process. However, another strives for biweekly <strong>design toolkit</strong> and <strong>design doc</strong> releases while aligning with an engineering partner team team releasing <strong>code</strong> independently. A third releases <strong>code</strong> every two weeks, but enables access to update the <strong>doc site</strong> immediately at any time.</p>
-<p><em>Takeaway</em>: Blend cadence to serve your team’s and community’s norms and capacity to effect change in a timely fashion. While usually mutually exclusive, there are opportunities to leverage continuous and by-increment models in concert.</p>
-<hr>
-<h2>Hot Fixing Unpredictable Mistakes</h2>
-<p>For teams releasing incrementally by sprint, system can be called upon to release irregularly to “hot fix” a browser defect, documentation typo, or even a malformed Sketch symbol.</p>
-<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
-        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
-            [Hot fixes] occur unpredictably. Therefore, we handle them informally.
-        &lt;/div&gt;
-        
-        
-        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
-            Shopify Polaris team
-        &lt;/div&gt;
-        
-    &lt;/div&gt;
-</code></pre>
-<p>Unlike regular releases packaging a collection of updates, a hot fix is instead introduced directly into production system code and documentation. As a result, a team member must slide that change <em>also</em> into branch of ongoing work as well.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-system-release-cadence/3.png" alt="Diagram of changes within a release period, with a hot fix introduced into both the release branch and the master branch">
-    </div>
-    <figcaption class="escom-article-figure__caption">A hot fix applied directly to production <em>and</em> folded into ongoing release work</figcaption>
-</figure>
-<p>Systems must remain rigorous. While the hot fix’s <em>trigger</em> can be an informal chat in the hallway or Slack, the hot fix’s <em>process</em> usually involves most steps of the ordinary release process plus a few special steps.</p>
-<p><em>Takeaway</em>: Avoid a hot fix habit. Increasing team tension due to it’s compressed urgency, a hot fix doesn’t just touch code. It always has associated light documentation. It may also impacts the design toolkit. It happens fast. It disrupts ongoing work. It can impact multiple team members.</p>
-<hr>
-<h2>Long-Term Release Cycles</h2>
-<p>Whether continuous or sprint-by-sprint, mature design systems plan large-scale efforts and priorities to be delivered over time, on time. These broader cycles usually promote changes associated with high-level objectives and span quarterly, annual, or–most often–semi-annual periods.</p>
-<h3>From Initial Launch to Incremental Feature Sets</h3>
-<p>As an organization is starting a design system, objectives correspond to alpha and beta releases intended for early adopters and lead to general availability. Later, cycles deliver new feature sets of significant value (Charts! Motion! Alerts!) and/or a major upgrade predictably.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-system-release-cadence/4.png" alt="Diagram of a year of releases, highlighting big releases of critical new feature sets">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Feedback from some customers amplifies a core expectation: “Don’t overwhelm us with constant change.” These adopters favor less frequent touch points to learn about what’s new and upgrade to a new version.</p>
-<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
-        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
-            We have clients building against specific timelines. They can’t — and don’t want to — constantly pull down UI updates.
-        &lt;/div&gt;
-        
-        
-        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
-            Nate Baldwin, Adobe Spectrum
-        &lt;/div&gt;
-        
-    &lt;/div&gt;
-</code></pre>
-<p>They’ll often <em>only</em> engage with a system based on these longer term cycles, fitting the system’s impact on their capacity with other prioritized objectives.</p>
-<p><em>Takeaway</em>: System adopters are interested in both what’s coming next as well as the broader direction and bigger chunks you’ll deliver. Orient priorities and release plans to suit both the near- and long-term.</p>
-<hr>
-<h3>Differentiating Core or Internal Customers from “The Rest”</h3>
-<p>Salesforce Lightning highlights another useful distinction: differentiating cadence by customer type. They’ll iterate and release often in support of their internal customers.</p>
-<p>However, “external releases” will happen rarely per year timed with public Salesforce releases and events for their platform. This limits promotion to concentrated periods, aligns with broader objectives, and clearly frames team priorities and customer expectations.</p>
-<p><em>Takeaway</em>: Orient release cadence and workflows based on relevant customer distinctions. For more closely aligned teams driving your priorities or more dependent on smaller, incremental change, increase how often—and how automated—you conduct the release process.</p>
-<hr>
-<p><strong>#1.</strong> <a href="/articles/releasing-design-systems"><strong>Outputs</strong></a> ← Previous | Next → <strong>#3. Versioning</strong></p>
-<p><em>#2 of 6 of the series Releasing Design Systems:</em>
 <a href="/articles/releasing-design-systems">Outputs</a> | <strong>Cadence</strong> | <a href="/articles/versioning-design-systems">Versions</a> | <a href="https://medium.com/@nathanacurtis/visual-breaking-change-in-design-systems-1e9109fac9c4">Breaking</a> | <a href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a> | Process</p>
 <p>For design system adopters, it’s not enough to know what you deliver. Just as important is knowing when and how often it’ll change.</p>
 <p>A design system’s age, stability, code composition, and degree of federated contribution all strongly influence it’s release cadence. Established design systems generally adopt a <strong>continuous</strong> or <strong>by increment/sprint</strong> model, consistent with <strong>longer-term release cycles</strong> consistent with the system’s vision and direction. Between these regular releases, a system program is also capable of pushing irregular <strong>hot fixes</strong> to address urgent defects.</p>

@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        12 min
+                        13 min
                       
                     </span>
                 </p>
@@ -279,25 +279,34 @@
 <p>In those scenarios, a system can’t rely on page-level resets. Instead, elements are reset at a boundary that is controlled, such as a component block mixin…</p>
 <pre><code class="language-css">.system-button {
   @include component-font-reset();
-  ...
-</code></pre>
-<p>…to reset at least a range of type properties, such as:</p>
-<script src="https://gist.github.com/nathanacurtis/d19ab018485ccea1346999a21c51de16.js"></script>
-<p><em>Takeaway</em>: There’s hubris in believing a system controls everything on a page, convinced it won’t collide with anything other styles. So fortify what you ship in the context you control, including reseting elements for typography.</p>
-<h3>Tools for Adopters to Make Components Themselves</h3>
-<p>A system never offers “all the components you’ll ever need.” Adopters build anywhere from 30% to 70% of their remaining interface . Therefore, they’ll depend on system tools to style text in what they build, such as Sass mixins.</p>
-<p>For example, an adopter could want to apply a heading to title element…</p>
-<pre><code class="language-css">.my-custom-component-title {
-    @include system-level-3-heading();
+  ...;
+}
+````
+
+…to reset at least a range of type properties, such as:
+
+&lt;script src=&quot;https://gist.github.com/nathanacurtis/d19ab018485ccea1346999a21c51de16.js&quot;&gt;&lt;/script&gt;
+
+_Takeaway_: There’s hubris in believing a system controls everything on a page, convinced it won’t collide with anything other styles. So fortify what you ship in the context you control, including reseting elements for typography.
+
+### Tools for Adopters to Make Components Themselves
+
+A system never offers “all the components you’ll ever need.” Adopters build anywhere from 30% to 70% of their remaining interface . Therefore, they’ll depend on system tools to style text in what they build, such as Sass mixins.
+
+For example, an adopter could want to apply a heading to title element…
+
+````css
+.my-custom-component-title {
+  @include system-level-3-heading();
 }
 </code></pre>
 <p>…in order to obtain system-compliant CSS like:</p>
 <pre><code class="language-css">.my-custom-component-title {
-    font-size: 24px;
-    font-family: &quot;Barlow&quot;, ...;
-    font-style: normal;
-    font-weight: &quot;Semibold&quot;;
-    line-height: 1.2;
+  font-family: &quot;Barlow&quot;, ...;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: &quot;Semibold&quot;;
+  line-height: 1.2;
 }
 </code></pre>
 <p>While code tools shouldn’t overwhelm gorgeous typography doc, that page is a reasonable location many developers should find handy, powerful tools.</p>

@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        12 min
+                        6 min
                       
                     </span>
                 </p>
@@ -141,119 +141,6 @@
     <div class="esds-row__inner">
 
     <p>Months after our first release, productivity was strong. We’d reached 20 components. Buttons and forms were behind us. We cranked through cards, tables, and nav bars. As another component went to review, comments unexpectedly overwhelmed the pull request:</p>
-<div class="escom-bar-quote escom-pull-quote--light">
-    “Why don’t we have this variation?”<br>“It breaks with a reasonably long label.”<br>“Did you check for accessibility? It’s missing an attribute for…”
-</div>
-<p>As discussion quickened, everyone swarmed to ask more questions. Really good questions. The contributing developer was overwhelmed: a finish line thought close extended again into the distance.</p>
-<p>Ugh. We had documented neither what we check for nor how we QA. At all. We just built things, “checked ‘em”, and moved on. System teams must hold themselves to a higher standard than that.</p>
-<hr>
-<h2>Systems Must Deliver on Promised Quality</h2>
-<p>In adopting a system, a product team must trust that the system saves time and reduces risk. The system’s quality must be no worse — heck, let’s be honest, <em>better</em> — than what the product team would have done on their own. Therefore, incorporate quality into your messaging, but be ready to deliver the goods.</p>
-<h3>Promote Using Quality</h3>
-<p>System advocates highlight quality when marketing their library. For example, <a href="https://getmdl.io/index.html">Material Design Lite</a> says that they…</p>
-<div class="escom-bar-quote">
-    … aim to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible.
-</div>
-<p>This isn’t whimsical aspiration. It’s a promise, promoting that library parts ascribe to attributes of quality. In fact, one of my favorite system principles is <a href="https://www.lightningdesignsystem.com/guidelines/overview/">Salesforce Lightning’s Beauty</a>, with a keyword I really appreciate:</p>
-<div class="escom-bar-quote">
-    Demonstrate respect for people’s time and attention through thoughtful and elegant <strong>craftsmanship</strong>.
-</div>
-<hr>
-<h3>Get Funded with Quality</h3>
-<p>In fact, I’ve observed the tone of a system pitch completely shift based on <em>just one word</em> that affords quality, like:</p>
-<div class="escom-bar-quote">
-    We guarantee the library includes only quality, <strong>accessible</strong> components.
-</div>
-<p>Stakeholders–your director or VP–listen for those trigger words. To them, it signifies a library (at least partially) can unburden teams struggling with or ignoring things a leader cares about.</p>
-<hr>
-<h3>Prove You Deliver the Quality</h3>
-<p>Therefore, you better be ready for the next questions: “What do you mean by <em>quality</em>?” and “How do you <em>assure</em> that quality?” Your answer must be better than “We check stuff after we build it.”</p>
-<hr>
-<h2>What’s Quality? Our QA Checklist</h2>
-<p>Here’s a quality checklist my most recent team established:</p>
-<h3>✔ #1 Visual Quality</h3>
-<p>Does the component apply visual style — color, typography, icons, space, borders, and more — using appropriate variable <a href="/articles/tokens-in-design-systems">tokens</a>?</p>
-<h3>✔ #2 Sufficient States &amp; Variations</h3>
-<p>Does it cover all the necessary variations (primary, secondary, flat, menu button) and states (default, hover, active, disabled), given intended scope?</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/1.png" alt="Demo of many different component states across variations">
-    </div>
-    <figcaption class="escom-article-figure__caption">A first pass may not comprehensively addressing states across <em>all</em> button types…</figcaption>
-</figure>
-<h3>✔ #3 Responsiveness</h3>
-<p>Does it incorporate responsive display patterns and behaviors as needed?</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/2.png" alt="Depiction of component in a wide viewport and narrow viewport">
-    </div>
-    <figcaption class="escom-article-figure__caption">Tab component, with options for responsive behavior</figcaption>
-</figure>
-<h3>✔ #4 Content Resilience</h3>
-<p>Is each dynamic word or image element resilient to too much, too little, and no content at all, respectively? For tabs, how long can labels be, and what happens when you run out of space?</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/3.png" alt="Demo of content that breaks a tab display">
-    </div>
-    <figcaption class="escom-article-figure__caption">Tab component, automatically shifting to alternate display based on content length</figcaption>
-</figure>
-<h3>✔ #5 <a href="https://en.wikipedia.org/wiki/Composability">Composability</a></h3>
-<p>Does it fit well when placed next to or layered with other components to form a larger composition? For tabs, how can they be applied stacked with or on top of other components?</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/4.png" alt="Demo of a tab component displayed below and on top of an image">
-    </div>
-    <figcaption class="escom-article-figure__caption">Tabs in different settings, positioned stacked after or on top of a photograph</figcaption>
-</figure>
-<h3>✔ #6 Functionality</h3>
-<p>Do all behaviors – typically, JavaScript-driven – function as expected? For responsive tabs, are gestures (for sliding left and right) and menus (for overflow tabs) behaving correctly in varied device settings?</p>
-<h3>✔ #7 Accessibility</h3>
-<p>Has the design and implementation accounted for accessible:</p>
-<ul>
-<li>color contrast</li>
-<li>ARIA</li>
-<li>print versions</li>
-<li>disabled CSS</li>
-<li><code>svg</code> and <code>img</code> attributes</li>
-<li>descriptive headers</li>
-<li>keyboard navigability, …</li>
-</ul>
-<p>The list goes on, and could be augmented by testing with a screen reader like <a href="http://www.chromevox.com/">ChromeVox</a>.</p>
-<h3>✔ #8 Browsers &amp; Device Compatibility</h3>
-<p>Has the component visual quality and accuracy been assessed across Safari, Chrome, Firefox, IE and other browsers across relevant devices?</p>
-<h3>✔ Usability Testing EXTRA CREDIT</h3>
-<p>Has the component design been assessed via usability testing with our customers, whether conducted for a product team or by our system team?</p>
-<p>We don’t gate releases of an component — particularly the smallest ones — by usability testing. But we do seek out opportunities to assess component efficacy in related product tests as well as commission our own studies of relevant concepts too.</p>
-<hr>
-<h2>How We Assure Quality: A QA Workflow</h2>
-<p>It might feel like a pain. Too much rigor. A threat to team momentum. That was my gut reaction to the realities of a QA-then-refactor step. Do this to the whole library, now that we’re behind? This could limit production for sprints! It didn’t, actually.</p>
-<p>I credit my team with convincing us that the library is <em>nothing</em> if the quality is poor or below a stated standard. Sure, we’d done light damage. Components in the wild now needed light refactoring. And this did trigger a distracting major <a href="http://semver.org">semver release</a> with a bevy of small, breaking changes. But the library’s demonstrable quality — and team’s confidence — shot way up when we got our act together.</p>
-<p><em>Takeaway:</em> Devise your QA checklist and process as you build your first components. You’ll justify the promise you make to your customers, and improve confidence and reputation as a result.</p>
-<h3>Where? Using a “Kitchen Sink” Page</h3>
-<p>It may be tempting to think you can test your variations using that doc page you’ve also started to build. Bad idea.</p>
-<p>Documentation page structure tightly constrains component displays to fit in the article’s width and example box, limiting display options. Plus, the page loads <em>all the CSS</em> of everything it displays, conflating your no-longer-encapsulated component styles with everything else.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/5.png" alt="Display of a kitchen sink page">
-    </div>
-    <figcaption class="escom-article-figure__caption">Buttons documentation page (left) and all 92,000px of vertically scrolled Buttons “Kitchen Sink” page examples (right)</figcaption>
-</figure>
-<p>As an alternative, our team creates a “<a href="http://idioms.thefreedictionary.com/everything+but+the+kitchen+sink">kitchen sink</a>.” The page bursts with examples: states (default, active, disabled, etc), content (too long, too short, just right, none), colors and themes, all across the many variations (text only, with icon, icon only, etc). We limit loaded CSS to only that component and base styles, improving encapsulation.</p>
-<p>We publish sink pages named <code>buttons-sink.html</code> in the same folder as the<code>buttons.html</code> documentation page. There it rests, a useful if orphaned resource for design reviews, quick reference and automated visual differencing.</p>
-<p><em>Takeaway</em>: Separate documentation from testing artifacts.</p>
-<h3>When? As a Build Concludes</h3>
-<p>QA begins when a developer signals they’re ready for a final review of their work in the build step, distinct from the documentation that may run in parallel but usually concludes after build.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/component-qa-in-design-systems/6.png" alt="Diagram of a step by step flow, placing a QA step within Build">
-    </div>
-    <figcaption class="escom-article-figure__caption">For our team, QA is part of the Build task.</figcaption>
-</figure>
-<p><em>Takeaway</em>: Incorporate QA as a clear step or sub-step that’ll prevent an item’s release if tests aren’t passed.</p>
-<h3>Who? The Associated Designer <em>and</em> Another Dev</h3>
-<p>A dedicated QA resource is a luxury item for a systems team. Instead, systems teams I’ve been on blend designers and developers that wear other hats as needed, including QA. We hold a contributing developer accountable to submit components that they’ve already run through the checklist. Our process <em>then</em> also requires a distinct person — a different developer, the component’s designer, or both — to run through the checklist too.</p>
-<p><em>Takeaway</em>: Identify a predictable role expected to review each contribution.</p>
-<p>Months after our first release, productivity was strong. We’d reached 20 components. Buttons and forms were behind us. We cranked through cards, tables, and nav bars. As another component went to review, comments unexpectedly overwhelmed the pull request:</p>
 <div class="escom-bar-quote escom-pull-quote--light">
     “Why don’t we have this variation?”<br>“It breaks with a reasonably long label.”<br>“Did you check for accessibility? It’s missing an attribute for…”
 </div>

@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        9 min
+                        5 min
                       
                     </span>
                 </p>
@@ -141,52 +141,6 @@
     <div class="esds-row__inner">
 
     <p>If you’ve worked on a design system spanning a portfolio, you may have experienced the genuine partnership formed across product teams. Except one. You know, <em>that</em> product. The one that rules the rest. The big one (or two, or few). The favored child. The 800 pound gorilla.</p>
-<p>Take, for example, an often insanely sweeping attention placed on propagating a .com homepage’s design throughout remaining products. Brand or marketing owns it, right? The CEO’s paying attention, right? All other products — a purchase path, account management, loyalty programs that are a business’ engine— must derive visual language from a single page with a massive ephemeral banner, ignorable corporate communications, and a few illustrations you can’t reuse. Influence flows from above, by site map as much as organization hierarchy, to constrain design with rules that can’t bend.</p>
-<p>Or suppose you work the product pages, but are destabilized by a powerful search and checkout team. Their decisions dominate decision-making, biasing convention towards <em>their</em> product. They can break from and reform system decisions with impunity, all driven by <em>their</em> metric: conversion.</p>
-<p>Single products can bias or even dominate decision-making no matter the lip-service to consistency.</p>
-<p>However, what’s missing from these scenarios?</p>
-<p>Other platforms like iOS, Android, and Windows, that’s what!</p>
-<hr>
-<h2>Platform Dominance Leads to an Ignorable Base</h2>
-<p>I’ve seen it happen. A web designer releases a gorgeous living style guide, shares with an org, and is befuddled when everyone else shrugs. They forgot to address a simple question: What’s in it for us? Does it even work on our platform?</p>
-<p>In that headlong rush to create a mini-<a href="http://www.getbootstrap.com">Bootstrap</a>-for-me, it’s easy and right to focus on what’s most important to other product teams.</p>
-<p>Things can get uncomfortable — or downright unproductive — when the mini-Bootstrap is propped up as the solution to the enterprise’s design system problem. Sure, there’s dissonance between a site’s layouts and interactive complexities of related apps. But that’s peanuts relative to the the competing conventions of another platform.</p>
-<p>Offering that guide as a foundation for products of other platforms can go nowhere, fast. Those teams rightly respond with “You built this for web. We’re [Windows/iOS/Android/etc]. What’s in it for us? How do we know such a design system even works in our context?”</p>
-<p>To apply a design system beyond “just web,” you’ve gotta involve designers from the other relevant platforms, especially in a formative period.</p>
-<p>Got a few iOS apps? Make sure at least one iOS designer is involved.</p>
-<p>Half your products Windows-based? Inject a Windows-based UI designer (or developer extraordinaire) into that web-centric committee of five. Or inject two. Because, seriously, it’s half your portfolio.</p>
-<h2>Cross-Platform Focuses Work on Fundamentals</h2>
-<p>Reducing platform bias also means teams spend more time on the fundamental design language (particularly color, iconography, typography) and elements (especially buttons and form input controls) everyone shares, at the expense of platform-specific components and layout systems.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/finding-platform-balance-in-a-design-system/2.png" alt="Diagram of buttons within a Windows platform">
-    </div>
-    <figcaption class="escom-article-figure__caption">Button designs emerging from three designers, including one on the Windows platform</figcaption>
-</figure>
-<p>Yes, now’s the time to nip that short-sighted belief that a moderate gray secondary button (for Cancel) is a good idea. It won’t work well everywhere, looks disabled, and — newsflash — it’s not accessible anyway.</p>
-<p>A stronger focus on fundamentals yields deeper thinking around core properties (such as color across contexts) and states. Suddenly, teams are provoking each other to resolve basic problems before they spread.</p>
-<hr>
-<h2>Mastering Fundamentals Means Better Tokenizing Them</h2>
-<p>A focus on basic properties can crystallize a shared vocabulary and structure those decisions.</p>
-<p>One such success story is the Salesforce UX team’s distribution of decisions across platforms. They’ve garnered considerable attention to their recent <a href="http://lightningdesignsystem.com">Lightning Design System</a> launch, with <a href="https://medium.com/salesforce-ux/the-lightning-design-system-is-the-next-generation-of-living-style-guides-9addc769c317">announcements</a>, big presentations and <a href="https://medium.com/salesforce-ux/building-an-enterprise-framework-is-hard-1e8d8b33e082">relevant articles</a>. I’ll admit, I’ve got a crush on what they’ve put together.</p>
-<p>What gets me most excited isn’t that the library is polished; actually, it’s parts are familiar. It’s not even that they’ve organized their fundamentals in an impressive collection of <a href="https://www.lightningdesignsystem.com/resources/tokens">design tokens</a>. What gets me is that they’ve automated how to integrate <a href="https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7">tokens by transforming them into many, maintainable platform-specific collections</a>.</p>
-<p>Such evidence convinces me — and, I hope, their collaborators — of their belief in supporting the system thoroughly across platforms. Delightful!</p>
-<hr>
-<h2>Balanced Influence Leads to Differences that are Justified, Structured, and Bounded</h2>
-<p>Another positive signal of a system’s convergence across 2+ platforms is how conversations shift from how design is the same to how the design is different and how teams draw boundaries around such exceptions.</p>
-<p>One team I worked with spanned web, iOS &amp; Android. For iconography, they discussed adopting an icon library like <a href="https://icomoon.io/">IcoMoon</a>, <a href="http://www.streamlineicons.com/">Streamline</a>, or <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a>, or building their own from scratch. Ultimately, they chose Streamline. Subsequent work yielded a shared subset of 30 to 40 customized Streamline icons everyone shared: person icon (for profile), magnifying glass (for search), pin (for maps), and more.</p>
-<p>Trouble is: the Android platform has established icons for many concepts, like the map pin. The Android designers reasonably justified that the design system shouldn’t project a Streamline-based icon set unaltered onto that platform. So the system’s iconography genius and an Android designer paired and established a parallel Android set.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/finding-platform-balance-in-a-design-system/3.png" alt="Icons for iOS and Web versus icons for Android">
-    </div>
-    <figcaption class="escom-article-figure__caption">Alternative icons for Android compared to iOS &amp; Web</figcaption>
-</figure>
-<p>This small success demonstrated the system’s posture towards justified flexibility, a willingness to adapt, and capability to support forks in the road narrowly bounded one part (iconography) on one platform (Android).</p>
-<hr>
-<h2>The Multi-Platform System Future</h2>
-<p>Each of these concepts — fundamentals, tokenization, adaptability — helps designers deal with the challenges of a system. As platform continue diversify and designers commit to addressing them, we’ll need such tools to deal with the complexity.</p>
-<p>If you’ve worked on a design system spanning a portfolio, you may have experienced the genuine partnership formed across product teams. Except one. You know, <em>that</em> product. The one that rules the rest. The big one (or two, or few). The favored child. The 800 pound gorilla.</p>
 <p>Take, for example, an often insanely sweeping attention placed on propagating a .com homepage’s design throughout remaining products. Brand or marketing owns it, right? The CEO’s paying attention, right? All other products — a purchase path, account management, loyalty programs that are a business’ engine— must derive visual language from a single page with a massive ephemeral banner, ignorable corporate communications, and a few illustrations you can’t reuse. Influence flows from above, by site map as much as organization hierarchy, to constrain design with rules that can’t bend.</p>
 <p>Or suppose you work the product pages, but are destabilized by a powerful search and checkout team. Their decisions dominate decision-making, biasing convention towards <em>their</em> product. They can break from and reform system decisions with impunity, all driven by <em>their</em> metric: conversion.</p>
 <p>Single products can bias or even dominate decision-making no matter the lip-service to consistency.</p>

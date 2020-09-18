@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        14 min
+                        7 min
                       
                     </span>
                 </p>
@@ -159,116 +159,7 @@
 <ul>
 <li>Useful only to your product? Not good enough.</li>
 <li>Useful to another product? Let’s <em>at least</em> chat about how useful.</li>
-<li>Useful to 3 products? Got it, let’s a_t least_ discuss this with the community.</li>
-<li>Useful to 5 products? It probably belongs.</li>
-</ul>
-<p>If relevance isn’t clear yet contributor passions persist, direct them to their community to validate assumptions and strengthen their case.</p>
-<hr>
-<h3><strong>#2. Is it consistent with the system’s vision?</strong></h3>
-<p>If your system already sports <em>page-</em>, <em>inline-</em>, and <em>toast messages,</em> a “<em>top hat”</em> for system outages and other announcements could fit nicely into the set of messaging components*.*</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/1.png" alt="Illustration of alert components, such as page level message, inline error, toast, and a proposed addition of a top hat">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>On the other hand, imagine a library of framework-independent HTML and CSS. Then, a contributor proposes a complex, React-based component. That would trigger a repository refactor, implies a framework commitment, and expands the practice to an entirely new testing workflow. The system isn’t meant for that.</p>
-<p>Few want or even tolerate a bunch of random parts bolted onto edges of a system. Instead, grow a collection deliberately and expand into concerns like editorial, brand, and accessibility when it makes sense.</p>
-<hr>
-<h3><strong>#3. How much will it cost to make and maintain?</strong></h3>
-<p>Got a primitive <em>pill</em> that needs a few varied colors? Easy. Proposing a complex, multi-panel <em>calendar date picker</em>? Let’s take a breath.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/2.png" alt="Comparison of a pil component and a date picker component">
-    </div>
-    <figcaption class="escom-article-figure__caption">Basic pill vs Very Complicated Date Picker (Source: <a href="http://bootstrap-datepicker.readthedocs.io/en/latest/" rel="noopener nofollow" target="_blank">readthedocs.io</a>)</figcaption>
-</figure>
-<p><em>Date Pickers</em> are a wonderful example. Many products use a <em>Date Picker</em>. However, most need <em>their specific version</em> of a Date Picker. Not only is it complex and expensive, but it’s nearly impossible to build one that meets every product’s nuanced needs and contexts. Instead, adopters gripe about all the overrides and extensions they have to do, effortfully stripping out the features you built thinking they worked for everyone. Avoid complex things made for everyone but fit no one.</p>
-<hr>
-<h3><strong>#4. Does it trigger momentum in a new direction?</strong></h3>
-<p>A system team can’t take a burgeoning library in every direction at once. If your team is focused on areas like error messaging and notifications, a <em>Tooltip</em> contribution could trigger growth elsewhere.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/3.png" alt="Illustration of a tooltip that begets a popover that begets a menu component">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Solving for <em>Tooltips</em> includes <code>z-index</code> layering and shadows, JavaScript events, and aligning notches to all sides. Compositionally, such properties extend to <em>Popover</em> and <em>Menus</em> that follow. I’ll bias towards contributions that spur development in directions useful to everyone.</p>
-<hr>
-<h3><strong>#5. How deeply can <em>YOU</em> guide its use?</strong></h3>
-<p><a href="https://www.linkedin.com/in/admrwe/">Adam Rowe</a>, a recent system collaborator, came up with this productive and reasonable challenge question:</p>
-<div class="escom-bar-quote">
-    What guidance can you document now? Use…when? Configure…how? Alter content…in what ways? How does this work, for everybody?
-</div>
-<p>If your contributor struggles to articulate ideas and you don’t know either, maybe the feature isn’t mature or ready for broad distribution. However, what if your contributor quickly cites scenarios of use, rattles off do and don’ts, and itemizes editorial and style considerations? Now we’re talking!</p>
-<hr>
-<h3><strong>#6. Is the timing right for contributor AND system?</strong></h3>
-<p>Ultimately, a contribution conversation must zero in on timing. Does your system team’s release cycle and roadmap have space for this now or later? Does this feature pair well with other current developments?</p>
-<p>Just as important, does your contributor have enough time to complete the work to be done? It’s often tough for a contributor to answer. First, they may not control their time and would need to get space from their manager or product owner. Plus, they may not have a grasp of the work that remains.</p>
-<hr>
-<h2>What’s Left to Be Done?</h2>
-<p>In my 10+ years of system work, I’ve never seen a contribution complete enough to be immediately merged into the system. Instead, there’s work to fine tune the contribution to:</p>
-<ol>
-<li><strong>Expand</strong> to a minimally sufficient feature set,</li>
-<li><strong>Reduce</strong> scope to omit contentious features, and</li>
-<li><em>Always, always</em> <strong>normalize</strong> to how system features are designed and built.</li>
-</ol>
-<hr>
-<h3>#1. Expand to Cover a Minimally Relevant Feature Set</h3>
-<p>You can’t add half-baked features to a library. Premature and simplistic solutions risk inconsistent interpretations per product that you meant to eradicate. Even worse, adding features later risks triggers breaking changes that can alienate adopters.</p>
-<p>For example, a proposed <em>Card</em> may appear simple: image and title. Done, right? Not so fast! A system-worthy grid may require opinions on card description, type, photo aspect ratio, interactions, and more.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/4.png" alt="Different additional elements added to a card design">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p><em>What’s left to be done?</em> Resolve <strong>what features to have</strong>  — Description or not? Tall photo or not? Photo optional? — and verify the solution with across the product community that’ll adopt it.</p>
-<p><em>Who does the work?</em> This is a tough one. A contributor’s passion may diffuse into apathy when forced to engage a large community to define requirements and finalize design. Be upfront on the time commitment and discern if the contributor is up to the task.</p>
-<hr>
-<h3>#2. Reduce Scope to Broaden Relevance</h3>
-<p>The contribution may also need to <strong>reduce scope to a relevant essence</strong> useful across products. Consider an already arduous collaboration across three flagship products to unify a <em>Card</em> component design.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/5.png" alt="Three alternative card designs">
-    </div>
-    <figcaption class="escom-article-figure__caption">Three alternative Card designs</figcaption>
-</figure>
-<p><em>Headings</em>, <em>descriptions</em>, and <em>images</em> are fairly similar, and we quickly achieved consensus on <em>thumbnail</em> aspect ratio. But interactions are all over the place! Conversations on button and icon arrangements swirled into oblivion. Argh, c’mon, can’t we all get along?</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/i-made-this-does-it-go-in-the-system/6.png" alt="Reconciled features of a card added to a system">
-    </div>
-    <figcaption class="escom-article-figure__caption">Card design added to the system</figcaption>
-</figure>
-<p>Actually, you already get along! A system’s <em>Card</em> can include agreed features — <em>thumbnail</em>, copy <em>heading</em> styles, <em>descriptions</em> — and omit contentious items. This is especially true if a library also offers other primitives—here, <em>button</em> and _icons — _so that product teams can customize the contentious stuff themselves. Problem solved, move on.</p>
-<p><em>What’s left to be done?</em> Review proposed features and prune unessential items lacking consensus. This may also yield other components (here, <em>thumbnail</em>) reusable in future components too (like <em>media object</em> and <em>content tiles</em>).</p>
-<p><em>Who does the work?</em> Reduction is often driven by a system expert acting as connector and negotiator across a community, probing and challenging designs effectively, and biasing collaboration towards consensus.</p>
-<hr>
-<h3>#3. Normalize! Align with System Composition and Quality</h3>
-<p>Perhaps a design include myriad non-system colors, wacky spatial choices, and product-specific icons. Or, maybe contributed HTML markup is crude, CSS is unorganized across files, and — gasp! — uses <a href="http://stylus-lang.com">Stylus</a> instead of the system’s <a href="http://sass-lang.com/">Sass</a>. Without a doubt, contributions always lack every text / background combo, size option and theming construct the system offers.</p>
-<p><em>What’s left to be done?</em> Each contribution must be normalized into system standards. The system promises <a href="/articles/component-qa-in-design-systems">robust and accessible features of high visual quality and resilient to varied content</a>, dependent on a shared — and perhaps <a href="/articles/tokens-in-design-systems">tokenized</a> — visual language. The system’s code aligns with repository standards to ease per-item and cross-library maintenance. So, the contribution has to get there.</p>
-<p><em>Who does the work?</em> For seasoned contributors, this step is familiar and completed with relative ease. However, the system rep must balance the time needed to deeply educate a contributor, suffer exhausting iterative reviews, and risk still having to complete the task themselves anyway. More often than not, a system rep volunteers for this production.</p>
-<p>Every system needs <em>button</em>, <em>checkbox</em>, and typographic <em>headings</em>. But beyond an obvious core, curating a system’s scope requires balancing disparate features, tradeoffs, and an uncertain boundary of how much is too much.</p>
-<p>Upon a <code>1.0</code> <a href="/articles/starting-a-design-system">release</a>, a system can be inundated with contribution inquiries:</p>
-<ul>
-<li>Can I add my awesome <em>Card</em> design to the library?</li>
-<li>Should we publish my Chart colors in system doc?</li>
-<li>Shall I merge my Layout Grid CSS into the system repo?</li>
-</ul>
-<p>Designers and engineers always confront challenges the system doesn’t solve. And then, they’ll solve it. Through blood, sweat and tears, they’ll develop fervent belief about the solution’s value. The system is their path to amplify that value. But is the system the right place for it?</p>
-<p>Where and how do we — collaborators chatting, a systems team reviewing proposals, squads planning a release, or a community of practice charting a path — decide <strong>what belongs in the system</strong> and convey <strong>what work remains</strong>?</p>
-<hr>
-<h2>Does It Belong in the System?</h2>
-<p>Systems are never the repository for every style, component, and feature designed and built for every product ever. Instead, a system should <a href="/articles/principles-of-designing-systems">include what’s shared across many products and omit what’s not</a>.</p>
-<p>By asking a contributor a few simple questions, you can probe how realistic and valuable a contribution can be. Each question need not elicit an emphatic “Yes!” (except the first one). However, they frame discussion between contributors and system representatives to decide whether or not to move forward.</p>
-<hr>
-<h3><strong>#1. Is it relevant to any other product? If so, how many?</strong></h3>
-<p>For example, a <em>toast error</em> <em>message</em> could be relevant to an entire app ecosystem. On the other hand, a souped-up <em>data grid</em> <em>with toolbars</em> unique to their product may be irrelevant to everyone else. I’ll use a scale:</p>
-<ul>
-<li>Useful only to your product? Not good enough.</li>
-<li>Useful to another product? Let’s <em>at least</em> chat about how useful.</li>
-<li>Useful to 3 products? Got it, let’s a_t least_ discuss this with the community.</li>
+<li>Useful to 3 products? Got it, let’s a<em>t least</em> discuss this with the community.</li>
 <li>Useful to 5 products? It probably belongs.</li>
 </ul>
 <p>If relevance isn’t clear yet contributor passions persist, direct them to their community to validate assumptions and strengthen their case.</p>

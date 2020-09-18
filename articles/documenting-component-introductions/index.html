@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        11 min
+                        6 min
                       
                     </span>
                 </p>
@@ -141,115 +141,6 @@
     <div class="esds-row__inner">
 
     <p><em>#2 of 6 of the series Documenting Components:</em>
-<a href="/articles/documenting-components">Overview</a> | <strong>Intros</strong> | <a href="/articles/component-examples">Examples</a> | <a href="/articles/component-design-guidelines">Design</a> | Code | Authoring</p>
-<hr>
-<h2>Component Names: “My name is…”</h2>
-<p>Naming a thing well is essential, and sometimes hard.</p>
-<p>A component’s name (<em>Buttons</em>) appears as the page’s title, a label in site’s navigation (Buttons), and a code identifier of a CSS class (<code>-button</code>) or HTML element name (<code>&lt;Button&gt;</code>). <em>Button</em> is easy. It’s a name we refer to easily and consistently, together, everywhere in our work.</p>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/1.png" alt="Illustration of a component name appearing in different artifacts">
-    </div>
-    <figcaption class="escom-article-figure__caption">Persist the <em>same component name throughout design, code and conversation</em></figcaption>
-</figure>
-<p><em>Drawer</em> or <em>Accordion</em> or <em>Collapsible</em> is hard. Even harder? <em>Grid</em> or <em>Layout</em> or <em>Layout Grid</em> or <em>Rows</em> &amp; <em>Columns</em> or <em>Box</em> or <em>Proportional Grid</em> or whatever you call invisible scaffolding visually ordering a page. Even <em>Card</em> isn’t universally defined: is it a generic container or the defined composite of all it contains? Making a library forces the choice.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/2.png" alt="Bar chart indicating the popularity of the simple term grid">
-    </div>
-    <figcaption class="escom-article-figure__caption">Name of component used to “Establish visual order on a page using rows and columns,” across 21 libraries.</figcaption>
-</figure>
-<p>For most doc sites, navigation relies on label alone. With a little effort, nav could be enhanced with a <em>thumbnail</em>, maybe only via a <em>tooltip</em> on hover. That same snapshot—or fully rendered components—could also be arranged in a gallery introducing the Components section. We can do more.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/3.png" alt="">
-    </div>
-    <figcaption class="escom-article-figure__caption">Diagram of thumbnails appearing in navigation</figcaption>
-</figure>
-<p>If demystifying synonyms is your game, sprinkle in a little “also known as” subtlety to sensitize rather than confuse.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/4.png" alt="Diagram of a preferred term and alternate terms displayed adjacently">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p><em>Takeaway</em>: A optimally clear title can be a challenge, so sweat the decision only just enough. Always pair it with a sensitizing example, and sprinkle hints elsewhere in the UI.</p>
-<hr>
-<h3>Button or Buttons? Deciding Singular vs Plural Form</h3>
-<p>Names in code uniformly refer to a singular instance (<code>-button</code>, <code>-input</code>, <code>-card</code>). For components used many times on a page, whether primitive (<em>Buttons</em>, <em>Inputs</em>) or composed (<em>Cards</em>), an industry sample suggests most libraries prefer the plural form for page titles and site navigation labels.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/5.png" alt="Illustration of whether to include component names as plural">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>However, the singular form is common for components used once on a page. <em>Global Navigation</em>, <em>Footer</em>, and <em>Grid</em> are thought to frame the page (although <em>Grids</em> do repeat within a page). Similarly, a <em>Masthead</em>, <em>Hero</em>, or <em>Billboard</em> can set the page’s tone, but aren’t repeated further down. When we verbalize these, the singular form sounds more natural.</p>
-<p>Now, navigation is tricky. As a component label, it’s the most vague, so consider avoiding it altogether. Yet for the remaining examples, plural variants — <em>Footers</em>, <em>Grids</em>, and <em>Mastheads</em> — work just fine.</p>
-<p><em>Takeaway</em>: Most teams favor plurals, and it’s up to your team to form a convention. Perfect consistency may not be worth the stirring the passions, but if you mix both, have a rationale.</p>
-<hr>
-<h2>Component Intros: “…and what I do is…”</h2>
-<p>Names offer an imperfect, incomplete component explanation. Therefore, many libraries elaborate with a description to capture a component’s essence.</p>
-<h3>Tantalizing with a Deck</h3>
-<p>The description can be short:</p>
-<ul>
-<li>Buttons can be used to show the user’s choice of options for actions and assign these to a clear hierarchy. (<a href="http://www.audi.com/ci/en/guides/user-interface/components/buttons.html" rel="nofollow noopener" target="_blank">Audi</a>)</li>
-<li>Grid systems are used for creating page layouts through a series of rows and columns that house your content. (<a href="http://carbondesignsystem.com/style/grid/design" rel="nofollow noopener" target="_blank">IBM Carbon</a>)</li>
-</ul>
-<p>Each elaborates with details that sensitize: a <em>Button</em>’s action and hierarchy, a <em>Grid</em>’s rows, columns, and purpose to create page layout.</p>
-<p>As a typographic tradition, the description—known as a <a href="https://www.thoughtco.com/what-is-an-article-deck-1078014">Deck</a>—should be paired visually with the component’s title and separate from remaining content. The deck’s font size should notably larger than paragraphs that follow. Tantalize the reader onward.</p>
-<hr>
-<h3>Keep the Deck to a Tweet</h3>
-<p>How long’s too long? I encourage teammates to embrace “Tweet length” (and by tweet, I mean original the length of 144 characters). Is two sentences OK? Perhaps, although my peer reviewing history is littered with suggestions trimming from two sentences to one.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/6.png" alt="Illustation of what to do: keep an intro short">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/documenting-component-introductions/7.png" alt="Illustration of what not to do: go long with an intro">
-    </div>
-    <figcaption class="escom-article-figure__caption"><strong>DO</strong> Keep the deck short. <strong>DON’T</strong> explain everything before Examples do a better job explaining everything.</figcaption>
-</figure>
-<p>When writing an introduction, capture the essence, not the whole story. That means clarifying component structure and purpose instead of implementation details. For a <em>Grid</em>, “rows and columns” for “responsive layout” are favored over “12 columns” or “breakpoints at 768 and 1024.” For <em>Buttons</em>, keep it very short. Like 10 words or less short! Everyone knows what a button is.</p>
-<p><em>Takeaway</em>: Set essential context and tone, avoid packing in every feature, and above all else: keep it short.</p>
-<hr>
-<h3>Industry Examples to Inspire</h3>
-<p>For <strong>Buttons</strong> :</p>
-<ul>
-<li>The Predix UI Buttons module is a simple, robust, extensible baseline for building entire suites of buttons on. (<a href="https://designsystem.morningstar.com/components/buttons.html" rel="nofollow noopener" target="_blank">GE Predix</a>)</li>
-<li>Buttons make common actions immediately visible and easy to perform with one click or tap. They can be used for any type of action, including navigation.(<a href="https://polaris.shopify.com/components/actions/button#navigation" rel="nofollow noopener" target="_blank">Shopify</a>)</li>
-<li>Buttons are used for actions, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another. (<a href="https://github.com/primer/primer/tree/master/modules/primer-buttons" rel="nofollow noopener" target="_blank">Github Primer</a>) %}</li>
-<li>Buttons are used to invoke an event. (<a href="http://Buttons%20are%20used%20to%20invoke%20an%20event" rel="nofollow noopener" target="_blank">Salesforce Lightning</a>)</li>
-</ul>
-<p>For <strong>Cards</strong> :</p>
-<ul>
-<li>Provide entry into detailed content via an image, text, and related information. (<a href="https://comet.discoveryeducation.com/components/cards.html" rel="nofollow noopener" target="_blank">Discovery Comet</a>)</li>
-<li>A card is a sheet of material that serves as an entry point to more detailed information. (<a href="https://material-ui-next.com/demos/cards/" rel="nofollow noopener" target="_blank">Material UI</a>)</li>
-<li>Cards contain elements and functions on a single topic and can be used as teasers for further content. (<a href="http://www.audi.com/ci/en/guides/user-interface/components/card.html" rel="nofollow noopener" target="_blank">Audi</a>)</li>
-</ul>
-<p>For <strong>(Layout) Grids</strong>:</p>
-<ul>
-<li>This 12-column, responsive grid provides structure for website content. (<a href="https://designsystem.digital.gov/components/grids/" rel="nofollow noopener" target="_blank">USDS</a>)</li>
-<li>The grid provides the foundation for harmoniously positioning elements, while maintaining a consistent and coherent look to the screen. (<a href="https://atlassian.design/guidelines/product/foundations/grid" rel="nofollow noopener" target="_blank">Atlassian</a>)</li>
-<li>Box component provides an easy way to apply standardized size &amp; space to your layout. (<a href="http://mineral-ui.com/components/box/" rel="nofollow noopener" target="_blank">Mineral</a>)</li>
-</ul>
-<hr>
-<h2>A Too-Detailed Introduction? “Get to the Goods!”</h2>
-<p>Sometimes components require introductions that elaborate on concepts, complexity, or library-specific points of view that aren’t self evident.</p>
-<p>This is very evident in <em>Layout Grid</em> documentation. Rows, columns, breakpoints, alignment, shifting, stacking, offsetting. Oh my, there’s so much to understand. I’m exhausted just thinking about it.</p>
-<p>So the instinct is to introduce in detail. An introductory paragraph becomes a section. Code examples to explain each concept only crop up later, mirror the introduction’s subheads. The repetition is unnecessary, bogging a reader down in details before they even get started.</p>
-<p>Component recognition relies as much or more on what a reader sees (the picture) rather than read (the name), even if recall and conversation depend on the name. Therefore, position the name as the page’s title close to the item’s picture. Usability testing of component doc affirms:</p>
-<div class="escom-bar-quote">
-    “I don’t want to read all this.”<br>“Show me stuff I can immediately use.”<br>“Get me to the goods.”<br>“Where are the tools?”
-</div>
-<p>In a introduction, avoid deep context setting and lengthy overviews. Save the feature details and expansive design and code guidelines for the examples.</p>
-<p><em>Takeaway</em>: Spare the gory details; instead, get to examples adopters can immediately apply! If you have long story to tell, save it for later.</p>
-<hr>
-<p>Component introductions must be powerful yet short. The objective is to tantalize enough to ensure the reader is in the right place. As a result, minimize the distance from component title to a first glimpse of the “goods” that follow. Get to the examples you can to use.</p>
-<p><a href="/articles/documenting-components"><strong>#1. Overview</strong></a> ← Previous | Next → <a href="/articles/component-examples"><strong>#3. Examples</strong></a></p>
-<p><em>#2 of 6 of the series Documenting Components:</em>
 <a href="/articles/documenting-components">Overview</a> | <strong>Intros</strong> | <a href="/articles/component-examples">Examples</a> | <a href="/articles/component-design-guidelines">Design</a> | Code | Authoring</p>
 <hr>
 <h2>Component Names: “My name is…”</h2>

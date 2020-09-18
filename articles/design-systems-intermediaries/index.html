@@ -116,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        16 min
+                        8 min
                       
                     </span>
                 </p>
@@ -141,126 +141,6 @@
     <div class="esds-row__inner">
 
     <p>It’s important to sustain strong, open relationships with all system customers: the individuals and teams adopting the system. Ideally, that relationship is direct — both practically from a collaborative perspective and literally via code dependency. Like any relationship, it gets harder when something gets between me and you.</p>
-<p>Intermediaries are inevitable when dispersing systems to the masses. They lodge themselves in the chain between your system (most literally, your system code) and adopting teams. This link breaks a team’s direct connection to a system. As a result, adopters grow frustrated, confused, disenchanted. Who do they go to for help? How do things work? Who <em>should</em> they depend on for upgrades, new features, and fixes?</p>
-<p><strong>Distributors</strong>, <strong>translators</strong>, and <strong>themers</strong> are three common intermediaries provoking both opportunities and challenges. As they step in between your system and teams you support, be ready for what awaits!</p>
-<hr>
-<h2>Distributors</h2>
-<p>Sophisticated products — often, a company’s flagship(s) — are often built by many squads that tightly couple work together. To scale, they’ll identify “shared” features (authentication? settings? containers? headers?) and anoint a team as the “platform team” to make and manage them.</p>
-<p>A team building shared features often manage shared dependencies, too. Want to use an open source package that other teams want? Then it’s the platform team that installs, deploys, maintains, and upgrades (when necessary) the package for other teams to access.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/1.png" alt="Comparative diagram of products depending on a system with or without an intermediary platform group in between">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Sound familiar? Yup, that’s <em>exactly</em> how I position a system code dependency. What I thought would be five independent adopters are actually accessed via a platform squad serving the other four. Triggering adoption by <em>any</em> team means distributing it solely via the platform team.</p>
-<p><em>Opportunities</em>:</p>
-<ul>
-<li><strong>Distributors signal mature practices</strong>. That a group has a platform team signals that they value rigor, dependability, and coordination. That’s correlated with a better readiness for adopting a system. This is what distributors do, and their community is usually better for it.</li>
-<li><strong>Distributors ease dissemination</strong>. Install a system once, and it’s installed for <em>all</em> squads directly, instantly. Yes!</li>
-</ul>
-<p><em>Challenges</em>:</p>
-<ul>
-<li><strong>Distributors block adoption</strong>. Teams aren’t allowed to directly adopt a design system. You may hear “We’d love to adopt, but we must leverage it <em>through</em> the platform. Otherwise, our hands are tied.” This is what distributors do, they are good at it, and they <em>should</em> take it seriously. But that seriousness gets in the way sometimes.</li>
-</ul>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/2.png" alt="Diagram of a platform group with product dependents, and then other products not working with the platform group">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<ul>
-<li><strong>Distributors Inhibit Upgrade Frequency</strong>. After a distributor installs a system, the system will continue to evolve. However, a distributor’s teams (1) <em>can’t</em> upgrade the system until the distributor upgrades it and (2) often <em>must</em> upgrade when distributor chooses too. A distributor likely upgrades the design system less often (certainly not every minor release), since upgrades involve enhancements and retesting across all features. Even more threatening, this lower upgrade frequency means more effort per upgrade since more system change has occurred. This diminished upgrade frequency inhibits timely access to shiny new system features.</li>
-</ul>
-<p><em>Takeaways</em>: Distributors, can’t adopt without ’em, so get used to living with them. Important products require many people and teams to make them special. These practices exist for a reason. So, I’ll work both angles.</p>
-<ol>
-<li><em>Forge a strong relationship with the distributor</em>. Ask what features and tools they need to ease adoption, and — if possible — architect system code in a manner consistent with their dissemination and optimization practices.</li>
-<li><em>Persist collaborating with feature teams that benefit</em>. Their case — “We need this system, now!” — is far more influential in provoking adoption and upgrades than you poking the distributor from the outside.</li>
-</ol>
-<hr>
-<h2>Translators</h2>
-<p>Some engineering cultures mandate a tool, going through extensive migrations to adopt a stack dependent on one framework, such as React. If there’s a dominant framework in play, then you bet we’ll build our HTML &amp; CSS system in that framework too. That leaves teams on <a href="https://angularjs.org/">Angular</a>, <a href="https://vuejs.org/">Vue</a>, and <a href="https://www.adobe.com/marketing-cloud/experience-manager.html">Adobe Experience Manager</a> (AEM) to fend for themselves using <a href="/articles/tokens-in-design-systems">design tokens</a> as their system <a href="https://en.wikipedia.org/wiki/Gateway_drug_theory">gateway drug</a>.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/3.png" alt="Diagram of a mostly React product portfolio, with a React translation of the components in between">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Other cultures advocate autonomy. Teams get to choose, and they do: 10 on React or Vue, a smattering of Angular, maybe a few on AEM. In those cases, we’ll offer a “vanilla” library of HTML, (S)CSS, and “light Javascript” not embedded in any framework, leaving translation up to each adopting team.</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/4.png" alt="Diagram of a vanilla html and css offering usable by many different frameworks">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Framework-specific sub-communities of engineers emerge. It’s plausible — even expected — that an adopting team or single engineer takes the initiative to translate a design system’s vanilla HTML &amp; CSS into their framework. They separate the concern in a distinct repo. And they tell their framework friends about it. “Look, here! I’ve translated the system into React in a new <code>system-react</code> repo. Anyone can use it. I hope you find it valuable!”</p>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/5.png" alt="Diagram of an HTML system overlaid into a React system used by adopters">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p>Other engineers salivate: ohhh, yes, so much saved time! They eagerly adopt it as a translated packaged dependency better suited to their needs. Suddenly, you find your system’s features — at least partially — intermediated by a framework <strong>translation</strong>.</p>
-<p><em>Opportunities</em>: That this is an opportunity for growth should be the initial perception of everyone involved: translator, other teams on that framework, and the systems team. So, be ready to:</p>
-<ul>
-<li><strong>Praise the contributor!</strong> It’s time gush with gratitude and praise. How awesome is that!?! Someone believed enough in your system to not just translate it, but also make it available to others. That’s the community spirit!</li>
-<li><strong>Accelerate others</strong>. At a minimum, the translation provides an example demonstrating how to thread the system through a framework. Candidate adopters lagging in commitment now have a helpful frame to connect the dots. Even better, maybe they adopt the framework translation directly and accelerate adoption even more.</li>
-</ul>
-<figure class="escom-article-figure">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/6.png" alt="Diagram of a React and Vue translation of a system">
-    </div>
-    <figcaption class="escom-article-figure__caption"></figcaption>
-</figure>
-<p><em>Challenges</em>: I’ve yet to see a faithful, complete, dependable translation of a design system. While it bears a system’s brand name, it may be riddled with:</p>
-<ul>
-<li><strong>Incomplete translations</strong> of only components (and features of those components) that a translator needs.</li>
-<li><strong>Out of date dependency</strong> languishing untouched months after a translation’s initial announcement fanfare, since such time your system considerably evolved.</li>
-<li><strong>Poor support</strong> for help and extensions as translators focus on their product, unlike the systems team that swarms incidents and plans growth.</li>
-<li><strong>Lagging quality</strong> when translations skimp on testing or drop features — browser support, accessibility, functionality — that adopters expect to get from the system.</li>
-</ul>
-<p><em>Takeaways</em>:</p>
-<ol>
-<li>Approach translators and their framework’s community with curiosity and cautious optimism. Educate them about the processes, engagement, and effort needed to make their “open source” passion play a success.</li>
-<li>Protect a system’s brand if a translation risks damaging it. If the translation bears your name, it must meet all the promises — feature completeness, support, quality, freshness — to be a part of the program.</li>
-</ol>
-<p>Once there’s no looking back, be sure how to position (or distance your system from) how the translation fits within your broader ecosystem.</p>
-<hr>
-<h2>Themers</h2>
-<p>Some may want to use a system as a foundation for <em>their</em> experiences too. However, their visual language — logo, color, typography, space, and iconography — may be quite distinct from a system’s foundation. Therefore, a library must be themed, or “skinned,” to meet requirements of any of:</p>
-<ul>
-<li>A master brand’s (like Marriott) subbrand (like Courtyard Hotels).</li>
-<li>An international corporation (like Volkswagon Group or Vodaphone) offering capabilities to an in-country team (like Audi of America or Vodaphone New Zealand).</li>
-<li>A corporation’s partner- or client-supporting teams that integrate solutions into that partner’s broader experience, such as intranet tools.</li>
-</ul>
-<figure class="escom-article-figure escom-article-figure--break-bleed">
-    <div class="escom-article-figure__image-container">
-        <img class="escom-article-figure__image" src="/images/articles/design-systems-intermediaries/7.png" alt="Diagram of themes dependent on a system">
-    </div>
-    <figcaption class="escom-article-figure__caption">Deeper system architecture, from a design system through two other teams ultimately to client teams making experiences</figcaption>
-</figure>
-<p>In one case, there were <em>four</em> layer of teams making customized “partner experiences” that integrated a company’s UI into other company’s experience. Each client team relied on an theme (made by Team 3) that applied custom visual styles to sophisticated analysis components (made by Team 2) that depended on UI components and charting components (made by Team 1, the “Design System” team). From the outside, it’s as if levels 1 to 3 is actually the “design system.”</p>
-<p>Themeability isn’t a built-in capability for systems that don’t need it. But when theming is built-in, a system must enable easy configuration. Themers need simple answers to questions like:</p>
-<ul>
-<li>“How do I change a global <code>font-family</code> or button <code>background-color</code>?”</li>
-<li>“How and where are library and component-specific variables organized?”</li>
-<li>“Where and how should I put style override on a per theme basis?”</li>
-<li>“Are multiple themes made in separate repos or in the same place?”</li>
-<li>“How do you manage change in your code architecture across releases?” (that is, “Is your code architecture both stable and considered part of what’s considered when <a href="http://www.semver.org/">semantically versioning</a> each system release?”)</li>
-</ul>
-<p><em>Opportunities</em>: While effortful and more complex, optimizing for themability strengthens how you can maintain and extend your default visual language, too. To help your themers, organize your code for optimal extensibility and overrides.</p>
-<ul>
-<li>Apply a core visual language using global variables, separate from where you style each component. Even better, embed the visual language into <a href="/articles/tokens-in-design-systems">design tokens</a> useful <em>across</em> platforms, and demonstrate how overriding this taxonomy as theming’s starting point.</li>
-<li>Isolate component-specific variables (possibly in one file, such as <code>/components/button/variables.scss</code>) from component CSS selectors and their rules (such as in <code>/components/button/button.scss</code>) in a more predictable and useful location.</li>
-<li>Leverage feature like Sass’ <code>!default</code>. If a variable has already been assigned a value by a theme’s override, it won't be re-assigned by a rule marked <code>!default</code>, which is otherwise applied.</li>
-</ul>
-<p><em>Challenges</em>: From a themer’s perspective, your system is their “<a href="http://www.getbootstrap.com/">Bootstrap</a>.” They want to know where the variables are. They value examples of how and where to override features not already represented by a variable.</p>
-<ol>
-<li>Themers may request that you <em>reorganize</em> or <em>expand</em> your file architecture, variable vocabulary, and token taxonomy to suit their interests. If your system’s primary goal isn’t theming (it usually isn’t), this is more work you gotta do now. Sigh.</li>
-<li>Innocuous requests can transform into considerable library refactoring from the ground up. Be careful, since serving that themer may inject <em>breaking changes</em> for everyone else.</li>
-</ol>
-<p><em>Takeaways</em>: Avoid themers forking your code and drifting their instance from your base. This severs the relationship between you, the theme, and downstream adopters of your system. Anticipate theming requirements early as a system forms, architect accordingly, and build what you can. If you succeed, you’ll amplify your system’s value and expand the recognition of it’s importance across a wider customer base.</p>
-<p>It’s important to sustain strong, open relationships with all system customers: the individuals and teams adopting the system. Ideally, that relationship is direct — both practically from a collaborative perspective and literally via code dependency. Like any relationship, it gets harder when something gets between me and you.</p>
 <p>Intermediaries are inevitable when dispersing systems to the masses. They lodge themselves in the chain between your system (most literally, your system code) and adopting teams. This link breaks a team’s direct connection to a system. As a result, adopters grow frustrated, confused, disenchanted. Who do they go to for help? How do things work? Who <em>should</em> they depend on for upgrades, new features, and fixes?</p>
 <p><strong>Distributors</strong>, <strong>translators</strong>, and <strong>themers</strong> are three common intermediaries provoking both opportunities and challenges. As they step in between your system and teams you support, be ready for what awaits!</p>
 <hr>
