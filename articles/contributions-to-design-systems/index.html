@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Contributions to Design Systems</title>
+        
+            <title>Eightshapes > @components > Contributions to Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/contributions-to-design-systems/" />
+            <meta property="og:title" content="Contributions to Design Systems" />
+            <meta property="og:description" content="Opening a Library to a Community’s Code, Design, and More" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Contributions to Design Systems" />
+            <meta name="twitter:description" value="Opening a Library to a Community’s Code, Design, and More" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/contributions-to-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/contributions-to-design-systems" />
-  <meta property="og:title" content="Contributions to Design Systems" />
-  <meta property="og:description" content="Opening a Library to a Community’s Code, Design, and More" />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/contributions-to-design-systems/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Contributions to Design Systems" />
-  <meta name="twitter:description" value="Opening a Library to a Community’s Code, Design, and More" />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/contributions-to-design-systems/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/contributions-to-design-systems" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,53 +95,55 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 3/14/2017 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            6min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Contributions to Design Systems</h1>
-                
-                <h2 class="escom-article__deck">Opening a Library to a Community’s Code, Design, and More</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/contributions-to-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 3/14/2017 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        13 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Contributions to Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Opening a Library to a Community’s Code, Design, and More</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/contributions-to-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
     <p>For a design system to thrive and scale within a larger product ecosystem, central system team members can’t make all the decisions, design all design, code all code. Instead, a system practice must <a href="/articles/team-models-for-scaling-a-design-system">model and foster a federated community</a>, opening the door to contributions far and wide. Don’t underestimate the effort to create and run these processes.</p>
 <p>The open source community offers rich examples of well-documented contribution models, including <a href="https://github.com/rust-lang/rfcs">Rust</a>, <a href="https://github.com/emberjs/rfcs">Ember</a>, and <a href="https://nodejs.org/en/get-involved/development/">Node.js</a>. What follows is an expansion of those ideas to broader considerations needed to serve a diverse design system community.</p>
 <hr>
-<h2 id="who--what-designers-design-developers-code-people-do-make-lots-of-things">Who &amp; What? Designer’s Design, Developer’s Code, People Do Make Lots of Things</h2>
+<h2>Who &amp; What? Designer’s Design, Developer’s Code, People Do Make Lots of Things</h2>
 <p>Code is truth. Therefore, a system must articulate the expectations and process for submitting and reviewing code, usually via pull requests. However, from the outside, a system isn’t <em>just</em> code: it’s design decisions, documentation, editorial word lists, the works.</p>
 <p>Therefore, a system team should be ready for diverse contributions like:</p>
 <ul>
@@ -151,11 +154,11 @@
 <p>In many cases, a systems team slots such contributions into the system backlog. Yet, even if taken up, such contributions still require back and forth to clarify requests, work on naming, and more.</p>
 <p><em>Takeaway</em>: Consider the range of disciplines and experience levels served by the system, define how non-coders submit works, and anticipate level-of-effort needed to integrate some contributions from the outside.</p>
 <hr>
-<h2 id="how-big-small-changes-are-easy-large-changes-are-hard">How Big? Small Changes Are Easy, Large Changes Are Hard</h2>
+<h2>How Big? Small Changes Are Easy, Large Changes Are Hard</h2>
 <p>While contributions come in many sizes, you can usually classify them as small or large.</p>
-<h3 id="small-changes">Small Changes</h3>
+<h3>Small Changes</h3>
 <p>Small changes can include fixing a functional, visual, or accessibility defect, objective improvements (such as a focus state), performance, and browser support. For code, such changes can be submitted as a pull request to a designated branch in the system repository, reviewed, and implemented in the team’s normal workflow.</p>
-<h3 id="large-changes">Large Changes</h3>
+<h3>Large Changes</h3>
 <p>On the other hand, even a simple pull request (PR) can touch upon a system’s architecture, challenge widely applied conventions, or be “bigger than a breadbox.” Large changes can include:</p>
 <ul>
 <li>Alterations to the system’s visual languages built into constants woven across many CSS properties, mixins, and/or components.</li>
@@ -165,7 +168,7 @@
 </ul>
 <p>In those cases, system team members must devote more effort to consider impacts and guide, collaborate with and review contributions.</p>
 <p><em>Takeaway</em>: Distinguish what constitutes a small change from a large change, and deflect larger changes to an established review process.</p>
-<h3 id="process-for-large-changes-request-for-comment-rfc">Process for Large Changes: “Request for Comment” (RFC)</h3>
+<h3>Process for Large Changes: “Request for Comment” (RFC)</h3>
 <p>For more substantial changes, a system must empathize with contributors by offering an easy to understand process that doesn’t waste their time. I find inspiration from the Request for Comment (RFC) model described by <a href="https://github.com/rust-lang/rfcs">Rust</a> and <a href="https://github.com/emberjs/rfcs">Ember</a>.</p>
 <p>Such a process should step through discussion, proposal with preliminary work and an ultimately larger time commitment in delivering and reviewing a polished, testing, and acceptable revision.</p>
 <p>Steps could include:</p>
@@ -179,22 +182,15 @@
 </ol>
 <p><em>Takeaway</em>: Have a process, avoid too many steps, separate understanding the change from making the change, and include clear milestones so a contributor sensibly invests their time.</p>
 <hr>
-<h2 id="how-good-set-expectations-on-quality">How Good? Set Expectations on Quality</h2>
+<h2>How Good? Set Expectations on Quality</h2>
 <p>System parts must often be higher quality and more flexible to address a range of concerns. Mature system practices document processes and checklists (as described in <a href="/articles/component-qa-in-design-systems">Component QA in Design Systems</a>) that can quite intimidate an aspiring contributor. In addition, a contributors’s proposal may trigger requirements they didn’t consider or don’t care about.</p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/2.png" alt="Page of many varying visual test cases">
-        </div>
-        <figcaption class="escom-article-figure__caption">Button kitchen sink page, showing variety of states and variations</figcaption>
-    </figure>
-
-
-
-  <p>System solutions must be more robust, adhering to conventions that can include:</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/2.png" alt="Page of many varying visual test cases">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button kitchen sink page, showing variety of states and variations</figcaption>
+</figure>
+<p>System solutions must be more robust, adhering to conventions that can include:</p>
 <ul>
 <li>Additional states and behaviors</li>
 <li>Accessibility failures in color contrast or interactivity</li>
@@ -204,31 +200,111 @@
 <p>Ugh! Suddenly, an ambitious contributor is overwhelmed by and frustrated with complexity. They may rescind the contribution, slow down, or negotiate with system team members to fill gaps, smooth rough edges, and complete the contribution.</p>
 <p><em>Takeaway</em>: Be prepared for difficult conversations to establish the meticulous quality required. If the contribution has validity, they balk, and you have time, ask if they are comfortable handing you the baton.</p>
 <hr>
-<h2 id="how-to-set-expectations-on-documentation-too">How To? Set Expectations on Documentation, Too</h2>
+<h2>How To? Set Expectations on Documentation, Too</h2>
 <p>Ah, documentation. I’ve worked with some incredibly talented designers and developers over the year that struggle when faced with a documentation template in Google Docs. Often, they can’t get started, because they fear or acknowledge that they write poorly, avoiding the task so as to prevent their contribution at all.</p>
 <p>Let’s face it, Material Design’s documentation is fantastically well-written with gorgeous Do’s, Don’ts, other imagery and demos. It’s like a design course! Salesforce Lightning’s component doc is incredibly detailed. Both are great examples to emulate. My teams also make <a href="/articles/design-system-doc-components">doc components within our component libraries to document components</a>. Head spinning yet?</p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/3.png" alt="Google Material and Salesforce Lightning button documentation">
-        </div>
-        <figcaption class="escom-article-figure__caption">Button documentation from <a href="https://material.io/guidelines/components/buttons.html#buttons-raised-buttons" rel="nofollow noopener" target="_blank">Google Material Design</a> and <a href="https://www.lightningdesignsystem.com/components/buttons/" rel="nofollow noopener" target="_blank">Salesforce Lightning</a></figcaption>
-    </figure>
-
-
-
-  <p>So, it’s the contributor’s job to document their new work, using the system’s tools, to meet a certain level of quality. Right? Usually.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/3.png" alt="Google Material and Salesforce Lightning button documentation">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button documentation from <a href="https://material.io/guidelines/components/buttons.html#buttons-raised-buttons" rel="nofollow noopener" target="_blank">Google Material Design</a> and <a href="https://www.lightningdesignsystem.com/components/buttons/" rel="nofollow noopener" target="_blank">Salesforce Lightning</a></figcaption>
+</figure>
+<p>So, it’s the contributor’s job to document their new work, using the system’s tools, to meet a certain level of quality. Right? Usually.</p>
 <p>However, set expectations that documentation — like design and coding — is incremental. Your system’s threshold for “good enough” documentation is likely lower. Therefore, offer templates (such as a Google Doc they can copy) and a System Doc Editorial Guide to improve authoring efficiency and quality.</p>
 <p><em>Takeaway</em>: Make good documentation a required part of the contribution process, even if a more well-trained system team member does much of the work. Offer predictable models for building variations and authoring doc to smooth the process and get the most out of your contributors.</p>
 <hr>
-<h2 id="expect-to-normalize-contributions-then-and-thereafter">Expect to Normalize Contributions, Then and Thereafter</h2>
+<h2>Expect to Normalize Contributions, Then and Thereafter</h2>
 <p>With so many contributions, it’s really up to the systems team to ensure they blend well. There’s often a normalize step – whether design, code, documentation, or artifacts from other disciplines – that follows to clean up the contribution. Other times, that normalization crops up as realizations after the fact.</p>
 <p><em>Takeaway</em>: Live with the reality that core members are responsible for maintaining an internally consistent system, and that curation takes effort. Your community appreciates you for it!</p>
 <hr>
-<h2 id="praise-contributor-value-in-public-settings">Praise Contributor Value in Public Settings</h2>
+<h2>Praise Contributor Value in Public Settings</h2>
+<p>Whether it’s a new icon (easy!) or a complex combo box with hierarchical menus (hard!), every person I’ve met derives intrinsic reward for doing something that mattered. But it matters much more to them when a system practice recognizes their efforts. Here’s some ideas on how to recognize contributors:</p>
+<ul>
+<li>A documentation <strong>page byline</strong> identifying authors.</li>
+<li>A system’s email <strong>release announcement</strong> , with a section elaborating on special contributions.</li>
+<li>A <strong>release history</strong> denoting authors for each line item.</li>
+<li>Empowering contributors to <strong>demonstrate their own work</strong> during brown bags and town halls.</li>
+<li>Promotion to owning a “segment” concern, becoming the point person for a topical area.</li>
+</ul>
+<p>The system of the people, for the people, and by the people indeed!</p>
+<p>For a design system to thrive and scale within a larger product ecosystem, central system team members can’t make all the decisions, design all design, code all code. Instead, a system practice must <a href="/articles/team-models-for-scaling-a-design-system">model and foster a federated community</a>, opening the door to contributions far and wide. Don’t underestimate the effort to create and run these processes.</p>
+<p>The open source community offers rich examples of well-documented contribution models, including <a href="https://github.com/rust-lang/rfcs">Rust</a>, <a href="https://github.com/emberjs/rfcs">Ember</a>, and <a href="https://nodejs.org/en/get-involved/development/">Node.js</a>. What follows is an expansion of those ideas to broader considerations needed to serve a diverse design system community.</p>
+<hr>
+<h2>Who &amp; What? Designer’s Design, Developer’s Code, People Do Make Lots of Things</h2>
+<p>Code is truth. Therefore, a system must articulate the expectations and process for submitting and reviewing code, usually via pull requests. However, from the outside, a system isn’t <em>just</em> code: it’s design decisions, documentation, editorial word lists, the works.</p>
+<p>Therefore, a system team should be ready for diverse contributions like:</p>
+<ul>
+<li>A designer contributing component design via Sketch files, even though the component isn’t built in system code.</li>
+<li>A code-wary designer offering a new colors for charts &amp; visualizations.</li>
+<li>An editor expanding the published word list (XLS) with 50 additional entries along with another Do/Don’t pair for a punctuation page.</li>
+</ul>
+<p>In many cases, a systems team slots such contributions into the system backlog. Yet, even if taken up, such contributions still require back and forth to clarify requests, work on naming, and more.</p>
+<p><em>Takeaway</em>: Consider the range of disciplines and experience levels served by the system, define how non-coders submit works, and anticipate level-of-effort needed to integrate some contributions from the outside.</p>
+<hr>
+<h2>How Big? Small Changes Are Easy, Large Changes Are Hard</h2>
+<p>While contributions come in many sizes, you can usually classify them as small or large.</p>
+<h3>Small Changes</h3>
+<p>Small changes can include fixing a functional, visual, or accessibility defect, objective improvements (such as a focus state), performance, and browser support. For code, such changes can be submitted as a pull request to a designated branch in the system repository, reviewed, and implemented in the team’s normal workflow.</p>
+<h3>Large Changes</h3>
+<p>On the other hand, even a simple pull request (PR) can touch upon a system’s architecture, challenge widely applied conventions, or be “bigger than a breadbox.” Large changes can include:</p>
+<ul>
+<li>Alterations to the system’s visual languages built into constants woven across many CSS properties, mixins, and/or components.</li>
+<li>Proposing a new component.</li>
+<li>Enhancements that require breaking changes to markup and/or script.</li>
+<li>New documentation for concerns not already covered.</li>
+</ul>
+<p>In those cases, system team members must devote more effort to consider impacts and guide, collaborate with and review contributions.</p>
+<p><em>Takeaway</em>: Distinguish what constitutes a small change from a large change, and deflect larger changes to an established review process.</p>
+<h3>Process for Large Changes: “Request for Comment” (RFC)</h3>
+<p>For more substantial changes, a system must empathize with contributors by offering an easy to understand process that doesn’t waste their time. I find inspiration from the Request for Comment (RFC) model described by <a href="https://github.com/rust-lang/rfcs">Rust</a> and <a href="https://github.com/emberjs/rfcs">Ember</a>.</p>
+<p>Such a process should step through discussion, proposal with preliminary work and an ultimately larger time commitment in delivering and reviewing a polished, testing, and acceptable revision.</p>
+<p>Steps could include:</p>
+<ol>
+<li><strong>Initial Discussion</strong> , often casual with system team members and/or the community, triggered by an request form, or discussed in a system critique session. “Check out our Contributor’s Guide at [enter URL here]” is a must have.</li>
+<li><strong>Formal Proposal</strong> outlining the contributor, detailed description, rationale, sub-team area (visual style, UI component, <a href="/articles/patterns-components">UX pattern</a>, or other concern), and relationship with ongoing system and product efforts.</li>
+<li><strong>Triage &amp; Clarification</strong> period to triage the request to refine and detail the proposal. This budding conversation is also an opportunity to educate contributors about related tasks (QA, doc, etc), screening the over-ambitious.</li>
+<li><strong>Discussion &amp; Consensus</strong> period to expose the proposal beyond the contributor and systems team into the community of system users in design and/or development. Common venues can include a system’s “council” of governing leaders, an open #system-design or #system-dev SlackHQ channel, an agenda item during critique, or a meeting with experts to dive deep.</li>
+<li><strong>Approval and Activation</strong> for the proposal to be fully implemented, however approval is defined within an organization.</li>
+<li><strong>Implementation</strong> to design, build and — oh yes, don’t forget — document the proposed feature(s).</li>
+</ol>
+<p><em>Takeaway</em>: Have a process, avoid too many steps, separate understanding the change from making the change, and include clear milestones so a contributor sensibly invests their time.</p>
+<hr>
+<h2>How Good? Set Expectations on Quality</h2>
+<p>System parts must often be higher quality and more flexible to address a range of concerns. Mature system practices document processes and checklists (as described in <a href="/articles/component-qa-in-design-systems">Component QA in Design Systems</a>) that can quite intimidate an aspiring contributor. In addition, a contributors’s proposal may trigger requirements they didn’t consider or don’t care about.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/2.png" alt="Page of many varying visual test cases">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button kitchen sink page, showing variety of states and variations</figcaption>
+</figure>
+<p>System solutions must be more robust, adhering to conventions that can include:</p>
+<ul>
+<li>Additional states and behaviors</li>
+<li>Accessibility failures in color contrast or interactivity</li>
+<li>Considerations across contexts, such as a darker setting or responsiveness</li>
+<li>Composability in layouts and adjacent to other elements</li>
+</ul>
+<p>Ugh! Suddenly, an ambitious contributor is overwhelmed by and frustrated with complexity. They may rescind the contribution, slow down, or negotiate with system team members to fill gaps, smooth rough edges, and complete the contribution.</p>
+<p><em>Takeaway</em>: Be prepared for difficult conversations to establish the meticulous quality required. If the contribution has validity, they balk, and you have time, ask if they are comfortable handing you the baton.</p>
+<hr>
+<h2>How To? Set Expectations on Documentation, Too</h2>
+<p>Ah, documentation. I’ve worked with some incredibly talented designers and developers over the year that struggle when faced with a documentation template in Google Docs. Often, they can’t get started, because they fear or acknowledge that they write poorly, avoiding the task so as to prevent their contribution at all.</p>
+<p>Let’s face it, Material Design’s documentation is fantastically well-written with gorgeous Do’s, Don’ts, other imagery and demos. It’s like a design course! Salesforce Lightning’s component doc is incredibly detailed. Both are great examples to emulate. My teams also make <a href="/articles/design-system-doc-components">doc components within our component libraries to document components</a>. Head spinning yet?</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/contributions-to-design-systems/3.png" alt="Google Material and Salesforce Lightning button documentation">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button documentation from <a href="https://material.io/guidelines/components/buttons.html#buttons-raised-buttons" rel="nofollow noopener" target="_blank">Google Material Design</a> and <a href="https://www.lightningdesignsystem.com/components/buttons/" rel="nofollow noopener" target="_blank">Salesforce Lightning</a></figcaption>
+</figure>
+<p>So, it’s the contributor’s job to document their new work, using the system’s tools, to meet a certain level of quality. Right? Usually.</p>
+<p>However, set expectations that documentation — like design and coding — is incremental. Your system’s threshold for “good enough” documentation is likely lower. Therefore, offer templates (such as a Google Doc they can copy) and a System Doc Editorial Guide to improve authoring efficiency and quality.</p>
+<p><em>Takeaway</em>: Make good documentation a required part of the contribution process, even if a more well-trained system team member does much of the work. Offer predictable models for building variations and authoring doc to smooth the process and get the most out of your contributors.</p>
+<hr>
+<h2>Expect to Normalize Contributions, Then and Thereafter</h2>
+<p>With so many contributions, it’s really up to the systems team to ensure they blend well. There’s often a normalize step – whether design, code, documentation, or artifacts from other disciplines – that follows to clean up the contribution. Other times, that normalization crops up as realizations after the fact.</p>
+<p><em>Takeaway</em>: Live with the reality that core members are responsible for maintaining an internally consistent system, and that curation takes effort. Your community appreciates you for it!</p>
+<hr>
+<h2>Praise Contributor Value in Public Settings</h2>
 <p>Whether it’s a new icon (easy!) or a complex combo box with hierarchical menus (hard!), every person I’ve met derives intrinsic reward for doing something that mattered. But it matters much more to them when a system practice recognizes their efforts. Here’s some ideas on how to recognize contributors:</p>
 <ul>
 <li>A documentation <strong>page byline</strong> identifying authors.</li>
@@ -239,11 +315,9 @@
 </ul>
 <p>The system of the people, for the people, and by the people indeed!</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -254,7 +328,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -283,127 +356,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -411,257 +379,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -669,255 +427,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -925,121 +473,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1049,247 +492,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1297,119 +532,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1421,7 +551,7 @@
 
 
 
-    
+
 
     
 
@@ -1458,7 +588,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1536,10 +665,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

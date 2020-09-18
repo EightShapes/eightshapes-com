@@ -53,7 +53,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
@@ -95,6 +95,8 @@
     </div>
 
 
+
+
 <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
     <div class="esds-row__inner">
         <div class="escom-article__author-row">
@@ -114,7 +116,7 @@
                     </span>
                     <span class="escom-article__read-duration">
                       
-                        5 min
+                        4 min
                       
                     </span>
                 </p>
@@ -141,24 +143,22 @@
     <p>Every web font includes whitespace above and below the text, making it difficult to render space in UI components systematically. I created the <a href="http://text-crop.eightshapes.com">Text Crop Tool</a> to empower designers and developers to remove this whitespace and more accurately render their components. This is how I did it.</p>
 <h2>How it works</h2>
 <p>I’ve added a red border around this paragraph to illustrate the white space I want to remove.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/1.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/1.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>To remove the space, add pseudo :before and :after elements to the text element, each with negative margins.</p>
 <p>In the Original, the :before and :after elements have height, width and background colors but no negative margins.</p>
 <p>In the Desired example, applying negative margins to the pseudo elements removes the undesirable space.</p>
 <p>The key benefit of this technique is that it removes top and bottom whitespace while preserving line height between lines in a multi-line block of text:</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/2.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Preserve internal line height but crop top and bottom white space&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/2.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption">Preserve internal line height but crop top and bottom white space</figcaption>
+</figure>
 <h2>Finding the formula</h2>
 <p>By experimenting at multiple font sizes and noting the offsets needed to crop the text at each size, a formula started to emerge:</p>
 <pre><code class="language-scss">    // Top crop:
@@ -172,57 +172,47 @@
 <p>The formula involved two “magic numbers,” constant values representing the top and bottom crop.</p>
 <p>The end result was a mixin that worked regardless of font size and only required a unitless line height to perform the calculation.</p>
 <p>But my confidence was dashed when I applied the mixin to a different font face.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/3.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/3.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <h2>Making it work for any font</h2>
 <p>The mixin didn’t work when applied to different typefaces and I couldn’t figure out why. After months of head scratching and experimentation, I ran across this excellent article explaining <a href="http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align">Font Metrics on the web</a>. In the article, Vincent De Oliveira describes the <a href="http://designwithfontforge.com/en-US/The_EM_Square.html">Em Square</a>.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/4.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/4.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>I could now articulate in proper typographic terms what I aimed to do: crop the Em Square to the baseline and cap height of the font face.</p>
 <p>However, <em>every font has a different em square definition</em>. Therefore the “magic numbers” that work for one font don’t work necessarily for other fonts.</p>
 <p>With this new understanding I created a tool to measure the amount of cropping required for the font’s Em Square. It outputs the code to implement that crop via SCSS, LESS, or Stylus.</p>
 <p>The <a href="http://text-crop.eightshapes.com">EightShapes Text Crop Tool</a> is the outcome of that effort.</p>
 <p>Select a Google font from within the tool or load a Custom Font, and then use the sliders to measure the top and bottom crop you want. The tool calculates the properties and formulae for you, just copy and paste the generated SCSS, LESS, or Stylus mixin into your source code and enjoy the crop! It’s not perfect, but it’s far better than before.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/5.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/5.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <h2>Cropping Caveats</h2>
 <p>Cropping the em square with this technique isn’t a silver bullet. Turns out typefaces (and em squares) render differently across operating systems. Cropping the em square to perfection on a Mac may be too much cropping or not enough on a Windows browser. Even on my local computer I’ve seen the crop be off by a pixel or two depending on whether I’m viewing on a regular resolution or retina display.</p>
 <p>Despite these shortcomings the text crop tool has allowed me to fix many issues related to vertical alignment that previously required bespoke CSS pixel pushing. The versatility of this tool is especially useful alongside <a href="/articles/space-in-design-systems">space tokens</a> in a design system.</p>
 <p>Here are some common use cases for cropping the text:</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/6.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Vertically centering icons and text in a button and providing consistent internal padding.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-
-
-
-
-
-&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/cropping-away-negative-impacts-of-line-height/7.png&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Vertically aligning media and accompanying text in a Media Object component.&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/6.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption">Vertically centering icons and text in a button and providing consistent internal padding.</figcaption>
+</figure>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/cropping-away-negative-impacts-of-line-height/7.png" alt="">
+    </div>
+    <figcaption class="escom-article-figure__caption">Vertically aligning media and accompanying text in a Media Object component.</figcaption>
+</figure>
 <h2>Three tips for text cropping</h2>
 <p>Here are some tips for using any typeface-specfic mixin you generate from the <a href="http://text-crop.eightshapes.com">Text Crop Tool</a></p>
 <p><strong>1. Use it only when it’s beneficial.</strong>
@@ -255,7 +245,6 @@ Be sure to test on all the browsers you need to support. Test across operating s
                 
 
 
-
 <h4 class="escom-footer-systems__header">visual style</h4>
 <ul class="escom-footer-systems__list">
     
@@ -282,127 +271,22 @@ Be sure to test on all the browsers you need to support. Test across operating s
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -410,257 +294,47 @@ Be sure to test on all the browsers you need to support. Test across operating s
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -668,255 +342,45 @@ Be sure to test on all the browsers you need to support. Test across operating s
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -924,121 +388,16 @@ Be sure to test on all the browsers you need to support. Test across operating s
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1048,247 +407,39 @@ Be sure to test on all the browsers you need to support. Test across operating s
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1296,119 +447,14 @@ Be sure to test on all the browsers you need to support. Test across operating s
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1534,10 +580,7 @@ Be sure to test on all the browsers you need to support. Test across operating s
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -1548,5 +591,6 @@ Be sure to test on all the browsers you need to support. Test across operating s
     pageTracker._trackPageview();
   </script>
 
+        <!-- GENERATED WITH 11ty -->
     </body>
 </html>

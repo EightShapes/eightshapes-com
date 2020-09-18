@@ -14,21 +14,25 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; Systems &gt; Workshops</title>
+        
+            <title>EightShapes &gt; Systems &gt; Workshops</title>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-        
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="escom-page-type--marketing">
         
 
-    
 
-    
+
+
+
+
+
+
+
     
     
 
@@ -64,9 +68,9 @@
     </div>
 
 
-    
 
-    
+
+
 
     
     
@@ -98,9 +102,9 @@
 
 
 
-    
 
-    
+
+
 
 <div class="esds-row esds-container--white esds-row--tall-inset"
     
@@ -108,17 +112,47 @@
     <div class="esds-row__inner">
         
             
-        <div class="escom-long-form-text">
-            <h2>What We Cover</h2>
-            <p class="escom-long-form-text__lead">
-                Design systems cover alot of ground. Architecting a high-quality library of design, code and documentation is essential. So to is operating a program, from forming a vision and roadmap to aligning people, processes, and contributions from a wide community.
-            </p>
-            <p>
-                EightShapes will customize a workshop for you that blends and prioritizes topics across a day or two together. For each topic, we'll find the right balance of <b>lecture</b>, hands-on <b>activities</b>, <b>discussion</b>, and – if you're ready – <b>critique</b> of your team's materials. If a default agenda suits your needs, excellent! Need to focus on some topics more than others? We'll customize an agenda to suit your needs.
-            </p>
-        </div>
+    <div class="escom-long-form-text">
+        <h2>What We Cover</h2>
+        <p class="escom-long-form-text__lead">
+            Design systems cover alot of ground. Architecting a high-quality library of design, code and documentation is essential. So to is operating a program, from forming a vision and roadmap to aligning people, processes, and contributions from a wide community.
+        </p>
+        <p>
+            EightShapes will customize a workshop for you that blends and prioritizes topics across a day or two together. For each topic, we'll find the right balance of <b>lecture</b>, hands-on <b>activities</b>, <b>discussion</b>, and – if you're ready – <b>critique</b> of your team's materials. If a default agenda suits your needs, excellent! Need to focus on some topics more than others? We'll customize an agenda to suit your needs.
+        </p>
+    </div>
 
-            
+        
+    <script type="text/javascript">
+        "use strict";
+
+document.addEventListener('DOMContentLoaded', function() {
+    var tab_button = document.querySelectorAll('.escom-tabs__button');
+    var tab_content = document.querySelectorAll('.escom-tabs__content');
+    var i;
+
+    function toggleTab() {
+        tab_button[i].addEventListener('click', function() {
+            var target = document.getElementById(this.dataset.target);
+
+            for (i = 0; i < tab_button.length; i++) {
+                tab_button[i].classList.remove('escom-tabs__button--is-active');
+            }
+            for (i = 0; i < tab_content.length; i++) {
+                tab_content[i].classList.remove('escom-tabs__content--is-active');
+            }
+
+            this.classList.add('escom-tabs__button--is-active');
+            target.classList.add('escom-tabs__content--is-active');
+        });
+    }
+
+    for (i = 0; i < tab_button.length; i++) {
+        toggleTab();
+    }
+});
+
+    </script>
     <div class="escom-tabs">
         <div class="escom-tabs__tabs">
             
@@ -156,16 +190,16 @@
     </div>
 
 
-            
+        
     
     <div id="tab-architecting-1-day-" class="escom-tabs__content  escom-tabs__content--is-active">
         
-                <div class="escom-long-form-text">
-                    <p>
-                        The Architecting Design Systems one-day workshop is ideal for teams looking to lift the quality of visual style and UI components across design, code, and documentation.
-                    </p>
-                </div>
-                
+            <div class="escom-long-form-text">
+                <p>
+                    The Architecting Design Systems one-day workshop is ideal for teams looking to lift the quality of visual style and UI components across design, code, and documentation.
+                </p>
+            </div>
+            
     <ul class="escom-timeline escom-timeline--agenda-sections">
         
         
@@ -578,7 +612,7 @@
                 
                 <dt class="esds-list__title">
                     
-                        Techincal Architecture: Tools and Templates
+                        Technical Architecture: Tools and Templates
  
                     
                     
@@ -882,20 +916,20 @@
         
     </ul>
 
-            
+        
     </div>
 
 
-           
+        
     
     <div id="tab-operating-1-day-" class="escom-tabs__content ">
         
-                <div class="escom-long-form-text">
-                    <p>
-                        The Operating Design Systems one-day workshop is ideal for teams considering the vision, plan and operations of a design system within their organization. The workshop covers objectives, roadmapping, adoption, processes and workflows, reorienting teams and cultivating design and developer communities of contribution.
-                    </p>
-                </div>
-                
+            <div class="escom-long-form-text">
+                <p>
+                    The Operating Design Systems one-day workshop is ideal for teams considering the vision, plan and operations of a design system within their organization. The workshop covers objectives, roadmapping, adoption, processes and workflows, reorienting teams and cultivating design and developer communities of contribution.
+                </p>
+            </div>
+            
     <ul class="escom-timeline escom-timeline--agenda-sections">
         
         
@@ -1529,26 +1563,26 @@
         
     </ul>
 
-            
+        
     </div>
 
 
-            
+        
     
     <div id="tab-custom-workshops" class="escom-tabs__content ">
         
-                <div class="escom-long-form-text">
-                    <p>
-                        Most in-house teams choose to customize their agenda to tailor topics to their  needs. This may result in a workshop lengthened to two days or shortened to a half day.
-                    </p>
+            <div class="escom-long-form-text">
+                <p>
+                    Most in-house teams choose to customize their agenda to tailor topics to their  needs. This may result in a workshop lengthened to two days or shortened to a half day.
+                </p>
 
-                    <h3>Example 1: Evening Talk, then Half–Day Workshop</h3>
+                <h3>Example 1: Evening Talk, then Half–Day Workshop</h3>
 
-                    <p>
-                        One client paired a sponsored talk for a local meetup with a customized half-day in-house workshop. Their objectives were to align multiple system efforts and better serve system customers and contributors. As a result, they omitted most topics of design, code and documentation.
-                    </p>
-                </div>
-                
+                <p>
+                    One client paired a sponsored talk for a local meetup with a customized half-day in-house workshop. Their objectives were to align multiple system efforts and better serve system customers and contributors. As a result, they omitted most topics of design, code and documentation.
+                </p>
+            </div>
+            
     <ul class="escom-timeline">
         
         
@@ -1880,12 +1914,12 @@
         
     </ul>
 
-                <div class="escom-long-form-text">
-                    <h3>Example 2: Customized Full-Day Workshop</h3>
-                    <p>Another client was well experienced but needed deep dives. In particular, they had two systemes: one four-year old, another emerging from other groups.</p>
-                    <p>Their workshop customized of existing topics and added new material based on top-level findings. Following planning sessions, stakeholder interviews, and system tours, the workshop's agenda was:</p>
-                </div>
-                
+            <div class="escom-long-form-text">
+                <h3>Example 2: Customized Full-Day Workshop</h3>
+                <p>Another client was well experienced but needed deep dives. In particular, they had two systemes: one four-year old, another emerging from other groups.</p>
+                <p>Their workshop customized of existing topics and added new material based on top-level findings. Following planning sessions, stakeholder interviews, and system tours, the workshop's agenda was:</p>
+            </div>
+            
     <ul class="escom-timeline">
         
         
@@ -2035,1253 +2069,131 @@
         
     </ul>
 
-            
+        
     </div>
 
 
-            
+        
     
     <div id="tab-available-topics" class="escom-tabs__content ">
         
-                <div class="escom-long-form-text">
-                    <p>
-                        When customizing a workshop, we’ll select topics and activities that fit your needs. Topics available out-of-the-box include:
-                    </p>
-                </div>
-                <div class="escom-layout escom-layout--three-column">
-                    <div class="escom-layout__column">
-                        
+            <div class="escom-long-form-text">
+                <p>
+                    When customizing a workshop, we’ll select topics and activities that fit your needs. Topics available out-of-the-box include:
+                </p>
+            </div>
+            <div class="escom-layout escom-layout--three-column">
+                <div class="escom-layout__column">
+                    
     
 
 <h4 class="esds-list__heading">Visual Style</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">Documentation</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">UI Components</h4>
 <ul class="esds-list">
     
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                    </div>
-                    <div class="escom-layout__column">
-                        
+                </div>
+                <div class="escom-layout__column">
+                    
     
 
 <h4 class="esds-list__heading">Strategy</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">Systems of Systems</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">Releases</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                    </div>
-                    <div class="escom-layout__column">
-                        
+                </div>
+                <div class="escom-layout__column">
+                    
     
 
 <h4 class="esds-list__heading">Contributions</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">Process</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">People</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
 </ul>
 
 
-                        
+                    
     
 
 <h4 class="esds-list__heading">Workshop Activities</h4>
 <ul class="esds-list">
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="esds-list__item esds-list__item--tight"><a  class="esds-list__link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
 </ul>
 
 
-                    </div>
                 </div>
-            
+            </div>
+        
     </div>
 
 
-    
+
         
     </div>
 </div>
 
 
 
-    
 
-    
+
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset"
     
@@ -3289,13 +2201,13 @@
     <div class="esds-row__inner">
         
             
-        <div class="escom-long-form-text">
-            <h2>Prepping for the Day</h2>
-            <p class="escom-long-form-text__lead">
-                Once you're signed up, we’ll meet at least three times to plan the event. For workshops requiring customization or additional consulting, we'll add activities as needed — interviews, more tours, etc — so that we can present material most effectively for your audience.
-            </p>
-        </div>
-        
+    <div class="escom-long-form-text">
+        <h2>Prepping for the Day</h2>
+        <p class="escom-long-form-text__lead">
+            Once you're signed up, we’ll meet at least three times to plan the event. For workshops requiring customization or additional consulting, we'll add activities as needed — interviews, more tours, etc — so that we can present material most effectively for your audience.
+        </p>
+    </div>
+    
 
 <div class="esds-tiles esds-tiles--secondary">
     
@@ -3362,16 +2274,16 @@
 </div>
 
 
-    
+
         
     </div>
 </div>
 
 
 
-    
 
-    
+
+
 
 <div class="esds-row esds-row--tall-inset"
     
@@ -3381,14 +2293,14 @@
     <div class="esds-row__inner">
         
             
-        <div class="esds-container--dark-photograph">
-            <div class="escom-long-form-text">
-                <h2>Who Should You Invite?</h2>
-                <p class="escom-long-form-text__lead">The workshop format is suitable for up to 100 participants and covers content relevant to disciplines beyond just designers and engineers.</p>
-                <p></p>
-            </div>
+    <div class="esds-container--dark-photograph">
+        <div class="escom-long-form-text">
+            <h2>Who Should You Invite?</h2>
+            <p class="escom-long-form-text__lead">The workshop format is suitable for up to 100 participants and covers content relevant to disciplines beyond just designers and engineers.</p>
+            <p></p>
         </div>
-        
+    </div>
+    
 
 <div class="esds-tiles esds-tiles--2-column esds-tiles--translucent-white esds-tiles--long-form-max-width">
     
@@ -3456,16 +2368,16 @@
 </div>
 
 
-    
+
         
     </div>
 </div>
 
 
 
-    
 
-    
+
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset"
     
@@ -3473,44 +2385,44 @@
     <div class="esds-row__inner">
         
             
-        <div class="escom-long-form-text">
-            <h2>Why EightShapes for a Workshop?</h2>
-            <p class="escom-long-form-text__lead">
-                EightShapes’ experience and enthusiasm will inspire and challenge your teams. Sessions will engage participants in hands-on activities, spark new ideas and moderate challenging conversations so your team can:
-            </p>
-            <div class="escom-long-form-text--two-column-at-768">
-                <ul>
-                    <li>Learn about design systems</li>
-                    <li>Kickoff or energize a program</li>
-                    <li>Define a system and what it offers</li>
-                    <li>Dive into topics like color and space</li>
-                </ul>
-                <ul>
-                    <li>Name a team &amp; energize a community</li>
-                    <li>Decide how contributions flow in</li>
-                    <li>Plan how other teams adopt over time</li>
-                    <li>Identify measurable outcomes</li>
-                </ul>
-            </div>
+    <div class="escom-long-form-text">
+        <h2>Why EightShapes for a Workshop?</h2>
+        <p class="escom-long-form-text__lead">
+            EightShapes’ experience and enthusiasm will inspire and challenge your teams. Sessions will engage participants in hands-on activities, spark new ideas and moderate challenging conversations so your team can:
+        </p>
+        <div class="escom-long-form-text--two-column-at-768">
+            <ul>
+                <li>Learn about design systems</li>
+                <li>Kickoff or energize a program</li>
+                <li>Define a system and what it offers</li>
+                <li>Dive into topics like color and space</li>
+            </ul>
+            <ul>
+                <li>Name a team &amp; energize a community</li>
+                <li>Decide how contributions flow in</li>
+                <li>Plan how other teams adopt over time</li>
+                <li>Identify measurable outcomes</li>
+            </ul>
         </div>
-        <div class="escom-pull-quote">
-            <div class="escom-pull-quote__the-quote">
-                Even as an experienced design systems pro, I picked up <strong>new techniques and concepts</strong> that I never knew about. Listening to Nathan and discussions as a class helped me get some perspective on issues I was facing at work.
-            </div>
-            <div class="escom-pull-quote__attribution">
-                <a href="https://publication.design.systems/what-i-learned-about-leading-a-design-system-in-2017-46b85e9d7eab">Jeff Crossman</a>, Design System Lead, JPMorgan Chase & Co.
-            </div>
+    </div>
+    <div class="escom-pull-quote">
+        <div class="escom-pull-quote__the-quote">
+            Even as an experienced design systems pro, I picked up <strong>new techniques and concepts</strong> that I never knew about. Listening to Nathan and discussions as a class helped me get some perspective on issues I was facing at work.
         </div>
-    
+        <div class="escom-pull-quote__attribution">
+            <a href="https://publication.design.systems/what-i-learned-about-leading-a-design-system-in-2017-46b85e9d7eab">Jeff Crossman</a>, Design System Lead, JPMorgan Chase & Co.
+        </div>
+    </div>
+
         
     </div>
 </div>
 
 
 
-    
 
-    
+
+
 
 <div class="esds-row esds-container--black esds-row--tall-inset"
     
@@ -3518,13 +2430,13 @@
     <div class="esds-row__inner">
         
             
-        <div class="escom-long-form-text">
-            <h2>Past Workshop Clients</h2>
-            <p class="escom-long-form-text__lead">
-                EightShapes has conducted design systems-oriented workshops at public events and for in-house teams across industries since 2007.
-            </p>
-        </div>
-        
+    <div class="escom-long-form-text">
+        <h2>Past Workshop Clients</h2>
+        <p class="escom-long-form-text__lead">
+            EightShapes has conducted design systems-oriented workshops at public events and for in-house teams across industries since 2007.
+        </p>
+    </div>
+    
     <table class="escom-table escom-table--long-form-width">
         <thead class="escom-table__head">
             <tr class="escom-table__row">
@@ -3842,16 +2754,16 @@
         </tbody>
     </table>
 
-    
+
         
     </div>
 </div>
 
 
 
-    
 
-    
+
+
 
     
 
@@ -3888,7 +2800,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -3966,10 +2877,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

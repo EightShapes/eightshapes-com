@@ -53,7 +53,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
@@ -93,6 +93,8 @@
             </h1>
         </div>
     </div>
+
+
 
 
 <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
@@ -146,22 +148,20 @@
 <h2>Approaching Density With Sizes That Unify Height</h2>
 <p>Interface density results from a tapestry of typography and spatial choices — paddings, margins, columns, gutters, etc— applied to everything from outer layout containers to primitive elements including components offered from a design system.</p>
 <p>A UI component control what’s inside its boundary, unless it also adds margin that risk neighborly conflict, which I like to avoid. There are many properties in play, including font-size, font-weight, line-height, padding and, if relevant, border. These properties blend together, impact density, and — vitally — result in a size.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/1.png&quot; alt=&quot;Button annotated for size, typography and padding&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Size Resulting from Space and Type&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/1.png" alt="Button annotated for size, typography and padding">
+    </div>
+    <figcaption class="escom-article-figure__caption">Size Resulting from Space and Type</figcaption>
+</figure>
 <p>Make no mistake: density ≠ size. But size impacts density and varying density can correlate strongly with tuning size. Increase or decrease font-size and padding, and the button gets larger or smaller, respectively.</p>
 <p>Yet, many component libraries size components inconsistently. Sizes do exist, mind you. There’s a small input here. There’s a small and large button there. There may even be extra large or even a “puffy” button (yes, that’s happened). Upon inspection, small input and small button aren’t the same small.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/2.png&quot; alt=&quot;Input and button size not aligned&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Inconsistent Component Height&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/2.png" alt="Input and button size not aligned">
+    </div>
+    <figcaption class="escom-article-figure__caption">Inconsistent Component Height</figcaption>
+</figure>
 <p>To build consistently and efficiently to varying densities using a system, adopters need a consistent component sizing model executed across a catalog. From both a visual and technical perspective, consistent sizing corresponds to a combination of it’s width and height. Width is often dictated by both context and content. On the other hand, consistent height is a realistic and desirable objective when arranging core components horizontally and vertically.</p>
 <p>As a result, we’ve begun to approach unifying component size as a step-by-step process that includes typography, space, and height from the inside out.</p>
 <hr>
@@ -170,22 +170,20 @@
 <hr>
 <h3>1. Identify and Name the Size You Need</h3>
 <p>For some teams, one is enough. Otherwise, how many sizes do we need?</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/3.png&quot; alt=&quot;Spectrum with default and high&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/3.png" alt="Spectrum with default and high">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>Some trend towards (1) Default versus (2) High density. The former serves most adopters with a sensible starting point. The latter offers those designing denser interfaces the compression appropriate for their customer needs.</p>
 <p>Two alternatives may not be enough. More often, we’ll see small, medium (the default) and large variants, serving experiences like:</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/4.png&quot; alt=&quot;Spectrum with small, medium and large&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/4.png" alt="Spectrum with small, medium and large">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <ul>
 <li><strong>Small</strong>: high-density displays for frequently used interfaces that integrate considerable data and enable diverse tasks.</li>
 <li><strong>Medium</strong>: a default for many motifs and long-form reading experiences for any range of consumer, business, and internal apps and content.</li>
@@ -196,65 +194,59 @@
 <hr>
 <h3>2. Identify Components To Unify Height Across Sizes</h3>
 <p>Designing size across component starts with a small set of atomic elements. Not every component will implement every size (more on that later), and many components won’t be sized at all. Exclusions can be obvious (example: the invisible truncate), based on lack of demand (example: pagination), or unwarranted (who needs a large and medium footnote?).</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/5.png&quot; alt=&quot;Various components to synchronize size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/5.png" alt="Various components to synchronize size">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>Common components across which height is unified</p>
 <p><em>Takeaway</em>: Avoid the temptation to solve all components across all sizes from the outset. Instead, initiate work on a core component set to ground the foundation to density, and go from there.</p>
 <hr>
 <h3>3. Start with Button or Input</h3>
 <p>Once the components are identified and work begins, conventions emerge across components sizes. Work may start with the input or button.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/6.png&quot; alt=&quot;Button by size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Button by size&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/6.png" alt="Button by size">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button by size</figcaption>
+</figure>
 <p>As button size stabilize, other elements follow suit: search field (a specialized input), select, combo box, list group item, and table cell.</p>
 <hr>
 <h3>4. Unify Typography</h3>
 <p>Typography starts with font-size, although size variants can also trigger shifts in font-weight, line-height, and other properties. Models emerge and become embedded in cross-component tools that vary style based on a size property.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/7.png&quot; alt=&quot;Button and Input with associated mixins used for typography&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Button and Input with associated mixins used for typography&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/7.png" alt="Button and Input with associated mixins used for typography">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button and Input with associated mixins used for typography</figcaption>
+</figure>
 <hr>
 <h3>5. Unify Space</h3>
-<p>Similarly, a spatial model can govern how elements are inset within a component block, as described in <a href="space-in-design-systems.html">Space in Design Systems</a>. Small, medium, and large component sizes often apply a complementary mapping of insets across a scale, leveraged via <a href="tokens-in-design-systems.html">design tokens</a>.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/8.png&quot; alt=&quot;Button and Input with associated space tokens&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Button and Input with associated space tokens&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<p>Similarly, a spatial model can govern how elements are inset within a component block, as described in <a href="/articles/space-in-design-systems">Space in Design Systems</a>. Small, medium, and large component sizes often apply a complementary mapping of insets across a scale, leveraged via <a href="/articles/tokens-in-design-systems">design tokens</a>.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/8.png" alt="Button and Input with associated space tokens">
+    </div>
+    <figcaption class="escom-article-figure__caption">Button and Input with associated space tokens</figcaption>
+</figure>
 <p>Less often, incrementing sizes can also result in other changes, such as thickening a <code>border</code>, changing a <code>border-radius</code>, or shifting icon weight.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/9.png&quot; alt=&quot;Grid of components by size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Grid of components by size&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/9.png" alt="Grid of components by size">
+    </div>
+    <figcaption class="escom-article-figure__caption">Grid of components by size</figcaption>
+</figure>
 <p><em>Takeaway</em>: Normalizing size will either trigger or build upon cross-component tooling like mixins and design tokens. Embed conventions in such tooling, and leaving the fine-tuning per component for the next step.</p>
 <hr>
 <h3>6. Extend and Override the Model Per Component, As Needed</h3>
 <p>To unify height, one could specify height and then override the typography and space of the contained elements. Alternatively, component height can arise automatically from the blend of well-modeled type and spatial properties and other content (particularly, images). We choose the latter. Thus our approach overrides per component to achieve consistent height.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/10.png&quot; alt=&quot;Overrides to default spacing models to account for borders and adjacent elements&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Overrides to default spacing models to account for borders and adjacent elements&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/10.png" alt="Overrides to default spacing models to account for borders and adjacent elements">
+    </div>
+    <figcaption class="escom-article-figure__caption">Overrides to default spacing models to account for borders and adjacent elements</figcaption>
+</figure>
 <p>Component-specific extensions and overrides included things like:</p>
 <ul>
 <li>Adjusting an inset’s <code>padding-left</code> or <code>-right</code> due to the presence of an icon to the left or right of a button label or list item.</li>
@@ -267,29 +259,26 @@
 <p>Implementing Component by Component Leads to Inconsistency</p>
 <p>Teams building components incrementally often apply space, per component, as each component is implemented. Many teams lack a sizing strategy, happening on sizes per component by accident, and realizing later that “Oh, yeah, these size names and visual properties aren’t aligned at all.”</p>
 <p>Two components named the same size (Medium and Medium) yet have different typography and spacing values and, thus, different size.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/11.png&quot; alt=&quot;Same Size Name, Different Size Outcomes&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Same Size Name, Different Size Outcomes&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/11.png" alt="Same Size Name, Different Size Outcomes">
+    </div>
+    <figcaption class="escom-article-figure__caption">Same Size Name, Different Size Outcomes</figcaption>
+</figure>
 <p>Two components named different sizes (Medium and Small) yet share typography and spacing and, thus, are the same size.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/12.png&quot; alt=&quot;Component naming inconsistency — Medium and Small — for the same visual size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Component naming inconsistency — Medium and Small — for the same visual size&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/12.png" alt="Component naming inconsistency — Medium and Small — for the same visual size">
+    </div>
+    <figcaption class="escom-article-figure__caption">Component naming inconsistency — Medium and Small — for the same visual size</figcaption>
+</figure>
 <p>Two components should be offered at the same size, yet only one’s available.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/13.png&quot; alt=&quot;Component availability unpredictability or incompleteness&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Component availability unpredictability or incompleteness&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/13.png" alt="Component availability unpredictability or incompleteness">
+    </div>
+    <figcaption class="escom-article-figure__caption">Component availability unpredictability or incompleteness</figcaption>
+</figure>
 <p><em>Takeaway</em>: Anticipate and reduce the impacts of drift by establishing concepts, building tools (such as mixins and tokens), and expecting tools to evolve.</p>
 <hr>
 <h3>Unify Size Holistically in a Single Pass</h3>
@@ -299,21 +288,19 @@
 <hr>
 <h3>Not Every Component Needs Every Size</h3>
 <p>The patterned use of some UI components runs counter to the intent of some stops on a sizing scale. Alerts, notifications, and other in-your-face cues must capture your attention, either by modally dominating a screen or presented so prominently that it can’t be missed. Offering a small variant runs counter to that mission.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/14.png&quot; alt=&quot;Medium and Large Alert (Small Unnecessary)&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Medium and Large Alert (Small Unnecessary)&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/14.png" alt="Medium and Large Alert (Small Unnecessary)">
+    </div>
+    <figcaption class="escom-article-figure__caption">Medium and Large Alert (Small Unnecessary)</figcaption>
+</figure>
 <p>On the other hand, a tag component denoting an attribute’s value revels in compact subtlety. It works well at small or medium sizes regardless of display. Offering a large variant doesn’t make sense.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/15.png&quot; alt=&quot;Small and Medium Tag (Large Unnecessary)&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Small and Medium Tag (Large Unnecessary)&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/15.png" alt="Small and Medium Tag (Large Unnecessary)">
+    </div>
+    <figcaption class="escom-article-figure__caption">Small and Medium Tag (Large Unnecessary)</figcaption>
+</figure>
 <p>Although the library may have changed since, at one point the Morningstar Design System offered sizes depending on component:</p>
 <ul>
 <li><strong>Small, Medium, and Large</strong>: Button, Button Group, Card, Checkbox, Combo Box, Data Table, Error Text, Label, List Group, Loaders, Microcopy, Radio Button, Required Field, Search Field, Select, Stepper, Switch, Text Box, Text Area, Tooltip</li>
@@ -326,21 +313,19 @@
 <hr>
 <h3>Avoid Using “Sizes” for Single-Dimension Options Like Width</h3>
 <p>While most sizing models concentrate on height, width can also vary per component with a set of discrete options. For example, a modal may be recommended at three discrete widths:400px, 600px, or 800px.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/16.png&quot; alt=&quot;Modals available at three discrete widths&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Modals available at three discrete widths&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/16.png" alt="Modals available at three discrete widths">
+    </div>
+    <figcaption class="escom-article-figure__caption">Modals available at three discrete widths</figcaption>
+</figure>
 <p>On the other hand, dialog may offer 300px and500px variants, and a popover 200px and 300px variants.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure escom-article-figure--break-bleed&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/17.png&quot; alt=&quot;Popovers available at two discrete widths&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Popovers available at two discrete widths&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/17.png" alt="Popovers available at two discrete widths">
+    </div>
+    <figcaption class="escom-article-figure__caption">Popovers available at two discrete widths</figcaption>
+</figure>
 <p>In this case, it could be tempting to apply S/M/L, S/M, and S/M names to the modal, dialog, and popover variants respectively. However, at least dialogs and popovers may also have variants applying typography and spacing rules similar to those above. Similarly, a component like modal may add 1000px as another variant, begging the question: is that ML? Me-rge? La-dium?</p>
 <p><em>Takeaway</em>: Avoid using a T-Shirt size model (S/M/L) that correspond to a single quantity like width, since such naming isn’t resilient to additions and the component sizing otherwise may already use T-Shirt sizing. Instead, consider naming the options based on explicit values, such as modal--width-500 and modal--width-700.</p>
 <hr>
@@ -348,41 +333,37 @@
 <p>Oh, those headings, their scale, and the hierarchy they create across the page. It’s a challenge, I know. This gets exasperated when component size is introduced as an dimension orthogonal to heading level. How so?</p>
 <p>It’s common for design systems to offer up to 9 heading levels. As typography is woven through a catalog, those headings are applied to components including accordions, tiles and alerts. As each of those components are varied via size, teams discover that the heading levels too vary by size. Therefore, a system can take one of two approaches.</p>
 <p>A system could offer a long list of heading sizes (such as 1–5) and apply levels consistently across components per size:</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/18.png&quot; alt=&quot;One heading set applied across component sizes&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;One heading set applied across component sizes&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/18.png" alt="One heading set applied across component sizes">
+    </div>
+    <figcaption class="escom-article-figure__caption">One heading set applied across component sizes</figcaption>
+</figure>
 <p>Alternatively, a system could offer a more limited set of heading levels, and specify font-size and other properties per size level:</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/19.png&quot; alt=&quot;Heading level sets per component size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Heading level sets per component size&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/19.png" alt="Heading level sets per component size">
+    </div>
+    <figcaption class="escom-article-figure__caption">Heading level sets per component size</figcaption>
+</figure>
 <p><em>Takeaway</em>: As a component collection implements sizing, it’s not only critical to standardize how heading styles are applied across components, but also how that model varies an element’s heading level for each size offered.</p>
 <hr>
 <h3>Mix and Match Sizes During Composition</h3>
 <p>You’ve got small, medium and large elemental components. So naturally, as you compose more sophisticated components, they’ll include components only from the same sizing scale, right? Stay in your size lane, so to speak?</p>
 <p>When it comes to composition, that’s not a given, and you may find justification in your very first component composition: icon into button. The Morningstar Design System team advises that small and medium buttons apply small icons, whereas a large button applied a medium icon.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/20.png&quot; alt=&quot;Mapping icon size to button size&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;Mapping icon size to button size&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/20.png" alt="Mapping icon size to button size">
+    </div>
+    <figcaption class="escom-article-figure__caption">Mapping icon size to button size</figcaption>
+</figure>
 <p>More surprisingly, their flat button worked well with a small icon in some cases and a medium icon in other cases. Therefore, the system offered a mds-button--flat-icon-m modifier empowering adopting teams to choose.</p>
-<pre><code>&lt;figure class=&quot;escom-article-figure&quot;&gt;
-    &lt;div class=&quot;escom-article-figure__image-container&quot;&gt;
-        &lt;img class=&quot;escom-article-figure__image&quot; src=&quot;/images/articles/size-in-design-systems/21.png&quot; alt=&quot;While small and large buttons have a fixed icon, the medium button offers choice&quot;&gt;
-    &lt;/div&gt;
-    &lt;figcaption class=&quot;escom-article-figure__caption&quot;&gt;While small and large buttons have a fixed icon, the medium button offers choice&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/size-in-design-systems/21.png" alt="While small and large buttons have a fixed icon, the medium button offers choice">
+    </div>
+    <figcaption class="escom-article-figure__caption">While small and large buttons have a fixed icon, the medium button offers choice</figcaption>
+</figure>
 <p>The lesson here? Mixing and matching of component sizes has validity even in the most atomic of cases: button and icon. Therefore, be prepared for justifiable cases of mixing and matching at any level of UI composition up to a full page layout with many, many components. Adopting teams mold pieces together to create contrast, solve their problems, and optimize an experience.</p>
 <p>A design system plays a role in density by guiding use and providing tools. Consistent sizes is a place to start. Level up your models for typography and space, and begin to unify your catalog along dimensions of height and more.</p>
 <p>Happy sizing!</p>
@@ -400,7 +381,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -429,127 +409,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -557,257 +432,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -815,255 +480,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -1071,121 +526,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1195,247 +545,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1443,119 +585,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1681,10 +718,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -1695,5 +729,6 @@
     pageTracker._trackPageview();
   </script>
 
+        <!-- GENERATED WITH 11ty -->
     </body>
 </html>

@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Design System Tiers</title>
+        
+            <title>Eightshapes > @components > Design System Tiers</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/design-system-tiers/" />
+            <meta property="og:title" content="Design System Tiers" />
+            <meta property="og:description" content="Time To Mature Systems To Support Levels of Work" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Design System Tiers" />
+            <meta name="twitter:description" value="Time To Mature Systems To Support Levels of Work" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/design-system-tiers/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/design-system-tiers" />
-  <meta property="og:title" content="Design System Tiers" />
-  <meta property="og:description" content="Time To Mature Systems To Support Levels of Work" />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/design-system-tiers/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Design System Tiers" />
-  <meta name="twitter:description" value="Time To Mature Systems To Support Levels of Work" />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/design-system-tiers/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/design-system-tiers" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,179 +95,132 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 2/6/2019 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            9min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Design System Tiers</h1>
-                
-                <h2 class="escom-article__deck">Time To Mature Systems To Support Levels of Work</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/design-system-tiers/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
-  <p>Our design system, the one-source-of-truth. Singular, central, perfect. The one place you find all the answers. Are systems destined to have one set of only the best things? I’m not convinced.</p>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 2/6/2019 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        19 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Design System Tiers</h1>
+            
+            <h2 class="escom-article__deck">Time To Mature Systems To Support Levels of Work</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/design-system-tiers/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>Our design system, the one-source-of-truth. Singular, central, perfect. The one place you find all the answers. Are systems destined to have one set of only the best things? I’m not convinced.</p>
 <p>Why limit design systems to only things of the highest quality, relevant to everyone? Is there space between a design system’s core and adopters for less-perfect features to live? A place to share working ideas, run experiments, and stabilize quality over time?</p>
 <p>I propose that design systems offer an opportunity for a taxonomy of flexible <strong>tiers</strong> below a highest-quality <strong>core</strong>. Using tiers, systems can incrementally improve capabilities and <strong>quality</strong> of meaningful feature <strong>sets</strong> and <strong>promote</strong> ideas from a team or group upward through an architecture everyone shares.</p>
 <hr>
-<h2 id="a-system-can-support-tiers">A System Can Support Tiers</h2>
+<h2>A System Can Support Tiers</h2>
 <p>Ideas bubble up. They may start with an idea in a single person’s mind. That idea is useful to a collaborator nearby. Others realize gradually that they share the need. Eventually, an idea may — or may not—be relevant to everyone. We can architect design systems to reflect such levels.</p>
 <p>Architectures start—but need not stop—with two tiers of a System and it’s adopting Products. A two level hierarchy is simple and easy to understand.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/1.png" alt="Diagram of products that depend on a system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/1.png" alt="Diagram of products that depend on a system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>Yet, not all components and other features are equally valuable, hardened to the same level of quality, or relevant to as many people. The higher the tier, the more broadly something is shared.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/2.png" alt="Diagram of two levels of system dependencies">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/2.png" alt="Diagram of two levels of system dependencies">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p><em>Takeaway</em>: Anticipate that as a system grows, it may benefit from additional tiers to make and share design assets, code, and documentation. Lower tiers can be spaces for features that need not belong to a system’s core visible to all.</p>
 <hr>
-<h2 id="at-the-top-a-core-relevant-to-everyone">At the Top, a “Core” Relevant to Everyone</h2>
+<h2>At the Top, a “Core” Relevant to Everyone</h2>
 <p>Once a system exposes features of varying quality and relevance, a core will need to be separated as the highest quality and most relevant to everyone.</p>
-<p>At this point, a design system’s core is predictable: a visual style’s color, typography, iconography and space applied to components like headings, button, icon, checkbox, input, and others everyone obviously needs. Until you get the core right, you can&#39;t craft the sophisticated stuff with confidence.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/3.png" alt="Diagram annotating the style and components included in a system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
+<p>At this point, a design system’s core is predictable: a visual style’s color, typography, iconography and space applied to components like headings, button, icon, checkbox, input, and others everyone obviously needs. Until you get the core right, you can't craft the sophisticated stuff with confidence.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/3.png" alt="Diagram annotating the style and components included in a system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>The core is managed and documented centrally by a core group or designated design system team(s). Communities of design and engineering have a heavy influence, but they also need a team to point towards that is responsible and accountable for a core’s sustained success.</p>
 <p><em>Takeaway</em>: Once additional system tiers begin to emerge, designate a “core” tier useful to all adopters and maintained by an identifiable core group. Call it what you will—core, base, foundation, whatever — to clearly denote these most essential features at the top.</p>
 <hr>
-<h2 id="start-with-tiers-for-within-business-units">Start with Tiers for WITHIN Business Units…</h2>
+<h2>Start with Tiers for WITHIN Business Units…</h2>
 <p>Feature sets form naturally within organizational boundaries, such as groups A, B, C, and D depicted below.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/4.png" alt="Diagram of products grouped by organization units">
-        </div>
-        <figcaption class="escom-article-figure__caption">Tier 2 subsystems, supporting different lines of business (A, B, C, D)</figcaption>
-    </figure>
-
-
-
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/4.png" alt="Diagram of products grouped by organization units">
+    </div>
+    <figcaption class="escom-article-figure__caption">Tier 2 subsystems, supporting different lines of business (A, B, C, D)</figcaption>
+</figure>
 <p>My observations across design systems suggest this occurs already, but in an ad-hoc manner ungoverned by a system team. One system team offered Core kit of Sketch assets and component code. In the wild, platform designers in groups A &amp; B made distinct sketch kit extensions, and an engineer had made a “C Kit” of component code for their group. In such cases, a system program could model and provide tools for such extensions of design and code.</p>
 <hr>
-<h2 id="and-also-empower-tiers-across-units">…And Also Empower Tiers ACROSS Units</h2>
+<h2>…And Also Empower Tiers ACROSS Units</h2>
 <p>A system need not limit a feature sets to organizational boundaries. Tiers can enable a community to share across boundaries, too. I’ll remind system teams that their visibility across products not just a strength, but a responsibility. Spotting opportunities and triggering connections is part of the job, even if beyond what’s in their system core.</p>
-<p>Consider an ecosystem’s multiple touchpoints integrating a rich-text editor. It’s not just an editor window with paragraphs, headings, lists, and other content. There&#39;s toolbars for formatting. Dialogs for uploading. Full screen toggles to compose immersively. Editors aren’t cheap. As a team in Group A takes it on, group B hears about it, and a shared investment takes shape.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/5.png" alt="Diagram of second tier systems like Editor, Navigation, and Social components">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
+<p>Consider an ecosystem’s multiple touchpoints integrating a rich-text editor. It’s not just an editor window with paragraphs, headings, lists, and other content. There's toolbars for formatting. Dialogs for uploading. Full screen toggles to compose immersively. Editors aren’t cheap. As a team in Group A takes it on, group B hears about it, and a shared investment takes shape.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/5.png" alt="Diagram of second tier systems like Editor, Navigation, and Social components">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
 <p>In the same ecosystem, other shared investments may arise, such as experiments with components for navigation, social, and other features below the core.</p>
 <p><em>Takeaway</em>: Be a matchmaker that connects efforts across teams. Offer tools — repo and component scaffolding, Sketch templates, doc fill-in-the-blanks—to start conversations so that their first date grows into a fruitful relationship.</p>
 <hr>
-<h2 id="expand-the-use-of-system-tools-for-tiered-work">Expand the Use of System Tools for Tiered Work</h2>
+<h2>Expand the Use of System Tools for Tiered Work</h2>
 <p>So, how would you roll tiers within an organization? One approach would be to pilot a first phase for a few sets across teams—editor, navigation, social. This would give you the opportunity to trial the access permissions, onboarding, workflow, and even potential promotion. As those pilots succeed, you deepen the tooling in a second phase to support more autonomous and extensive use at a third tier within teams.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/6.png" alt="Diagram of tiers highlighted from top to bottom">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-<p>One system supporting approximately 25 teams deliberately instanced their <code>core-ui</code> architecture into a sibling <code>sales-ui</code> repository dependent on <code>core-ui</code>&#39;s components and style. The <code>sales-ui</code> catalog expanded rapidly relative to the slower-evolving core. Controls were loose. Delivery deadlines were met. Some saw a mess.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/7.png" alt="Diagram of organizational units including Sales">
-        </div>
-        <figcaption class="escom-article-figure__caption">Example: Sales organization building an extended component library</figcaption>
-    </figure>
-
-
-
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/6.png" alt="Diagram of tiers highlighted from top to bottom">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>One system supporting approximately 25 teams deliberately instanced their <code>core-ui</code> architecture into a sibling <code>sales-ui</code> repository dependent on <code>core-ui</code>'s components and style. The <code>sales-ui</code> catalog expanded rapidly relative to the slower-evolving core. Controls were loose. Delivery deadlines were met. Some saw a mess.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/7.png" alt="Diagram of organizational units including Sales">
+    </div>
+    <figcaption class="escom-article-figure__caption">Example: Sales organization building an extended component library</figcaption>
+</figure>
 <p>Yet the system team saw opportunity. There were clear candidates to promote from <code>sales-ui</code> to <code>core-ui</code>. Tools improving quality (linting, visual regression testing) took hold in a previously ragtag group. Most of all, sales teams integrated core-ui features into everything they did without a second thought. Without realizing, they were now a second tier of that design system.</p>
 <p><em>Takeaway</em>: Business units and product lines are motivated to work fast, meet goals, and reuse with their adjacent squads. System tools can scaffold up rapid, systematic design and development practices to spur groups move forward, without necessarily complicating the system’s core.</p>
 <hr>
-<h2 id="model-permissions-for-visibility-and-control">Model Permissions for Visibility and Control</h2>
+<h2>Model Permissions for Visibility and Control</h2>
 <p>When a design system team supports a core, it’s clear that they’ll be responsible to do much of the design, coding and documentation of that core. As a result, they’ll watch proposed contributions that change that core very carefully. However, for any tier below the core, more people need more open permissions to contribute, extend, and maintain assets.</p>
 <p>Teams can uses applications like Abstract and <a href="https://www.lingoapp.com/">Lingo</a> App to distribute Sketch library assets for their system. The kit(s) provides a core’s <code>button</code>, <code>checkbox</code>, and many other components to the entire community, although only core team members (and key partners) have edit access.</p>
 <p>Additional kits (such as <code>Products</code>, <code>Account</code>, <code>Gifting</code>, and <code>Checkout</code>) could organize a second tier of subgroups by experience. These subgroups can extend components like <code>card</code> and <code>forms</code> and also include assets (like <code>images</code>) and components (like <code>Account Header</code>) only relevant to their team. While every kit is visible to the entire design community, each kit’s edit privileges are limited to designers in that business unit plus the core team.</p>
 <p><em>Takeaway</em>: Model permissions to maximum visibility and minimize risk. The more designers and developers can see work being done in other groups, they can form connections, reduce redundancy, and join an experiment.</p>
 <hr>
-<h2 id="curate-the-namespace-centrally">Curate the Namespace Centrally</h2>
+<h2>Curate the Namespace Centrally</h2>
 <p>Once a system encourages contributions from diverse groups, it can become the wild wild west. You’ve got to keep your eye on the prize: a library sharing an architecture without conflict and collisions. Nobody needs <code>checkbox-button</code>, <code>action-button</code>, and <code>box-with-checkmark-in-it-button</code> rolling around.</p>
 <p>That requires governing the namespace to ensure that new features:</p>
 <ul>
@@ -277,7 +231,7 @@
 <p>Naming is hard. We all get that. But renaming later can really gunk up the works. A system establishes a shared space requiring a vocabulary across developers <em>and</em> designers. Therefore, as a system spreads features across sets, you must normalize what each thing is named and how it’s grouped.</p>
 <p><em>Takeaway</em>: Carefully curate the names of sets and features, especially components. Be clear about who curates naming and reviews proposed names as they emerge. This may even be a specific person or small group who are really talented and/or passionate about it.</p>
 <hr>
-<h2 id="expose-tiers-in-documentation">Expose Tiers in Documentation</h2>
+<h2>Expose Tiers in Documentation</h2>
 <p>Just as teams start to <em>make</em> distinct feature sets, others will want to <em>use</em> those feature sets they are interested in. They won’t want to see feature sets they aren’t interested in, either. This impacts how features are presented in documentation and tools, such as:</p>
 <ul>
 <li>Classifying documentation site navigation, catalog status, and detail pages</li>
@@ -288,42 +242,27 @@
 </ul>
 <p><em>Takeaway</em>: Adding sets beyond a core is an information architecture challenge for tools and documentation. It forces questions of classification, organization, and priority. Envision a target state, and then build tools towards it incrementally, one feature at a time.</p>
 <hr>
-<h2 id="the-higher-the-tier-the-higher-the-quality">The Higher the Tier, The Higher the Quality</h2>
+<h2>The Higher the Tier, The Higher the Quality</h2>
 <p>A core’s features must be highest quality. As tiers emerge, quality below the core will vary. Atlassian’s <a href="https://atlaskit.atlassian.com/packages">Atlaskit</a> code packages hint at a second tier of feature groups for both business units (<code>bitbucket</code>) and features across groups ( <code>editor</code>, <code>home</code>, <code>search</code>, and <code>navigation</code>), where the quality of some may be lower than what comes with <code>core</code>. IBM Carbon’s site documentation belies two tiers: an implicit core and an “Experimental” second tier:</p>
-
-
-
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                Experimental components, designs, and other resources are presented for testing and feedback. They are not intended for production use.
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                <a href="https://medium.com/eightshapes-llc/www.carbondesignsystem.com/experimental/about/overview">IBM Carbon</a>
-            </div>
-            
-        </div>
-
-
-
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Experimental components, designs, and other resources are presented for testing and feedback. They are not intended for production use.
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            &lt;a href=&quot;https://medium.com/eightshapes-llc/www.carbondesignsystem.com/experimental/about/overview&quot;&gt;IBM Carbon&lt;/a&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
 <p>Feature quality should improve the higher a feature ascends. As a result, a system must clarify for makers how well each feature <em>must</em> be made, and to users how well each feature <em>has</em> been made. It’s up to a system with two or more tiers to differentiate and clearly communicate quality at each level.</p>
-
-
-
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/8.png" alt="Feature quality criteria by tier">
-        </div>
-        <figcaption class="escom-article-figure__caption">Feature quality criteria by tier</figcaption>
-    </figure>
-
-
-
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/8.png" alt="Feature quality criteria by tier">
+    </div>
+    <figcaption class="escom-article-figure__caption">Feature quality criteria by tier</figcaption>
+</figure>
 <p>One model tightens quality control based on how widespread the feature will be used across business units:</p>
 <ul>
 <li><strong>“Within Group”</strong> tier features must pass browser checks and code linting, address accessibility challenges relevant to those making it, and be styled in a manner consistent with the core design language.</li>
@@ -333,7 +272,151 @@
 <p>Running a system today and barely meeting “Within Group” tier quality? I’m not judging you. Your adopters might be, however. So consider what quality is needed and chart a path to get there.</p>
 <p><em>Takeaway</em>: Identify clear and attainable criteria to place features. For those running fast and loose, establish minimum expectations to not slow them down. As use of a feature increases (and confidence soars), clarify what steps are next to harden it for promotion. For others peeking in and interested in non-core features, ensure they know what they are getting into.</p>
 <hr>
-<h2 id="use-tiers-in-conversations-about-contributions">Use Tiers in Conversations About Contributions</h2>
+<h2>Use Tiers in Conversations About Contributions</h2>
+<p>Tiers provide a hook to talk about how features promote from narrow experiments to widespread use using clear criteria. That feature will need to go somewhere, and tiers provide guardrails in conversations like:</p>
+<ul>
+<li>Let’s organize editor features as a <strong>set</strong>... (the “What?”)</li>
+<li>…built at <strong>tier 2</strong>... (the “Where?” and “How well?”)</li>
+<li>…that we’ll need <strong>3</strong> sprints (the “How much does it cost?”)…</li>
+<li>…to serve product groups <strong>A</strong> and <strong>C</strong> but not <strong>B</strong>, <strong>D</strong> or <strong>E</strong> (the “Who?”).</li>
+</ul>
+<p>Why? Because systems offer an architecture to design more consistently, build more efficiently, and achieve higher quality. There’s no reason to limit that value of making things well to only the system team.</p>
+<p><em>Takeaway</em>: You can map “contribution” opportunities as promotion through tiers of a system. Those contributors need a system’s architecture to build with and system team members to identify opportunities and shepherd the process.</p>
+<hr>
+<p>Tiers will succeed when a community adopts a language and architecture for sharing. Tooling will expand to welcome more participants, and activity will be evident within and across business units. We’ll be watching.</p>
+<p>Our design system, the one-source-of-truth. Singular, central, perfect. The one place you find all the answers. Are systems destined to have one set of only the best things? I’m not convinced.</p>
+<p>Why limit design systems to only things of the highest quality, relevant to everyone? Is there space between a design system’s core and adopters for less-perfect features to live? A place to share working ideas, run experiments, and stabilize quality over time?</p>
+<p>I propose that design systems offer an opportunity for a taxonomy of flexible <strong>tiers</strong> below a highest-quality <strong>core</strong>. Using tiers, systems can incrementally improve capabilities and <strong>quality</strong> of meaningful feature <strong>sets</strong> and <strong>promote</strong> ideas from a team or group upward through an architecture everyone shares.</p>
+<hr>
+<h2>A System Can Support Tiers</h2>
+<p>Ideas bubble up. They may start with an idea in a single person’s mind. That idea is useful to a collaborator nearby. Others realize gradually that they share the need. Eventually, an idea may — or may not—be relevant to everyone. We can architect design systems to reflect such levels.</p>
+<p>Architectures start—but need not stop—with two tiers of a System and it’s adopting Products. A two level hierarchy is simple and easy to understand.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/1.png" alt="Diagram of products that depend on a system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>Yet, not all components and other features are equally valuable, hardened to the same level of quality, or relevant to as many people. The higher the tier, the more broadly something is shared.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/2.png" alt="Diagram of two levels of system dependencies">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p><em>Takeaway</em>: Anticipate that as a system grows, it may benefit from additional tiers to make and share design assets, code, and documentation. Lower tiers can be spaces for features that need not belong to a system’s core visible to all.</p>
+<hr>
+<h2>At the Top, a “Core” Relevant to Everyone</h2>
+<p>Once a system exposes features of varying quality and relevance, a core will need to be separated as the highest quality and most relevant to everyone.</p>
+<p>At this point, a design system’s core is predictable: a visual style’s color, typography, iconography and space applied to components like headings, button, icon, checkbox, input, and others everyone obviously needs. Until you get the core right, you can't craft the sophisticated stuff with confidence.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/3.png" alt="Diagram annotating the style and components included in a system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>The core is managed and documented centrally by a core group or designated design system team(s). Communities of design and engineering have a heavy influence, but they also need a team to point towards that is responsible and accountable for a core’s sustained success.</p>
+<p><em>Takeaway</em>: Once additional system tiers begin to emerge, designate a “core” tier useful to all adopters and maintained by an identifiable core group. Call it what you will—core, base, foundation, whatever — to clearly denote these most essential features at the top.</p>
+<hr>
+<h2>Start with Tiers for WITHIN Business Units…</h2>
+<p>Feature sets form naturally within organizational boundaries, such as groups A, B, C, and D depicted below.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/4.png" alt="Diagram of products grouped by organization units">
+    </div>
+    <figcaption class="escom-article-figure__caption">Tier 2 subsystems, supporting different lines of business (A, B, C, D)</figcaption>
+</figure>
+<p>My observations across design systems suggest this occurs already, but in an ad-hoc manner ungoverned by a system team. One system team offered Core kit of Sketch assets and component code. In the wild, platform designers in groups A &amp; B made distinct sketch kit extensions, and an engineer had made a “C Kit” of component code for their group. In such cases, a system program could model and provide tools for such extensions of design and code.</p>
+<hr>
+<h2>…And Also Empower Tiers ACROSS Units</h2>
+<p>A system need not limit a feature sets to organizational boundaries. Tiers can enable a community to share across boundaries, too. I’ll remind system teams that their visibility across products not just a strength, but a responsibility. Spotting opportunities and triggering connections is part of the job, even if beyond what’s in their system core.</p>
+<p>Consider an ecosystem’s multiple touchpoints integrating a rich-text editor. It’s not just an editor window with paragraphs, headings, lists, and other content. There's toolbars for formatting. Dialogs for uploading. Full screen toggles to compose immersively. Editors aren’t cheap. As a team in Group A takes it on, group B hears about it, and a shared investment takes shape.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/5.png" alt="Diagram of second tier systems like Editor, Navigation, and Social components">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>In the same ecosystem, other shared investments may arise, such as experiments with components for navigation, social, and other features below the core.</p>
+<p><em>Takeaway</em>: Be a matchmaker that connects efforts across teams. Offer tools — repo and component scaffolding, Sketch templates, doc fill-in-the-blanks—to start conversations so that their first date grows into a fruitful relationship.</p>
+<hr>
+<h2>Expand the Use of System Tools for Tiered Work</h2>
+<p>So, how would you roll tiers within an organization? One approach would be to pilot a first phase for a few sets across teams—editor, navigation, social. This would give you the opportunity to trial the access permissions, onboarding, workflow, and even potential promotion. As those pilots succeed, you deepen the tooling in a second phase to support more autonomous and extensive use at a third tier within teams.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/6.png" alt="Diagram of tiers highlighted from top to bottom">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>One system supporting approximately 25 teams deliberately instanced their <code>core-ui</code> architecture into a sibling <code>sales-ui</code> repository dependent on <code>core-ui</code>'s components and style. The <code>sales-ui</code> catalog expanded rapidly relative to the slower-evolving core. Controls were loose. Delivery deadlines were met. Some saw a mess.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/7.png" alt="Diagram of organizational units including Sales">
+    </div>
+    <figcaption class="escom-article-figure__caption">Example: Sales organization building an extended component library</figcaption>
+</figure>
+<p>Yet the system team saw opportunity. There were clear candidates to promote from <code>sales-ui</code> to <code>core-ui</code>. Tools improving quality (linting, visual regression testing) took hold in a previously ragtag group. Most of all, sales teams integrated core-ui features into everything they did without a second thought. Without realizing, they were now a second tier of that design system.</p>
+<p><em>Takeaway</em>: Business units and product lines are motivated to work fast, meet goals, and reuse with their adjacent squads. System tools can scaffold up rapid, systematic design and development practices to spur groups move forward, without necessarily complicating the system’s core.</p>
+<hr>
+<h2>Model Permissions for Visibility and Control</h2>
+<p>When a design system team supports a core, it’s clear that they’ll be responsible to do much of the design, coding and documentation of that core. As a result, they’ll watch proposed contributions that change that core very carefully. However, for any tier below the core, more people need more open permissions to contribute, extend, and maintain assets.</p>
+<p>Teams can uses applications like Abstract and <a href="https://www.lingoapp.com/">Lingo</a> App to distribute Sketch library assets for their system. The kit(s) provides a core’s <code>button</code>, <code>checkbox</code>, and many other components to the entire community, although only core team members (and key partners) have edit access.</p>
+<p>Additional kits (such as <code>Products</code>, <code>Account</code>, <code>Gifting</code>, and <code>Checkout</code>) could organize a second tier of subgroups by experience. These subgroups can extend components like <code>card</code> and <code>forms</code> and also include assets (like <code>images</code>) and components (like <code>Account Header</code>) only relevant to their team. While every kit is visible to the entire design community, each kit’s edit privileges are limited to designers in that business unit plus the core team.</p>
+<p><em>Takeaway</em>: Model permissions to maximum visibility and minimize risk. The more designers and developers can see work being done in other groups, they can form connections, reduce redundancy, and join an experiment.</p>
+<hr>
+<h2>Curate the Namespace Centrally</h2>
+<p>Once a system encourages contributions from diverse groups, it can become the wild wild west. You’ve got to keep your eye on the prize: a library sharing an architecture without conflict and collisions. Nobody needs <code>checkbox-button</code>, <code>action-button</code>, and <code>box-with-checkmark-in-it-button</code> rolling around.</p>
+<p>That requires governing the namespace to ensure that new features:</p>
+<ul>
+<li>don’t overlap with other feature capabilities</li>
+<li>won’t collide with other features names as it’s used or promoted</li>
+<li>minimizes name changes so early adopters won’t have to refactor later</li>
+</ul>
+<p>Naming is hard. We all get that. But renaming later can really gunk up the works. A system establishes a shared space requiring a vocabulary across developers <em>and</em> designers. Therefore, as a system spreads features across sets, you must normalize what each thing is named and how it’s grouped.</p>
+<p><em>Takeaway</em>: Carefully curate the names of sets and features, especially components. Be clear about who curates naming and reviews proposed names as they emerge. This may even be a specific person or small group who are really talented and/or passionate about it.</p>
+<hr>
+<h2>Expose Tiers in Documentation</h2>
+<p>Just as teams start to <em>make</em> distinct feature sets, others will want to <em>use</em> those feature sets they are interested in. They won’t want to see feature sets they aren’t interested in, either. This impacts how features are presented in documentation and tools, such as:</p>
+<ul>
+<li>Classifying documentation site navigation, catalog status, and detail pages</li>
+<li>Packaging code and design assets, such as Sketch symbols</li>
+<li>Prioritizing core and broadly relevant sets more than those less relevant</li>
+<li>Customizing so users can configure what they do and don’t see</li>
+<li>Integrating documentation centrally in one site property or — gasp! — considering multiple doc sites?</li>
+</ul>
+<p><em>Takeaway</em>: Adding sets beyond a core is an information architecture challenge for tools and documentation. It forces questions of classification, organization, and priority. Envision a target state, and then build tools towards it incrementally, one feature at a time.</p>
+<hr>
+<h2>The Higher the Tier, The Higher the Quality</h2>
+<p>A core’s features must be highest quality. As tiers emerge, quality below the core will vary. Atlassian’s <a href="https://atlaskit.atlassian.com/packages">Atlaskit</a> code packages hint at a second tier of feature groups for both business units (<code>bitbucket</code>) and features across groups ( <code>editor</code>, <code>home</code>, <code>search</code>, and <code>navigation</code>), where the quality of some may be lower than what comes with <code>core</code>. IBM Carbon’s site documentation belies two tiers: an implicit core and an “Experimental” second tier:</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Experimental components, designs, and other resources are presented for testing and feedback. They are not intended for production use.
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            &lt;a href=&quot;https://medium.com/eightshapes-llc/www.carbondesignsystem.com/experimental/about/overview&quot;&gt;IBM Carbon&lt;/a&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>Feature quality should improve the higher a feature ascends. As a result, a system must clarify for makers how well each feature <em>must</em> be made, and to users how well each feature <em>has</em> been made. It’s up to a system with two or more tiers to differentiate and clearly communicate quality at each level.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-tiers/8.png" alt="Feature quality criteria by tier">
+    </div>
+    <figcaption class="escom-article-figure__caption">Feature quality criteria by tier</figcaption>
+</figure>
+<p>One model tightens quality control based on how widespread the feature will be used across business units:</p>
+<ul>
+<li><strong>“Within Group”</strong> tier features must pass browser checks and code linting, address accessibility challenges relevant to those making it, and be styled in a manner consistent with the core design language.</li>
+<li><strong>“Across Groups”</strong> tier features must also be responsive, use BEM CSS methodology, semantically version, log changes, encapsulate style dependent on design tokens, setup unit and visual regression tests, and be approved by the complete design and/or development communities.</li>
+<li><strong>Top core tier</strong> features tier must also pass comprehensive accessibility review, enable sizing (S, M, &amp; L), work across backgrounds (white, light, dark, black and brand), and enable custom theming, analytics, and internationalization features such as right-to-left.</li>
+</ul>
+<p>Running a system today and barely meeting “Within Group” tier quality? I’m not judging you. Your adopters might be, however. So consider what quality is needed and chart a path to get there.</p>
+<p><em>Takeaway</em>: Identify clear and attainable criteria to place features. For those running fast and loose, establish minimum expectations to not slow them down. As use of a feature increases (and confidence soars), clarify what steps are next to harden it for promotion. For others peeking in and interested in non-core features, ensure they know what they are getting into.</p>
+<hr>
+<h2>Use Tiers in Conversations About Contributions</h2>
 <p>Tiers provide a hook to talk about how features promote from narrow experiments to widespread use using clear criteria. That feature will need to go somewhere, and tiers provide guardrails in conversations like:</p>
 <ul>
 <li>Let’s organize editor features as a <strong>set</strong>... (the “What?”)</li>
@@ -346,11 +429,9 @@
 <hr>
 <p>Tiers will succeed when a community adopts a language and architecture for sharing. Tooling will expand to welcome more participants, and activity will be evident within and across business units. We’ll be watching.</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -361,7 +442,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -390,127 +470,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -518,257 +493,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -776,255 +541,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -1032,121 +587,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1156,247 +606,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1404,119 +646,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1528,7 +665,7 @@
 
 
 
-    
+
 
     
 
@@ -1565,7 +702,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1643,10 +779,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

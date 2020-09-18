@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Right-Sizing the Rectangles</title>
+        
+            <title>Eightshapes > @components > Right-Sizing the Rectangles</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/right-sizing-the-rectangles/" />
+            <meta property="og:title" content="Right-Sizing the Rectangles" />
+            <meta property="og:description" content="Grappling with Hierarchy for a More Effective Design System" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Right-Sizing the Rectangles" />
+            <meta name="twitter:description" value="Grappling with Hierarchy for a More Effective Design System" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/right-sizing-the-rectangles/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/right-sizing-the-rectangles" />
-  <meta property="og:title" content="Right-Sizing the Rectangles" />
-  <meta property="og:description" content="Grappling with Hierarchy for a More Effective Design System" />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/right-sizing-the-rectangles/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Right-Sizing the Rectangles" />
-  <meta name="twitter:description" value="Grappling with Hierarchy for a More Effective Design System" />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/right-sizing-the-rectangles/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/right-sizing-the-rectangles" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,50 +95,52 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 3/14/2016 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            6min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Right-Sizing the Rectangles</h1>
-                
-                <h2 class="escom-article__deck">Grappling with Hierarchy for a More Effective Design System</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/right-sizing-the-rectangles/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
-  <p>During early system activities like our <a href="/articles/the-component-cut-up-workshop">Component Cut Up workshop</a>, participants can get stuck on the “correct” way to chop up page into components. Staring at pages on offer, each person has their moment—scissors in hand—wondering:</p>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 3/14/2016 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        12 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Right-Sizing the Rectangles</h1>
+            
+            <h2 class="escom-article__deck">Grappling with Hierarchy for a More Effective Design System</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/right-sizing-the-rectangles/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>During early system activities like our <a href="/articles/the-component-cut-up-workshop">Component Cut Up workshop</a>, participants can get stuck on the “correct” way to chop up page into components. Staring at pages on offer, each person has their moment—scissors in hand—wondering:</p>
 <ul>
 <li>Is this thing (like a <code>Card</code>) the component?</li>
 <li>Or this smaller thing (like a <code>Button</code>or <code>Tag</code>) the component?</li>
@@ -149,44 +152,35 @@
 <p>Experience seasons the judgment and instincts of where the a component’s boundaries lie. Yet, over time, we begin to transcend the notion that there’s only one layer of lines to cut that arrange component simply as siblings on a page.</p>
 <p>Instead, modular component libraries embrace the reality of the material in which they are built: a rich hierarchical tapestry of interrelated things, small and large, ultimately assembled into a full page composition.</p>
 <hr>
-<h2 id="1-components-are-hierarchical-containing-other-components">#1. Components Are Hierarchical, Containing Other Components</h2>
+<h2>#1. Components Are Hierarchical, Containing Other Components</h2>
 <p>Beginners see pages as a two-dimensional construct displayed on screen. That’s why the activities like the Component Cut-Up are so effective. Soon, designers (using a light source) and developers (via z-index) develop a more nuanced appreciation for depth, unflattening elements into a third dimension.</p>
 <p>But make no mistake, web pages are <em>built</em> hierarchically. The impact on how we manage and relate modular components hierarchically is profound. I find myself injecting subtle reminders that every component in a library need not be a sibling, components can contain other components, and smaller doesn’t always mean more valuable or broadly relevant.</p>
 <p>Considering the impact of hierarchy frees the minds of library makers and influencers to have more nuanced discussions around what matters, how parts relate to one another, and how we’ll build for reuse.</p>
 <hr>
-<h2 id="2-build--encapsulate-small-components">#2. Build &amp; Encapsulate Small Components</h2>
+<h2>#2. Build &amp; Encapsulate Small Components</h2>
 <p>A library must have a sufficient quantity of bite-sized components — <em>Button</em>, <em>Textbox</em>, <em>Tag</em>, <em>Checkbox</em>, <em>Breadcrumb</em>, <em>Modal</em>, even <em>Cards</em> — to be minimally useful and adoptable. Let’s say you need ~10 to 20, including at least <em>Button</em> (with lots of variations), <em>Forms</em>, and a few others depending on the system’s context.</p>
 <p>But it’s not long before a system team starts addressing more sophisticated arrangements, such as a <em>Card Grid</em> that contains <em>Cards</em> that contains <em>Primary Button</em> and <em>Icon Button</em> and <em>Tag</em>.</p>
-<h3 id="encapsulate-the-small-components">Encapsulate the Small Components</h3>
+<h3>Encapsulate the Small Components</h3>
 <p>Modern front-end tooling—like CSS preprocessor mixins and template partials and macros—help us <a href="https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29">encapsulate</a> the definition of and interface to small components.</p>
 <p>Library users don’t care about <em>how</em> things are encapsulated. To them, it’s just compiled CSS classes applied to markup so that a button looks right, behaves right, and fits right when used in something bigger. They are shielded from and comfortably depend on component relationships being resolved.</p>
-<h3 id="encapsulation-makes-things-complicated">Encapsulation Makes Things Complicated</h3>
+<h3>Encapsulation Makes Things Complicated</h3>
 <p>But encapsulation is a challenge for library makers. Where do properties go? Will CSS classes of smaller components be integrated into or encapsulated within the classes of larger ones containing them? How can ensure larger components are resilient to changes in their reusable smaller parts? My emotions are mixed: Encapsulation is required to scale a library, but increases complexity, lengthens conversations, and requires thoughtful planning. Practicing effective encapsulation is far from free.</p>
 <hr>
-<h2 id="3-offer-important-big-components-too">#3. Offer Important Big Components, Too</h2>
-<p>The more atomic a part, the more likely it’ll be broadly reused, correctly, at a small cost to the system. However, this doesn’t mean system can’t also offer big components like a “<em>Hero Carousel_” banner, a _Toolbar</em> with varied menus, icons, and buttons, or—if you’re serious about bringing products together—a <em>Header</em> system (possibly including panels like <em>Megamenus</em> that may span products).</p>
-
-
-
-
-
-
-        <div class="escom-bar-quote">
-            More Complex=More Expensive=More Likely to be Inconsistent. Some of These Matter. A lot.
-        </div>
-
-
-
+<h2>#3. Offer Important Big Components, Too</h2>
+<p>The more atomic a part, the more likely it’ll be broadly reused, correctly, at a small cost to the system. However, this doesn’t mean system can’t also offer big components like a “<em>Hero Carousel</em>” banner, a <em>Toolbar</em> with varied menus, icons, and buttons, or—if you’re serious about bringing products together—a <em>Header</em> system (possibly including panels like <em>Megamenus</em> that may span products).</p>
+<div class="escom-bar-quote">
+    More Complex=More Expensive=More Likely to be Inconsistent. Some of These Matter. A lot.
+</div>
 <p>Big components — <code>Heroes</code>, <code>Toolbar</code>, and especially <code>HeaderBar</code> — are essential for making a broad experience cohesive. Yet these components are complex beasts, particularly responsively, as measured by overflowing lines of markup and style.</p>
 <p>Is “Give ’em some atomic elements and hope for the best!” across 5+ products the right approach? For both cost and consistency, that’s bollocks. If a system is a centralized force to eliminate wasteful redundancy and deliver consistency, then build and propagate big ones that matter.</p>
-<h3 id="big-components-reveal-seams">Big Components Reveal Seams</h3>
+<h3>Big Components Reveal Seams</h3>
 <p>A library lacking big components risks looking like a muddled mess when things are put together. Larger components provide inspectable examples of both visually and in code. You can see how small things fit in big things, learning how to apply spacing, color, variable names and themes along the way.</p>
 <p>Likewise, larger pieces are material to QA the library as tokenized decisions—a <em>border-radius</em> here, a <em>bottom-margin</em> there—are adjusted centrally yet impact broadly.</p>
 <hr>
-<h2 id="4-grids-are-components-not-layouts">#4. Grids are Components, Not Layouts</h2>
+<h2>#4. Grids are Components, Not Layouts</h2>
 <p>The parts on a page are all composed in a the hierarchical journey, from the most atomic element all the way up to the body tag.</p>
 <p>The invisible scaffolding that holds a page together is often erroneously thought of as “The Grid.” Without it, some feel unable to build anything visually coherent: Get me the Grid! I need the Grid! I can’t build anything without the Grid!</p>
-<h3 id="a-grid-is-a-component">A Grid is a Component</h3>
+<h3>A Grid is a Component</h3>
 <p>Most libraries offer a <code>Grid</code> defined as (more often now) rows containing columns down a scrollable page. The <em>Grid</em> has many hallmarks of a component, in that a grid is:</p>
 <ul>
 <li>A fulcrum of a page’s responsiveness,</li>
@@ -196,21 +190,78 @@
 <li>A container of while also often contained in other components.</li>
 </ul>
 <p>A <em>Grid</em> is a component.</p>
-<h3 id="grid-≠-overall-layout">Grid ≠ Overall Layout.</h3>
+<h3>Grid ≠ Overall Layout.</h3>
 <p>That said, a <em>Grid</em> never the top-most component that contains everything else. It’s an intermediate component sandwiched between the smaller parts and often one of a few likely <em>Layouts</em>.</p>
 <p>A <em>Layout</em> provides empty page regions into which you can place components, such as a website’s header, footer, and sidebar that envelop the main content well or a web app’s header, toolbar(s), and panels evoked from viewport edges and corners.</p>
-<h2 id="5-users-value-assembled-shells">#5. Users Value Assembled Shells</h2>
+<h2>#5. Users Value Assembled Shells</h2>
 <p>When library users approach a library, they can be overwhelmed by the vast ocean of atomic choices. A library’s breadth of parts is correlated with its perceived worth. However, another key question is: Can I compose my layout, arranging an array of prebuilt parts how I want to, bound within a shell of “global” components that I may configure but need not rebuild?</p>
-<h3 id="offer-prebuilt-shells-that-include-big-components">Offer Prebuilt Shells that Include Big Components</h3>
-<p>That’s not “the grid” and it’s more complex than just a layout of empty regions. We’ll often offer a page <em>Shell</em> as a prearranged layout that already contains a <code>Header</code>, <code>GlobalNavigation</code>, and possibly <code>Footer</code> and other _Panel_ing<em>.</em></p>
+<h3>Offer Prebuilt Shells that Include Big Components</h3>
+<p>That’s not “the grid” and it’s more complex than just a layout of empty regions. We’ll often offer a page <em>Shell</em> as a prearranged layout that already contains a <code>Header</code>, <code>GlobalNavigation</code>, and possibly <code>Footer</code> and other _Panel_ing*.*</p>
+<p>Shells ease the assembly process and revealing how things are organized. They help adopters not just see regions visually (in a browser) and in code (in their editor) into which they add, but get users a few steps ahead with the parts they should be skipping past anyway.</p>
+<p>While our libraries begin as bottom-up collections of atomic elements, library users often begin composition top-down. Like the code we share and designs we converge, the conversation always meets and heats up in the middle.</p>
+<p>During early system activities like our <a href="/articles/the-component-cut-up-workshop">Component Cut Up workshop</a>, participants can get stuck on the “correct” way to chop up page into components. Staring at pages on offer, each person has their moment—scissors in hand—wondering:</p>
+<ul>
+<li>Is this thing (like a <code>Card</code>) the component?</li>
+<li>Or this smaller thing (like a <code>Button</code>or <code>Tag</code>) the component?</li>
+<li>Actually, is this far bigger thing (like <code>Card Grid with Toolbar</code>) the component?</li>
+</ul>
+<p>After years working on libraries, my response is a straightforward: Yes.</p>
+<hr>
+<p>When users start working with a library, instinct suggests that a page is just 10 to 20 reusable chunks: a top <code>Header</code> here, a multi-level <code>Tab</code> navigation below it, three <em>Sidebar Modules</em> over there. Recent practices build understanding up from an atomic base: a <code>Button</code> here, a <code>Menu</code> there, perhaps a limited variety of <code>Card</code>. Forever, all these parts have been assembled into <code>Layout</code>.</p>
+<p>Experience seasons the judgment and instincts of where the a component’s boundaries lie. Yet, over time, we begin to transcend the notion that there’s only one layer of lines to cut that arrange component simply as siblings on a page.</p>
+<p>Instead, modular component libraries embrace the reality of the material in which they are built: a rich hierarchical tapestry of interrelated things, small and large, ultimately assembled into a full page composition.</p>
+<hr>
+<h2>#1. Components Are Hierarchical, Containing Other Components</h2>
+<p>Beginners see pages as a two-dimensional construct displayed on screen. That’s why the activities like the Component Cut-Up are so effective. Soon, designers (using a light source) and developers (via z-index) develop a more nuanced appreciation for depth, unflattening elements into a third dimension.</p>
+<p>But make no mistake, web pages are <em>built</em> hierarchically. The impact on how we manage and relate modular components hierarchically is profound. I find myself injecting subtle reminders that every component in a library need not be a sibling, components can contain other components, and smaller doesn’t always mean more valuable or broadly relevant.</p>
+<p>Considering the impact of hierarchy frees the minds of library makers and influencers to have more nuanced discussions around what matters, how parts relate to one another, and how we’ll build for reuse.</p>
+<hr>
+<h2>#2. Build &amp; Encapsulate Small Components</h2>
+<p>A library must have a sufficient quantity of bite-sized components — <em>Button</em>, <em>Textbox</em>, <em>Tag</em>, <em>Checkbox</em>, <em>Breadcrumb</em>, <em>Modal</em>, even <em>Cards</em> — to be minimally useful and adoptable. Let’s say you need ~10 to 20, including at least <em>Button</em> (with lots of variations), <em>Forms</em>, and a few others depending on the system’s context.</p>
+<p>But it’s not long before a system team starts addressing more sophisticated arrangements, such as a <em>Card Grid</em> that contains <em>Cards</em> that contains <em>Primary Button</em> and <em>Icon Button</em> and <em>Tag</em>.</p>
+<h3>Encapsulate the Small Components</h3>
+<p>Modern front-end tooling—like CSS preprocessor mixins and template partials and macros—help us <a href="https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29">encapsulate</a> the definition of and interface to small components.</p>
+<p>Library users don’t care about <em>how</em> things are encapsulated. To them, it’s just compiled CSS classes applied to markup so that a button looks right, behaves right, and fits right when used in something bigger. They are shielded from and comfortably depend on component relationships being resolved.</p>
+<h3>Encapsulation Makes Things Complicated</h3>
+<p>But encapsulation is a challenge for library makers. Where do properties go? Will CSS classes of smaller components be integrated into or encapsulated within the classes of larger ones containing them? How can ensure larger components are resilient to changes in their reusable smaller parts? My emotions are mixed: Encapsulation is required to scale a library, but increases complexity, lengthens conversations, and requires thoughtful planning. Practicing effective encapsulation is far from free.</p>
+<hr>
+<h2>#3. Offer Important Big Components, Too</h2>
+<p>The more atomic a part, the more likely it’ll be broadly reused, correctly, at a small cost to the system. However, this doesn’t mean system can’t also offer big components like a “<em>Hero Carousel</em>” banner, a <em>Toolbar</em> with varied menus, icons, and buttons, or—if you’re serious about bringing products together—a <em>Header</em> system (possibly including panels like <em>Megamenus</em> that may span products).</p>
+<div class="escom-bar-quote">
+    More Complex=More Expensive=More Likely to be Inconsistent. Some of These Matter. A lot.
+</div>
+<p>Big components — <code>Heroes</code>, <code>Toolbar</code>, and especially <code>HeaderBar</code> — are essential for making a broad experience cohesive. Yet these components are complex beasts, particularly responsively, as measured by overflowing lines of markup and style.</p>
+<p>Is “Give ’em some atomic elements and hope for the best!” across 5+ products the right approach? For both cost and consistency, that’s bollocks. If a system is a centralized force to eliminate wasteful redundancy and deliver consistency, then build and propagate big ones that matter.</p>
+<h3>Big Components Reveal Seams</h3>
+<p>A library lacking big components risks looking like a muddled mess when things are put together. Larger components provide inspectable examples of both visually and in code. You can see how small things fit in big things, learning how to apply spacing, color, variable names and themes along the way.</p>
+<p>Likewise, larger pieces are material to QA the library as tokenized decisions—a <em>border-radius</em> here, a <em>bottom-margin</em> there—are adjusted centrally yet impact broadly.</p>
+<hr>
+<h2>#4. Grids are Components, Not Layouts</h2>
+<p>The parts on a page are all composed in a the hierarchical journey, from the most atomic element all the way up to the body tag.</p>
+<p>The invisible scaffolding that holds a page together is often erroneously thought of as “The Grid.” Without it, some feel unable to build anything visually coherent: Get me the Grid! I need the Grid! I can’t build anything without the Grid!</p>
+<h3>A Grid is a Component</h3>
+<p>Most libraries offer a <code>Grid</code> defined as (more often now) rows containing columns down a scrollable page. The <em>Grid</em> has many hallmarks of a component, in that a grid is:</p>
+<ul>
+<li>A fulcrum of a page’s responsiveness,</li>
+<li>A predictable array of variations (1/4 wide, 2/3 wide, etc).</li>
+<li>Hierarchical, with a row contains column contains row contains column.</li>
+<li>Markup encoded with styles, managed and adjusted over time.</li>
+<li>A container of while also often contained in other components.</li>
+</ul>
+<p>A <em>Grid</em> is a component.</p>
+<h3>Grid ≠ Overall Layout.</h3>
+<p>That said, a <em>Grid</em> never the top-most component that contains everything else. It’s an intermediate component sandwiched between the smaller parts and often one of a few likely <em>Layouts</em>.</p>
+<p>A <em>Layout</em> provides empty page regions into which you can place components, such as a website’s header, footer, and sidebar that envelop the main content well or a web app’s header, toolbar(s), and panels evoked from viewport edges and corners.</p>
+<h2>#5. Users Value Assembled Shells</h2>
+<p>When library users approach a library, they can be overwhelmed by the vast ocean of atomic choices. A library’s breadth of parts is correlated with its perceived worth. However, another key question is: Can I compose my layout, arranging an array of prebuilt parts how I want to, bound within a shell of “global” components that I may configure but need not rebuild?</p>
+<h3>Offer Prebuilt Shells that Include Big Components</h3>
+<p>That’s not “the grid” and it’s more complex than just a layout of empty regions. We’ll often offer a page <em>Shell</em> as a prearranged layout that already contains a <code>Header</code>, <code>GlobalNavigation</code>, and possibly <code>Footer</code> and other _Panel_ing*.*</p>
 <p>Shells ease the assembly process and revealing how things are organized. They help adopters not just see regions visually (in a browser) and in code (in their editor) into which they add, but get users a few steps ahead with the parts they should be skipping past anyway.</p>
 <p>While our libraries begin as bottom-up collections of atomic elements, library users often begin composition top-down. Like the code we share and designs we converge, the conversation always meets and heats up in the middle.</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -221,7 +272,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -250,127 +300,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -378,257 +323,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -636,255 +371,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -892,121 +417,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1016,247 +436,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1264,119 +476,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1388,7 +495,7 @@
 
 
 
-    
+
 
     
 
@@ -1425,7 +532,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1503,10 +609,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

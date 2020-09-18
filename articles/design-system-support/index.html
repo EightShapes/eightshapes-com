@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        
+            <title>Eightshapes > @components > Design System Support</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/design-system-support/" />
+            <meta property="og:title" content="Design System Support" />
+            <meta property="og:description" content="Operating a Workflow to Resolve Designer and Developer Needs" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Design System Support" />
+            <meta name="twitter:description" value="Operating a Workflow to Resolve Designer and Developer Needs" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/design-system-support/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
+
+        <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
+        <link rel="stylesheet" href="/styles/escom.css">
+    </head>
+    <body class="">
+        
+
+
+
+    
+    
+
+    
+    <div class="esds-row esds-container--brand esds-breadcrumb esds-row--no-inset">
+        <div class="esds-row__inner">
+            <h1 class="esds-breadcrumb__brand">
+                <a href="/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__brand-mark" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                </a>
+                
+                <a href="/components/" class="esds-breadcrumb__link">
+                    
+    
+
+    <svg class="esds-icon esds-breadcrumb__delimiter" >
+        
+        <use xlink:href="/icons/esds.svg#angle-right"></use>
+    </svg>
+
+                    <span class="esds-breadcrumb__crumb-section">@components</span>
+                </a>
+                
+            </h1>
+        </div>
+    </div>
+
+
+
+
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 9/10/2020 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        27 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Design System Support</h1>
+            
+            <h2 class="escom-article__deck">Operating a Workflow to Resolve Designer and Developer Needs</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/design-system-support/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>After building for months, <a href="https://designsystem.morningstar.com/">Morningstar Design System</a> released in <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-0-june-30-2017">June 2017</a> and celebrated the launch with our community of designers and developers.</p>
+<p>Immediately, the community used it. And, immediately, they needed help.</p>
+<p>What kind of help? Oh my goodness did those requests fly! Fix <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-3-july-28-2017">your defect</a>. Add a feature I want. Answer my question. Approve my proposal. Set up my files. Train us. Review that we used the system correctly. Link our library. On and on and on. Over eight weeks, 100+ incidents (or cases, in tech support speak) inundated the team in Slack, email, tickets, and more.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/1.png" alt="Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch">
+    </div>
+    <figcaption class="escom-article-figure__caption">Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch</figcaption>
+</figure>
+<p>Gulp. We hadn’t anticipated the demand. Cases felt unceasing. Responses flew haphazardly. It was all quite chaotic. We figured it out, and we gained our customer’s trust. And, along the way, I learned a lesson.</p>
+<p>Design systems must be ready to resolve emerging and at times urgent needs of designers and developers. This requires upfront investment in process and ongoing commitment that isn’t handwavingly trivial. Instead, a design system team must understanding and what types of <strong>cases</strong> it supports, in what <strong>channels</strong> they arise, and who’s responsible to <strong>manage</strong> and <strong>resolve</strong> each via a well-defined <strong>workflow</strong>.</p>
+<hr>
+<h2>What is Support? Cases to Resolve Across Channels</h2>
+<p>Support is a concept interpreted in many ways. Two come to mind: “What are our supported browsers and devices?” (features) and “Do we have enough people on our core team to support the program?” (team capacity). For this article, I define support as:</p>
+<div class="escom-bar-quote">
+    <b>Design System Support</b>: how a design system takes in, triages, routes, assigns, and resolves customer incidents and requests on a case-by-case basis.
+</div>
+<p>The direction is inbound and the relationship usually individual, triggered by someone who needs something and expects a response from the system. This distinguishes support from outbound efforts that enable customers like <a href="/articles/design-system-communications">communications</a>, <a href="/articles/adopting-design-systems">adopter outreach</a>, governance and training events.</p>
+<hr>
+<h3>What is — and is not—support?</h3>
+<p>Design systems always resolve cases when a designer or developer needs to…</p>
+<ul>
+<li><strong>Get Help</strong> with system features and tools to move work forward.</li>
+<li><strong>Submit a Defect</strong> when features behave unexpectedly or lack quality.</li>
+<li><strong>Request a (Compliance?) Review</strong> emerging work to discern if a solution aligns or complies with standards.</li>
+</ul>
+<p>These needs—and expected system response—is immediate. Lacking understanding or a defect may block someone from getting work done. If a system team isn’t responding to such needs, it strains the relationship and erodes trust.</p>
+<p>Other requests require more deliberation, such as:</p>
+<ul>
+<li><strong>(Request a) Feature</strong> when the system doesn’t yet offer something a customer expects or thinks it should.</li>
+<li><strong>(Propose a) Contribution</strong> for something a system lacks that someone else is willing to provide.</li>
+<li><strong>(Request) Training/Onboarding</strong> for an individual, team, or large group.</li>
+</ul>
+<p>Here, customers need to know “What can the system do, by when?” rather an immediate outcome. While these requests aren’t thought of as “support,” they do flow through support channels. As a result, a support workflow will triage and route each to be declined, activated or settled into a backlog.</p>
+<p>Finally, support often invites more generic interactions, such as:</p>
+<ul>
+<li><strong>Give Feedback</strong> on system features, process, status, and more.</li>
+<li><strong>Contact Us</strong> with whatever else you are curious about. We’re an open door.</li>
+</ul>
+<hr>
+<h3>Where does support arise? Many places. Watch informal ones, too.</h3>
+<p>Support cases originate from sources formal and informal. Design systems typically promote formal paths in documentation and communications like:</p>
+<ul>
+<li><strong>Chat</strong> (Slack, MS Team, Google Chat,…) monitored by the team, by far the preferred, most responsive and effective channel… if it exists.</li>
+<li><strong>Task management</strong> software(Jira, Github, …), particularly defects.</li>
+<li><strong>System email inbox</strong>(es) like designsystem@company.com.</li>
+<li><strong>Online form(s)</strong> built with Google Forms or Survey Monkey.</li>
+<li><strong>Discussion boards</strong> such as Stack Overflow, Github Issues, or Confluence.</li>
+<li><strong>Modules</strong> and <strong>links</strong> in documentation, possibly triggering formal forms and/or configured with URL parameters to populate specific fields.</li>
+</ul>
+<p>Support requests arise informally, too, amid interactions between system team members and those throughout a community. Encountered by any team member, they include:</p>
+<ul>
+<li><strong>Personal chat(s)</strong> with and email inbox(es) of system team members.</li>
+<li><strong>Reviews</strong> involving the system like design critiques and code reviews.</li>
+<li><strong>Communication</strong> like replies to a release announcement or training event.</li>
+<li><strong>Surveys</strong> with open ended questions inviting customers to comment.</li>
+<li><strong>Other meetings</strong> like working sessions, training, town halls, and more.</li>
+</ul>
+<p><em>Takeaway</em>: Be thoughtful about which channels to open and monitor, and don’t support too many. For formal channels with high activity, optimize data collection, response time and response quality. For informal cases, ensure staff can put requests in the right place and gather just enough information to move things forward.</p>
+<h3>What‘s Supported: System Features Only, or How to Make Things?</h3>
+<p>The design system serves teams throughout an organization. Unlike research and accessibility, the system makes things — visual style and (more core) UI components — in a process similar to how each team typically delivers their own product. System features are built into tools that adopters also use day to day, like Sketch for designers, frameworks (React, Angular, …) and code (CSS, JavaScript, …) for developers.</p>
+<p>As a result, many requests are more “How do I do my job?” and less if at all “How does the system help me do my job?”</p>
+<ul>
+<li>“How to install this code package and manage that dependency?”</li>
+<li>“How should I apply CSS classes to apply this custom visual style?”</li>
+<li>“How should I organize my Sketch artboards for component designs?”</li>
+</ul>
+<p>Such overlaps distort expectations. Should the design system team answer any question about Sketch, React or Angular because support other teams? Opinions are mixed, but my willingness to offer a helping hand has grown over time. This is consistent with creating a collective, nurturing environment and building trust in the system program. However, I’m also at the ready to admit “You understand your context more than I do, and I’m not informed enough to give you good advice.”</p>
+<p><em>Takeaway</em>: Be prepared for questions that are outside the scope of simply using a system. Depending on your capacity to do so, consider offering a helping hand as much as you can. However, know your role. Establish reasonable boundaries and expectations of what the system is and isn’t there to help with.</p>
+<hr>
+<h2>Support Workflow: From Intake to Resolution</h2>
+<p>I’m not an authority on customer service workflow. That said, for design systems, I start simple and refine over time how a team intakes across channels, triages and routes requests responsively, and flows the work into existing scrum / kanban workflows as needed.</p>
+<h3>Do all cases require a workflow? No, some resolve immediately.</h3>
+<p>Not every case needs to be formally tracked, and many resolve immediately. An answer in a meeting, a quick Slack chat, a rapid email. All are best resolved quickly and informally. This means no heavy form to complete, no new ticket to track in Jira, no notifications when resolved.</p>
+<p>However, these “immediately resolved cases” are still support. The work demands attention and takes time away from other tasks. To ignore this effort is to ignore what might be consistently 20% or up to 50% of designer or developers job day-to-day.</p>
+<p><em>Takeaway</em>: Make easy-to-resolve interactions light and effective, resolving each with no loose ends. In doing so, don’t ignore—instead, recognize and plan for!—the time staff needs to handle these conversations properly.</p>
+<hr>
+<h3>Is every case urgent? Gosh no, so set expectations.</h3>
+<p>Not all cases require an immediate response. Sure, a system should be able to rapidly release fixes, respond to feature requests and proposals “in the flow” of work. But not every case warrants stopping everything and getting whatever they ask for done.
+Customers may have unrealistic expectations about how a system prioritizes their needs. Imagine a request like:</p>
+<div class="escom-bar-quote">
+    “We need a responsive, animated headline & hero photograph carousel reusable across all our marketing site landing pages. By next week. In production.”
+</div>
+<p>Um, no. That’s not how most systems work. Instead of scrambling to respond to and resolve that demand, a response could be:</p>
+<div class="escom-bar-quote">
+    “Given your urgency, your best bet is to make it locally in your product. We can help you align with standards and discern if it’s a need shared by others.”
+</div>
+<p>Design systems play the long game, incrementally adding features relevant for everybody by collaborating with everybody. A responsive support workflow shouldn’t be confused with a willingness to rapidly release complex features on a day’s notice.</p>
+<p><em>Takeaway</em>: Gauge how much your design system is coupled or decoupled individual and imminent product delivery to production. Generally, the larger and more diverse an adopter ecosystem, the less likely the system team is release features or even fixes to douse a single customer’s fire.</p>
+<hr>
+<h3>What initiates a case? Intake, with just enough data.</h3>
+<p>When a case isn’t resolved immediately or is submitted independently, you’ll want to collect the right—and just enough—data. Prioritizing, managing and resolving a case is made easier with:</p>
+<ul>
+<li><strong>Requester name</strong>, email and — if known—team, product, or organization.</li>
+<li><strong>Type</strong>, such as Defect, Help, Review Request, and more.</li>
+<li><strong>Description</strong></li>
+<li><strong>Attachments</strong>, like screenshots of what’s experienced or proposed.</li>
+<li><strong>Channel</strong> where the request originated.</li>
+<li><strong>Group</strong>, product, squad, … to identify who the requester represents.</li>
+</ul>
+<p>For defects, you’ll also benefit from:</p>
+<ul>
+<li>What’s experienced, like screenshots and warning copy</li>
+<li>Steps to reproduce the result, as detailed as possible</li>
+<li>Versions, both of their tools (like a browser) and the system</li>
+</ul>
+<p>For feature requests and contribution proposals, don’t go overboard. Keep it light and deepen afterwards through conversation and transitioning it to formal inquiry (such as a [DISCOVERY] task). Here, questions could include:</p>
+<ul>
+<li><strong>Type</strong>: Is it new or an enhancement? If an enhancement, of what?</li>
+<li><strong>Shared Need</strong>: What other teams would benefit?</li>
+<li><strong>Urgency</strong>: Is this expected this week? month? quarter? year?</li>
+</ul>
+<p>While you could collect so much data, avoid making things complicated. Forms with useful but onerous inputs, task templates, and specialized properties in task management software to improve data consistency yet also increase a submitter’s effort. Additionally, autoresponders to forms and incoming emails can ensure requesters feel heard, set expectations, and point to helpful materials but can also feel noisy.</p>
+<p><em>Takeaway</em>: Identify what to collect and where to track it. Collect only essential data and be resilient to missing data.</p>
+<hr>
+<h3>Where, when do you triage and assign cases? Name a place, time.</h3>
+<p>Habits across teams vary. However, most teams route cases into project management rituals and tools, like:</p>
+<ul>
+<li>a daily scrum / standup</li>
+<li>a sprint backlog</li>
+<li>a weekly planning queue</li>
+<li>“To Triage” / “Not Yet Prioritized” bucket in a Kanban board (my favorite)</li>
+</ul>
+<p>Ensure you’ve identified that place place and monitor it routinely. For teams with sufficient capacity, there’s people assigned to triage and assign cases in real time as they flow in during business hours. Other teams wait to discuss and assign cases in regular ceremonies like daily standup or—at most—biweekly planning.</p>
+<hr>
+<h3>How fast do we respond? Set expectations with an SLA.</h3>
+<p>Systems earn trust by responding quickly. A first response of “We heard you, we’re working on it” is different from “Your case is resolved.” At a minimum, the requester should feel heard and trusts that you are on it.</p>
+<p>Feedback from design system colleagues indicates that most design system teams promise to respond in a day or less.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/2.png" alt="Survey results of response time by design system team.">
+    </div>
+    <figcaption class="escom-article-figure__caption">Survey results of response time by design system team.</figcaption>
+</figure>
+<p>I encourage teams to reveal a response time — the “<strong>service level agreement</strong>” (SLA)—in formal support channels. Advertising a SLA shifts a team to take support seriously and orient capacity to meet that commitment. Teams unprepared for support omit an SLA at their own peril, and this can’t last forever. A refusal to fluidly support your customers is a terrible signal to send.
+What tool(s) should we use? Scale tools to suit demand.</p>
+<p>System teams often mature through three or four stages of growth:</p>
+<ul>
+<li><strong>No tools</strong>. The system team size and/or adopter quantity is small enough doesn’t warrant responding and tracking with any formality. While every team starts here, few system programs stay here for long.</li>
+<li><strong>Spreadsheets.</strong> The first instinct: when managing cases is a challenge, track the work in a spreadsheet like Excel or Google Sheets!</li>
+<li><strong>Task management</strong> software, such as Jira, Asana, or Github Issues, managing cases in a primary team tool. Other channels—a form, a link with URL parameters, etc—tend to route submissions into that tool.</li>
+<li><strong>Ticketing software</strong>, such as Jira Service Desk or Help Scout.</li>
+</ul>
+<p>Most established teams end up in task management software like Jira, while those handling a high case load turn to tools optimized for their scale.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/3.png" alt="Chart of tools used by design system teams. 80% use task management like Jira, with a balance across other options.">
+    </div>
+    <figcaption class="escom-article-figure__caption">Survey results of what tools are used by design system teams.</figcaption>
+</figure>
+<p><em>Takeaway</em>: Systems built to last include tool(s) to manage support tasks and integrate and make visible those tasks on a daily basis. A spreadsheet managed in solitude on a shared drive isn’t enough for large-scale efforts.</p>
+<h2>Roles: Who Manages and Resolves Cases?</h2>
+<h3>Who manages (parts of) the workflow? One, some, or all of us.</h3>
+<p>Larger system teams benefit from project managers / scrummasters whose job it is to route tickets and manage workflow. For system teams not at that scale, designers and developers are saddled with the responsibility. Whether junior or senior, such practitioners tend to be less interested in triaging and routing support tickets than their core mandate: design and code.</p>
+<p>So who should monitor support channels, triage requests, and route assignments? Different design system teams take different approaches:</p>
+<p><strong>*A single person.</strong> Whether a lead, project manager, or practitioner, a single person may be responsible. Their day-to-day routine may be to monitor chats, inboxes and form submissions, and trigger the workflow as a result. The tradeoff here is efficiency and decisiveness with “single-point-of-failure” for responsiveness if busy with meetings, out sick or on vacation.
+<strong>*A defined subset of the team.</strong> Usually pairing a lead and project manager or practitioner, there’s few enough cooks in the kitchen that coordinate who owns what is easy via backchannel chats and st andup.
+<strong>*Anyone on the team.</strong> Should anyone respond to anything? While more responsive, it can miss cases, lead to chaos and requires consistent answers and workflow across many people.</p>
+<p>Decomposing the challenge a bit more, does everyone monitor Slack but designated individual(s) monitor an email inbox and ticket submissions?</p>
+<p><em>Takeaway</em>: Most bias towards using an entire team or a defined subset. My experience suggests that formal channels benefit from a single person accountable to route cases and ensure each resolves. On larger teams, everyone can’t do everything.
+So chalk up my vote for balance. Align a few to operate the workflow, coordinate in the backchannel, and unburden the rest of the team. Also, consider making support triage an impermanent tour-of-duty so that team members rotate and don’t get burned out.</p>
+<hr>
+<h3>It’s not for everybody.</h3>
+<p>Some designers and developers relish back-and-forth problem solving and the connectedness provoked by support. They welcome bouncing in and out of resolving requests. Positive vibes emit from their pores as each interaction accumulates the intrinsic reward of helping others.</p>
+<p>Others? Nah. Not so much. First, not everyone can bring the patience, curiosity, and positive attitude needed. Also, many find context-switching disruptive, friction-filled, and far from the designing, coding and documenting they enjoy most. I’ve seen team members assigned enough support work that they unexpectedly leave a team. That’s sad and avoidable. Support isn’t for everyone.</p>
+<p><em>Takeaway</em>: When starting support and preceding assignments, consider frank and individual discussions with each person. You can cover topics like preferences, comfort level, flexibility, attitude, confidence, and capability. Once you are confident they are the right person for the job, away you go!</p>
+<hr>
+<h3>How responsive is TOO responsive? Beware of “The Swarm™”</h3>
+<p>If more than one person can respond (usually in chats like Slack or Teams), then two or more staff members may swarm to respond simultaneously. This sometimes works, and certainly signals you care. Yet, swarming risks crosstalk, splayed directions, and conflicting advice. Avoid overwhelming those in need, align answers, and coordinate activity when one respondent suffices.</p>
+<p><em>Takeaway</em>: Telling some team members that they can’t or shouldn’t talk to customers is a signal to avoid. Instead, establish expectations that team members coordinate in a private backchannel before inundating a requester with feedback.</p>
+<hr>
+<h3>How good are responses? Friendly, yet authority and quality matter.</h3>
+<p>Confidence and authority matter. While a design lead may be more knowledgable of brand and organizational nuance, others lack that context. A tech lead knows how to balance constraints, frameworks, and approaches; other developers lacks experience.</p>
+<p><em>Takeaway</em>: Incorporate moments to review responses prior to sending.</p>
+<hr>
+<h3>Who should have access to tools? Visibility &amp; collaboration matter.</h3>
+<p>Tools should permit visibility and collaboration between a requester, responder, and those managing the process. A less structured Jira board visible to all three participants is better than a spreadsheet or souped-up ticketing software only accessible by a responder alone.</p>
+<p><em>Takeaway</em>: Most system teams lack the scale to need ticketing software. However, a dependable case workflow through assignable and measurable task management is a hallmark of operations that take support seriously.</p>
+<p>After building for months, <a href="https://designsystem.morningstar.com/">Morningstar Design System</a> released in <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-0-june-30-2017">June 2017</a> and celebrated the launch with our community of designers and developers.</p>
+<p>Immediately, the community used it. And, immediately, they needed help.</p>
+<p>What kind of help? Oh my goodness did those requests fly! Fix <a href="https://designsystem.morningstar.com/legacy/release-history.html#v1-0-3-july-28-2017">your defect</a>. Add a feature I want. Answer my question. Approve my proposal. Set up my files. Train us. Review that we used the system correctly. Link our library. On and on and on. Over eight weeks, 100+ incidents (or cases, in tech support speak) inundated the team in Slack, email, tickets, and more.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/1.png" alt="Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch">
+    </div>
+    <figcaption class="escom-article-figure__caption">Visualization of help, defect, and new feature requests arising in Slack and Jira over eight weeks following a major launch</figcaption>
+</figure>
+<p>Gulp. We hadn’t anticipated the demand. Cases felt unceasing. Responses flew haphazardly. It was all quite chaotic. We figured it out, and we gained our customer’s trust. And, along the way, I learned a lesson.</p>
+<p>Design systems must be ready to resolve emerging and at times urgent needs of designers and developers. This requires upfront investment in process and ongoing commitment that isn’t handwavingly trivial. Instead, a design system team must understanding and what types of <strong>cases</strong> it supports, in what <strong>channels</strong> they arise, and who’s responsible to <strong>manage</strong> and <strong>resolve</strong> each via a well-defined <strong>workflow</strong>.</p>
+<hr>
+<h2>What is Support? Cases to Resolve Across Channels</h2>
+<p>Support is a concept interpreted in many ways. Two come to mind: “What are our supported browsers and devices?” (features) and “Do we have enough people on our core team to support the program?” (team capacity). For this article, I define support as:</p>
+<div class="escom-bar-quote">
+    <b>Design System Support</b>: how a design system takes in, triages, routes, assigns, and resolves customer incidents and requests on a case-by-case basis.
+</div>
+<p>The direction is inbound and the relationship usually individual, triggered by someone who needs something and expects a response from the system. This distinguishes support from outbound efforts that enable customers like <a href="/articles/design-system-communications">communications</a>, <a href="/articles/adopting-design-systems">adopter outreach</a>, governance and training events.</p>
+<hr>
+<h3>What is — and is not—support?</h3>
+<p>Design systems always resolve cases when a designer or developer needs to…</p>
+<ul>
+<li><strong>Get Help</strong> with system features and tools to move work forward.</li>
+<li><strong>Submit a Defect</strong> when features behave unexpectedly or lack quality.</li>
+<li><strong>Request a (Compliance?) Review</strong> emerging work to discern if a solution aligns or complies with standards.</li>
+</ul>
+<p>These needs—and expected system response—is immediate. Lacking understanding or a defect may block someone from getting work done. If a system team isn’t responding to such needs, it strains the relationship and erodes trust.</p>
+<p>Other requests require more deliberation, such as:</p>
+<ul>
+<li><strong>(Request a) Feature</strong> when the system doesn’t yet offer something a customer expects or thinks it should.</li>
+<li><strong>(Propose a) Contribution</strong> for something a system lacks that someone else is willing to provide.</li>
+<li><strong>(Request) Training/Onboarding</strong> for an individual, team, or large group.</li>
+</ul>
+<p>Here, customers need to know “What can the system do, by when?” rather an immediate outcome. While these requests aren’t thought of as “support,” they do flow through support channels. As a result, a support workflow will triage and route each to be declined, activated or settled into a backlog.</p>
+<p>Finally, support often invites more generic interactions, such as:</p>
+<ul>
+<li><strong>Give Feedback</strong> on system features, process, status, and more.</li>
+<li><strong>Contact Us</strong> with whatever else you are curious about. We’re an open door.</li>
+</ul>
+<hr>
+<h3>Where does support arise? Many places. Watch informal ones, too.</h3>
+<p>Support cases originate from sources formal and informal. Design systems typically promote formal paths in documentation and communications like:</p>
+<ul>
+<li><strong>Chat</strong> (Slack, MS Team, Google Chat,…) monitored by the team, by far the preferred, most responsive and effective channel… if it exists.</li>
+<li><strong>Task management</strong> software(Jira, Github, …), particularly defects.</li>
+<li><strong>System email inbox</strong>(es) like designsystem@company.com.</li>
+<li><strong>Online form(s)</strong> built with Google Forms or Survey Monkey.</li>
+<li><strong>Discussion boards</strong> such as Stack Overflow, Github Issues, or Confluence.</li>
+<li><strong>Modules</strong> and <strong>links</strong> in documentation, possibly triggering formal forms and/or configured with URL parameters to populate specific fields.</li>
+</ul>
+<p>Support requests arise informally, too, amid interactions between system team members and those throughout a community. Encountered by any team member, they include:</p>
+<ul>
+<li><strong>Personal chat(s)</strong> with and email inbox(es) of system team members.</li>
+<li><strong>Reviews</strong> involving the system like design critiques and code reviews.</li>
+<li><strong>Communication</strong> like replies to a release announcement or training event.</li>
+<li><strong>Surveys</strong> with open ended questions inviting customers to comment.</li>
+<li><strong>Other meetings</strong> like working sessions, training, town halls, and more.</li>
+</ul>
+<p><em>Takeaway</em>: Be thoughtful about which channels to open and monitor, and don’t support too many. For formal channels with high activity, optimize data collection, response time and response quality. For informal cases, ensure staff can put requests in the right place and gather just enough information to move things forward.</p>
+<h3>What‘s Supported: System Features Only, or How to Make Things?</h3>
+<p>The design system serves teams throughout an organization. Unlike research and accessibility, the system makes things — visual style and (more core) UI components — in a process similar to how each team typically delivers their own product. System features are built into tools that adopters also use day to day, like Sketch for designers, frameworks (React, Angular, …) and code (CSS, JavaScript, …) for developers.</p>
+<p>As a result, many requests are more “How do I do my job?” and less if at all “How does the system help me do my job?”</p>
+<ul>
+<li>“How to install this code package and manage that dependency?”</li>
+<li>“How should I apply CSS classes to apply this custom visual style?”</li>
+<li>“How should I organize my Sketch artboards for component designs?”</li>
+</ul>
+<p>Such overlaps distort expectations. Should the design system team answer any question about Sketch, React or Angular because support other teams? Opinions are mixed, but my willingness to offer a helping hand has grown over time. This is consistent with creating a collective, nurturing environment and building trust in the system program. However, I’m also at the ready to admit “You understand your context more than I do, and I’m not informed enough to give you good advice.”</p>
+<p><em>Takeaway</em>: Be prepared for questions that are outside the scope of simply using a system. Depending on your capacity to do so, consider offering a helping hand as much as you can. However, know your role. Establish reasonable boundaries and expectations of what the system is and isn’t there to help with.</p>
+<hr>
+<h2>Support Workflow: From Intake to Resolution</h2>
+<p>I’m not an authority on customer service workflow. That said, for design systems, I start simple and refine over time how a team intakes across channels, triages and routes requests responsively, and flows the work into existing scrum / kanban workflows as needed.</p>
+<h3>Do all cases require a workflow? No, some resolve immediately.</h3>
+<p>Not every case needs to be formally tracked, and many resolve immediately. An answer in a meeting, a quick Slack chat, a rapid email. All are best resolved quickly and informally. This means no heavy form to complete, no new ticket to track in Jira, no notifications when resolved.</p>
+<p>However, these “immediately resolved cases” are still support. The work demands attention and takes time away from other tasks. To ignore this effort is to ignore what might be consistently 20% or up to 50% of designer or developers job day-to-day.</p>
+<p><em>Takeaway</em>: Make easy-to-resolve interactions light and effective, resolving each with no loose ends. In doing so, don’t ignore—instead, recognize and plan for!—the time staff needs to handle these conversations properly.</p>
+<hr>
+<h3>Is every case urgent? Gosh no, so set expectations.</h3>
+<p>Not all cases require an immediate response. Sure, a system should be able to rapidly release fixes, respond to feature requests and proposals “in the flow” of work. But not every case warrants stopping everything and getting whatever they ask for done.
+Customers may have unrealistic expectations about how a system prioritizes their needs. Imagine a request like:</p>
+<div class="escom-bar-quote">
+    “We need a responsive, animated headline & hero photograph carousel reusable across all our marketing site landing pages. By next week. In production.”
+</div>
+<p>Um, no. That’s not how most systems work. Instead of scrambling to respond to and resolve that demand, a response could be:</p>
+<div class="escom-bar-quote">
+    “Given your urgency, your best bet is to make it locally in your product. We can help you align with standards and discern if it’s a need shared by others.”
+</div>
+<p>Design systems play the long game, incrementally adding features relevant for everybody by collaborating with everybody. A responsive support workflow shouldn’t be confused with a willingness to rapidly release complex features on a day’s notice.</p>
+<p><em>Takeaway</em>: Gauge how much your design system is coupled or decoupled individual and imminent product delivery to production. Generally, the larger and more diverse an adopter ecosystem, the less likely the system team is release features or even fixes to douse a single customer’s fire.</p>
+<hr>
+<h3>What initiates a case? Intake, with just enough data.</h3>
+<p>When a case isn’t resolved immediately or is submitted independently, you’ll want to collect the right—and just enough—data. Prioritizing, managing and resolving a case is made easier with:</p>
+<ul>
+<li><strong>Requester name</strong>, email and — if known—team, product, or organization.</li>
+<li><strong>Type</strong>, such as Defect, Help, Review Request, and more.</li>
+<li><strong>Description</strong></li>
+<li><strong>Attachments</strong>, like screenshots of what’s experienced or proposed.</li>
+<li><strong>Channel</strong> where the request originated.</li>
+<li><strong>Group</strong>, product, squad, … to identify who the requester represents.</li>
+</ul>
+<p>For defects, you’ll also benefit from:</p>
+<ul>
+<li>What’s experienced, like screenshots and warning copy</li>
+<li>Steps to reproduce the result, as detailed as possible</li>
+<li>Versions, both of their tools (like a browser) and the system</li>
+</ul>
+<p>For feature requests and contribution proposals, don’t go overboard. Keep it light and deepen afterwards through conversation and transitioning it to formal inquiry (such as a [DISCOVERY] task). Here, questions could include:</p>
+<ul>
+<li><strong>Type</strong>: Is it new or an enhancement? If an enhancement, of what?</li>
+<li><strong>Shared Need</strong>: What other teams would benefit?</li>
+<li><strong>Urgency</strong>: Is this expected this week? month? quarter? year?</li>
+</ul>
+<p>While you could collect so much data, avoid making things complicated. Forms with useful but onerous inputs, task templates, and specialized properties in task management software to improve data consistency yet also increase a submitter’s effort. Additionally, autoresponders to forms and incoming emails can ensure requesters feel heard, set expectations, and point to helpful materials but can also feel noisy.</p>
+<p><em>Takeaway</em>: Identify what to collect and where to track it. Collect only essential data and be resilient to missing data.</p>
+<hr>
+<h3>Where, when do you triage and assign cases? Name a place, time.</h3>
+<p>Habits across teams vary. However, most teams route cases into project management rituals and tools, like:</p>
+<ul>
+<li>a daily scrum / standup</li>
+<li>a sprint backlog</li>
+<li>a weekly planning queue</li>
+<li>“To Triage” / “Not Yet Prioritized” bucket in a Kanban board (my favorite)</li>
+</ul>
+<p>Ensure you’ve identified that place place and monitor it routinely. For teams with sufficient capacity, there’s people assigned to triage and assign cases in real time as they flow in during business hours. Other teams wait to discuss and assign cases in regular ceremonies like daily standup or—at most—biweekly planning.</p>
+<hr>
+<h3>How fast do we respond? Set expectations with an SLA.</h3>
+<p>Systems earn trust by responding quickly. A first response of “We heard you, we’re working on it” is different from “Your case is resolved.” At a minimum, the requester should feel heard and trusts that you are on it.</p>
+<p>Feedback from design system colleagues indicates that most design system teams promise to respond in a day or less.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/2.png" alt="Survey results of response time by design system team.">
+    </div>
+    <figcaption class="escom-article-figure__caption">Survey results of response time by design system team.</figcaption>
+</figure>
+<p>I encourage teams to reveal a response time — the “<strong>service level agreement</strong>” (SLA)—in formal support channels. Advertising a SLA shifts a team to take support seriously and orient capacity to meet that commitment. Teams unprepared for support omit an SLA at their own peril, and this can’t last forever. A refusal to fluidly support your customers is a terrible signal to send.
+What tool(s) should we use? Scale tools to suit demand.</p>
+<p>System teams often mature through three or four stages of growth:</p>
+<ul>
+<li><strong>No tools</strong>. The system team size and/or adopter quantity is small enough doesn’t warrant responding and tracking with any formality. While every team starts here, few system programs stay here for long.</li>
+<li><strong>Spreadsheets.</strong> The first instinct: when managing cases is a challenge, track the work in a spreadsheet like Excel or Google Sheets!</li>
+<li><strong>Task management</strong> software, such as Jira, Asana, or Github Issues, managing cases in a primary team tool. Other channels—a form, a link with URL parameters, etc—tend to route submissions into that tool.</li>
+<li><strong>Ticketing software</strong>, such as Jira Service Desk or Help Scout.</li>
+</ul>
+<p>Most established teams end up in task management software like Jira, while those handling a high case load turn to tools optimized for their scale.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/design-system-support/3.png" alt="Chart of tools used by design system teams. 80% use task management like Jira, with a balance across other options.">
+    </div>
+    <figcaption class="escom-article-figure__caption">Survey results of what tools are used by design system teams.</figcaption>
+</figure>
+<p><em>Takeaway</em>: Systems built to last include tool(s) to manage support tasks and integrate and make visible those tasks on a daily basis. A spreadsheet managed in solitude on a shared drive isn’t enough for large-scale efforts.</p>
+<h2>Roles: Who Manages and Resolves Cases?</h2>
+<h3>Who manages (parts of) the workflow? One, some, or all of us.</h3>
+<p>Larger system teams benefit from project managers / scrummasters whose job it is to route tickets and manage workflow. For system teams not at that scale, designers and developers are saddled with the responsibility. Whether junior or senior, such practitioners tend to be less interested in triaging and routing support tickets than their core mandate: design and code.</p>
+<p>So who should monitor support channels, triage requests, and route assignments? Different design system teams take different approaches:</p>
+<p><strong>*A single person.</strong> Whether a lead, project manager, or practitioner, a single person may be responsible. Their day-to-day routine may be to monitor chats, inboxes and form submissions, and trigger the workflow as a result. The tradeoff here is efficiency and decisiveness with “single-point-of-failure” for responsiveness if busy with meetings, out sick or on vacation.
+<strong>*A defined subset of the team.</strong> Usually pairing a lead and project manager or practitioner, there’s few enough cooks in the kitchen that coordinate who owns what is easy via backchannel chats and st andup.
+<strong>*Anyone on the team.</strong> Should anyone respond to anything? While more responsive, it can miss cases, lead to chaos and requires consistent answers and workflow across many people.</p>
+<p>Decomposing the challenge a bit more, does everyone monitor Slack but designated individual(s) monitor an email inbox and ticket submissions?</p>
+<p><em>Takeaway</em>: Most bias towards using an entire team or a defined subset. My experience suggests that formal channels benefit from a single person accountable to route cases and ensure each resolves. On larger teams, everyone can’t do everything.
+So chalk up my vote for balance. Align a few to operate the workflow, coordinate in the backchannel, and unburden the rest of the team. Also, consider making support triage an impermanent tour-of-duty so that team members rotate and don’t get burned out.</p>
+<hr>
+<h3>It’s not for everybody.</h3>
+<p>Some designers and developers relish back-and-forth problem solving and the connectedness provoked by support. They welcome bouncing in and out of resolving requests. Positive vibes emit from their pores as each interaction accumulates the intrinsic reward of helping others.</p>
+<p>Others? Nah. Not so much. First, not everyone can bring the patience, curiosity, and positive attitude needed. Also, many find context-switching disruptive, friction-filled, and far from the designing, coding and documenting they enjoy most. I’ve seen team members assigned enough support work that they unexpectedly leave a team. That’s sad and avoidable. Support isn’t for everyone.</p>
+<p><em>Takeaway</em>: When starting support and preceding assignments, consider frank and individual discussions with each person. You can cover topics like preferences, comfort level, flexibility, attitude, confidence, and capability. Once you are confident they are the right person for the job, away you go!</p>
+<hr>
+<h3>How responsive is TOO responsive? Beware of “The Swarm™”</h3>
+<p>If more than one person can respond (usually in chats like Slack or Teams), then two or more staff members may swarm to respond simultaneously. This sometimes works, and certainly signals you care. Yet, swarming risks crosstalk, splayed directions, and conflicting advice. Avoid overwhelming those in need, align answers, and coordinate activity when one respondent suffices.</p>
+<p><em>Takeaway</em>: Telling some team members that they can’t or shouldn’t talk to customers is a signal to avoid. Instead, establish expectations that team members coordinate in a private backchannel before inundating a requester with feedback.</p>
+<hr>
+<h3>How good are responses? Friendly, yet authority and quality matter.</h3>
+<p>Confidence and authority matter. While a design lead may be more knowledgable of brand and organizational nuance, others lack that context. A tech lead knows how to balance constraints, frameworks, and approaches; other developers lacks experience.</p>
+<p><em>Takeaway</em>: Incorporate moments to review responses prior to sending.</p>
+<hr>
+<h3>Who should have access to tools? Visibility &amp; collaboration matter.</h3>
+<p>Tools should permit visibility and collaboration between a requester, responder, and those managing the process. A less structured Jira board visible to all three participants is better than a spreadsheet or souped-up ticketing software only accessible by a responder alone.</p>
+<p><em>Takeaway</em>: Most system teams lack the scale to need ticketing software. However, a dependable case workflow through assignable and measurable task management is a hallmark of operations that take support seriously.</p>
+
+    </div>
+</div>
+
+
+<div class="esds-row esds-container--light esds-row--tall-inset">
+    <div class="esds-row__inner escom-footer-systems__row">
+        <div class="escom-long-form-text">
+            <h2>@components</h2>
+            <p class="escom-long-form-text__lead">The complete collection of EightShapes writings on design systems, here for free. Follow <a href="https://twitter.com/components">@components</a> on Twitter for updates and new articles.</p>
+        </div>
+        <div class="escom-footer-systems__columnset">
+            <div class="escom-footer-systems__column">
+                
+
+
+<h4 class="escom-footer-systems__header">visual style</h4>
+<ul class="escom-footer-systems__list">
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/color-in-design-systems/">Color</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/tokens-in-design-systems/">Tokens</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/reference-designs-for-systems/">Reference Designs</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/space-in-design-systems/">Space</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/light-dark/">Light &amp; Dark Modes</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/cropping-away-negative-impacts-of-line-height/">Cropping Line Height</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/size-in-design-systems/">Size</a></li>
+    
+        <li class="escom-footer-systems__list-item"><a class="escom-footer-systems__list-item-link" href="/articles/typography-in-design-systems/">Typography</a></li>
+    
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">Documentation</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+<h4 class="escom-footer-systems__header">UI Components</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">Releases</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+<h4 class="escom-footer-systems__header">Strategy</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">Contributions</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">Systems of Systems</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
+</ul>
+
+
+
+            </div>
+            <div class="escom-footer-systems__column">
+                
+
+
+<h4 class="escom-footer-systems__header">Process</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">People</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
+</ul>
+
+
+
+                
+
+
+<h4 class="escom-footer-systems__header">Workshop Activities</h4>
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
+</ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+<div class="esds-row esds-row esds-row--tall-inset esds-container--brand escom-cta escom-cta--components-publication escom-page-type--marketing"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+        <div class="escom-long-form-text">
+            <h2>Need help with your system?</h2>
+            
+            <p class="escom-long-form-text__lead">EightShapes can energize your efforts to coach, workshop, assess or partner with you to design, code, document and manage a system.</p>
+            
+        </div>
+        
+        <div class="escom-cta__action">
+        
+    
+
+    <a class="esds-button esds-button--secondary esds-button--large escom-cta__action-button"  href=/design-systems>
+        
+        
+            Learn More
+        
+        
+    </a>
+
+        </div>
+        
+    
+        
+    </div>
+</div>
+
+
+
+
+        
+
+    
+
+<div class="esds-row esds-container--dark escom-site-footer esds-row--tall-inset"
+    
+    >
+    <div class="esds-row__inner">
+        
+            
+    
+        <div class="escom-site-footer__row">
+            <div class="escom-site-footer__column">
+                
+    
+
+    <svg class="esds-icon escom-site-footer__logo" >
+        
+        <use xlink:href="/icons/esds.svg#eightshapes-logo"></use>
+    </svg>
+
+                <div class"escom-site-footer__address-row">12805 Misty Creek Lane</div> 
+                <div class"escom-site-footer__address-row">Fairfax, VA 22033</div>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__link" tel="703.296.8831"> (703) 296-8831</a>
+                <a class="escom-site-footer__link" href="mailto:info@eightshapes.com">info@eightshapes.com</a>
+            </div>
+            <div class="escom-site-footer__column escom-site-footer__column--offset">
+                <a class="escom-site-footer__social-link" href="https://twitter.com/eightshapes">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--twitter" >
+        
+        <use xlink:href="/icons/esds.svg#twitter"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://www.linkedin.com/company/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--linkedin" >
+        
+        <use xlink:href="/icons/esds.svg#linkedin"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@EightShapes</span>
+                </a>
+                <a class="escom-site-footer__social-link" href="https://medium.com/eightshapes-llc">
+                    
+    
+
+    <svg class="esds-icon escom-site-footer__icon escom-site-footer__icon--medium" >
+        
+        <use xlink:href="/icons/esds.svg#medium"></use>
+    </svg>
+ 
+                    <span class="escom-site-footer__social-name">@eightshapes</span>
+                </a>
+            </div>
+        </div>
+
+    
+        
+    </div>
+</div>
+
+
+
+
+        <script src="/scripts/svg4everybody.js"></script>
+          <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1201194-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+
+        <!-- GENERATED WITH 11ty -->
+    </body>
+</html>

@@ -14,47 +14,48 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Principles of Design Systems</title>
+        
+            <title>Eightshapes > @components > Principles of Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/principles-of-designing-systems/" />
+            <meta property="og:title" content="Principles of Design Systems" />
+            <meta property="og:description" content="Core Beliefs to Guide System Strategy and Tactics" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Principles of Design Systems" />
+            <meta name="twitter:description" value="Core Beliefs to Guide System Strategy and Tactics" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/principles-of-designing-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/principles-of-designing-systems" />
-  <meta property="og:title" content="Principles of Design Systems" />
-  <meta property="og:description" content="Core Beliefs to Guide System Strategy and Tactics" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Principles of Design Systems" />
-  <meta name="twitter:description" value="Core Beliefs to Guide System Strategy and Tactics" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/principles-of-designing-systems" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -90,121 +91,147 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 5/24/2017 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            5min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row escom-article__title-row--no-masthead-next">
-                <h1 class="escom-article__title">Principles of Design Systems</h1>
-                
-                <h2 class="escom-article__deck">Core Beliefs to Guide System Strategy and Tactics</h2>
-                
-            </div>
 
-    
 
-    
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 5/24/2017 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        12 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row escom-article__title-row--no-masthead-next">
+            <h1 class="escom-article__title">Principles of Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Core Beliefs to Guide System Strategy and Tactics</h2>
+            
+        </div>
+
+
     <p>I’m wary of design principles. I find some inspirational (like my favorite, <a href="https://www.lightningdesignsystem.com/guidelines/overview/">Salesforce Lightning’s Beauty</a>, which focuses on craft). Yet, in-house teams can spend months defining principles too vague (“Be Magical!”) or generic (“Simplicity!”, as if most efforts crave complexity) to be useful. These principles then surface rarely if ever, even in design discussions that include principle authors.</p>
 <p>So, why write on design system principles? Because I find myself repeating a few core beliefs with collaborators to short-circuit meandering discussions and ground decision-making. Here are eight principles that I repeat often when talking strategy and tactics with design system teams.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #1: Systems solve the easy problems so Products can solve hard problems more easily.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908081935007744?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>Buttons are the most atomic interactive component used <em>everywhere</em> by <em>everyone</em>. <a href="/articles/buttons-in-design-systems">Buttons are complex</a>, with all their properties, states, types, variations, and complexities. The days of each and every team making their own buttons must come to an end. Just ask <a href="https://medium.com/etsy-design/designed-for-growth-cdc2a01a8a8a#.2vvndtaoz">Etsy</a>, or execs after I’ve depicted the six-figure button cost across their 10+ product portfolio.</p>
 <p>Thus, it makes sense to build buttons once, <em>really well</em>, to shave costs from every team. However, that doesn’t mean that systems teams suddenly own the design and build of the complete customer journey from start to finish. So start small, and build from there.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #2: Include what’s shared, omit what’s not.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908229213728773?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>When collaborating with a community of designers and developers, I’ll hear “I’ve made something that’d be great for the system!”</p>
 <p>A cursory demo reveals a carefully crafted solution, perfectly imbued with the system’s style, behavior, and voice. Certain carousels, date pickers, and dashboards modules come to mind. My reaction: “What a great solution! What other products need this?” Response: 🤔.</p>
 <p>Just because a component, pattern or other solution is well-crafted – even an award winner – doesn’t mean it belongs in the system. First, it’s effortful to integrate, normalize, and maintain contributions, especially complex ones. Secondly, if nobody else needs it, it’s noise getting in the way of system users trying to make their way through an unfamiliar place.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #3: Products own their destiny, systems equip them to realize that destiny.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908342791356418?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>Systems should neither take over building things for products nor think they decide what and when the products do or don’t do anything. Instead, systems exist to improve development efficiency, raise consistency, and improve quality. Ultimately, it’s up to products to choose to adopt a system, use it appropriately, and decide how fast and how much to use.</p>
 <p>Many collaborators on both sides struggle to see this. Instead, product managers hear system leads mandating a threat to their autonomy. System staff, assertive and excited about their progress, get a bit pushy. It takes time for both disarm their points-of-view to recognize each product owns it’s own path. This transforms incentives for system staff to make things good enough for the product to choose to adopt it, or for leadership higher up to justifiably set expectations to do so.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #4: Favor community over control.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908413108785153?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>The arc of practicing design and development favors those that can collaborate, negotiate, and work well with others. While I’ve been a part of systems past that injected standards gates, audits, and review milestones into a product’s development path to production, I don’t encounter them much anymore. One VP outright banned the notion:</p>
-
-
-
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                “Don’t use the word governance in our organization.” 
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                VP, Digital Design
-            </div>
-            
-        </div>
-
-
-
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            “Don’t use the word governance in our organization.” 
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            VP, Digital Design
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
 <p>Building a community is a critical component of practicing design systems. When the “Big G” (governance) comes up in early strategic discussions, I try to redirect the conversation. How’s your culture of cross-product critique, whether in design or engineering? Are design system offerings considered features by product managers? Have you established segment guides to curate and monitor topics like accessibility, motion, iconography, or UX patterns? While sometimes governance is necessary, I start with the carrot before donning the stick, knowing community building is a big, effortful track of work.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #5: Favor elegance of simple things over flexibility of complex things.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908723067916290?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>As our team approached <code>v1.0</code>, we began to enhance a basic <em>Button</em> to include icons left and right, menus, split zones, the works. The instant I opened the pull request to review, I saw it. A simple <code>button</code> now had a three-deep hierarchy of HTML elements. A quick SlackHQ message to the developer inquired “Seriously? To put a basic button on the page, I need all this gook?”</p>
 <p>He took the feedback to heart and returned with a solution that kept the simple simple, and layered complexity as needed. The experience was a microcosm of what we struggle with making systems every day: create solutions to complex problems used via an interface that’s clean and simple. As we increase complexity, it’s up to us to minimize how much we reveal and transfer that complexity to our system’s users.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #6: Make documentation first as a tool to use, then as pictures to show, then – if needed – as words to read.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908856488669184?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>It’s really tempting to follow the path of least resistance: a documentation template as a big, empty Word/Google document. Just start typing stuff you want people to know. Yet, there’s no bigger buzzkill to an onboarding designer than to be told “Go read this tome called our design standards.”</p>
 <p>That why we start each component documentation page with rendered variations and copiable code, possibly introduced via <a href="https://blog.hichroma.com/the-crucial-tool-for-modern-frontend-engineers-fb849b06187a#.mn1np7yzw">component explorers</a> demonstrations. That’s also why we write guidelines in the imperative (shortening sentences) and replace important ones with effective <a href="/articles/design-system-doc-components">do &amp; don’t contrasts</a>. What’s better: a hefty table of hex code color values or clickable tints stack as a visualization that when clicked copy a hex code or variable value to your clipboard?</p>
 <p>Take a look at your documentation, and ask yourself: how can I visualize these ideas better? Even more, how can I make these ideas into a tool?</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #7: Measure success on dependency.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908991453040641?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>I’m pretty adamant that despite how much we build – and how much fun we have building it – nothing matters unless products use what we make:</p>
-
-
-  
-
-
-
-        <div class="escom-bar-quote">
-            A system’s value is realized when products ship features using a system’s parts.
-        </div>
-
-
-
-  <p>Therefore, the first step of any system-product relationship is the dependency, these days first in the form of an NPM dependency in the product’s <code>package.json</code> file. From there, brief planning yields a map for integration: migrate to tokenized variables if needed, and then layer in HTML, CSS, or whatever way the system manifests. Those dependencies help form system success criteria that can be measured, monitored, and reported.</p>
+<div class="escom-bar-quote">
+    A system’s value is realized when products ship features using a system’s parts.
+</div>
+<p>Therefore, the first step of any system-product relationship is the dependency, these days first in the form of an NPM dependency in the product’s <code>package.json</code> file. From there, brief planning yields a map for integration: migrate to tokenized variables if needed, and then layer in HTML, CSS, or whatever way the system manifests. Those dependencies help form system success criteria that can be measured, monitored, and reported.</p>
 <hr>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #8: Favor quality over quantity.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844909151327322114?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+<p>Very early in a formative system period, two things happen: we make a <a href="/articles/picking-parts-products-people">list of parts – mostly visual style and components – we want to make</a>, and we identify the <a href="/articles/component-qa-in-design-systems">minimum quality each must achieve</a>. These concern create a familiar tension when discerning how far we’ll get, how fast.</p>
+<p>However, a system’s quality must always meet or exceed the quality threshold held by a product team, lest the product not trust or respect it enough to adopt it. Therefore, be deliberate and trust your process to achieve a high level of quality, even if stakeholders (including me, sometimes!) want so much so much sooner.</p>
+<p>I’m wary of design principles. I find some inspirational (like my favorite, <a href="https://www.lightningdesignsystem.com/guidelines/overview/">Salesforce Lightning’s Beauty</a>, which focuses on craft). Yet, in-house teams can spend months defining principles too vague (“Be Magical!”) or generic (“Simplicity!”, as if most efforts crave complexity) to be useful. These principles then surface rarely if ever, even in design discussions that include principle authors.</p>
+<p>So, why write on design system principles? Because I find myself repeating a few core beliefs with collaborators to short-circuit meandering discussions and ground decision-making. Here are eight principles that I repeat often when talking strategy and tactics with design system teams.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #1: Systems solve the easy problems so Products can solve hard problems more easily.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908081935007744?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Buttons are the most atomic interactive component used <em>everywhere</em> by <em>everyone</em>. <a href="/articles/buttons-in-design-systems">Buttons are complex</a>, with all their properties, states, types, variations, and complexities. The days of each and every team making their own buttons must come to an end. Just ask <a href="https://medium.com/etsy-design/designed-for-growth-cdc2a01a8a8a#.2vvndtaoz">Etsy</a>, or execs after I’ve depicted the six-figure button cost across their 10+ product portfolio.</p>
+<p>Thus, it makes sense to build buttons once, <em>really well</em>, to shave costs from every team. However, that doesn’t mean that systems teams suddenly own the design and build of the complete customer journey from start to finish. So start small, and build from there.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #2: Include what’s shared, omit what’s not.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908229213728773?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>When collaborating with a community of designers and developers, I’ll hear “I’ve made something that’d be great for the system!”</p>
+<p>A cursory demo reveals a carefully crafted solution, perfectly imbued with the system’s style, behavior, and voice. Certain carousels, date pickers, and dashboards modules come to mind. My reaction: “What a great solution! What other products need this?” Response: 🤔.</p>
+<p>Just because a component, pattern or other solution is well-crafted – even an award winner – doesn’t mean it belongs in the system. First, it’s effortful to integrate, normalize, and maintain contributions, especially complex ones. Secondly, if nobody else needs it, it’s noise getting in the way of system users trying to make their way through an unfamiliar place.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #3: Products own their destiny, systems equip them to realize that destiny.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908342791356418?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Systems should neither take over building things for products nor think they decide what and when the products do or don’t do anything. Instead, systems exist to improve development efficiency, raise consistency, and improve quality. Ultimately, it’s up to products to choose to adopt a system, use it appropriately, and decide how fast and how much to use.</p>
+<p>Many collaborators on both sides struggle to see this. Instead, product managers hear system leads mandating a threat to their autonomy. System staff, assertive and excited about their progress, get a bit pushy. It takes time for both disarm their points-of-view to recognize each product owns it’s own path. This transforms incentives for system staff to make things good enough for the product to choose to adopt it, or for leadership higher up to justifiably set expectations to do so.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #4: Favor community over control.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908413108785153?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The arc of practicing design and development favors those that can collaborate, negotiate, and work well with others. While I’ve been a part of systems past that injected standards gates, audits, and review milestones into a product’s development path to production, I don’t encounter them much anymore. One VP outright banned the notion:</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            “Don’t use the word governance in our organization.” 
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            VP, Digital Design
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>Building a community is a critical component of practicing design systems. When the “Big G” (governance) comes up in early strategic discussions, I try to redirect the conversation. How’s your culture of cross-product critique, whether in design or engineering? Are design system offerings considered features by product managers? Have you established segment guides to curate and monitor topics like accessibility, motion, iconography, or UX patterns? While sometimes governance is necessary, I start with the carrot before donning the stick, knowing community building is a big, effortful track of work.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #5: Favor elegance of simple things over flexibility of complex things.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908723067916290?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>As our team approached <code>v1.0</code>, we began to enhance a basic <em>Button</em> to include icons left and right, menus, split zones, the works. The instant I opened the pull request to review, I saw it. A simple <code>button</code> now had a three-deep hierarchy of HTML elements. A quick SlackHQ message to the developer inquired “Seriously? To put a basic button on the page, I need all this gook?”</p>
+<p>He took the feedback to heart and returned with a solution that kept the simple simple, and layered complexity as needed. The experience was a microcosm of what we struggle with making systems every day: create solutions to complex problems used via an interface that’s clean and simple. As we increase complexity, it’s up to us to minimize how much we reveal and transfer that complexity to our system’s users.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #6: Make documentation first as a tool to use, then as pictures to show, then – if needed – as words to read.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908856488669184?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>It’s really tempting to follow the path of least resistance: a documentation template as a big, empty Word/Google document. Just start typing stuff you want people to know. Yet, there’s no bigger buzzkill to an onboarding designer than to be told “Go read this tome called our design standards.”</p>
+<p>That why we start each component documentation page with rendered variations and copiable code, possibly introduced via <a href="https://blog.hichroma.com/the-crucial-tool-for-modern-frontend-engineers-fb849b06187a#.mn1np7yzw">component explorers</a> demonstrations. That’s also why we write guidelines in the imperative (shortening sentences) and replace important ones with effective <a href="/articles/design-system-doc-components">do &amp; don’t contrasts</a>. What’s better: a hefty table of hex code color values or clickable tints stack as a visualization that when clicked copy a hex code or variable value to your clipboard?</p>
+<p>Take a look at your documentation, and ask yourself: how can I visualize these ideas better? Even more, how can I make these ideas into a tool?</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #7: Measure success on dependency.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844908991453040641?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I’m pretty adamant that despite how much we build – and how much fun we have building it – nothing matters unless products use what we make:</p>
+<div class="escom-bar-quote">
+    A system’s value is realized when products ship features using a system’s parts.
+</div>
+<p>Therefore, the first step of any system-product relationship is the dependency, these days first in the form of an NPM dependency in the product’s <code>package.json</code> file. From there, brief planning yields a map for integration: migrate to tokenized variables if needed, and then layer in HTML, CSS, or whatever way the system manifests. Those dependencies help form system success criteria that can be measured, monitored, and reported.</p>
+<hr>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Design system principle #8: Favor quality over quantity.</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/844909151327322114?ref_src=twsrc%5Etfw">March 23, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Very early in a formative system period, two things happen: we make a <a href="/articles/picking-parts-products-people">list of parts – mostly visual style and components – we want to make</a>, and we identify the <a href="/articles/component-qa-in-design-systems">minimum quality each must achieve</a>. These concern create a familiar tension when discerning how far we’ll get, how fast.</p>
 <p>However, a system’s quality must always meet or exceed the quality threshold held by a product team, lest the product not trust or respect it enough to adopt it. Therefore, be deliberate and trust your process to achieve a high level of quality, even if stakeholders (including me, sometimes!) want so much so much sooner.</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -215,7 +242,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -244,127 +270,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -372,257 +293,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -630,255 +341,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -886,121 +387,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1010,247 +406,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1258,119 +446,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1382,7 +465,7 @@
 
 
 
-    
+
 
     
 
@@ -1419,7 +502,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1497,10 +579,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

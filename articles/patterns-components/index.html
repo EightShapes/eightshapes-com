@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; UX Patterns ≠ UI Components</title>
+        
+            <title>Eightshapes > @components > UX Patterns ≠ UI Components</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/patterns-components/" />
+            <meta property="og:title" content="UX Patterns ≠ UI Components" />
+            <meta property="og:description" content="Our Community, not Companies, Should Build Pattern Libraries" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="UX Patterns ≠ UI Components" />
+            <meta name="twitter:description" value="Our Community, not Companies, Should Build Pattern Libraries" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/patterns-components/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/patterns-components" />
-  <meta property="og:title" content="UX Patterns ≠ UI Components" />
-  <meta property="og:description" content="Our Community, not Companies, Should Build Pattern Libraries" />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/patterns-components/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="UX Patterns ≠ UI Components" />
-  <meta name="twitter:description" value="Our Community, not Companies, Should Build Pattern Libraries" />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/patterns-components/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/patterns-components" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,69 +95,64 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 1/27/2017 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            8min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">UX Patterns ≠ UI Components</h1>
-                
-                <h2 class="escom-article__deck">Our Community, not Companies, Should Build Pattern Libraries</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/patterns-components/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
-  <p>In “<a href="https://ethanmarcotte.com/wrote/pattern-patter/">Pattern patter.</a>”, Ethan Marcotte writes yearningly for more design patterns in our practice. For now, many teams build libraries reusable components. However, these libraries usually lack thoughtful guidance to resolve myriad forces at play to compose interfaces effectively. Today’s libraries are (just) a kit of interface parts.</p>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 1/27/2017 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        17 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">UX Patterns ≠ UI Components</h1>
+            
+            <h2 class="escom-article__deck">Our Community, not Companies, Should Build Pattern Libraries</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/patterns-components/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
+    <p>In “<a href="https://ethanmarcotte.com/wrote/pattern-patter/">Pattern patter.</a>”, Ethan Marcotte writes yearningly for more design patterns in our practice. For now, many teams build libraries reusable components. However, these libraries usually lack thoughtful guidance to resolve myriad forces at play to compose interfaces effectively. Today’s libraries are (just) a kit of interface parts.</p>
 <p>Ethan hints at the gap between reusable snippet and principled guidance. The call for <em>more</em> patterns, in my opinion, it misses a point. Those “pattern” snippets aren’t patterns at all. At least not in the formal sense. Those snippets are components. And conflating the two confuses and clouds our judgment on why in-house teams don’t pursue patterns much anymore.</p>
 <p>Let’s trace pattern history to understand the difference.</p>
 <hr>
-<h2 id="pattern-provenance">Pattern Provenance</h2>
+<h2>Pattern Provenance</h2>
 <p>In learning patterns, designers immediately encounter Christopher Alexander’s inspirational <a href="https://www.patternlanguage.com/bookstore/bookshelf.html#0"><em>A Pattern Language</em></a> (1977).</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/patterns-components/2.png" alt="Photograph of A Pattern Language book">
-        </div>
-        <figcaption class="escom-article-figure__caption">Christopher Alexander’s A Pattern Language.</figcaption>
-    </figure>
-
-
-
-  <p>The book is required reading (or browsing, since it’s THICK) for any aspiring design librarian. The book lays out myriad patterns — Arcades, Sequence of Sitting Spaces, Six-Foot Balcony, and 253 others — as a language options to ground sound architectural designs and decision making.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/2.png" alt="Photograph of A Pattern Language book">
+    </div>
+    <figcaption class="escom-article-figure__caption">Christopher Alexander’s A Pattern Language.</figcaption>
+</figure>
+<p>The book is required reading (or browsing, since it’s THICK) for any aspiring design librarian. The book lays out myriad patterns — Arcades, Sequence of Sitting Spaces, Six-Foot Balcony, and 253 others — as a language options to ground sound architectural designs and decision making.</p>
 <p>Alexander’s catalog sets a content model for each pattern we emulate today:</p>
 <ul>
 <li><strong>Name</strong></li>
@@ -165,95 +161,58 @@
 <li><strong>Use When</strong> (and often Don’t Use When)</li>
 <li><strong>Guidelines</strong> rich with examples and scenarios</li>
 </ul>
-<h3 id="patterns-in-software">Patterns in Software</h3>
+<h3>Patterns in Software</h3>
 <p>You can trace Alexander’s influence into software engineering with <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612"><em>Design Patterns:Elements of Reusable Object Oriented Software</em></a> (1994) by Gamma, Helm, Johnson, and Vlissides.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/patterns-components/3.png" alt="Photograph of Design Patterns book">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <p>Design Patterns quotes Alexander’s definition of a pattern:</p>
-
-
-  
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                Each pattern describes a problem that occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, <strong>without ever doing it the same way twice</strong> (emphasis added).
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                Chrisopher Alexander
-            </div>
-            
-        </div>
-
-
-
-  <p>The book then differentiates patterns from the components of today’s “living style guides:”</p>
-
-
-  
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                Design patterns are not about designs such as linked lists and hash tables that can be … reused as is. Nor are they complex, domain-specific designs for an entire application or subsystem. The design patterns in this book are descriptions … that are [then] customized to solve a general design problem in a particular context.
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                Christopher Alexander
-            </div>
-            
-        </div>
-
-
-
-  <p>Unlike patterns, components we use are already built for domain-specific reuse within a system. For example, a button is built for the web using HTML and CSS snippets to apply a visual language (like Material Design) for a layout motif (like a responsive site or dashboard app).</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/3.png" alt="Photograph of Design Patterns book">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>Design Patterns quotes Alexander’s definition of a pattern:</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Each pattern describes a problem that occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, &lt;strong&gt;without ever doing it the same way twice&lt;/strong&gt; (emphasis added).
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Chrisopher Alexander
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>The book then differentiates patterns from the components of today’s “living style guides:”</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Design patterns are not about designs such as linked lists and hash tables that can be … reused as is. Nor are they complex, domain-specific designs for an entire application or subsystem. The design patterns in this book are descriptions … that are [then] customized to solve a general design problem in a particular context.
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Christopher Alexander
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>Unlike patterns, components we use are already built for domain-specific reuse within a system. For example, a button is built for the web using HTML and CSS snippets to apply a visual language (like Material Design) for a layout motif (like a responsive site or dashboard app).</p>
 <hr>
-<h2 id="the-rise-of-patterns-in-digital-design">The Rise of Patterns in Digital Design</h2>
+<h2>The Rise of Patterns in Digital Design</h2>
 <p>In the mid-2000’s, Yahoo’s massive design organization released their pattern library to the public.</p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/patterns-components/4.png" alt="Screenshots of the Yahoo Pattern Library">
-        </div>
-        <figcaption class="escom-article-figure__caption">Yahoo Pattern Library Home, About &amp; Download pages, <a href="https://developer.yahoo.com/ypatterns/" rel="nofollow noopener" target="_blank">https://developer.yahoo.com/ypatterns/</a></figcaption>
-    </figure>
-
-
-
-  <p>Grounded by pioneering work of <a href="https://twitter.com/uipatternscom">Jenifer Tidwell</a>, luminaries like <a href="https://twitter.com/emalone">Erin Malone</a>, <a href="https://twitter.com/mediajunkie?lang=en">Christian Crumlish</a>, and <a href="https://twitter.com/billwscott?lang=en">Bill Scott</a> contributed to the library that took at least my community (information architects) by storm. Erin <a href="http://boxesandarrows.com/implementing-a-pattern-library-in-the-real-world-a-yahoo-case-study/">wrote up their whole process</a> on boxesandarrows.com. It’s processes and considerations are familiar to today’s design system makers. Many revered Yahoo then as they revere Salesforce Lightning and Google Material now.</p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/patterns-components/5.png" alt="Photograph of pattern books from the latter 2000s">
-        </div>
-        <figcaption class="escom-article-figure__caption">Design pattern books from the latter 2000s</figcaption>
-    </figure>
-
-
-
-  <h3 id="pattern-literature-explodes">Pattern Literature Explodes</h3>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/4.png" alt="Screenshots of the Yahoo Pattern Library">
+    </div>
+    <figcaption class="escom-article-figure__caption">Yahoo Pattern Library Home, About &amp; Download pages, <a href="https://developer.yahoo.com/ypatterns/" rel="nofollow noopener" target="_blank">https://developer.yahoo.com/ypatterns/</a></figcaption>
+</figure>
+<p>Grounded by pioneering work of <a href="https://twitter.com/uipatternscom">Jenifer Tidwell</a>, luminaries like <a href="https://twitter.com/emalone">Erin Malone</a>, <a href="https://twitter.com/mediajunkie?lang=en">Christian Crumlish</a>, and <a href="https://twitter.com/billwscott?lang=en">Bill Scott</a> contributed to the library that took at least my community (information architects) by storm. Erin <a href="http://boxesandarrows.com/implementing-a-pattern-library-in-the-real-world-a-yahoo-case-study/">wrote up their whole process</a> on boxesandarrows.com. It’s processes and considerations are familiar to today’s design system makers. Many revered Yahoo then as they revere Salesforce Lightning and Google Material now.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/5.png" alt="Photograph of pattern books from the latter 2000s">
+    </div>
+    <figcaption class="escom-article-figure__caption">Design pattern books from the latter 2000s</figcaption>
+</figure>
+<h3>Pattern Literature Explodes</h3>
 <p>As the decade closed, <a href="https://developer.yahoo.com/ypatterns/about/libraries.html">many more libraries emerged</a> and books provided in-depth pattern catalogs from a variety of perspectives:</p>
 <ul>
 <li><a href="https://www.amazon.com/Designing-Interfaces-Patterns-Effective-Interaction/dp/1449379702/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1483640085&amp;sr=1-1&amp;keywords=Designing+Interfaces">Designing Interfaces</a> (Jenifer Tidwell, 2005), with associated <a href="http://designinginterfaces.com/patterns/">online catalog</a></li>
@@ -263,36 +222,29 @@
 <li><a href="https://www.amazon.com/Search-Patterns-Discovery-Peter-Morville/dp/0596802277">Search Patterns</a> (Peter Morville, 2010)</li>
 </ul>
 <hr>
-<h2 id="however-patterns-arent-components">However, Patterns Aren’t Components</h2>
+<h2>However, Patterns Aren’t Components</h2>
 <p>Yahoo’s pattern library was a watershed moment as my career careened into components, patterns, and systems. It coincided with my first large scale library experience at sun.com from 2006–2010. Sun’s library was the most sophisticated library I’ve ever contributed to. However, those things we made at sun.com – and what so many teams make now – weren’t patterns in the formal sense.</p>
 <p>In <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a>, I describe that <strong>components are designed and built</strong> in code, ready for reuse by plopping in a sketch file or HTML page, <strong>patterns are abstract, principled guidance</strong> applied <em>as you design and build.</em></p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/patterns-components/6.png" alt="Annotated screenshot of Yahoo and Bootstrap Accordion pages">
-        </div>
-        <figcaption class="escom-article-figure__caption">An accordion as a <a href="https://developer.yahoo.com/ypatterns/navigation/accordion.html" rel="nofollow noopener" target="_blank">Yahoo Design Pattern</a> and <a href="http://getbootstrap.com/javascript/#collapse-example-accordion" rel="nofollow noopener" target="_blank">Bootstrap Javascript-driven Component</a></figcaption>
-    </figure>
-
-
-
-  <p><strong>Components are how something DOES work</strong> , inclusive of tradeoffs and constraints realized through a build process. <strong>Patterns describe how something SHOULD work</strong> under preferred conditions and suggestions of how to cope with tradeoffs.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/6.png" alt="Annotated screenshot of Yahoo and Bootstrap Accordion pages">
+    </div>
+    <figcaption class="escom-article-figure__caption">An accordion as a <a href="https://developer.yahoo.com/ypatterns/navigation/accordion.html" rel="nofollow noopener" target="_blank">Yahoo Design Pattern</a> and <a href="http://getbootstrap.com/javascript/#collapse-example-accordion" rel="nofollow noopener" target="_blank">Bootstrap Javascript-driven Component</a></figcaption>
+</figure>
+<p><strong>Components are how something DOES work</strong> , inclusive of tradeoffs and constraints realized through a build process. <strong>Patterns describe how something SHOULD work</strong> under preferred conditions and suggestions of how to cope with tradeoffs.</p>
 <p><strong>Components are an interface chunk</strong> to be added to an overall layout. whereas <strong>patterns may be UI or a variety of other things</strong> , like a behavior, flow, application motif or something else.</p>
 <p>Completed <strong>components exhibit a visual language</strong> in polished, precise detail, yet <strong>patterns are independent of any particular skin</strong> and flexibly adapts across any visual language.</p>
 <p>In Modular Web Design, Christian Crumlish (one time curator of the Yahoo pattern library) reinforced this nature of this distinction at Yahoo too. The public pattern library was related to but distinct from a ONE universal components library applied in-house across 80–90% of Yahoo’s product portfolio at the time.</p>
 <hr>
-<h2 id="the-2011--beyond-era-of-living-style-guides">The 2011 &amp; Beyond Era of Living Style Guides</h2>
+<h2>The 2011 &amp; Beyond Era of Living Style Guides</h2>
 <p>Time passed, and things got quiet on the pattern front. Really quiet. Other stuff was going on.</p>
 <p>In 2010, Ethan wrote a <a href="http://alistapart.com/article/responsive-web-design">responsive web design</a> thing. HTML &amp; CSS increased in power and simplicity simultaneously. Designers began prototyping and building in code (and arguing about unicorns).</p>
 <p>As a result, design-oriented and architecturally inclined minds began to organize front-end assets in maintainable libraries. <a href="http://getbootstrap.com">Bootstrap</a> hit, as did <a href="http://foundation.zurb.com/">Foundation</a>. Anna Debenham wrote about <a href="http://24ways.org/2011/front-end-style-guides/">building and maintaining living guides</a>. Mailchimp shared their <a href="http://us5.campaign-archive1.com/?u=7e093c5cf4&amp;id=ead8a72012&amp;e=ecb25a3f93">UI Patterns</a>. Brad Frost got atomic and worked with a team to launch <a href="http://patternlab.io/">PatternLab</a>. System of style and components exploded, but “traditional” patterns didn’t follow along.</p>
-<h3 id="our-community-diluted-patterns-definition">Our Community Diluted Pattern’s Definition</h3>
+<h3>Our Community Diluted Pattern’s Definition</h3>
 <p>Where does this leave us? Many use patterns and components interchangeably as synonyms. Others explain “ patterns are complex components, arranged together, right?” Many can’t really say. Yet, a few high-profile libraries, like Google Material, strictly delineate the two.</p>
 <p>I would spend energy distinguishing the two. But explaining abstract things is tiresome. Naming is hard. I moved on.</p>
 <hr>
-<h2 id="why-patterns-again-now">Why “Patterns” Again, Now?</h2>
+<h2>Why “Patterns” Again, Now?</h2>
 <p>Folks are talking patterns again. In 2016, many of my clients began elevating (traditionally defined) UX Patterns for early system work. Still a lower priority relative to style and components, pattern interest is yet on the rise.</p>
 <p>My conversations indicate this interest is due to:</p>
 <ul>
@@ -303,7 +255,7 @@
 <p>Conclusion? System teams should invest in patterns too. Obviously, right?</p>
 <p>Not so fast.</p>
 <hr>
-<h2 id="most-system-teams-shouldnt-invest-in-many-patterns">(Most) System Teams Shouldn’t Invest In (Many) Patterns</h2>
+<h2>(Most) System Teams Shouldn’t Invest In (Many) Patterns</h2>
 <p>I adore Google Material’s collection. I find inspiration in GE Predix’s expansion into patterns of flows and apps. But those enterprises are massive!</p>
 <p>Most teams and organizations I serve are one or two orders of magnitude smaller than that. Therefore, when pattern patter arises I’ll advise a cautious, more deliberate pattern investment because:</p>
 <ul>
@@ -315,7 +267,7 @@
 <li>Patterns help improve design quality, no doubt. But <strong>patterns</strong>  <strong>don’t necessarily improve – and can even lead to a lack of – cohesiveness</strong> , another primary goal of system efforts. Citing a pattern’s abstract flexibility, designers can interpret patterns differently, resulting in different solutions that may be inconsistent to a customer.</li>
 </ul>
 <p>Don’t get me wrong, I value patterns. It’s just not that I’ve found a justifiable return on investment in creating a reasonably sized pattern library in-house.</p>
-<h3 id="start-with-one-essential-pattern">Start with One Essential Pattern</h3>
+<h3>Start with One Essential Pattern</h3>
 <p>On the other hand, I encourage small-to-medium size teams to compose just the most essential patterns unique to their customer experience:</p>
 <ul>
 <li>A bank’s pattern to <strong>move money</strong> from one account to another</li>
@@ -325,16 +277,155 @@
 <p>To these companies, such a moment is fundamental. A pattern provides a way forward to a consistent experience across such an arc of the interaction whether applied on web, iOS, Android, or Windows.</p>
 <p>However, start with one. And when you find success, be wary of setting expectations that an essential pattern signals a vast library next.</p>
 <hr>
-<h2 id="then-who-creates-most-of-the-patterns-could-it-be-the-design-community-together">Then Who Creates Most of the Patterns? Could it be the Design Community, Together?</h2>
+<h2>Then Who Creates Most of the Patterns? Could it be the Design Community, Together?</h2>
+<p>Patterns, if written well, probably don’t apply just to your team or even just your company. Well written patterns probably apply to <em>everyone, everywhere,</em> doing what we do.</p>
+<p>In the latter part of the last decade, lots of endeavoring designers published their own libraries. Now, there’s a vibrant, engaged system community and tools where we could work together to write patterns we all benefit from. Is now the moment for a community to dive into UX Patterns? I’m not convinced, but I’m open minded.</p>
+<p>Plus, Alexander didn’t write A Pattern Language for a client, but for an architecture community. A book for everyone.</p>
+<p>In “<a href="https://ethanmarcotte.com/wrote/pattern-patter/">Pattern patter.</a>”, Ethan Marcotte writes yearningly for more design patterns in our practice. For now, many teams build libraries reusable components. However, these libraries usually lack thoughtful guidance to resolve myriad forces at play to compose interfaces effectively. Today’s libraries are (just) a kit of interface parts.</p>
+<p>Ethan hints at the gap between reusable snippet and principled guidance. The call for <em>more</em> patterns, in my opinion, it misses a point. Those “pattern” snippets aren’t patterns at all. At least not in the formal sense. Those snippets are components. And conflating the two confuses and clouds our judgment on why in-house teams don’t pursue patterns much anymore.</p>
+<p>Let’s trace pattern history to understand the difference.</p>
+<hr>
+<h2>Pattern Provenance</h2>
+<p>In learning patterns, designers immediately encounter Christopher Alexander’s inspirational <a href="https://www.patternlanguage.com/bookstore/bookshelf.html#0"><em>A Pattern Language</em></a> (1977).</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/2.png" alt="Photograph of A Pattern Language book">
+    </div>
+    <figcaption class="escom-article-figure__caption">Christopher Alexander’s A Pattern Language.</figcaption>
+</figure>
+<p>The book is required reading (or browsing, since it’s THICK) for any aspiring design librarian. The book lays out myriad patterns — Arcades, Sequence of Sitting Spaces, Six-Foot Balcony, and 253 others — as a language options to ground sound architectural designs and decision making.</p>
+<p>Alexander’s catalog sets a content model for each pattern we emulate today:</p>
+<ul>
+<li><strong>Name</strong></li>
+<li><strong>Problem Statement</strong></li>
+<li><strong>Sensitizing Picture</strong> (always at the top)</li>
+<li><strong>Use When</strong> (and often Don’t Use When)</li>
+<li><strong>Guidelines</strong> rich with examples and scenarios</li>
+</ul>
+<h3>Patterns in Software</h3>
+<p>You can trace Alexander’s influence into software engineering with <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612"><em>Design Patterns:Elements of Reusable Object Oriented Software</em></a> (1994) by Gamma, Helm, Johnson, and Vlissides.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/3.png" alt="Photograph of Design Patterns book">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>Design Patterns quotes Alexander’s definition of a pattern:</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Each pattern describes a problem that occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, &lt;strong&gt;without ever doing it the same way twice&lt;/strong&gt; (emphasis added).
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Chrisopher Alexander
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>The book then differentiates patterns from the components of today’s “living style guides:”</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            Design patterns are not about designs such as linked lists and hash tables that can be … reused as is. Nor are they complex, domain-specific designs for an entire application or subsystem. The design patterns in this book are descriptions … that are [then] customized to solve a general design problem in a particular context.
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Christopher Alexander
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>Unlike patterns, components we use are already built for domain-specific reuse within a system. For example, a button is built for the web using HTML and CSS snippets to apply a visual language (like Material Design) for a layout motif (like a responsive site or dashboard app).</p>
+<hr>
+<h2>The Rise of Patterns in Digital Design</h2>
+<p>In the mid-2000’s, Yahoo’s massive design organization released their pattern library to the public.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/4.png" alt="Screenshots of the Yahoo Pattern Library">
+    </div>
+    <figcaption class="escom-article-figure__caption">Yahoo Pattern Library Home, About &amp; Download pages, <a href="https://developer.yahoo.com/ypatterns/" rel="nofollow noopener" target="_blank">https://developer.yahoo.com/ypatterns/</a></figcaption>
+</figure>
+<p>Grounded by pioneering work of <a href="https://twitter.com/uipatternscom">Jenifer Tidwell</a>, luminaries like <a href="https://twitter.com/emalone">Erin Malone</a>, <a href="https://twitter.com/mediajunkie?lang=en">Christian Crumlish</a>, and <a href="https://twitter.com/billwscott?lang=en">Bill Scott</a> contributed to the library that took at least my community (information architects) by storm. Erin <a href="http://boxesandarrows.com/implementing-a-pattern-library-in-the-real-world-a-yahoo-case-study/">wrote up their whole process</a> on boxesandarrows.com. It’s processes and considerations are familiar to today’s design system makers. Many revered Yahoo then as they revere Salesforce Lightning and Google Material now.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/5.png" alt="Photograph of pattern books from the latter 2000s">
+    </div>
+    <figcaption class="escom-article-figure__caption">Design pattern books from the latter 2000s</figcaption>
+</figure>
+<h3>Pattern Literature Explodes</h3>
+<p>As the decade closed, <a href="https://developer.yahoo.com/ypatterns/about/libraries.html">many more libraries emerged</a> and books provided in-depth pattern catalogs from a variety of perspectives:</p>
+<ul>
+<li><a href="https://www.amazon.com/Designing-Interfaces-Patterns-Effective-Interaction/dp/1449379702/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1483640085&amp;sr=1-1&amp;keywords=Designing+Interfaces">Designing Interfaces</a> (Jenifer Tidwell, 2005), with associated <a href="http://designinginterfaces.com/patterns/">online catalog</a></li>
+<li><a href="https://www.amazon.com/Designing-Web-Interfaces-Principles-Interactions/dp/0596516258/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1483640067&amp;sr=1-1&amp;keywords=Designing+Web+Interfaces">Designing Web Interfaces</a> (Scott and Neil, 2009)</li>
+<li><a href="https://www.amazon.com/Designing-Social-Interfaces-Principles-Experience/dp/0596154925">Designing Social Interfaces</a> (Crumlish and Malone, 2009), with associate <a href="http://www.designingsocialinterfaces.com/patterns/Main_Page">online catalog</a></li>
+<li><a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a> (Curtis, 2009)</li>
+<li><a href="https://www.amazon.com/Search-Patterns-Discovery-Peter-Morville/dp/0596802277">Search Patterns</a> (Peter Morville, 2010)</li>
+</ul>
+<hr>
+<h2>However, Patterns Aren’t Components</h2>
+<p>Yahoo’s pattern library was a watershed moment as my career careened into components, patterns, and systems. It coincided with my first large scale library experience at sun.com from 2006–2010. Sun’s library was the most sophisticated library I’ve ever contributed to. However, those things we made at sun.com – and what so many teams make now – weren’t patterns in the formal sense.</p>
+<p>In <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a>, I describe that <strong>components are designed and built</strong> in code, ready for reuse by plopping in a sketch file or HTML page, <strong>patterns are abstract, principled guidance</strong> applied <em>as you design and build.</em></p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/patterns-components/6.png" alt="Annotated screenshot of Yahoo and Bootstrap Accordion pages">
+    </div>
+    <figcaption class="escom-article-figure__caption">An accordion as a <a href="https://developer.yahoo.com/ypatterns/navigation/accordion.html" rel="nofollow noopener" target="_blank">Yahoo Design Pattern</a> and <a href="http://getbootstrap.com/javascript/#collapse-example-accordion" rel="nofollow noopener" target="_blank">Bootstrap Javascript-driven Component</a></figcaption>
+</figure>
+<p><strong>Components are how something DOES work</strong> , inclusive of tradeoffs and constraints realized through a build process. <strong>Patterns describe how something SHOULD work</strong> under preferred conditions and suggestions of how to cope with tradeoffs.</p>
+<p><strong>Components are an interface chunk</strong> to be added to an overall layout. whereas <strong>patterns may be UI or a variety of other things</strong> , like a behavior, flow, application motif or something else.</p>
+<p>Completed <strong>components exhibit a visual language</strong> in polished, precise detail, yet <strong>patterns are independent of any particular skin</strong> and flexibly adapts across any visual language.</p>
+<p>In Modular Web Design, Christian Crumlish (one time curator of the Yahoo pattern library) reinforced this nature of this distinction at Yahoo too. The public pattern library was related to but distinct from a ONE universal components library applied in-house across 80–90% of Yahoo’s product portfolio at the time.</p>
+<hr>
+<h2>The 2011 &amp; Beyond Era of Living Style Guides</h2>
+<p>Time passed, and things got quiet on the pattern front. Really quiet. Other stuff was going on.</p>
+<p>In 2010, Ethan wrote a <a href="http://alistapart.com/article/responsive-web-design">responsive web design</a> thing. HTML &amp; CSS increased in power and simplicity simultaneously. Designers began prototyping and building in code (and arguing about unicorns).</p>
+<p>As a result, design-oriented and architecturally inclined minds began to organize front-end assets in maintainable libraries. <a href="http://getbootstrap.com">Bootstrap</a> hit, as did <a href="http://foundation.zurb.com/">Foundation</a>. Anna Debenham wrote about <a href="http://24ways.org/2011/front-end-style-guides/">building and maintaining living guides</a>. Mailchimp shared their <a href="http://us5.campaign-archive1.com/?u=7e093c5cf4&amp;id=ead8a72012&amp;e=ecb25a3f93">UI Patterns</a>. Brad Frost got atomic and worked with a team to launch <a href="http://patternlab.io/">PatternLab</a>. System of style and components exploded, but “traditional” patterns didn’t follow along.</p>
+<h3>Our Community Diluted Pattern’s Definition</h3>
+<p>Where does this leave us? Many use patterns and components interchangeably as synonyms. Others explain “ patterns are complex components, arranged together, right?” Many can’t really say. Yet, a few high-profile libraries, like Google Material, strictly delineate the two.</p>
+<p>I would spend energy distinguishing the two. But explaining abstract things is tiresome. Naming is hard. I moved on.</p>
+<hr>
+<h2>Why “Patterns” Again, Now?</h2>
+<p>Folks are talking patterns again. In 2016, many of my clients began elevating (traditionally defined) UX Patterns for early system work. Still a lower priority relative to style and components, pattern interest is yet on the rise.</p>
+<p>My conversations indicate this interest is due to:</p>
+<ul>
+<li><strong>Teams have solved how to systematize style and atomic components</strong> at a high level. Non-designers get it and expect a “mini-bootstrappy kit made for us” with both. Patterns seem a logical next step.</li>
+<li><strong>More systems teams are funded and operate predictably</strong>. As a system matures, they build a home and run workflows to disseminate advice to a wide community. Patterns can piggy back on this place to live.</li>
+<li><strong>It feels wrong to “leave UX out.”</strong> UX designers begrudgingly admit that visual style threaded into a component library offers a predictable ROI across teams. However, that’s surface. These don’t address reusable, more structural solutions that UX designers grapple with. Patterns provide a platform for UX designers to share, debate, and converge on complex challenges.</li>
+</ul>
+<p>Conclusion? System teams should invest in patterns too. Obviously, right?</p>
+<p>Not so fast.</p>
+<hr>
+<h2>(Most) System Teams Shouldn’t Invest In (Many) Patterns</h2>
+<p>I adore Google Material’s collection. I find inspiration in GE Predix’s expansion into patterns of flows and apps. But those enterprises are massive!</p>
+<p>Most teams and organizations I serve are one or two orders of magnitude smaller than that. Therefore, when pattern patter arises I’ll advise a cautious, more deliberate pattern investment because:</p>
+<ul>
+<li>Designers apply patterns to make decisions. As a result, <strong>patterns are for designers</strong> (and developers) primarily in practice. They aren’t the actual decisions used by teams as products are made. Therefore, patterns can feel less relevant to a narrower audience.</li>
+<li>Patterns are universal. As a result, <strong>patterns are abstract</strong> , and thus effortful to reuse. As a decision-making mechanism, they offer considerations to judge, not a prescriptively solved item like a styled and coded button, tab, or card.</li>
+<li><strong>Patterns aren’t measurable</strong>. Development organizations value tools teams can predictability and efficiently reuse. Visual style and component adoption can be measured. Patterns? Not nearly so much.</li>
+<li><strong>Patterns are made of lots of words</strong>. Good patterns always start with a picture. However, understanding a pattern requires reading words. Lots of words. Usability testing of system doc suggests designers and devs don’t want to read: “Enough with the words. Gimme stuff to use.”</li>
+<li><strong>Patterns are expensive</strong>. Composing patterns takes time and iteration, comparisons and conversations, whittling down to essential truths. That’s not quick and easy to do well. If you do it quickly, it shows in far wordier, narrowly considered advice. Again, the words.</li>
+<li>Patterns help improve design quality, no doubt. But <strong>patterns</strong>  <strong>don’t necessarily improve – and can even lead to a lack of – cohesiveness</strong> , another primary goal of system efforts. Citing a pattern’s abstract flexibility, designers can interpret patterns differently, resulting in different solutions that may be inconsistent to a customer.</li>
+</ul>
+<p>Don’t get me wrong, I value patterns. It’s just not that I’ve found a justifiable return on investment in creating a reasonably sized pattern library in-house.</p>
+<h3>Start with One Essential Pattern</h3>
+<p>On the other hand, I encourage small-to-medium size teams to compose just the most essential patterns unique to their customer experience:</p>
+<ul>
+<li>A bank’s pattern to <strong>move money</strong> from one account to another</li>
+<li>A database version control company’s pattern to <strong>connect to a database</strong></li>
+<li>A sport performance analysis tool’s pattern to open or <strong>edit video</strong></li>
+</ul>
+<p>To these companies, such a moment is fundamental. A pattern provides a way forward to a consistent experience across such an arc of the interaction whether applied on web, iOS, Android, or Windows.</p>
+<p>However, start with one. And when you find success, be wary of setting expectations that an essential pattern signals a vast library next.</p>
+<hr>
+<h2>Then Who Creates Most of the Patterns? Could it be the Design Community, Together?</h2>
 <p>Patterns, if written well, probably don’t apply just to your team or even just your company. Well written patterns probably apply to <em>everyone, everywhere,</em> doing what we do.</p>
 <p>In the latter part of the last decade, lots of endeavoring designers published their own libraries. Now, there’s a vibrant, engaged system community and tools where we could work together to write patterns we all benefit from. Is now the moment for a community to dive into UX Patterns? I’m not convinced, but I’m open minded.</p>
 <p>Plus, Alexander didn’t write A Pattern Language for a client, but for an architecture community. A book for everyone.</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -345,7 +436,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -374,127 +464,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -502,257 +487,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -760,255 +535,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -1016,121 +581,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1140,247 +600,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1388,119 +640,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1512,7 +659,7 @@
 
 
 
-    
+
 
     
 
@@ -1549,7 +696,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1627,10 +773,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

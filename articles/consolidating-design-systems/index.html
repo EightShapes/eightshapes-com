@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Consolidating Design Systems</title>
+        
+            <title>Eightshapes > @components > Consolidating Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/consolidating-design-systems/" />
+            <meta property="og:title" content="Consolidating Design Systems" />
+            <meta property="og:description" content="Over time, systems happen." />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Consolidating Design Systems" />
+            <meta name="twitter:description" value="Over time, systems happen." />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/consolidating-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/consolidating-design-systems" />
-  <meta property="og:title" content="Consolidating Design Systems" />
-  <meta property="og:description" content="Over time, systems happen." />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/consolidating-design-systems/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Consolidating Design Systems" />
-  <meta name="twitter:description" value="Over time, systems happen." />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/consolidating-design-systems/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/consolidating-design-systems" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,81 +95,67 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 2/27/2018 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            9min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Consolidating Design Systems</h1>
-                
-                <h2 class="escom-article__deck">Over time, systems happen.</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/consolidating-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 2/27/2018 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        18 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Consolidating Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Over time, systems happen.</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/consolidating-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
     <p>An enterprise usually has many concurrent design systems. Separate groups chart paths loosely aware or even willfully ignorant of what others do. Many systems isn’t necessarily bad. Different programs may support different experiences and teams with different tools, and that’s ok.</p>
 <p>Other times, systems keep experiences and teams apart. Unjustifiable inconsistency. Varying quality. Unmistakable redundancy. “We can do better,” an enterprise leader may say, “designing at scale.” And so they ponder:</p>
-
-
-  
-
-
-
-        <div class="escom-bar-quote">
-            Should we consolidate our design systems? If so, how?
-        </div>
-
-
-
-  <p>Consolidation takes effort, time, and an emotional capability to relinquish (some) control. Heretofore independent systems may resist this uncomfortable change. So an approach to consolidation is best shared, rational, and yet also decisive. First, share an understanding of how each system arose. Second, rationalize the features, outputs, and practices on offer. Finally, define a consolidated identity and how it comes together.</p>
+<div class="escom-bar-quote">
+    Should we consolidate our design systems? If so, how?
+</div>
+<p>Consolidation takes effort, time, and an emotional capability to relinquish (some) control. Heretofore independent systems may resist this uncomfortable change. So an approach to consolidation is best shared, rational, and yet also decisive. First, share an understanding of how each system arose. Second, rationalize the features, outputs, and practices on offer. Finally, define a consolidated identity and how it comes together.</p>
 <hr>
-<h2 id="how-did-we-get-here-map-the-ecosystem">How Did We Get Here? Map the Ecosystem.</h2>
+<h2>How Did We Get Here? Map the Ecosystem.</h2>
 <p>Products (here, a circle) adopt systems (here, a diamond) to efficiently and consistently compose their experience.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/1.png" alt="Diagram of product depends on system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <p>Across an enterprise, disparate systems can arise separate by myriad boundaries of teams, organization units, and platforms.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/1.png" alt="Diagram of product depends on system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>Across an enterprise, disparate systems can arise separate by myriad boundaries of teams, organization units, and platforms.</p>
 <p>For example, systems can mirror organizational boundaries, such as:</p>
 <ul>
 <li><strong>Product</strong> serving customers across web, native, and other touchpoints.</li>
@@ -178,54 +165,31 @@
 </ul>
 <p>While distinct systems, outsiders assume they share a common visual language inherited from Brand. Or, at least the logo, right? Not always. Inspection reveals massive discrepancies. One experience touts modern typography sourced from Brand in 2018. An archaic internal toolset from 2013 still rocks Verdana. It’s as if they are from separate companies. If you’ve worked at a company of any scale, you’ve lived this.</p>
 <p>Larger entities — think the size of Microsofts, Amazons, IBMs, GEs, or any of the large banks — may replicate such system divisions across lines of business.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/2.png" alt="Complex diagram mapping systems to products">
-        </div>
-        <figcaption class="escom-article-figure__caption">System of systems for a large bank, in need of more consolidation</figcaption>
-    </figure>
-
-
-
-  <p>In other cases, lines of business also create boundaries, such as a bank’s groups and apps for credit card, banking accounts, and loans. Leaders in design, product and engineering may be on their consolidation journey, having consolidated some (like credit card and banking) while others (loans and institutional) lag behind.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/2.png" alt="Complex diagram mapping systems to products">
+    </div>
+    <figcaption class="escom-article-figure__caption">System of systems for a large bank, in need of more consolidation</figcaption>
+</figure>
+<p>In other cases, lines of business also create boundaries, such as a bank’s groups and apps for credit card, banking accounts, and loans. Leaders in design, product and engineering may be on their consolidation journey, having consolidated some (like credit card and banking) while others (loans and institutional) lag behind.</p>
 <p>Distinct systems can also emerge due to a fairly basic premise:</p>
-
-
-  
-
-
-
-        <div class="escom-bar-quote escom-pull-quote--light">
-            “That system, over there, wasn’t made for us.”
-        </div>
-
-
-
-  <p>Maybe native design conventions differ from the better-funded web system. Or, there’s a belief that “Employee tools have different needs than customers. Therefore, we need a different visual style and components.” Flat out, maybe it’s thinly-veiled hubris: <em>their</em> system isn’t good enough for <em>our</em> stuff. Digging into this more subjective and often emotional divisiveness is important.</p>
+<div class="escom-bar-quote escom-pull-quote--light">
+    “That system, over there, wasn’t made for us.”
+</div>
+<p>Maybe native design conventions differ from the better-funded web system. Or, there’s a belief that “Employee tools have different needs than customers. Therefore, we need a different visual style and components.” Flat out, maybe it’s thinly-veiled hubris: <em>their</em> system isn’t good enough for <em>our</em> stuff. Digging into this more subjective and often emotional divisiveness is important.</p>
 <p>Well-intentioned system teams serving distinct portfolios do try to “stay in touch” and “share best practices.” Yet apart from a meeting here and a hallway conversation there, nothing comes to pass. Are they sharing outputs like code libraries, documentation, design asset libraries? Not even close.</p>
 <hr>
-<h2 id="what-do-we-have-compare--rationalize">What Do We Have? Compare &amp; Rationalize.</h2>
+<h2>What Do We Have? Compare &amp; Rationalize.</h2>
 <p>If you are considering consolidating, the first step is compare and rationalize differences. Your objective: help makers, customers, and sponsors get a sense of how things differ and could change as a result.</p>
-<h3 id="compare-libraries--outputs">Compare Libraries &amp; Outputs</h3>
+<h3>Compare Libraries &amp; Outputs</h3>
 <p>To start, compare features of visual style, UI components, and other categories. Identify what features exist, how they are disseminated (as code and design assets), and depth of documentation of each part.</p>
-
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/3.png" alt="Rationalization table of two different systems">
-        </div>
-        <figcaption class="escom-article-figure__caption">High-level system comparison that precedes a more thorough audit and report</figcaption>
-    </figure>
-
-
-
-  <p>For example, a Product group’s system may be more robustly featured and funded. On the other hand, Intranet’s system may be less mature, minimally funded. In that case, a high-level comparison would communicate:</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/3.png" alt="Rationalization table of two different systems">
+    </div>
+    <figcaption class="escom-article-figure__caption">High-level system comparison that precedes a more thorough audit and report</figcaption>
+</figure>
+<p>For example, a Product group’s system may be more robustly featured and funded. On the other hand, Intranet’s system may be less mature, minimally funded. In that case, a high-level comparison would communicate:</p>
 <ul>
 <li><strong>Visual style: Inconsistent</strong>.
 Hopes of existing alignment are dashed. The <em>logo</em> and core brand <em>color</em> match, but divergent neutral, interactive, and accent colors are in utter conflict. <em>Typography</em> is a mess. <em>Icons</em> are sourced from libraries with distinct tones.</li>
@@ -238,35 +202,28 @@ Product offers <em>React</em> code and <em>Sketch</em> assets, while Internal to
 <li><strong>Documentation: Different but both strong</strong>.
 Both teams invested heavily in quality code documenting and contain relevant design guidance. That’s rare, but if true, then shift conversation to content reconciliation and information architecture concerns.</li>
 </ul>
-<h3 id="evaluate-system-practices-too">Evaluate System Practices, Too</h3>
+<h3>Evaluate System Practices, Too</h3>
 <p>Systems aren’t just features. You must also evaluate how each system gets work done, expressed through the teams, processes, and depth of adoption already established. So also compare:</p>
 <ul>
 <li><strong>People</strong> dedicated to making the system (and who funds their capacity) and the contribution activity from each community.
-<em>Reference</em>: <a href="/articles/designing-a-systems-team">Designing a System Teams</a>, <a href="View%20story">Team Models for Scaling Design Systems</a>, <a href="/articles/contributions-to-design-systems">Contributions to Design Systems</a></li>
+<em>Reference</em>: <a href="/articles/designing-a-systems-team">Designing a System Teams</a>, <a href="/articles/team-models-for-scaling-a-design-system">Team Models for Scaling Design Systems</a>, <a href="/articles/contributions-to-design-systems">Contributions to Design Systems</a></li>
 <li><strong>Processes</strong> done regularly with proficiency as a system team and group.
 <em>Reference</em>: <a href="/articles/practicing-design-systems">Practicing Design Systems</a></li>
 <li><strong>Products</strong> (and other sites and experiences) serving as the customers would adopt the consolidated system across organizational boundaries.
 <em>Reference</em>: <a href="/articles/adopting-design-systems">Adopting Design Systems</a></li>
 </ul>
 <hr>
-<h2 id="how-do-we-consolidate-pick-a-path">How Do We Consolidate? Pick a Path.</h2>
+<h2>How Do We Consolidate? Pick a Path.</h2>
 <p>System histories and rationalization in hand, time to answer the big question: how do we consolidate and what — if any — systems survive it?</p>
-<h3 id="option-1-keep-both-do-nothing">Option #1. Keep Both. Do Nothing.</h3>
+<h3>Option #1. Keep Both. Do Nothing.</h3>
 <p>Sometimes, teams walk away from the table. They aren’t ready to yield the autonomy, established norms, and distinct goals they don’t share. Another big threat? Resistance to change among their adopting customers.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/4.png" alt="Diagram of two systems, remaining distinct">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <ul>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/4.png" alt="Diagram of two systems, remaining distinct">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
 <li>For features, <strong>nothing changes</strong>. Both persist redundant libraries.</li>
 <li>For people and processes, <strong>disconnected</strong> practices remain.</li>
 <li>For products, <strong>nothing changes</strong>. Adopters dodge a refactoring or redesign, yet users continue with lower quality, inconsistent experiences.</li>
@@ -274,22 +231,15 @@ Both teams invested heavily in quality code documenting and contain relevant des
 <p><em>Takeaways</em>: If adoption of a consolidated system isn’t likely, why bother ?Traditionally, slowly changing products (I’m looking at you, internal tools!) are less likely to prioritize what consolidation brings.</p>
 <p>To avoid doing nothing, begin conversation with agreement that both portfolios intend to use a consolidated system, soon. Also, to push conversation past a “do nothing” impasse, leadership must care enough, mandate consolidation, and designate a system to serve — and expected to be used by — teams into the future.</p>
 <hr>
-<h3 id="option-2-keep-both-and-start-sharing-subsystems">Option #2. Keep Both and Start Sharing Subsystems.</h3>
+<h3>Option #2. Keep Both and Start Sharing Subsystems.</h3>
 <p>Complete consolidation may be too ambitious, yet teams could start with subsystem(s). Multiple systems with smaller connections — in code <em>and</em> collaboration — makes things more complicated. But start small, pilot sharing the foundational things, and see if it works.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/5.png" alt="Diagram of two systems depending on an ascendant shared system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <ul>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/5.png" alt="Diagram of two systems depending on an ascendant shared system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
 <li>For features, <strong>converge foundations, even if design before code</strong>. Start with style (color, typography) applied to essential components (buttons, forms). Do teams share a dependency on <a href="/articles/tokens-in-design-systems">design tokens</a> that are separated from any given component library? Be realistic that a single source-of-truth for front-end code and documentation probably come later.</li>
 <li>For people and process, <strong>increase collaboration</strong> across groups. Brown bags and random shares should give way to vibrant Slack discussions and and regularly attended critique. Leaders must create space and time for this, but it may not yet be time to unify rituals into a single team.</li>
 <li>For products, <strong>demonstrate proof of intent</strong> through willing teams on both sides without a mandate wide change all products now.</li>
@@ -297,44 +247,175 @@ Both teams invested heavily in quality code documenting and contain relevant des
 <p><em>Takeaways</em>: It’s hard to stay connected, in agreement, and synchronized across boundaries without a long term commitment.</p>
 <p>I’ve never seen a subsystem-only step occur, although I’ve discussed it with a few organizations. The approach appeals to sensibilities of separating concerns and making incremental progress. Yet change will be slow and and lack authoritative oomph. My role as outsider often leads to the harder, strategic question: are we <em>really</em> consolidating or not, and if so, how?</p>
 <hr>
-<h3 id="option-3-retire-both-and-build-a-new-system-together">Option #3. Retire Both and Build a New System Together</h3>
+<h3>Option #3. Retire Both and Build a New System Together</h3>
 <p>Instead of sustaining existing features from one or both systems, you may retire both as a reboot to something new. Blowing up the old and starting fresh, bigger may be triggered by an external force — an executive mandate, brand refresh, or tech replatform. Maybe all of the above.</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/6.png" alt="Diagram of all products shifting to a shared, new third system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <ul>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/6.png" alt="Diagram of all products shifting to a shared, new third system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
 <li>For features, once a <strong>new design language</strong> is in play, so too will be UI components and code too. The “softer” libraries like UX patterns and editorial may avoid reimagination, but they won’t be in the spotlight.</li>
 <li>For people and processes, a <strong>larger team</strong> may combines the capacity of both existing programs under a bigger umbrella, although maybe <strong>efficiencies risk trimming system capacity</strong>.</li>
 <li>For products, every … single … experience faces <strong>uncertain, potentially large change</strong>. Existing adopters from all sides may wince at integrating a massive redesign while being subsumed by something intended for an even more diverse portfolio.</li>
 </ul>
 <p><em>Takeaways</em>: Consolidation framed as a merger of equals raises complications. Decision-making is unclear. Everything is up for discussion. Without a considerable reboot leveling the playing field and <em>really</em> starting fresh, rationalization could dilute the value of both and integration becomes time-consuming. It’s expensive to reinvent from the ground up. Worse, every product’s change will take a long time. This is a difficult path to tread.</p>
 <hr>
-<h3 id="option-4-keep-one-and-inherit-features-from-the-other">Option #4. Keep One and Inherit Features From the Other</h3>
+<h3>Option #4. Keep One and Inherit Features From the Other</h3>
 <p>Rationalization often indicates a predominant choice. A stronger system. As such, the mindset shifts to acquisition: what must we add from the weaker to the stronger system to best support all customers?</p>
-
-
-  
-
-    <figure class="escom-article-figure">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/7.png" alt="Diagram of some products shifting to a new system">
-        </div>
-        <figcaption class="escom-article-figure__caption"></figcaption>
-    </figure>
-
-
-
-  <ul>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/7.png" alt="Diagram of some products shifting to a new system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
+<li>For features, acquired customers will <strong>demand feature parity</strong> with what they currently use. You can’t drop components, features, frameworks, and supported platforms, can you? Possibly, but the surviving system will need to grow and diversify to serve a wider customer base.</li>
+<li>For people and processes, combine both to ideally <strong>grow the team</strong> to serve the wider base. Adopting a stronger system favors adopting the workflows and operations of that system, but not always.</li>
+<li>For products, it’s business as usual for those using the surviving system. On the other hand, <strong>acquired customers must adopt something new</strong>.</li>
+</ul>
+<p>When discussing an acquisition, ask the hard questions:</p>
+<ul>
+<li>Is the acquiring system willing to support more teams with more diverse needs likely less relevant to their current customer base?</li>
+<li>Is the acquired product community and system team willing to yield to the design, code and documentation already on offer? Or does friction await?</li>
+<li>Are organizational units migrating to a new system willing to engage regularly and drive change so teams use the system, faithfully?</li>
+<li>Who funds future system efforts? Will a shared cost model work for previously independent sponsors, or will the team drift towards one or the other existing cost center, biasing the results?</li>
+</ul>
+<p><em>Takeaways</em>: A stronger system’s success places them in a powerful position to dictate terms. Acquired systems may bring weaker tools, processes, capacity and commitments from their leaders. Yet their core features may still be strong, as is their emotional tie to them.</p>
+<p>When talking mergers and acquisitions, “look into the books” of weaker system too. They may be looking for a way out, an existential lifeline, otherwise risking a fade into an abyss without a consolidation.</p>
+<p>These imbalances makes consolidation conversations difficult. Your goal? Realizing the promise of a thriving practice serving more teams at scale. So time to exercise some leadership <em>and</em> management to make consolidation best serve your community!</p>
+<p>An enterprise usually has many concurrent design systems. Separate groups chart paths loosely aware or even willfully ignorant of what others do. Many systems isn’t necessarily bad. Different programs may support different experiences and teams with different tools, and that’s ok.</p>
+<p>Other times, systems keep experiences and teams apart. Unjustifiable inconsistency. Varying quality. Unmistakable redundancy. “We can do better,” an enterprise leader may say, “designing at scale.” And so they ponder:</p>
+<div class="escom-bar-quote">
+    Should we consolidate our design systems? If so, how?
+</div>
+<p>Consolidation takes effort, time, and an emotional capability to relinquish (some) control. Heretofore independent systems may resist this uncomfortable change. So an approach to consolidation is best shared, rational, and yet also decisive. First, share an understanding of how each system arose. Second, rationalize the features, outputs, and practices on offer. Finally, define a consolidated identity and how it comes together.</p>
+<hr>
+<h2>How Did We Get Here? Map the Ecosystem.</h2>
+<p>Products (here, a circle) adopt systems (here, a diamond) to efficiently and consistently compose their experience.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/1.png" alt="Diagram of product depends on system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<p>Across an enterprise, disparate systems can arise separate by myriad boundaries of teams, organization units, and platforms.</p>
+<p>For example, systems can mirror organizational boundaries, such as:</p>
+<ul>
+<li><strong>Product</strong> serving customers across web, native, and other touchpoints.</li>
+<li><strong>Internal</strong> (aka, Intranet, Admin, “Enterprise”) apps serving employees.</li>
+<li><strong>Marketing</strong> (for some, “.com”) and ecommerce, usually in the form of content sites and/or pre- and post-purchase transactional apps.</li>
+<li><strong>Corporate</strong> sites about the company, finances, jobs, press, and microsites.</li>
+</ul>
+<p>While distinct systems, outsiders assume they share a common visual language inherited from Brand. Or, at least the logo, right? Not always. Inspection reveals massive discrepancies. One experience touts modern typography sourced from Brand in 2018. An archaic internal toolset from 2013 still rocks Verdana. It’s as if they are from separate companies. If you’ve worked at a company of any scale, you’ve lived this.</p>
+<p>Larger entities — think the size of Microsofts, Amazons, IBMs, GEs, or any of the large banks — may replicate such system divisions across lines of business.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/2.png" alt="Complex diagram mapping systems to products">
+    </div>
+    <figcaption class="escom-article-figure__caption">System of systems for a large bank, in need of more consolidation</figcaption>
+</figure>
+<p>In other cases, lines of business also create boundaries, such as a bank’s groups and apps for credit card, banking accounts, and loans. Leaders in design, product and engineering may be on their consolidation journey, having consolidated some (like credit card and banking) while others (loans and institutional) lag behind.</p>
+<p>Distinct systems can also emerge due to a fairly basic premise:</p>
+<div class="escom-bar-quote escom-pull-quote--light">
+    “That system, over there, wasn’t made for us.”
+</div>
+<p>Maybe native design conventions differ from the better-funded web system. Or, there’s a belief that “Employee tools have different needs than customers. Therefore, we need a different visual style and components.” Flat out, maybe it’s thinly-veiled hubris: <em>their</em> system isn’t good enough for <em>our</em> stuff. Digging into this more subjective and often emotional divisiveness is important.</p>
+<p>Well-intentioned system teams serving distinct portfolios do try to “stay in touch” and “share best practices.” Yet apart from a meeting here and a hallway conversation there, nothing comes to pass. Are they sharing outputs like code libraries, documentation, design asset libraries? Not even close.</p>
+<hr>
+<h2>What Do We Have? Compare &amp; Rationalize.</h2>
+<p>If you are considering consolidating, the first step is compare and rationalize differences. Your objective: help makers, customers, and sponsors get a sense of how things differ and could change as a result.</p>
+<h3>Compare Libraries &amp; Outputs</h3>
+<p>To start, compare features of visual style, UI components, and other categories. Identify what features exist, how they are disseminated (as code and design assets), and depth of documentation of each part.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/3.png" alt="Rationalization table of two different systems">
+    </div>
+    <figcaption class="escom-article-figure__caption">High-level system comparison that precedes a more thorough audit and report</figcaption>
+</figure>
+<p>For example, a Product group’s system may be more robustly featured and funded. On the other hand, Intranet’s system may be less mature, minimally funded. In that case, a high-level comparison would communicate:</p>
+<ul>
+<li><strong>Visual style: Inconsistent</strong>.
+Hopes of existing alignment are dashed. The <em>logo</em> and core brand <em>color</em> match, but divergent neutral, interactive, and accent colors are in utter conflict. <em>Typography</em> is a mess. <em>Icons</em> are sourced from libraries with distinct tones.</li>
+<li><strong>UI Components: Overlapping but Inconsistent</strong>.
+Both offer the same core set common components. But their design and variation taxonomy don’t at all match. Plus, each library <em>also</em> offers up to 20 other components that the other does not.</li>
+<li><strong>Additional Libraries: One vast, another empty</strong>.
+The Product catalog also strongly supports <em>UX Patterns</em>, <em>Accessibility</em>, <em>Layouts</em>, and <em>Motion</em>, while Internal Tools offers nothing beyond style and components. Where’s content strategy / <em>Editorial</em>? Both casually (or meekly) point to Brand’s PDF single page on tone.</li>
+<li><strong>Outputs: Different code frameworks, different design software</strong>.
+Product offers <em>React</em> code and <em>Sketch</em> assets, while Internal tools provides a dated <em>Angular</em> codebase and an <em>Adobe Illustrator</em> symbol set.</li>
+<li><strong>Documentation: Different but both strong</strong>.
+Both teams invested heavily in quality code documenting and contain relevant design guidance. That’s rare, but if true, then shift conversation to content reconciliation and information architecture concerns.</li>
+</ul>
+<h3>Evaluate System Practices, Too</h3>
+<p>Systems aren’t just features. You must also evaluate how each system gets work done, expressed through the teams, processes, and depth of adoption already established. So also compare:</p>
+<ul>
+<li><strong>People</strong> dedicated to making the system (and who funds their capacity) and the contribution activity from each community.
+<em>Reference</em>: <a href="/articles/designing-a-systems-team">Designing a System Teams</a>, <a href="/articles/team-models-for-scaling-a-design-system">Team Models for Scaling Design Systems</a>, <a href="/articles/contributions-to-design-systems">Contributions to Design Systems</a></li>
+<li><strong>Processes</strong> done regularly with proficiency as a system team and group.
+<em>Reference</em>: <a href="/articles/practicing-design-systems">Practicing Design Systems</a></li>
+<li><strong>Products</strong> (and other sites and experiences) serving as the customers would adopt the consolidated system across organizational boundaries.
+<em>Reference</em>: <a href="/articles/adopting-design-systems">Adopting Design Systems</a></li>
+</ul>
+<hr>
+<h2>How Do We Consolidate? Pick a Path.</h2>
+<p>System histories and rationalization in hand, time to answer the big question: how do we consolidate and what — if any — systems survive it?</p>
+<h3>Option #1. Keep Both. Do Nothing.</h3>
+<p>Sometimes, teams walk away from the table. They aren’t ready to yield the autonomy, established norms, and distinct goals they don’t share. Another big threat? Resistance to change among their adopting customers.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/4.png" alt="Diagram of two systems, remaining distinct">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
+<li>For features, <strong>nothing changes</strong>. Both persist redundant libraries.</li>
+<li>For people and processes, <strong>disconnected</strong> practices remain.</li>
+<li>For products, <strong>nothing changes</strong>. Adopters dodge a refactoring or redesign, yet users continue with lower quality, inconsistent experiences.</li>
+</ul>
+<p><em>Takeaways</em>: If adoption of a consolidated system isn’t likely, why bother ?Traditionally, slowly changing products (I’m looking at you, internal tools!) are less likely to prioritize what consolidation brings.</p>
+<p>To avoid doing nothing, begin conversation with agreement that both portfolios intend to use a consolidated system, soon. Also, to push conversation past a “do nothing” impasse, leadership must care enough, mandate consolidation, and designate a system to serve — and expected to be used by — teams into the future.</p>
+<hr>
+<h3>Option #2. Keep Both and Start Sharing Subsystems.</h3>
+<p>Complete consolidation may be too ambitious, yet teams could start with subsystem(s). Multiple systems with smaller connections — in code <em>and</em> collaboration — makes things more complicated. But start small, pilot sharing the foundational things, and see if it works.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/5.png" alt="Diagram of two systems depending on an ascendant shared system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
+<li>For features, <strong>converge foundations, even if design before code</strong>. Start with style (color, typography) applied to essential components (buttons, forms). Do teams share a dependency on <a href="/articles/tokens-in-design-systems">design tokens</a> that are separated from any given component library? Be realistic that a single source-of-truth for front-end code and documentation probably come later.</li>
+<li>For people and process, <strong>increase collaboration</strong> across groups. Brown bags and random shares should give way to vibrant Slack discussions and and regularly attended critique. Leaders must create space and time for this, but it may not yet be time to unify rituals into a single team.</li>
+<li>For products, <strong>demonstrate proof of intent</strong> through willing teams on both sides without a mandate wide change all products now.</li>
+</ul>
+<p><em>Takeaways</em>: It’s hard to stay connected, in agreement, and synchronized across boundaries without a long term commitment.</p>
+<p>I’ve never seen a subsystem-only step occur, although I’ve discussed it with a few organizations. The approach appeals to sensibilities of separating concerns and making incremental progress. Yet change will be slow and and lack authoritative oomph. My role as outsider often leads to the harder, strategic question: are we <em>really</em> consolidating or not, and if so, how?</p>
+<hr>
+<h3>Option #3. Retire Both and Build a New System Together</h3>
+<p>Instead of sustaining existing features from one or both systems, you may retire both as a reboot to something new. Blowing up the old and starting fresh, bigger may be triggered by an external force — an executive mandate, brand refresh, or tech replatform. Maybe all of the above.</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/6.png" alt="Diagram of all products shifting to a shared, new third system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
+<li>For features, once a <strong>new design language</strong> is in play, so too will be UI components and code too. The “softer” libraries like UX patterns and editorial may avoid reimagination, but they won’t be in the spotlight.</li>
+<li>For people and processes, a <strong>larger team</strong> may combines the capacity of both existing programs under a bigger umbrella, although maybe <strong>efficiencies risk trimming system capacity</strong>.</li>
+<li>For products, every … single … experience faces <strong>uncertain, potentially large change</strong>. Existing adopters from all sides may wince at integrating a massive redesign while being subsumed by something intended for an even more diverse portfolio.</li>
+</ul>
+<p><em>Takeaways</em>: Consolidation framed as a merger of equals raises complications. Decision-making is unclear. Everything is up for discussion. Without a considerable reboot leveling the playing field and <em>really</em> starting fresh, rationalization could dilute the value of both and integration becomes time-consuming. It’s expensive to reinvent from the ground up. Worse, every product’s change will take a long time. This is a difficult path to tread.</p>
+<hr>
+<h3>Option #4. Keep One and Inherit Features From the Other</h3>
+<p>Rationalization often indicates a predominant choice. A stronger system. As such, the mindset shifts to acquisition: what must we add from the weaker to the stronger system to best support all customers?</p>
+<figure class="escom-article-figure">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/consolidating-design-systems/7.png" alt="Diagram of some products shifting to a new system">
+    </div>
+    <figcaption class="escom-article-figure__caption"></figcaption>
+</figure>
+<ul>
 <li>For features, acquired customers will <strong>demand feature parity</strong> with what they currently use. You can’t drop components, features, frameworks, and supported platforms, can you? Possibly, but the surviving system will need to grow and diversify to serve a wider customer base.</li>
 <li>For people and processes, combine both to ideally <strong>grow the team</strong> to serve the wider base. Adopting a stronger system favors adopting the workflows and operations of that system, but not always.</li>
 <li>For products, it’s business as usual for those using the surviving system. On the other hand, <strong>acquired customers must adopt something new</strong>.</li>
@@ -350,11 +431,9 @@ Both teams invested heavily in quality code documenting and contain relevant des
 <p>When talking mergers and acquisitions, “look into the books” of weaker system too. They may be looking for a way out, an existential lifeline, otherwise risking a fade into an abyss without a consolidation.</p>
 <p>These imbalances makes consolidation conversations difficult. Your goal? Realizing the promise of a thriving practice serving more teams at scale. So time to exercise some leadership <em>and</em> management to make consolidation best serve your community!</p>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -365,7 +444,6 @@ Both teams invested heavily in quality code documenting and contain relevant des
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -394,127 +472,22 @@ Both teams invested heavily in quality code documenting and contain relevant des
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -522,257 +495,47 @@ Both teams invested heavily in quality code documenting and contain relevant des
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -780,255 +543,45 @@ Both teams invested heavily in quality code documenting and contain relevant des
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -1036,121 +589,16 @@ Both teams invested heavily in quality code documenting and contain relevant des
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1160,247 +608,39 @@ Both teams invested heavily in quality code documenting and contain relevant des
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1408,119 +648,14 @@ Both teams invested heavily in quality code documenting and contain relevant des
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1532,7 +667,7 @@ Both teams invested heavily in quality code documenting and contain relevant des
 
 
 
-    
+
 
     
 
@@ -1569,7 +704,6 @@ Both teams invested heavily in quality code documenting and contain relevant des
         
     </div>
 </div>
-
 
 
 
@@ -1647,10 +781,7 @@ Both teams invested heavily in quality code documenting and contain relevant des
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

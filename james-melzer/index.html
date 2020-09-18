@@ -14,18 +14,19 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; James Melzer</title>
+        
+            <title>EightShapes &gt; James Melzer</title>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-        
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="escom-page-type--marketing">
         
-    
+
+
+
     
     
 
@@ -50,7 +51,7 @@
 
 
 
-    
+
 
 <div class="esds-row esds-background--dark "
     
@@ -58,7 +59,7 @@
     <div class="esds-row__inner">
         
             
-        
+    
 s    
     
     
@@ -73,7 +74,7 @@ s
 
     <div class="escom-hero-profile">
         <div class="escom-hero-profile__image-wrap">
-            <a href="/chris-detzi" class="escom-hero-profile__nav escom-hero-profile__nav--previous">
+            <a href="/dan-brown" class="escom-hero-profile__nav escom-hero-profile__nav--previous">
                 
     
 
@@ -103,20 +104,20 @@ s
     </div>
 
 
-        <div class="esds-container--dark">
-            <div class="escom-long-form-text">
-                <p class="escom-long-form-text__p--l">
-                    As a UX designer and team lead, James connects business leaders, designers and developers to design the best solutions. James’ 18 years of experience includes large-scale information architecture, search, responsive design, and creating living style guides for design teams.
-                </p>
-            </div>
+    <div class="esds-container--dark">
+        <div class="escom-long-form-text">
+            <p class="escom-long-form-text__p--l">
+                As a UX designer and team lead, James connects business leaders, designers and developers to design the best solutions. James’ 18 years of experience includes large-scale information architecture, search, responsive design, and creating living style guides for design teams.
+            </p>
         </div>
-    
+    </div>
+
         
     </div>
 </div>
 
 
-    
+
 
 <div class="esds-row esds-container--white esds-row--tall-inset"
     
@@ -124,22 +125,52 @@ s
     <div class="esds-row__inner">
         
             
-        <div class="escom-long-form-text">
-                <p>
-                    James has led accounts and projects with diverse clients in industry, education, government, and civil society, on projects such as:
-                </p>
-                <ul>
-                    <li><strong>Led a design system team</strong> that helped a financial institution realize its efficiency and quality goals.</li>
-                    <li><strong>Built and governed a design system</strong> to achieve brand cohesiveness across dozens of vendor and in-house teams with over a hundred native apps.</li>
-                    <li><strong>Facilitated c-suite ideation</strong> toward an app's MVP, then led the team to realize the concept via prototypes. </li>
-                    <li><strong>Led the research and design team</strong> to overhaul the federal government's assistance for victims of identity theft.</li>
-                </ul>
-                <p>
-                    James designed navigation schemes for several of the world's largest companies and organizations. He relishes thorny information architecture problems, leveraging years of experience and a Master’s Degree in Library/Information Science from the University of Maryland.
-                </p>
-        </div>
+    <div class="escom-long-form-text">
+            <p>
+                James has led accounts and projects with diverse clients in industry, education, government, and civil society, on projects such as:
+            </p>
+            <ul>
+                <li><strong>Led a design system team</strong> that helped a financial institution realize its efficiency and quality goals.</li>
+                <li><strong>Built and governed a design system</strong> to achieve brand cohesiveness across dozens of vendor and in-house teams with over a hundred native apps.</li>
+                <li><strong>Facilitated c-suite ideation</strong> toward an app's MVP, then led the team to realize the concept via prototypes. </li>
+                <li><strong>Led the research and design team</strong> to overhaul the federal government's assistance for victims of identity theft.</li>
+            </ul>
+            <p>
+                James designed navigation schemes for several of the world's largest companies and organizations. He relishes thorny information architecture problems, leveraging years of experience and a Master’s Degree in Library/Information Science from the University of Maryland.
+            </p>
+    </div>
 
-        
+    
+    <script type="text/javascript">
+        "use strict";
+
+document.addEventListener('DOMContentLoaded', function() {
+    var tab_button = document.querySelectorAll('.escom-tabs__button');
+    var tab_content = document.querySelectorAll('.escom-tabs__content');
+    var i;
+
+    function toggleTab() {
+        tab_button[i].addEventListener('click', function() {
+            var target = document.getElementById(this.dataset.target);
+
+            for (i = 0; i < tab_button.length; i++) {
+                tab_button[i].classList.remove('escom-tabs__button--is-active');
+            }
+            for (i = 0; i < tab_content.length; i++) {
+                tab_content[i].classList.remove('escom-tabs__content--is-active');
+            }
+
+            this.classList.add('escom-tabs__button--is-active');
+            target.classList.add('escom-tabs__content--is-active');
+        });
+    }
+
+    for (i = 0; i < tab_button.length; i++) {
+        toggleTab();
+    }
+});
+
+    </script>
     <div class="escom-tabs">
         <div class="escom-tabs__tabs">
             
@@ -169,11 +200,11 @@ s
 
     </div>
 
-        
+    
     
     <div id="tab-past-projects" class="escom-tabs__content  escom-tabs__content--is-active">
         
-            
+        
     <ul class="escom-timeline escom-timeline--years-only">
         
         
@@ -788,15 +819,15 @@ s
         
     </ul>
 
-        
+    
     </div>
 
 
-        
+    
     
     <div id="tab-writing" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="esds-list esds-list--large">
     
@@ -828,14 +859,14 @@ s
 </ul>
 
 
-        
+    
     </div>
 
-        
+    
     
     <div id="tab-posters" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="escom-link-list escom-link-list--large">
     
@@ -950,10 +981,10 @@ s
 </ul>
 
 
-        
+    
     </div>
 
-    
+
         
     </div>
 </div>
@@ -1033,10 +1064,7 @@ s
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

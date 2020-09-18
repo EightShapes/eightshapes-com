@@ -14,51 +14,52 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; @components &gt; Practicing Design Systems</title>
+        
+            <title>Eightshapes > @components > Practicing Design Systems</title>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
+            <!-— facebook open graph tags -->
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.eightshapes.com/articles/practicing-design-systems/" />
+            <meta property="og:title" content="Practicing Design Systems" />
+            <meta property="og:description" content="Address How Do I…? Questions to Form Processes That Matter" />
+            
+            <meta property="og:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+
+            <!-— twitter card tags additive with the og: tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:domain" value="eightshapes.com" />
+            <meta name="twitter:title" value="Practicing Design Systems" />
+            <meta name="twitter:description" value="Address How Do I…? Questions to Form Processes That Matter" />
+            
+            <meta name="twitter:image" content="https://eightshapes.com//images/articles//masthead.png" />
+            
+            <meta name="twitter:url" value="https://www.eightshapes.com/articles/practicing-design-systems/" />
+
+            <!-- No Shadow DOM, so link directly to styles -->
+            <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
+
+            <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
+            <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
+
+            <!-- ESDS Doc components -->
+            <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
+            <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
+
+            <!-- A babel-compiled version of the component for IE11 -->
+            <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700&display=swap" rel="stylesheet">
-  <!-— facebook open graph tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eightshapes.com/articles/practicing-design-systems" />
-  <meta property="og:title" content="Practicing Design Systems" />
-  <meta property="og:description" content="Address How Do I…? Questions to Form Processes That Matter" />
-  
-  <meta property="og:image" content="https://eightshapes.com//images/articles/practicing-design-systems/masthead.png" />
-  
-
-  <!-— twitter card tags additive with the og: tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="eightshapes.com" />
-  <meta name="twitter:title" value="Practicing Design Systems" />
-  <meta name="twitter:description" value="Address How Do I…? Questions to Form Processes That Matter" />
-  
-  <meta name="twitter:image" content="https://eightshapes.com//images/articles/practicing-design-systems/masthead.png" />
-  
-  <meta name="twitter:url" value="https://www.eightshapes.com/articles/practicing-design-systems" />
-
-  <!-- No Shadow DOM, so link directly to styles -->
-  <link rel="stylesheet" href="/dependencies/esds-code-snippet.css"/>
-
-  <!-- Separate webcomponents polyfill bundle for Edge, IE11, etc. -->
-  <script type="text/javascript" src="/dependencies/custom-elements.min.js"></script>
-
-  <!-- ESDS Doc components -->
-  <!-- The ESM "vanilla" version of the component for FF, Safari, Chrome and Edge -->
-  <script type="module" src="/dependencies/esds-code-snippet-web-component.js"></script>
-
-  <!-- A babel-compiled version of the component for IE11 -->
-  <script nomodule type="text/javascript" src="/dependencies/esds-code-snippet-legacy.js"></script>
-
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="">
         
-    
+
+
+
     
     
 
@@ -94,117 +95,113 @@
     </div>
 
 
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-            <div class="escom-article__author-row">
-                <div class="escom-article__author-avatar"
-                    style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
-                </div>
-                <div class="escom-article__author-text">
-                    <p class="escom-article__author">
-                        <a href="/nathan-curtis">Nathan Curtis</a>
-                    </p>
-                    <p class="escom-article__author-role">
-                        Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
-                    </p>
-                    <p>
-                        <span class="escom-article__published-date">
-                            Originally published 10/17/2017 •
-                        </span>
-                        <span class="escom-article__read-duration">
-                            8min
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="escom-article__title-row">
-                <h1 class="escom-article__title">Practicing Design Systems</h1>
-                
-                <h2 class="escom-article__deck">Address How Do I…? Questions to Form Processes That Matter</h2>
-                
-            </div>
 
-    
-        </div>
-    </div>
-    <div class="esds-row esds-container--dark esds-row--no-inset escom-article">
-        <div class="esds-row__inner">
-            <img src="/images/articles/practicing-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
-        </div>
-    </div>
-    <div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
-        <div class="esds-row__inner">
-    
 
-    
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+        <div class="escom-article__author-row">
+            <div class="escom-article__author-avatar"
+                style="background-image: url('/images/bios/bio-thumb-nathan-curtis.png')">
+            </div>
+            <div class="escom-article__author-text">
+                <p class="escom-article__author">
+                    <a href="/nathan-curtis">Nathan Curtis</a>
+                </p>
+                <p class="escom-article__author-role">
+                    Founder of UX firm @eightshapes. Speaker. Writer. Fan of Arsenal, Hokies. Cyclist &amp; runner. Father &amp; husband. VT &amp; @uchicago grad.
+                </p>
+                <p>
+                    <span class="escom-article__published-date">
+                        Originally published 10/17/2017 •
+                    </span>
+                    <span class="escom-article__read-duration">
+                      
+                        17 min
+                      
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="escom-article__title-row">
+            <h1 class="escom-article__title">Practicing Design Systems</h1>
+            
+            <h2 class="escom-article__deck">Address How Do I…? Questions to Form Processes That Matter</h2>
+            
+        </div>
+
+
+    </div>
+</div>
+<div class="esds-row esds-container--dark esds-row--no-inset escom-article">
+    <div class="esds-row__inner">
+        <img src="/images/articles/practicing-design-systems/masthead.png" alt="Masthead" class="escom-article__masthead" >
+    </div>
+</div>
+<div class="esds-row esds-container--white esds-row--tall-inset esds-row--article-max-width escom-article">
+    <div class="esds-row__inner">
+
     <p>Early on, design system efforts can focus on <a href="/articles/defining-design-systems">defining <em>what</em> a system is</a> or fret over <a href="/articles/principles-of-designing-systems">principles</a>. However, conversation can shift swiftly towards defining and documenting <em>how</em> it works. Stakeholders want answers to:</p>
-
-
-  
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                How do I … add a component I designed to the library?
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                Contributing Designer
-            </div>
-            
-        </div>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … add a component I designed to the library?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Contributing Designer
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
 
 
 
-  
-
-  
 
 
 
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                How do I … get my pull request approved by teammates?
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                Systems Team Developer
-            </div>
-            
-        </div>
 
 
 
-  
 
-  
-
-
-
-        <div class="escom-pull-quote escom-pull-quote--light">
-            <div class="escom-pull-quote__the-quote">
-                How do I … adopt a system, without it getting in the way of my priorities?
-            </div>
-            
-            
-            <div class="escom-pull-quote__attribution">
-                Every Adopting Product Manager, ever, in my career of working systems
-            </div>
-            
-        </div>
+    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … get my pull request approved by teammates?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Systems Team Developer
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
 
 
 
-  <p>One client recently started a Google Doc, <a href="http://www.usabilitybok.org/free-listing">freelisted</a> questions, and three pages later was befuddled at what to do next. So many questions! Unlocking the answers is essential for a system to thrive as a practice within an organization.</p>
+
+
+
+
+
+
+
+    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … adopt a system, without it getting in the way of my priorities?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Every Adopting Product Manager, ever, in my career of working systems
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>One client recently started a Google Doc, <a href="http://www.usabilitybok.org/free-listing">freelisted</a> questions, and three pages later was befuddled at what to do next. So many questions! Unlocking the answers is essential for a system to thrive as a practice within an organization.</p>
 <p><strong>Design Systems Practice</strong>: System activities and methods performed habitually and regularly with proficiency as a team, enterprise, and community.</p>
-<p>Establishing frictionless processes requires knowing the <strong>groups and disciplines</strong> in play, identifying relevant <strong>“How Do I&nbsp;…?”</strong> questions, and forming and documenting processes to address each over time. I’ve got a <strong>full inventory</strong> to get you started. Overwhelmed? Then conduct my <a href="/articles/how-do-i-practice-cards-activity">“How Do I…?” Practice Cards Activity</a> with your groups to sort out what matters to you.</p>
+<p>Establishing frictionless processes requires knowing the <strong>groups and disciplines</strong> in play, identifying relevant <strong>“How Do I …?”</strong> questions, and forming and documenting processes to address each over time. I’ve got a <strong>full inventory</strong> to get you started. Overwhelmed? Then conduct my <a href="/articles/how-do-i-practice-cards-activity">“How Do I…?” Practice Cards Activity</a> with your groups to sort out what matters to you.</p>
 <hr>
-<h2 id="system-experience-roles--disciplines">System Experience Roles &amp; Disciplines</h2>
+<h2>System Experience Roles &amp; Disciplines</h2>
 <p>I think of my design system customers using a model that relates groups and disciplines to form perspectives with distinct needs.</p>
-<h3 id="groups">Groups</h3>
+<h3>Groups</h3>
 <ul>
 <li><a href="/articles/designing-a-systems-team"><strong><em>System Team</em></strong></a> member allocated to make the system</li>
 <li><a href="/articles/adopting-design-systems"><strong><em>Adopter</em></strong></a> on a team using the system to make experiences, serving as a primary customer that uses or consumes a system</li>
@@ -213,7 +210,7 @@
 <li><strong><em>Ops</em></strong> configuring tools a system like repos, JIRA boards, and deployments</li>
 </ul>
 <p>Yes, some <strong><em>Adopters</em></strong> can be <strong><em>Contributors</em></strong> too. In my practice, a person’s needs shift when taking one mindset or the other. Plus, the vast majority of adopters (90%–95%) never become a contributor. As a result, crafting distinct processes for each has been tremendously valuable.</p>
-<h3 id="disciplines">Disciplines</h3>
+<h3>Disciplines</h3>
 <ul>
 <li><strong><em>Designer</em></strong> (including UX, Visual, IxD, IA, and UI)</li>
 <li><strong><em>Developer</em></strong> (or “engineer,” usually front-end, but can be a “full stack”)</li>
@@ -223,7 +220,7 @@
 <li><strong><em>Researcher</em></strong></li>
 <li><strong><em>QA</em></strong></li>
 </ul>
-<h3 id="group--discipline--a-perspective-toconsider">Group + Discipline = A Perspective to&nbsp;Consider</h3>
+<h3>Group + Discipline = A Perspective to Consider</h3>
 <p>Combining a role and discipline — such as a <strong><em>Designer as Adopter</em></strong>  — results in so many perspectives to consider! When setting setting up a practice, we’ll focus on eight primary perspectives:</p>
 <ul>
 <li><strong><em>System Team Designer</em></strong></li>
@@ -237,17 +234,17 @@
 </ul>
 <p><em>Takeaway</em>: All perspectives are valuable, yet value varies. A system practice must know its customers and prioritize investments to serve them well.</p>
 <hr>
-<h2 id="forming-how-do-i-questions-by-perspective">Forming “How Do I…?” Questions, by Perspective</h2>
+<h2>Forming “How Do I…?” Questions, by Perspective</h2>
 <p>From each perspective, we’ll formulate many “How do I…?” questions that frame how the system works for them.</p>
-<h3 id="as-an-individual-of-a-specific-discipline">As an Individual of a Specific Discipline</h3>
-<p>For example, as a <strong><em>System Team Developer</em></strong> , how do I <a href="/articles/system-features-step-by-step"><strong>build a system feature</strong></a> in code?&nbsp;… <strong>release</strong> a version?&nbsp;… release a <strong>hot fix</strong>?</p>
-<h3 id="as-an-individual-of-any-discipline">As an Individual of Any Discipline</h3>
-<p>Some questions are relevant to any discipline — designer, developer, or product manager — within a group. For example, as an <strong><em>Adopter</em></strong> , how do I get <strong>help</strong>?&nbsp;… <strong>submit a defect</strong>?&nbsp;… <strong>upgrade</strong> to a new release?</p>
-<h3 id="as-a-collective-group">As a Collective Group</h3>
-<p>Finally, some are relevant to a entire group, so frame the activity with “we.” For example, as a <strong><em>System Team</em></strong> , how do we meet as a team to discuss <strong>status</strong>?&nbsp;… convene to <strong>critique</strong> a teammate’s work?&nbsp;… <strong>organize</strong> &amp; <strong>track</strong> our work on a daily basis (Hint: this is an easy answer: use a tool like JIRA)?</p>
+<h3>As an Individual of a Specific Discipline</h3>
+<p>For example, as a <strong><em>System Team Developer</em></strong> , how do I <a href="/articles/design-system-features-step-by-step"><strong>build a system feature</strong></a> in code? … <strong>release</strong> a version? … release a <strong>hot fix</strong>?</p>
+<h3>As an Individual of Any Discipline</h3>
+<p>Some questions are relevant to any discipline — designer, developer, or product manager — within a group. For example, as an <strong><em>Adopter</em></strong> , how do I get <strong>help</strong>? … <strong>submit a defect</strong>? … <strong>upgrade</strong> to a new release?</p>
+<h3>As a Collective Group</h3>
+<p>Finally, some are relevant to a entire group, so frame the activity with “we.” For example, as a <strong><em>System Team</em></strong> , how do we meet as a team to discuss <strong>status</strong>? … convene to <strong>critique</strong> a teammate’s work? … <strong>organize</strong> &amp; <strong>track</strong> our work on a daily basis (Hint: this is an easy answer: use a tool like JIRA)?</p>
 <p><em>Takeaway</em>: There’s around 50 recurring processes to define and document across perspectives, some simple and others complicated. If we know the questions and we can’t do everything at once at an infinite level of detail, then we’ll need to prioritize.</p>
 <hr>
-<h2 id="the-depth-of-defining-aprocess">The Depth of Defining a&nbsp;Process</h2>
+<h2>The Depth of Defining a Process</h2>
 <p>Not all processes require the same level of workflow modeling, assignment of responsibilities, and documentation. Heck, some processes need <em>no</em> documentation:</p>
 <ul>
 <li><strong>“As a system team, how do we organize and track our tasks?”</strong><br>Depth &amp; Formality:<em> None, though it requires — ironically, as a task organizer — tasks that precede it to decide what system to use and then set it up.<br></em>Urgency:<em> Immediately.</em></li>
@@ -256,28 +253,22 @@
 <ul>
 <li><strong>As an adopting developer, how do I get started?</strong><br>Depth &amp; Formality: <em>High, outlining in detailed easy-to-follow steps how to setup the code, style components, invoke components in an app, and more.<br></em>Urgency<em>: By </em><code><em>0.1</em></code><em>, not just because some developers may adopt early but also to solidify this essential process that’s a foundation for everything you build.</em></li>
 </ul>
-
-  
-
-    <figure class="escom-article-figure escom-article-figure--break-bleed">
-        <div class="escom-article-figure__image-container">
-            <img class="escom-article-figure__image" src="/images/articles/practicing-design-systems/1.png" alt="Screenshots of prominent design systems&#39; getting started pages">
-        </div>
-        <figcaption class="escom-article-figure__caption">Getting Started pages — or even sections! – on well known UI toolkits</figcaption>
-    </figure>
-
-
-
-  <p>I’ve always appreciated the details and clarity of <a href="https://getmdl.io/started/index.html">Material Design Lite’s Getting Started walkthrough</a>. U.S. Web Design Standards effectively pairs <a href="https://standards.usa.gov/getting-started/developers/">a developer guide</a> with a “Getting Started” guide for designers too. GE’s Predix library has <a href="https://www.predix-ui.com/#/about/introduction"><em>an entire section of their site</em></a> devoted to this process, with full videos, links to tutorials, and so much more.</p>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/practicing-design-systems/1.png" alt="Screenshots of prominent design systems&#39; getting started pages">
+    </div>
+    <figcaption class="escom-article-figure__caption">Getting Started pages — or even sections! – on well known UI toolkits</figcaption>
+</figure>
+<p>I’ve always appreciated the details and clarity of <a href="https://getmdl.io/started/index.html">Material Design Lite’s Getting Started walkthrough</a>. U.S. Web Design Standards effectively pairs <a href="https://standards.usa.gov/getting-started/developers/">a developer guide</a> with a “Getting Started” guide for designers too. GE’s Predix library has <a href="https://www.predix-ui.com/#/about/introduction"><em>an entire section of their site</em></a> devoted to this process, with full videos, links to tutorials, and so much more.</p>
 <p><em>Takeaway</em>: When faced with a vast array of processes, find comfort in that some workflows are simple and others complicated. Some warrant extensive documentation while others skimp (at least, until a practice scales further).</p>
 <hr>
-<h2 id="the-how-do-i-question-inventory">The “How Do I…” Question Inventory</h2>
+<h2>The “How Do I…” Question Inventory</h2>
 <p>The following list helps teams form system practices by considering a wide variety of perspectives and questions. Some questions may not directly be a process (For example: “As an adopter, how do I know what <strong>browsers and devices</strong> you support?”), but indirectly requires an essential process whose description rolls off your tongue when asked.</p>
 <p>Every team and organization is different. Surely there are additional questions relevant to you given your conditions and circumstances. Got a recommendation for another question? Let me know!</p>
-<h3 id="system-team">System Team</h3>
+<h3>System Team</h3>
 <ul>
 <li>As a system team, how do we get <a href="/articles/starting-a-design-system">from nothing to <strong>launch a first release</strong></a>?</li>
-<li>As a system team, how do we evolve our <a href="/articles/what-s-will-your-design-system-deliver"><strong>roadmap</strong></a> &amp; priorities?</li>
+<li>As a system team, how do we evolve our <a href="/articles/roadmaps-for-design-systems"><strong>roadmap</strong></a> &amp; priorities?</li>
 <li>As a system team, how do we convene regularly to plan <strong>release cycles</strong>?</li>
 <li>As a system team, how do we <strong>organize</strong> &amp; <strong>track</strong> our work on a daily basis?</li>
 <li>As a system team, how do we meet as a team to discuss <strong>status</strong>?</li>
@@ -285,13 +276,13 @@
 <li>As a system team member, how do I <strong>request a review</strong> from a teammate so I can complete my task?</li>
 <li>As a system team, how do we <a href="/articles/designing-a-systems-team"><strong>compose our system team</strong></a>?</li>
 <li>As a system team, how do we <strong>plan for rotating team members</strong> and approving future capacity?</li>
-<li>As a system team, how do we follow <a href="/articles/system-features-step-by-step"><strong>steps to make things</strong></a> like a component, including approvers?</li>
+<li>As a system team, how do we follow <a href="/articles/design-system-features-step-by-step"><strong>steps to make things</strong></a> like a component, including approvers?</li>
 <li>As a system team, how do we validate feature <strong>usability</strong> via research?</li>
-<li>As a system team, how do we <a href="/articles/system-features-step-by-step">discover and decide on potential system features</a> we choose to design, build and document?</li>
+<li>As a system team, how do we <a href="/articles/design-system-features-step-by-step">discover and decide on potential system features</a> we choose to design, build and document?</li>
 <li>As a system team designer, how do I collect <strong>examples and design requirements</strong> from a design community for system features?</li>
-<li>As a system team designer, how do I <a href="/articles/system-features-step-by-step"><strong>design a system feature</strong></a>?</li>
+<li>As a system team designer, how do I <a href="/articles/design-system-features-step-by-step"><strong>design a system feature</strong></a>?</li>
 <li>As a system team designer, how do I <strong>engage my design community</strong> and leadership to validate emerging system feature designs?</li>
-<li>As a system team developer, how do I <a href="/articles/system-features-step-by-step"><strong>build a system feature</strong></a> in code?</li>
+<li>As a system team developer, how do I <a href="/articles/design-system-features-step-by-step"><strong>build a system feature</strong></a> in code?</li>
 <li>As a system team developer, how do I <strong>release</strong> a version?</li>
 <li>As a system team developer, how do I release a <strong>hot fix</strong>?</li>
 <li>As a system team member, how do I author and review <strong>documentation</strong>?</li>
@@ -301,7 +292,7 @@
 <li>As a system team, how do we <strong>communicate and promote</strong> each release?</li>
 <li>As a system team, how do we monitor system <a href="/articles/adopting-design-systems"><strong>adoption across products</strong></a>?</li>
 </ul>
-<h3 id="adopter">Adopter</h3>
+<h3>Adopter</h3>
 <ul>
 <li>As an adopting designer, how do I <strong>get started</strong>?</li>
 <li>As an adopting developer, how do I <strong>get started</strong>?</li>
@@ -322,7 +313,7 @@
 <li>As an adopting product manager, how do I estimate integration <strong>cost</strong>?</li>
 <li>As an adopter, how do I have confidence that features are <strong>usable</strong>?</li>
 </ul>
-<h3 id="contributor">Contributor</h3>
+<h3>Contributor</h3>
 <ul>
 <li>As a contributor, how do I <a href="/articles/contributions-to-design-systems"><strong>propose a contribution</strong></a> to be evaluated for inclusion in the system?</li>
 <li>As a contributing designer, how do I <strong>contribute design</strong> to the system?</li>
@@ -334,17 +325,205 @@
 <li>As a contributing designer, how do I <strong>get involved</strong> to influence the system?</li>
 <li>As a contributor, how do I <a href="/articles/designing-a-systems-team"><strong>join the systems team</strong></a> as a rotating team member for a shorter period, and convince my boss too?</li>
 </ul>
-<h3 id="leader">Leader</h3>
+<h3>Leader</h3>
+<ul>
+<li>As a leader, how do I get an <strong>introduction</strong> to the system?</li>
+<li>As a leader, how do I get regular <strong>system updates</strong> on progress?</li>
+</ul>
+<p>Early on, design system efforts can focus on <a href="/articles/defining-design-systems">defining <em>what</em> a system is</a> or fret over <a href="/articles/principles-of-designing-systems">principles</a>. However, conversation can shift swiftly towards defining and documenting <em>how</em> it works. Stakeholders want answers to:</p>
+<pre><code>    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … add a component I designed to the library?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Contributing Designer
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … get my pull request approved by teammates?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Systems Team Developer
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+    &lt;div class=&quot;escom-pull-quote escom-pull-quote--light&quot;&gt;
+        &lt;div class=&quot;escom-pull-quote__the-quote&quot;&gt;
+            How do I … adopt a system, without it getting in the way of my priorities?
+        &lt;/div&gt;
+        
+        
+        &lt;div class=&quot;escom-pull-quote__attribution&quot;&gt;
+            Every Adopting Product Manager, ever, in my career of working systems
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+</code></pre>
+<p>One client recently started a Google Doc, <a href="http://www.usabilitybok.org/free-listing">freelisted</a> questions, and three pages later was befuddled at what to do next. So many questions! Unlocking the answers is essential for a system to thrive as a practice within an organization.</p>
+<p><strong>Design Systems Practice</strong>: System activities and methods performed habitually and regularly with proficiency as a team, enterprise, and community.</p>
+<p>Establishing frictionless processes requires knowing the <strong>groups and disciplines</strong> in play, identifying relevant <strong>“How Do I …?”</strong> questions, and forming and documenting processes to address each over time. I’ve got a <strong>full inventory</strong> to get you started. Overwhelmed? Then conduct my <a href="/articles/how-do-i-practice-cards-activity">“How Do I…?” Practice Cards Activity</a> with your groups to sort out what matters to you.</p>
+<hr>
+<h2>System Experience Roles &amp; Disciplines</h2>
+<p>I think of my design system customers using a model that relates groups and disciplines to form perspectives with distinct needs.</p>
+<h3>Groups</h3>
+<ul>
+<li><a href="/articles/designing-a-systems-team"><strong><em>System Team</em></strong></a> member allocated to make the system</li>
+<li><a href="/articles/adopting-design-systems"><strong><em>Adopter</em></strong></a> on a team using the system to make experiences, serving as a primary customer that uses or consumes a system</li>
+<li><a href="/articles/contributions-to-design-systems"><strong><em>Contributor</em></strong></a> outside the system team making something for the system</li>
+<li><strong><em>Leader</em></strong> (usually Directors/VPs) steering a system within an organization</li>
+<li><strong><em>Ops</em></strong> configuring tools a system like repos, JIRA boards, and deployments</li>
+</ul>
+<p>Yes, some <strong><em>Adopters</em></strong> can be <strong><em>Contributors</em></strong> too. In my practice, a person’s needs shift when taking one mindset or the other. Plus, the vast majority of adopters (90%–95%) never become a contributor. As a result, crafting distinct processes for each has been tremendously valuable.</p>
+<h3>Disciplines</h3>
+<ul>
+<li><strong><em>Designer</em></strong> (including UX, Visual, IxD, IA, and UI)</li>
+<li><strong><em>Developer</em></strong> (or “engineer,” usually front-end, but can be a “full stack”)</li>
+<li><strong><em>Product Manager</em></strong></li>
+<li><strong><em>Content</em></strong>  <strong><em>Strategist</em></strong> / Copywriter (while distinct, usually one or the other)</li>
+<li><strong><em>Accessibility</em></strong>  <strong><em>Specialist</em></strong></li>
+<li><strong><em>Researcher</em></strong></li>
+<li><strong><em>QA</em></strong></li>
+</ul>
+<h3>Group + Discipline = A Perspective to Consider</h3>
+<p>Combining a role and discipline — such as a <strong><em>Designer as Adopter</em></strong>  — results in so many perspectives to consider! When setting setting up a practice, we’ll focus on eight primary perspectives:</p>
+<ul>
+<li><strong><em>System Team Designer</em></strong></li>
+<li><strong><em>System Team Developer</em></strong></li>
+<li><strong><em>System Team Product Manager</em></strong></li>
+<li><strong><em>Adopting Designer</em></strong></li>
+<li><strong><em>Adopting Developer</em></strong></li>
+<li><strong><em>Adopting Product Manager</em></strong></li>
+<li><strong><em>Contributing Designer</em></strong></li>
+<li><strong><em>Contributing Developer</em></strong></li>
+</ul>
+<p><em>Takeaway</em>: All perspectives are valuable, yet value varies. A system practice must know its customers and prioritize investments to serve them well.</p>
+<hr>
+<h2>Forming “How Do I…?” Questions, by Perspective</h2>
+<p>From each perspective, we’ll formulate many “How do I…?” questions that frame how the system works for them.</p>
+<h3>As an Individual of a Specific Discipline</h3>
+<p>For example, as a <strong><em>System Team Developer</em></strong> , how do I <a href="/articles/design-system-features-step-by-step"><strong>build a system feature</strong></a> in code? … <strong>release</strong> a version? … release a <strong>hot fix</strong>?</p>
+<h3>As an Individual of Any Discipline</h3>
+<p>Some questions are relevant to any discipline — designer, developer, or product manager — within a group. For example, as an <strong><em>Adopter</em></strong> , how do I get <strong>help</strong>? … <strong>submit a defect</strong>? … <strong>upgrade</strong> to a new release?</p>
+<h3>As a Collective Group</h3>
+<p>Finally, some are relevant to a entire group, so frame the activity with “we.” For example, as a <strong><em>System Team</em></strong> , how do we meet as a team to discuss <strong>status</strong>? … convene to <strong>critique</strong> a teammate’s work? … <strong>organize</strong> &amp; <strong>track</strong> our work on a daily basis (Hint: this is an easy answer: use a tool like JIRA)?</p>
+<p><em>Takeaway</em>: There’s around 50 recurring processes to define and document across perspectives, some simple and others complicated. If we know the questions and we can’t do everything at once at an infinite level of detail, then we’ll need to prioritize.</p>
+<hr>
+<h2>The Depth of Defining a Process</h2>
+<p>Not all processes require the same level of workflow modeling, assignment of responsibilities, and documentation. Heck, some processes need <em>no</em> documentation:</p>
+<ul>
+<li><strong>“As a system team, how do we organize and track our tasks?”</strong><br>Depth &amp; Formality:<em> None, though it requires — ironically, as a task organizer — tasks that precede it to decide what system to use and then set it up.<br></em>Urgency:<em> Immediately.</em></li>
+</ul>
+<p>On the other hand, other processes are vitally important and require deliberately crafted, high-quality step-by-step documentation. For example, the “Getting Started for Developers” guide is a staple of every UI toolkit code library.</p>
+<ul>
+<li><strong>As an adopting developer, how do I get started?</strong><br>Depth &amp; Formality: <em>High, outlining in detailed easy-to-follow steps how to setup the code, style components, invoke components in an app, and more.<br></em>Urgency<em>: By </em><code><em>0.1</em></code><em>, not just because some developers may adopt early but also to solidify this essential process that’s a foundation for everything you build.</em></li>
+</ul>
+<figure class="escom-article-figure escom-article-figure--break-bleed">
+    <div class="escom-article-figure__image-container">
+        <img class="escom-article-figure__image" src="/images/articles/practicing-design-systems/1.png" alt="Screenshots of prominent design systems&#39; getting started pages">
+    </div>
+    <figcaption class="escom-article-figure__caption">Getting Started pages — or even sections! – on well known UI toolkits</figcaption>
+</figure>
+<p>I’ve always appreciated the details and clarity of <a href="https://getmdl.io/started/index.html">Material Design Lite’s Getting Started walkthrough</a>. U.S. Web Design Standards effectively pairs <a href="https://standards.usa.gov/getting-started/developers/">a developer guide</a> with a “Getting Started” guide for designers too. GE’s Predix library has <a href="https://www.predix-ui.com/#/about/introduction"><em>an entire section of their site</em></a> devoted to this process, with full videos, links to tutorials, and so much more.</p>
+<p><em>Takeaway</em>: When faced with a vast array of processes, find comfort in that some workflows are simple and others complicated. Some warrant extensive documentation while others skimp (at least, until a practice scales further).</p>
+<hr>
+<h2>The “How Do I…” Question Inventory</h2>
+<p>The following list helps teams form system practices by considering a wide variety of perspectives and questions. Some questions may not directly be a process (For example: “As an adopter, how do I know what <strong>browsers and devices</strong> you support?”), but indirectly requires an essential process whose description rolls off your tongue when asked.</p>
+<p>Every team and organization is different. Surely there are additional questions relevant to you given your conditions and circumstances. Got a recommendation for another question? Let me know!</p>
+<h3>System Team</h3>
+<ul>
+<li>As a system team, how do we get <a href="/articles/starting-a-design-system">from nothing to <strong>launch a first release</strong></a>?</li>
+<li>As a system team, how do we evolve our <a href="/articles/roadmaps-for-design-systems"><strong>roadmap</strong></a> &amp; priorities?</li>
+<li>As a system team, how do we convene regularly to plan <strong>release cycles</strong>?</li>
+<li>As a system team, how do we <strong>organize</strong> &amp; <strong>track</strong> our work on a daily basis?</li>
+<li>As a system team, how do we meet as a team to discuss <strong>status</strong>?</li>
+<li>As a system team, how do we convene to <strong>critique</strong> a teammate’s work?</li>
+<li>As a system team member, how do I <strong>request a review</strong> from a teammate so I can complete my task?</li>
+<li>As a system team, how do we <a href="/articles/designing-a-systems-team"><strong>compose our system team</strong></a>?</li>
+<li>As a system team, how do we <strong>plan for rotating team members</strong> and approving future capacity?</li>
+<li>As a system team, how do we follow <a href="/articles/design-system-features-step-by-step"><strong>steps to make things</strong></a> like a component, including approvers?</li>
+<li>As a system team, how do we validate feature <strong>usability</strong> via research?</li>
+<li>As a system team, how do we <a href="/articles/design-system-features-step-by-step">discover and decide on potential system features</a> we choose to design, build and document?</li>
+<li>As a system team designer, how do I collect <strong>examples and design requirements</strong> from a design community for system features?</li>
+<li>As a system team designer, how do I <a href="/articles/design-system-features-step-by-step"><strong>design a system feature</strong></a>?</li>
+<li>As a system team designer, how do I <strong>engage my design community</strong> and leadership to validate emerging system feature designs?</li>
+<li>As a system team developer, how do I <a href="/articles/design-system-features-step-by-step"><strong>build a system feature</strong></a> in code?</li>
+<li>As a system team developer, how do I <strong>release</strong> a version?</li>
+<li>As a system team developer, how do I release a <strong>hot fix</strong>?</li>
+<li>As a system team member, how do I author and review <strong>documentation</strong>?</li>
+<li>As a system team member, how do I <strong>publish</strong> content on the system site?</li>
+<li>As a system team, how do we <a href="/articles/component-qa-in-design-systems"><strong>QA</strong> visual language and UI components</a>?</li>
+<li>As a system team, how do we route, assign and respond to <strong>help requests</strong>?</li>
+<li>As a system team, how do we <strong>communicate and promote</strong> each release?</li>
+<li>As a system team, how do we monitor system <a href="/articles/adopting-design-systems"><strong>adoption across products</strong></a>?</li>
+</ul>
+<h3>Adopter</h3>
+<ul>
+<li>As an adopting designer, how do I <strong>get started</strong>?</li>
+<li>As an adopting developer, how do I <strong>get started</strong>?</li>
+<li>As an adopting product manager, how does my product <strong>adopt a system</strong>?</li>
+<li>As an adopting product manager, how do I adopt system incrementally?</li>
+<li>As an adopting product manager, how do I get <strong>monitored</strong> and reported on for system adoption?</li>
+<li>As an adopting product manager, how does my team <strong>work with the system team</strong> to integrate the system?</li>
+<li>As an adopter, how do I know what <strong>browsers and devices</strong> you support?</li>
+<li>As an adopter, how do I <strong>request</strong> a new feature?</li>
+<li>As an adopter, how do I learn about <strong>new system updates</strong>?</li>
+<li>As an adopter, how do I get <strong>help</strong>?</li>
+<li>As an adopter, how do I <strong>submit a defect</strong>?</li>
+<li>As an adopter, how do I <strong>upgrade</strong> to a new release?</li>
+<li>As an adopter, how do I get <strong>assessed</strong> for system compliance?</li>
+<li>As an adopter, how do I get a (short) system <strong>introduction</strong> for my team?</li>
+<li>As an adopter, how do I get (longer) <strong>training</strong> on how the system works?</li>
+<li>As an adopter, how do I know if an upgrade will <strong>break</strong> what I already use?</li>
+<li>As an adopting product manager, how do I estimate integration <strong>cost</strong>?</li>
+<li>As an adopter, how do I have confidence that features are <strong>usable</strong>?</li>
+</ul>
+<h3>Contributor</h3>
+<ul>
+<li>As a contributor, how do I <a href="/articles/contributions-to-design-systems"><strong>propose a contribution</strong></a> to be evaluated for inclusion in the system?</li>
+<li>As a contributing designer, how do I <strong>contribute design</strong> to the system?</li>
+<li>As an contributing developer, how do I <strong>contribute code</strong> to the system?</li>
+<li>As an contributing developer, how do I follow <strong>coding style</strong> requirements?</li>
+<li>As a contributor, how and where do I <strong>compose documentation</strong> and get it reviewed and approved?</li>
+<li>As a contributor, how do I contribute <strong>guidelines &amp; specs</strong> to system doc?</li>
+<li>As a contributor, how do I <strong>publish documentation</strong> on the system site?</li>
+<li>As a contributing designer, how do I <strong>get involved</strong> to influence the system?</li>
+<li>As a contributor, how do I <a href="/articles/designing-a-systems-team"><strong>join the systems team</strong></a> as a rotating team member for a shorter period, and convince my boss too?</li>
+</ul>
+<h3>Leader</h3>
 <ul>
 <li>As a leader, how do I get an <strong>introduction</strong> to the system?</li>
 <li>As a leader, how do I get regular <strong>system updates</strong> on progress?</li>
 </ul>
 
-
-
-        </div>
     </div>
-    
+</div>
+
 
 <div class="esds-row esds-container--light esds-row--tall-inset">
     <div class="esds-row__inner escom-footer-systems__row">
@@ -355,7 +534,6 @@
         <div class="escom-footer-systems__columnset">
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">visual style</h4>
@@ -384,127 +562,22 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Documentation</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions">Introductions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-examples">Examples</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines">Design Guidelines</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components">Myths</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation">Authoring</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components">Doc Components</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-doc-components/">Doc Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-components/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/documenting-component-introductions/">Introductions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-examples/">Examples</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-design-guidelines/">Design Guidelines</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/authoring-component-documentation/">Authoring</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/myths-of-documenting-components/">Myths</a>
+    </li>
 </ul>
 
 
@@ -512,257 +585,47 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">UI Components</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems">Buttons</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy">Why Buttons Aren&#39;t Easy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems">Cards and Composability</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems">Classification</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components">UX Patterns vs UI Components</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles">Decomposition and Hierarchy</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems">Component QA</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans">Component Testing Plans</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system">Getting Developers Started</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/on-classification-in-design-systems/">Classification</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/right-sizing-the-rectangles/">Decomposition and Hierarchy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/buttons-in-design-systems/">Buttons</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-qa-in-design-systems/">Component QA</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/patterns-components/">UX Patterns vs UI Components</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/and-you-thought-buttons-were-easy/">Why Buttons Aren&#39;t Easy</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/cards-and-composability-in-design-systems/">Cards and Composability</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/component-testing-plans/">Component Testing Plans</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/getting-developers-started-with-a-design-system/">Getting Developers Started</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Releases</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems">Overview</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence">Cadence</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems">Versioning</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems">Visual Breaking Change</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems">Dependencies</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/visual-breaking-change-in-design-systems/">Visual Breaking Change</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-release-cadence/">Cadence</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/releasing-design-systems/">Overview</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/versioning-design-systems/">Versioning</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/dealing-with-dependencies-inside-design-systems/">Dependencies</a>
+    </li>
 </ul>
 
 
@@ -770,255 +633,45 @@
             </div>
             <div class="escom-footer-systems__column">
                 
-
 
 
 <h4 class="escom-footer-systems__header">Strategy</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products">A Product, Serving Products</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems">Defining</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems">Principles</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems">Adoption</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system">Platform Balance</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products">Accessibility</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success">Measuring Success</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach">Reach</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/finding-platform-balance-in-a-design-system/">Platform Balance</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-s-reach/">Reach</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/a-design-system-isn-t-a-project-it-s-a-product-serving-products/">A Product, Serving Products</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/principles-of-designing-systems/">Principles</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/measuring-design-system-success/">Measuring Success</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/adopting-design-systems/">Adoption</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-design-systems/">Defining</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/accessible-design-systems-dont-guarantee-accessible-products/">Accessibility</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">Contributions</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems">Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions">Defining Contributions</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter">Why Contributions Matter</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions">Stewarding</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system">Contribution Criteria</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/contributions-to-design-systems/">Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/i-made-this-does-it-go-in-the-system/">Contribution Criteria</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/why-contributions-matter/">Why Contributions Matter</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/defining-contributions/">Defining Contributions</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/stewarding-design-system-contributions/">Stewarding</a>
+    </li>
 </ul>
 
 
@@ -1026,121 +679,16 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Systems of Systems</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers">Tiers</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries">Intermediaries</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems">Consolidation</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams">Architecture Diagrams</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/consolidating-design-systems/">Consolidation</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-tiers/">Tiers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-intermediaries/">Intermediaries</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-systems-architecture-diagrams/">Architecture Diagrams</a>
+    </li>
 </ul>
 
 
@@ -1150,247 +698,39 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Process</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system">Starting a Design System</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems">Roadmaps</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step">Features, Step by Step</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step">Subtasks, by Step</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications">Communications</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems">Using Jira</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems">Building a Practice</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/roadmaps-for-design-systems/">Roadmaps</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/starting-a-design-system/">Starting a Design System</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-features-step-by-step/">Features, Step by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/practicing-design-systems/">Building a Practice</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/using-jira-for-design-systems/">Using Jira</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-communications/">Communications</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-subtasks-by-step/">Subtasks, by Step</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-support/">Support</a>
+    </li>
 </ul>
 
 
 
                 
-
 
 
 <h4 class="escom-footer-systems__header">People</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system">Team Models</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team">Designing a Team</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s">Leaders and Managers</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/team-models-for-scaling-a-design-system/">Team Models</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/design-system-leader-s-manager-s/">Leaders and Managers</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/designing-a-systems-team/">Designing a Team</a>
+    </li>
 </ul>
 
 
@@ -1398,119 +738,14 @@
                 
 
 
-
 <h4 class="escom-footer-systems__header">Workshop Activities</h4>
-<ul class="escom-footer-systems__list">
-    
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop">Component Cut Up</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people">Parts, Products and People</a></li>
-        
-    
-        
-    <li class="escom-footer-systems__list-item"><a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity">How Do I? Cards</a></li>
-        
-    
+<ul class="escom-footer-systems__list"><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/the-component-cut-up-workshop/">Component Cut Up</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/picking-parts-products-people/">Parts, Products and People</a>
+    </li><li class="escom-footer-systems__list-item">
+    <a  class="escom-footer-systems__list-item-link" href="/articles/how-do-i-practice-cards-activity/">How Do I? Cards</a>
+    </li>
 </ul>
 
 
@@ -1522,7 +757,7 @@
 
 
 
-    
+
 
     
 
@@ -1559,7 +794,6 @@
         
     </div>
 </div>
-
 
 
 
@@ -1637,10 +871,7 @@
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

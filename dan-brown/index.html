@@ -14,18 +14,19 @@
         <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
         <meta http-equiv="cleartype" content="on">
 
-        <title>EightShapes &gt; Dan Brown</title>
+        
+            <title>EightShapes &gt; Dan Brown</title>
+        
 
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="/dependencies/esds.css"> <!-- copied from esds-library dependency -->
-        <link rel="stylesheet" href="/dist/escom.css">
-
-        
-        
+        <link rel="stylesheet" href="/styles/escom.css">
     </head>
     <body class="escom-page-type--marketing">
         
-    
+
+
+
     
     
 
@@ -49,7 +50,7 @@
     </div>
 
 
-    
+
 
 <div class="esds-row esds-background--dark "
     
@@ -57,7 +58,7 @@
     <div class="esds-row__inner">
         
             
-        
+    
 s    
     
     
@@ -83,7 +84,7 @@ s
 
             </a>
             <img alt="Dan Brown" class="escom-hero-profile__image" src="/images/components/bio_hero/bio-dan-brown-2018.png" />
-            <a href="/chris-detzi" class="escom-hero-profile__nav escom-hero-profile__nav--next">
+            <a href="/james-melzer" class="escom-hero-profile__nav escom-hero-profile__nav--next">
                 
     
 
@@ -102,21 +103,21 @@ s
     </div>
 
 
-        <div class="esds-container--dark">
-            <div class="escom-long-form-text">
-                <p class="escom-long-form-text__p--l">
-                    Since 1994, Dan’s focused on <a href="/design-discovery">digital product discovery and definition</a>, user research, information architecture, content strategy and interaction design for content-heavy sites and complex web applications. He’s worked on teams large and small to perfect collaboration and productivity. In 2006, Dan co-founded EightShapes with <a href="/nathan-curtis">Nathan Curtis</a> to serve clients in healthcare, education, not-for-profit, and high-tech.
-                </p>
-            </div>
+    <div class="esds-container--dark">
+        <div class="escom-long-form-text">
+            <p class="escom-long-form-text__p--l">
+                Since 1994, Dan’s focused on <a href="/design-discovery">digital product discovery and definition</a>, user research, information architecture, content strategy and interaction design for content-heavy sites and complex web applications. He’s worked on teams large and small to perfect collaboration and productivity. In 2006, Dan co-founded EightShapes with <a href="/nathan-curtis">Nathan Curtis</a> to serve clients in healthcare, education, not-for-profit, and high-tech.
+            </p>
         </div>
-    
+    </div>
+
         
     </div>
 </div>
 
 
 
-    
+
 
 <div class="esds-row esds-container--white esds-row--tall-inset"
     
@@ -125,7 +126,37 @@ s
         
             
 
-        
+    
+    <script type="text/javascript">
+        "use strict";
+
+document.addEventListener('DOMContentLoaded', function() {
+    var tab_button = document.querySelectorAll('.escom-tabs__button');
+    var tab_content = document.querySelectorAll('.escom-tabs__content');
+    var i;
+
+    function toggleTab() {
+        tab_button[i].addEventListener('click', function() {
+            var target = document.getElementById(this.dataset.target);
+
+            for (i = 0; i < tab_button.length; i++) {
+                tab_button[i].classList.remove('escom-tabs__button--is-active');
+            }
+            for (i = 0; i < tab_content.length; i++) {
+                tab_content[i].classList.remove('escom-tabs__content--is-active');
+            }
+
+            this.classList.add('escom-tabs__button--is-active');
+            target.classList.add('escom-tabs__content--is-active');
+        });
+    }
+
+    for (i = 0; i < tab_button.length; i++) {
+        toggleTab();
+    }
+});
+
+    </script>
     <div class="escom-tabs">
         <div class="escom-tabs__tabs">
             
@@ -170,11 +201,11 @@ s
     </div>
 
 
-        
+    
     
     <div id="tab-appearances" class="escom-tabs__content  escom-tabs__content--is-active">
         
-                
+            
     <ul class="escom-timeline escom-timeline--years-only">
         
         
@@ -826,15 +857,15 @@ s
         
     </ul>
 
-        
+    
     </div>
 
 
-        
+    
     
     <div id="tab-books" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="esds-list esds-list--large">
     
@@ -916,15 +947,15 @@ s
 </ul>
 
 
-        
+    
     </div>
 
 
-        
+    
     
     <div id="tab-webinars" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="esds-list esds-list--large">
     
@@ -1131,15 +1162,15 @@ s
 </ul>
 
 
-        
+    
     </div>
 
 
-        
+    
     
     <div id="tab-podcasts" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="esds-list esds-list--large">
     
@@ -1546,15 +1577,15 @@ s
 </ul>
 
 
-        
+    
     </div>
 
 
-        
+    
     
     <div id="tab-games" class="escom-tabs__content ">
         
-            
+        
 
 <ul class="esds-list esds-list--large">
     
@@ -1611,17 +1642,17 @@ s
 </ul>
 
 
-        
+    
     </div>
 
-    
+
         
     </div>
 </div>
 
 
 
-    
+
 
 <div class="esds-row esds-container--black esds-row--tall-inset"
     
@@ -1629,61 +1660,61 @@ s
     <div class="esds-row__inner">
         
             
-        
+    
     <div class="escom-fifty-fifty esds-container--white esds-container--dark">
         <div class="escom-fifty-fifty__image" style="background-image: url(/images/discovery/practical-design-discovery-book.jpg)"></div>
         <div class="escom-fifty-fifty__body">
             <div class="escom-fifty-fifty__content">
                 
-            <div class="escom-long-form-text">
-                <h3>Practical Design Discovery:<br/>The Book</h3>
-                <p>
-                    A handbook for planning discovery projects, Practical Design Discovery provides a framework for helping teams understand the why and how of discovery. It uses this framework to clarify the role of different activities and outputs, walking readers through planning a discovery phase.
-                </p>
-                <p><a href="https://abookapart.com/products/practical-design-discovery">Learn More</a></p>
-            </div>
-        
-            </div>
+        <div class="escom-long-form-text">
+            <h3>Practical Design Discovery:<br/>The Book</h3>
+            <p>
+                A handbook for planning discovery projects, Practical Design Discovery provides a framework for helping teams understand the why and how of discovery. It uses this framework to clarify the role of different activities and outputs, walking readers through planning a discovery phase.
+            </p>
+            <p><a href="https://abookapart.com/products/practical-design-discovery">Learn More</a></p>
         </div>
-    </div>
-
-        
-    <div class="escom-fifty-fifty esds-container--white esds-container--dark">
-        <div class="escom-fifty-fifty__image" style="background-image: url(/images/components/fiftyfifty/SurvivingDesignProjects.png)"></div>
-        <div class="escom-fifty-fifty__body">
-            <div class="escom-fifty-fifty__content">
-                
-            <div class="escom-long-form-text">
-                <h3>Surviving Design Projects:<br/>The Game</h3>
-                <p>
-                    Teach creative teams how to deal with difficult situations with story-telling.
-                </p>
-                <p><a href="https://greenonions.com/how-to-play-surviving-design-projects-5cbe8ac6acd1">Learn More</a></p>
-            </div>
-        
-            </div>
-        </div>
-    </div>
-
-        
-    <div class="escom-fifty-fifty esds-container--white esds-container--dark">
-        <div class="escom-fifty-fifty__image" style="background-image: url(/images/components/fiftyfifty/IALenses.png)"></div>
-        <div class="escom-fifty-fifty__body">
-            <div class="escom-fifty-fifty__content">
-                
-            <div class="escom-long-form-text">
-                <h3>Information Architecture Lenses:<br/>The Cards</h3>
-                <p>
-                    Give designers different perspectives on their ideas to look at their decisions in a whole new way.
-                </p>
-                <p><a href="https://www.thegamecrafter.com/games/information-architecture-lenses">Learn More</a></p>
-            </div>
-        
+    
             </div>
         </div>
     </div>
 
     
+    <div class="escom-fifty-fifty esds-container--white esds-container--dark">
+        <div class="escom-fifty-fifty__image" style="background-image: url(/images/components/fiftyfifty/SurvivingDesignProjects.png)"></div>
+        <div class="escom-fifty-fifty__body">
+            <div class="escom-fifty-fifty__content">
+                
+        <div class="escom-long-form-text">
+            <h3>Surviving Design Projects:<br/>The Game</h3>
+            <p>
+                Teach creative teams how to deal with difficult situations with story-telling.
+            </p>
+            <p><a href="https://greenonions.com/how-to-play-surviving-design-projects-5cbe8ac6acd1">Learn More</a></p>
+        </div>
+    
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="escom-fifty-fifty esds-container--white esds-container--dark">
+        <div class="escom-fifty-fifty__image" style="background-image: url(/images/components/fiftyfifty/IALenses.png)"></div>
+        <div class="escom-fifty-fifty__body">
+            <div class="escom-fifty-fifty__content">
+                
+        <div class="escom-long-form-text">
+            <h3>Information Architecture Lenses:<br/>The Cards</h3>
+            <p>
+                Give designers different perspectives on their ideas to look at their decisions in a whole new way.
+            </p>
+            <p><a href="https://www.thegamecrafter.com/games/information-architecture-lenses">Learn More</a></p>
+        </div>
+    
+            </div>
+        </div>
+    </div>
+
+
         
     </div>
 </div>
@@ -1763,10 +1794,7 @@ s
 
 
 
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        
-        <script src="/dist/escom.js"></script>
+        <script src="/scripts/svg4everybody.js"></script>
           <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
