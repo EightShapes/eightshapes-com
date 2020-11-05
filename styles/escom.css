@@ -2178,6 +2178,11 @@ body *:after {
     font-size: 14.4px;
   }
 }
+.escom-article .esds-row__inner > pre {
+  background: #F3F1F1;
+  overflow-x: auto;
+  padding: 16px;
+}
 
 .escom-article-figure {
   margin: 0 0 32px;
